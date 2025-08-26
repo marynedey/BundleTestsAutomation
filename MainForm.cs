@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using System.Drawing;
+using System.Xml.Linq;
 
 namespace BundleTestsAutomation
 {
@@ -12,6 +13,7 @@ namespace BundleTestsAutomation
         private readonly Button btnLoad;
         private readonly Button btnLoadCANdata;
         private readonly Button btnCompare;
+        private readonly Button btnGenerateBundleManifest;
         private readonly DataGridView gridLeft;
         private readonly DataGridView gridRight;
         private readonly OpenFileDialog ofd;
@@ -33,6 +35,9 @@ namespace BundleTestsAutomation
             btnCompare = new Button { Text = "Comparer 2 CSV", Dock = DockStyle.Top, Height = 42 };
             btnCompare.Click += BtnCompare_Click;
 
+            btnGenerateBundleManifest = new Button {  Text = "Générer le Bundle Manifest", Dock = DockStyle.Top, Height=42 };
+            btnGenerateBundleManifest.Click += btnGenerateBundleManifest_Click;
+
             // --- Split container pour afficher 2 grilles côte à côte ---
             var split = new SplitContainer
             {
@@ -47,6 +52,7 @@ namespace BundleTestsAutomation
             split.Panel1.Controls.Add(gridLeft);
             split.Panel2.Controls.Add(gridRight);
 
+            // --- Fenêtre d'ouverture d'un fichier CSV ---
             ofd = new OpenFileDialog
             {
                 Title = "Sélectionnez un fichier CSV",
@@ -63,8 +69,11 @@ namespace BundleTestsAutomation
             Controls.Add(btnLoad);
             Controls.Add(btnLoadCANdata);
             Controls.Add(btnCompare);
+            Controls.Add(btnGenerateBundleManifest);
         }
 
+
+        #region Gestion des CSV
         private DataGridView CreateGrid()
         {
             return new DataGridView
@@ -92,9 +101,7 @@ namespace BundleTestsAutomation
         // --- Charger un CSV spécifique (CANalyzer) ---
         private void BtnLoadCANdata_Click(object? sender, EventArgs e)
         {
-            string exeFolder = AppDomain.CurrentDomain.BaseDirectory;
-
-            DirectoryInfo? dir = new DirectoryInfo(exeFolder);
+            DirectoryInfo? dir = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory);
             while (dir != null && dir.Name != "BundleTestsAutomation")
             {
                 dir = dir.Parent;
@@ -281,5 +288,57 @@ namespace BundleTestsAutomation
             result.Add(cur.ToString());
             return result;
         }
+        #endregion
+
+
+        #region Génération du Bundle Manifest
+        private void btnGenerateBundleManifest_Click(object? sender, EventArgs e)
+        {
+            // --- Génération du template du fichier ---
+            DirectoryInfo? dir = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory);
+            while (dir != null && dir.Name != "BundleTestsAutomation")
+            {
+                dir = dir.Parent;
+            }
+
+            if (dir == null)
+            {
+                MessageBox.Show(this, "Impossible de trouver le dossier BundleTestsAutomation.", "Erreur",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string path = Path.Combine(dir.FullName, "data", "BundleManifest.xml");
+            BundleManifestGenerator.Generate(path);
+
+            // --- Chargement du XML et ajout des données (seulement des tests pour le moment) ---
+            var doc = XDocument.Load(path);
+
+            var firstService = doc.Root!.Element("services")?.Element("service");
+            var firstParam = firstService?.Element("configuration")?.Element("param");
+
+            if (firstParam != null)
+            {
+                firstParam.SetAttributeValue("key", "dm1");
+                firstParam.SetAttributeValue("value", "123");
+            }
+
+            var firstPackage = doc.Root.Element("packages")?.Element("package");
+            if (firstPackage != null)
+            {
+                firstPackage.SetAttributeValue("runlevel", "1");
+            }
+
+            doc.Save(path);
+
+            // --- Confirmation de la génération du fichier ---
+            MessageBox.Show(
+                $"Le Bundle Manifest a été généré avec succès !\n\nChemin du fichier :\n{path}",
+                "Fichier généré",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
+        }
+        #endregion
     }
 }
