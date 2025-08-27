@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Windows.Forms;
-using System.Drawing;
 using System.Xml.Linq;
 
 namespace BundleTestsAutomation
@@ -374,6 +375,31 @@ namespace BundleTestsAutomation
                 }
 
                 package.SetAttributeValue("version", version);
+
+                // Mise à jour du digest
+                if (matchedName != null)
+                {
+                    string fullPath = Path.Combine(rootFolder, matchedName);
+
+                    package.SetAttributeValue("filename", matchedName);
+
+                    // Calcul du SHA-256 seulement si le fichier ou le dossier existe
+                    if (File.Exists(fullPath))
+                    {
+                        package.SetAttributeValue("digest", HashUtils.ComputeSha256HashFromFile(fullPath));
+                    }
+                    else if (Directory.Exists(fullPath))
+                    {
+                        // Pour un dossier : concaténer le contenu des fichiers pour un hash global (optionnel)
+                        var allFiles = Directory.GetFiles(fullPath, "*.*", SearchOption.AllDirectories);
+                        StringBuilder sb = new StringBuilder();
+                        foreach (var file in allFiles.OrderBy(f => f))
+                        {
+                            sb.Append(File.ReadAllText(file));
+                        }
+                        package.SetAttributeValue("digest", HashUtils.ComputeSha256Hash(sb.ToString()));
+                    }
+                }
             }
         }
         #endregion
