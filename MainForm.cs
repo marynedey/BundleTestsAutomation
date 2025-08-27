@@ -294,29 +294,38 @@ namespace BundleTestsAutomation
         #region Génération du Bundle Manifest
         private void btnGenerateBundleManifest_Click(object? sender, EventArgs e)
         {
-            // --- Génération du template du fichier ---
-            DirectoryInfo? dir = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory);
-            while (dir != null && dir.Name != "BundleTestsAutomation")
-            {
-                dir = dir.Parent;
-            }
-
-            if (dir == null)
+            // --- Détermination du chemin ---
+            string? path = BundleManifestGenerator.GetBundleManifestPath();
+            if (path == null)
             {
                 MessageBox.Show(this, "Impossible de trouver le dossier BundleTestsAutomation.", "Erreur",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            string path = Path.Combine(dir.FullName, "data", "BundleManifest.xml");
+            // --- Génération du template ---
             BundleManifestGenerator.Generate(path);
             var doc = XDocument.Load(path);
 
-            // --- Packages filename and version ---
-            // A utiliser dans la version finie: string baseFolder = Path.Combine(dir.FullName, "data", "Bundle"); ; // le dossier racine où chercher
-            string rootFolder = "\\\\naslyon\\PROJETS_VT\\VIVERIS\\2025 STAGE Automatisation Tests Bundles - Maryne DEY\\Documentation IVECO\\Exemples_Bundle\\BundleExemple_IVECOINTERCITY3_5803336623_v1.17.0_PROD\\IVECOINTERCITY3_5803336623_v1.17.0_PROD";
+            // --- Mise à jour des packages ---
+            // A utiliser dans la version finie: string rootFolder = Path.Combine(dir.FullName, "data", "Bundle"); ; // le dossier racine où chercher
+            string rootFolder = @"\\naslyon\PROJETS_VT\VIVERIS\2025 STAGE Automatisation Tests Bundles - Maryne DEY\Documentation IVECO\Exemples_Bundle\BundleExemple_IVECOINTERCITY3_5803336623_v1.17.0_PROD\IVECOINTERCITY3_5803336623_v1.17.0_PROD";
+            UpdatePackages(doc, rootFolder);
 
-            // Dictionnaire pour les exceptions : key = nom du package, value = nom à chercher dans les dossiers/fichiers
+            doc.Save(path);
+
+            // --- Confirmation ---
+            MessageBox.Show(
+                $"Le Bundle Manifest a été généré avec succès !\n\nChemin du fichier :\n{path}",
+                "Fichier généré",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
+        }
+
+        // --- Mise à jour des packages (filename + version) ---
+        private void UpdatePackages(XDocument doc, string rootFolder)
+        {
             var specialNames = new Dictionary<string, string>
             {
                 {"eHorizonISA", "ehoisa"},
@@ -328,7 +337,6 @@ namespace BundleTestsAutomation
                 string packageName = package.Attribute("name")?.Value ?? "";
                 if (string.IsNullOrWhiteSpace(packageName)) continue;
 
-                // Mise à jour du filename
                 string searchName = specialNames.ContainsKey(packageName) ? specialNames[packageName] : packageName;
 
                 var matchingDir = Directory.GetDirectories(rootFolder)
@@ -339,6 +347,7 @@ namespace BundleTestsAutomation
                         .FirstOrDefault(f => Path.GetFileName(f).IndexOf(searchName, StringComparison.OrdinalIgnoreCase) >= 0)
                     : null;
 
+                // Mise à jour du filename
                 string? matchedName = matchingDir != null
                     ? Path.GetFileName(matchingDir)
                     : matchingFile != null
@@ -366,16 +375,6 @@ namespace BundleTestsAutomation
 
                 package.SetAttributeValue("version", version);
             }
-
-            doc.Save(path);
-
-            // --- Confirmation de la génération du fichier ---
-            MessageBox.Show(
-                $"Le Bundle Manifest a été généré avec succès !\n\nChemin du fichier :\n{path}",
-                "Fichier généré",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information
-            );
         }
         #endregion
     }

@@ -4,6 +4,7 @@ namespace BundleTestsAutomation
 {
     public static class BundleManifestGenerator
     {
+        // --- Génération du template du BundleManifest.xml ---
         public static void Generate(string filePath)
         {
             var bundle = new XElement("bundle",
@@ -346,6 +347,24 @@ namespace BundleTestsAutomation
             // Création du document XML (avec l'encodage par défaut TODO: le supprimer)
             var doc = new XDocument(new XDeclaration("1.0", null, null), bundle);
             doc.Save(filePath);
+        }
+
+
+        // --- Récupération du chemin du BundleManifest.xml ---
+        public static string? GetBundleManifestPath()
+        {
+            DirectoryInfo? dir = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory);
+            while (dir != null && dir.Name != "BundleTestsAutomation")
+            {
+                dir = dir.Parent;
+            }
+
+            if (dir == null)
+            {
+                throw new DirectoryNotFoundException("Impossible de trouver le dossier BundleTestsAutomation.");
+            }
+
+            return Path.Combine(dir.FullName, "data", "BundleManifest.xml");
         }
     }
 }
