@@ -311,24 +311,9 @@ namespace BundleTestsAutomation
             string path = Path.Combine(dir.FullName, "data", "BundleManifest.xml");
             BundleManifestGenerator.Generate(path);
 
-            // --- Chargement du XML et ajout des données (seulement des tests pour le moment) ---
+            // --- Chargement du XML et ajout des données ---
             var doc = XDocument.Load(path);
-
-            var firstService = doc.Root!.Element("services")?.Element("service");
-            var firstParam = firstService?.Element("configuration")?.Element("param");
-
-            if (firstParam != null)
-            {
-                firstParam.SetAttributeValue("key", "dm1");
-                firstParam.SetAttributeValue("value", "123");
-            }
-
-            var firstPackage = doc.Root.Element("packages")?.Element("package");
-            if (firstPackage != null)
-            {
-                firstPackage.SetAttributeValue("runlevel", "1");
-            }
-
+            // TODO: Ajouter les données spécifiques au Bundle Manifest ici
             doc.Save(path);
 
             // --- Confirmation de la génération du fichier ---
