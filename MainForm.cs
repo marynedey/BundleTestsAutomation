@@ -308,6 +308,21 @@ namespace BundleTestsAutomation
             BundleManifestGenerator.Generate(path);
             var doc = XDocument.Load(path);
 
+            // --- Demande des infos à l’utilisateur ---
+            var infos = AskBundleInfo();
+
+            // Mise à jour des attributs du bundle
+            var bundle = doc.Root;
+            if (bundle != null)
+            {
+                bundle.SetAttributeValue("version", infos.version);
+                bundle.SetAttributeValue("sw_id", infos.swId);
+                bundle.SetAttributeValue("sw_part_number", infos.swPartNumber);
+            }
+
+            // --- Mise à jour du runlevel 4 ---
+            UpdateWirelessManagerArg2(doc, infos.swId);
+
             // --- Mise à jour des packages ---
             // A utiliser dans la version finie: string rootFolder = Path.Combine(dir.FullName, "data", "Bundle"); ; // le dossier racine où chercher
             string rootFolder = @"\\naslyon\PROJETS_VT\VIVERIS\2025 STAGE Automatisation Tests Bundles - Maryne DEY\Documentation IVECO\Exemples_Bundle\BundleExemple_IVECOINTERCITY3_5803336623_v1.17.0_PROD\IVECOINTERCITY3_5803336623_v1.17.0_PROD";
@@ -319,6 +334,20 @@ namespace BundleTestsAutomation
             MessageBox.Show(
                 $"Le Bundle Manifest a été généré avec succès !\n\nChemin du fichier :\n{path}",
                 "Fichier généré",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
+
+            // --- WARNING ---
+            MessageBox.Show(
+                $"Veuillez supprimer le type d'encodage en première ligne du xml.\n\nIl suffit de supprimer l'argument encoding et sa valeur associée.",
+                "WARNING",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
+            MessageBox.Show(
+                $"Veuillez entrer l'argument xmlns dans <Signature> : http://www.w3.org/2000/09/xmldsig#",
+                "WARNING",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information
             );
@@ -401,6 +430,45 @@ namespace BundleTestsAutomation
                     }
                 }
             }
+        }
+
+        private (string version, string swId, string swPartNumber) AskBundleInfo()
+        {
+            string version = Microsoft.VisualBasic.Interaction.InputBox(
+                "Veuillez entrer la version du bundle :",
+                "Saisie du Bundle Version",
+                "1.0.0"
+            );
+
+            string swId = Microsoft.VisualBasic.Interaction.InputBox(
+                "Veuillez entrer le sw_id :",
+                "Saisie du sw_id",
+                "IVECOINTERCITY3"
+            );
+
+            string swPartNumber = Microsoft.VisualBasic.Interaction.InputBox(
+                "Veuillez entrer le sw_part_number :",
+                "Saisie du sw_part_number",
+                "0000000000"
+            );
+
+            return (version, swId, swPartNumber);
+        }
+
+        private void UpdateWirelessManagerArg2(XDocument doc, string newValue)
+        {
+            // Trouver le package WirelessManager
+            var wmPackage = doc.Root?
+                .Element("packages")?
+                .Elements("package")
+                .FirstOrDefault(p => p.Attribute("name")?.Value == "WirelessManager");
+            if (wmPackage == null) return;
+
+            // Modifier le 2e argument par le sw_id
+            var args = wmPackage.Element("execution")?.Element("args");
+            var allArgs = args?.Elements("arg").ToList();
+            string oldValue = allArgs?[1].Attribute("value")?.Value ?? "";
+            allArgs?[1].SetAttributeValue("value", newValue);
         }
         #endregion
     }
