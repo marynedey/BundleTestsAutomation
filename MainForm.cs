@@ -310,10 +310,63 @@ namespace BundleTestsAutomation
 
             string path = Path.Combine(dir.FullName, "data", "BundleManifest.xml");
             BundleManifestGenerator.Generate(path);
-
-            // --- Chargement du XML et ajout des données ---
             var doc = XDocument.Load(path);
-            // TODO: Ajouter les données spécifiques au Bundle Manifest ici
+
+            // --- Packages filename and version ---
+            // A utiliser dans la version finie: string baseFolder = Path.Combine(dir.FullName, "data", "Bundle"); ; // le dossier racine où chercher
+            string rootFolder = "\\\\naslyon\\PROJETS_VT\\VIVERIS\\2025 STAGE Automatisation Tests Bundles - Maryne DEY\\Documentation IVECO\\Exemples_Bundle\\BundleExemple_IVECOINTERCITY3_5803336623_v1.17.0_PROD\\IVECOINTERCITY3_5803336623_v1.17.0_PROD";
+
+            // Dictionnaire pour les exceptions : key = nom du package, value = nom à chercher dans les dossiers/fichiers
+            var specialNames = new Dictionary<string, string>
+            {
+                {"eHorizonISA", "ehoisa"},
+                {"BSW", "leap"}
+            };
+
+            foreach (var package in doc.Root?.Element("packages")?.Elements("package") ?? Enumerable.Empty<XElement>())
+            {
+                string packageName = package.Attribute("name")?.Value ?? "";
+                if (string.IsNullOrWhiteSpace(packageName)) continue;
+
+                // Mise à jour du filename
+                string searchName = specialNames.ContainsKey(packageName) ? specialNames[packageName] : packageName;
+
+                var matchingDir = Directory.GetDirectories(rootFolder)
+                    .FirstOrDefault(d => Path.GetFileName(d).IndexOf(searchName, StringComparison.OrdinalIgnoreCase) >= 0);
+
+                var matchingFile = matchingDir == null
+                    ? Directory.GetFiles(rootFolder)
+                        .FirstOrDefault(f => Path.GetFileName(f).IndexOf(searchName, StringComparison.OrdinalIgnoreCase) >= 0)
+                    : null;
+
+                string? matchedName = matchingDir != null
+                    ? Path.GetFileName(matchingDir)
+                    : matchingFile != null
+                        ? Path.GetFileName(matchingFile)
+                        : null;
+
+                if (matchedName == null) continue;
+
+                package.SetAttributeValue("filename", matchedName);
+
+                // Mise à jour du numéro de version : prendre tout ce qui suit le dernier tiret jusqu'à la première lettre
+                string version = "";
+                int lastDash = matchedName.LastIndexOf('-');
+                if (lastDash >= 0 && lastDash < matchedName.Length - 1)
+                {
+                    string afterDash = matchedName.Substring(lastDash + 1);
+                    foreach (char c in afterDash)
+                    {
+                        if (char.IsDigit(c) || c == '.')
+                            version += c;
+                        else
+                            break;
+                    }
+                }
+
+                package.SetAttributeValue("version", version);
+            }
+
             doc.Save(path);
 
             // --- Confirmation de la génération du fichier ---
