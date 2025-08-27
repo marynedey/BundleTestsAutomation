@@ -32,7 +32,7 @@ namespace BundleTestsAutomation
                             new XComment(" Sleep period: 23.55 hours (Mist check for battery safety) "),
                             new XElement("param", new XAttribute("key", "pwm.sleep.max.interval"), new XAttribute("value", "86100")),
                             new XComment(" Max wakeups count allowed in sleep then forced reboot (Mist check for system safety) "),
-                            new XElement("param", new XAttribute("key", "pwm.sleep.consecutive.reboot"), new XAttribute("value", "30")),
+                            new XElement("param", new XAttribute("key", "pwm.sleep.consecutive.reboot.threshold"), new XAttribute("value", "30")),
                             new XComment(" Max RTC interval allowed = max low power period "),
                             new XElement("param", new XAttribute("key", "pwm.dsleep.wakeup.max.interval"), new XAttribute("value", "777600")),
                             new XComment(" Max wakeups count in key off (Mist check for battery safety) "),
