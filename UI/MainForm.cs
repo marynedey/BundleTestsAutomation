@@ -315,8 +315,23 @@ namespace BundleTestsAutomation.UI
                 // Supprime manuellement l'attribut encoding
                 string xmlContent = File.ReadAllText(path);
                 xmlContent = Regex.Replace(xmlContent, @"encoding=[""'][^""']*[""']", "");
+
+                // Supprimer les attributs xmlns vides ou doublons
+                xmlContent = xmlContent.Replace(" xmlns=\"\"", "");
+                xmlContent = Regex.Replace(xmlContent, @"xmlns=""http://www\.w3\.org/2000/09/xmldsig#""", "");
+
+                // Ajouter l'attribut xmlns correctement
+                int index = xmlContent.IndexOf("<Signature");
+                if (index >= 0)
+                {
+                    int endIndex = xmlContent.IndexOf(">", index);
+                    if (endIndex >= 0 && !xmlContent.Substring(index, endIndex - index).Contains("xmlns=\"http://www.w3.org/2000/09/xmldsig#\""))
+                    {
+                        xmlContent = xmlContent.Insert(endIndex, " xmlns=\"http://www.w3.org/2000/09/xmldsig#\"");
+                    }
+                }
+
                 File.WriteAllText(path, xmlContent);
-                //doc.Save(path);
 
                 UpdateProgress(100, "Finalisation...");
 
