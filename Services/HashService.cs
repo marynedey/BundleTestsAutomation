@@ -1,11 +1,11 @@
-﻿using System.Security.Cryptography;
+﻿using System.IO;
+using System.Security.Cryptography;
 using System.Text;
 
-namespace BundleTestsAutomation
+namespace BundleTestsAutomation.Services
 {
-    public static class HashUtils
+    public static class HashService
     {
-        // SHA-256 d'une chaîne
         public static string ComputeSha256Hash(string text)
         {
             using (SHA256 sha256 = SHA256.Create())
@@ -16,7 +16,6 @@ namespace BundleTestsAutomation
             }
         }
 
-        // SHA-256 d'un fichier
         public static string ComputeSha256HashFromFile(string filePath)
         {
             using (SHA256 sha256 = SHA256.Create())

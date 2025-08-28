@@ -1,10 +1,30 @@
-﻿using System.Xml.Linq;
+﻿using BundleTestsAutomation.Models;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using System.Xml.Linq;
 
-namespace BundleTestsAutomation
+namespace BundleTestsAutomation.Services
 {
-    public static class BundleManifestGenerator
+    public static class BundleManifestService
     {
-        // --- Génération du template du BundleManifest.xml ---
+        public static string? GetBundleManifestPath()
+        {
+            DirectoryInfo? dir = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory);
+            while (dir != null && dir.Name != "BundleTestsAutomation")
+            {
+                dir = dir.Parent;
+            }
+            if (dir == null)
+            {
+                throw new DirectoryNotFoundException("Impossible de trouver le dossier BundleTestsAutomation.");
+            }
+            return Path.Combine(dir.FullName, "data", "BundleManifest.xml");
+        }
+
         public static void Generate(string filePath)
         {
             var bundle = new XElement("bundle",
@@ -357,28 +377,124 @@ namespace BundleTestsAutomation
                     )
                 )
             );
-
-            // Création du document XML (avec l'encodage par défaut TODO: le supprimer)
             var doc = new XDocument(new XDeclaration("1.0", null, null), bundle);
             doc.Save(filePath);
         }
 
-
-        // --- Récupération du chemin du BundleManifest.xml ---
-        public static string? GetBundleManifestPath()
+        public static BundleInfo AskBundleInfo()
         {
-            DirectoryInfo? dir = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory);
-            while (dir != null && dir.Name != "BundleTestsAutomation")
-            {
-                dir = dir.Parent;
-            }
+            string version = Microsoft.VisualBasic.Interaction.InputBox(
+                "Veuillez entrer la version du bundle :",
+                "Saisie du Bundle Version",
+                "1.0.0"
+            );
+            string swId = Microsoft.VisualBasic.Interaction.InputBox(
+                "Veuillez entrer le sw_id :",
+                "Saisie du sw_id",
+                "IVECOINTERCITY3"
+            );
+            string swPartNumber = Microsoft.VisualBasic.Interaction.InputBox(
+                "Veuillez entrer le sw_part_number :",
+                "Saisie du sw_part_number",
+                "0000000000"
+            );
+            return new BundleInfo { Version = version, SwId = swId, SwPartNumber = swPartNumber };
+        }
 
-            if (dir == null)
-            {
-                throw new DirectoryNotFoundException("Impossible de trouver le dossier BundleTestsAutomation.");
-            }
+        public static void UpdateWirelessManagerArg2(XDocument doc, string newValue)
+        {
+            var wmPackage = doc.Root?
+                .Element("packages")?
+                .Elements("package")
+                .FirstOrDefault(p => p.Attribute("name")?.Value == "WirelessManager");
+            if (wmPackage == null) return;
+            var args = wmPackage.Element("execution")?.Element("args");
+            var allArgs = args?.Elements("arg").ToList();
+            allArgs?[1].SetAttributeValue("value", newValue);
+        }
 
-            return Path.Combine(dir.FullName, "data", "BundleManifest.xml");
+        public static void UpdateDSEName(XDocument doc, string newValue)
+        {
+            var dsePackage = doc.Root?
+                .Element("packages")?
+                .Elements("package")
+                .FirstOrDefault(p => p.Attribute("name")?.Value == "dse");
+            if (dsePackage == null) return;
+            dsePackage.SetAttributeValue("name", "dsecitybus");
+        }
+
+        public static void UpdatePackages(XDocument doc, string rootFolder)
+        {
+            var specialNames = new Dictionary<string, string>
+            {
+                {"eHorizonISA", "ehoisa"},
+                {"BSW", "leap"}
+            };
+            foreach (var package in doc.Root?.Element("packages")?.Elements("package") ?? Enumerable.Empty<XElement>())
+            {
+                string packageName = package.Attribute("name")?.Value ?? "";
+                if (string.IsNullOrWhiteSpace(packageName)) continue;
+                string searchName = specialNames.ContainsKey(packageName) ? specialNames[packageName] : packageName;
+                var matchingDir = Directory.GetDirectories(rootFolder)
+                    .FirstOrDefault(d => Path.GetFileName(d).IndexOf(searchName, StringComparison.OrdinalIgnoreCase) >= 0);
+                var matchingFile = matchingDir == null
+                    ? Directory.GetFiles(rootFolder)
+                        .FirstOrDefault(f => Path.GetFileName(f).IndexOf(searchName, StringComparison.OrdinalIgnoreCase) >= 0)
+                    : null;
+                string? matchedName = matchingDir != null
+                    ? Path.GetFileName(matchingDir)
+                    : matchingFile != null
+                        ? Path.GetFileName(matchingFile)
+                        : null;
+                if (matchedName == null) continue;
+                package.SetAttributeValue("filename", matchedName);
+                string version = ExtractVersion(matchedName);
+                package.SetAttributeValue("version", version);
+                string fullPath = Path.Combine(rootFolder, matchedName);
+                if (File.Exists(fullPath))
+                {
+                    package.SetAttributeValue("digest", HashService.ComputeSha256HashFromFile(fullPath));
+                }
+                else if (Directory.Exists(fullPath))
+                {
+                    var allFiles = Directory.GetFiles(fullPath, "*.*", SearchOption.AllDirectories);
+                    StringBuilder sb = new StringBuilder();
+                    foreach (var file in allFiles.OrderBy(f => f))
+                    {
+                        sb.Append(File.ReadAllText(file));
+                    }
+                    package.SetAttributeValue("digest", HashService.ComputeSha256Hash(sb.ToString()));
+                }
+            }
+        }
+
+        private static string ExtractVersion(string matchedName)
+        {
+            string nameWithoutExt = Path.GetFileNameWithoutExtension(matchedName);
+            int startIndex = -1;
+            for (int i = 0; i < nameWithoutExt.Length; i++)
+            {
+                if (char.IsDigit(nameWithoutExt[i]))
+                {
+                    startIndex = i;
+                    break;
+                }
+            }
+            if (startIndex == -1) return "";
+            string version = "";
+            for (int i = startIndex; i < nameWithoutExt.Length; i++)
+            {
+                char c = nameWithoutExt[i];
+                if (char.IsDigit(c) || c == '.' || c == '-')
+                {
+                    version += c;
+                }
+                else
+                {
+                    break;
+                }
+            }
+            return version.TrimEnd('.', '-');
         }
     }
 }

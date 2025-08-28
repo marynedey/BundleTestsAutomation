@@ -1,7 +1,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace BundleTestsAutomation
+namespace BundleTestsAutomation.UI
 {
     internal static class Program
     {
