@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -19,6 +18,11 @@ namespace BundleTestsAutomation.UI
         private readonly DataGridView gridLeft;
         private readonly DataGridView gridRight;
         private readonly OpenFileDialog ofd;
+        private readonly ProgressBar progressBar;
+        private readonly Label lblProgress;
+        private readonly FolderBrowserDialog folderBrowserDialog;
+        private readonly ComboBox cmbPcmVersion;
+        private readonly Button btnValidatePcm;
 
         public MainForm()
         {
@@ -27,6 +31,7 @@ namespace BundleTestsAutomation.UI
             Height = 700;
             StartPosition = FormStartPosition.CenterScreen;
 
+            // Initialisation des boutons
             btnLoad = new Button { Text = "Charger un CSV", Dock = DockStyle.Top, Height = 42 };
             btnLoad.Click += BtnLoad_Click;
 
@@ -39,11 +44,12 @@ namespace BundleTestsAutomation.UI
             btnGenerateBundleManifest = new Button { Text = "Générer le Bundle Manifest", Dock = DockStyle.Top, Height = 42 };
             btnGenerateBundleManifest.Click += BtnGenerateBundleManifest_Click;
 
+            // SplitContainer pour les grilles
             var split = new SplitContainer
             {
                 Dock = DockStyle.Fill,
                 Orientation = Orientation.Vertical,
-                SplitterDistance = this.Width / 2
+                SplitterDistance = Width / 2
             };
 
             gridLeft = CreateGrid();
@@ -51,6 +57,7 @@ namespace BundleTestsAutomation.UI
             split.Panel1.Controls.Add(gridLeft);
             split.Panel2.Controls.Add(gridRight);
 
+            // OpenFileDialog pour les CSV
             ofd = new OpenFileDialog
             {
                 Title = "Sélectionnez un fichier CSV",
@@ -59,14 +66,85 @@ namespace BundleTestsAutomation.UI
                 Multiselect = false
             };
 
+            // Synchronisation du scroll
             gridLeft.Scroll += Grid_Scroll;
             gridRight.Scroll += Grid_Scroll;
+
+            // Barre de progression
+            progressBar = new ProgressBar
+            {
+                Dock = DockStyle.Bottom,
+                Height = 20,
+                Minimum = 0,
+                Maximum = 100,
+                Value = 0,
+                Visible = false
+            };
+
+            lblProgress = new Label
+            {
+                Dock = DockStyle.Bottom,
+                TextAlign = ContentAlignment.MiddleCenter,
+                Height = 20,
+                Text = "Prêt",
+                Visible = false
+            };
+
+            // ComboBox pour la version du PCM
+            cmbPcmVersion = new ComboBox
+            {
+                Dock = DockStyle.Bottom,
+                DropDownStyle = ComboBoxStyle.DropDownList,
+                Height = 30,
+                Visible = false
+            };
+            for (int i = 1; i <= 10; i++)
+                cmbPcmVersion.Items.Add(i);
+            cmbPcmVersion.SelectedIndex = 2; // Valeur par défaut : 3
+
+            // Bouton pour valider la version du PCM
+            btnValidatePcm = new Button
+            {
+                Text = "Valider la version du PCM",
+                Dock = DockStyle.Bottom,
+                Height = 30,
+                Visible = false
+            };
+            btnValidatePcm.Click += BtnValidatePcm_Click;
 
             Controls.Add(split);
             Controls.Add(btnLoad);
             Controls.Add(btnLoadCANdata);
             Controls.Add(btnCompare);
             Controls.Add(btnGenerateBundleManifest);
+            Controls.Add(progressBar);
+            Controls.Add(lblProgress);
+            Controls.Add(cmbPcmVersion);
+            Controls.Add(btnValidatePcm);
+
+            // Sélection du répertoire du bundle au lancement
+            folderBrowserDialog = new FolderBrowserDialog
+            {
+                Description = "Sélectionnez le répertoire du bundle à traiter",
+                UseDescriptionForTitle = true,
+                ShowNewFolderButton = false
+            };
+
+            if (folderBrowserDialog.ShowDialog(this) != DialogResult.OK)
+            {
+                MessageBox.Show(this, "Aucun répertoire sélectionné. L'application va se fermer.", "Erreur",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Application.Exit();
+                return;
+            }
+
+            AppSettings.BundleDirectory = folderBrowserDialog.SelectedPath;
+
+            // Affichage de la ComboBox pour la version du PCM
+            lblProgress.Text = "Sélectionnez la version du PCM :";
+            lblProgress.Visible = true;
+            cmbPcmVersion.Visible = true;
+            btnValidatePcm.Visible = true;
         }
 
         private DataGridView CreateGrid()
@@ -92,23 +170,17 @@ namespace BundleTestsAutomation.UI
 
         private void BtnLoadCANdata_Click(object? sender, EventArgs e)
         {
-            DirectoryInfo? dir = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory);
-            while (dir != null && dir.Name != "BundleTestsAutomation")
+            if (!File.Exists(AppSettings.DataFullCsvPath))
             {
-                dir = dir.Parent;
-            }
-            if (dir == null)
-            {
-                MessageBox.Show(this, "Impossible de trouver le dossier BundleTestsAutomation.", "Erreur",
+                MessageBox.Show(this, "Le fichier data_full.csv est introuvable.", "Erreur",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            string fullPath = Path.Combine(dir.FullName, "data", "data_full.csv");
-            var rows = CsvService.ReadCsv(fullPath)
+            var rows = CsvService.ReadCsv(AppSettings.DataFullCsvPath)
                 .Where(r => !string.Join(",", r).Contains("System", StringComparison.OrdinalIgnoreCase))
                 .ToList();
             CsvService.DisplayCsv(rows, gridLeft);
-            Text = $"CSV Management - {Path.GetFileName(fullPath)}";
+            Text = $"CSV Management - {Path.GetFileName(AppSettings.DataFullCsvPath)}";
         }
 
         private void BtnCompare_Click(object? sender, EventArgs e)
@@ -133,51 +205,154 @@ namespace BundleTestsAutomation.UI
             }
         }
 
-        private void BtnGenerateBundleManifest_Click(object? sender, EventArgs e)
+        private void BtnValidatePcm_Click(object? sender, EventArgs e)
         {
-            string? path = BundleManifestService.GetBundleManifestPath();
-            if (path == null)
+            if (cmbPcmVersion.SelectedItem == null)
             {
-                MessageBox.Show(this, "Impossible de trouver le dossier BundleTestsAutomation.", "Erreur",
+                MessageBox.Show(this, "Veuillez sélectionner une version de PCM.", "Erreur",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            BundleManifestService.Generate(path);
-            var doc = XDocument.Load(path);
-            var infos = BundleManifestService.AskBundleInfo();
-            var bundle = doc.Root;
-            if (bundle != null)
+
+            AppSettings.PcmVersion = (int)cmbPcmVersion.SelectedItem;
+            cmbPcmVersion.Visible = false;
+            btnValidatePcm.Visible = false;
+            lblProgress.Visible = false;
+
+            MessageBox.Show(this,
+                $"Version du PCM définie sur {AppSettings.PcmVersion}.\n" +
+                $"Le sw_id sera : {AppSettings.ExtractBundleInfoFromDirectoryWithoutPcm().SwId}{AppSettings.PcmVersion}",
+                "Version du PCM",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
+        }
+
+        private async void BtnGenerateBundleManifest_Click(object? sender, EventArgs e)
+        {
+            try
             {
-                bundle.SetAttributeValue("version", infos.Version);
-                bundle.SetAttributeValue("sw_id", infos.SwId);
-                bundle.SetAttributeValue("sw_part_number", infos.SwPartNumber);
+                ShowProgressBar(100);
+
+                if (string.IsNullOrEmpty(AppSettings.BundleDirectory))
+                {
+                    MessageBox.Show(this, "Aucun répertoire de bundle sélectionné.", "Erreur",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    HideProgressBar();
+                    return;
+                }
+
+                string path = AppSettings.BundleManifestPath;
+
+                // Étape 1 : Génération du template (5%)
+                UpdateProgress(5, "Génération du template XML...");
+                BundleManifestService.Generate(path);
+
+                // Étape 2 : Chargement du document XML (10%)
+                UpdateProgress(10, "Chargement du document XML...");
+                var doc = XDocument.Load(path);
+
+                // Étape 3 : Extraction des infos (15%)
+                UpdateProgress(15, "Extraction des informations du Bundle...");
+                var infos = AppSettings.ExtractBundleInfoFromDirectory();
+
+                // Étape 4 : Mise à jour des attributs du bundle (20%)
+                UpdateProgress(20, "Mise à jour des attributs du Bundle...");
+                var bundle = doc.Root;
+                if (bundle != null)
+                {
+                    bundle.SetAttributeValue("version", infos.Version);
+                    bundle.SetAttributeValue("sw_id", infos.SwId);
+                    bundle.SetAttributeValue("sw_part_number", infos.SwPartNumber);
+                }
+
+                // Étape 5 : Mise à jour des packages (20% à 90%)
+                UpdateProgress(20, "Préparation de la mise à jour des packages...");
+                string rootFolder = AppSettings.BundleDirectory ?? string.Empty;
+
+                await Task.Run(() =>
+                {
+                    BundleManifestService.UpdateWirelessManagerArg2(doc, infos.SwId);
+                    if (infos.SwId.StartsWith("IVECOCITYBUS", StringComparison.OrdinalIgnoreCase))
+                    {
+                        BundleManifestService.UpdateDSEName(doc, infos.SwId);
+                    }
+                    BundleManifestService.UpdatePackages(doc, rootFolder, UpdatePackageProgress);
+                });
+
+                // Étape 6 : Sauvegarde (95% à 100%)
+                UpdateProgress(95, "Sauvegarde du BundleManifest...");
+                doc.Save(path);
+                UpdateProgress(100, "Finalisation...");
+
+                HideProgressBar();
+
+                // Messages de confirmation
+                MessageBox.Show(
+                    $"Le Bundle Manifest a été généré avec succès !\n\n" +
+                    $"Version: {infos.Version}\n" +
+                    $"sw_id: {infos.SwId}\n" +
+                    $"sw_part_number: {infos.SwPartNumber}\n\n" +
+                    $"Chemin du fichier :\n{path}",
+                    "Fichier généré",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+
+                MessageBox.Show(
+                    $"Veuillez supprimer le type d'encodage en première ligne du XML.\n\n" +
+                    $"Il suffit de supprimer l'argument encoding et sa valeur associée.",
+                    "WARNING",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+
+                MessageBox.Show(
+                    $"Veuillez entrer l'argument xmlns dans <Signature> : http://www.w3.org/2000/09/xmldsig#",
+                    "WARNING",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
             }
-            BundleManifestService.UpdateWirelessManagerArg2(doc, infos.SwId);
-            if (infos.SwId.StartsWith("IVECOCITYBUS", StringComparison.OrdinalIgnoreCase))
+            catch (Exception ex)
             {
-                BundleManifestService.UpdateDSEName(doc, infos.SwId);
+                HideProgressBar();
+                MessageBox.Show(this, $"Une erreur est survenue : {ex.Message}", "Erreur",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            string rootFolder = @"\\naslyon\PROJETS_VT\VIVERIS\2025 STAGE Automatisation Tests Bundles - Maryne DEY\Documentation IVECO\Official_bundles\IVECOCITYBUS_5803336620_v1.17.1_PROD";
-            BundleManifestService.UpdatePackages(doc, rootFolder);
-            doc.Save(path);
-            MessageBox.Show(
-                $"Le Bundle Manifest a été généré avec succès !\n\nChemin du fichier :\n{path}",
-                "Fichier généré",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information
-            );
-            MessageBox.Show(
-                $"Veuillez supprimer le type d'encodage en première ligne du xml.\n\nIl suffit de supprimer l'argument encoding et sa valeur associée.",
-                "WARNING",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information
-            );
-            MessageBox.Show(
-                $"Veuillez entrer l'argument xmlns dans <Signature> : http://www.w3.org/2000/09/xmldsig#",
-                "WARNING",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information
-            );
+        }
+
+        private void ShowProgressBar(int maxValue)
+        {
+            progressBar.Value = 0;
+            progressBar.Maximum = maxValue;
+            progressBar.Visible = true;
+            lblProgress.Visible = true;
+            lblProgress.Text = "Début de la génération...";
+            Application.DoEvents();
+        }
+
+        private void UpdateProgress(int value, string message)
+        {
+            if (value > progressBar.Maximum) value = progressBar.Maximum;
+            progressBar.Value = value;
+            lblProgress.Text = $"{message} ({value}%)";
+            Application.DoEvents();
+        }
+
+        private void HideProgressBar()
+        {
+            progressBar.Value = 0;
+            progressBar.Visible = false;
+            lblProgress.Visible = false;
+            lblProgress.Text = "Prêt";
+        }
+
+        private void UpdatePackageProgress(int current, int total, string message)
+        {
+            int minValue = 20;
+            int maxValue = 90;
+            int stepValue = minValue + (current * (maxValue - minValue) / total);
+            this.Invoke((MethodInvoker)delegate
+            {
+                UpdateProgress(stepValue, $"{message} ({current}/{total})");
+            });
         }
     }
 }
