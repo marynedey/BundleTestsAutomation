@@ -1,11 +1,14 @@
-﻿using System;
+﻿using BundleTestsAutomation.Models;
+using BundleTestsAutomation.Services;
+using System;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using System.Xml;
 using System.Xml.Linq;
-using BundleTestsAutomation.Models;
-using BundleTestsAutomation.Services;
 
 namespace BundleTestsAutomation.UI
 {
@@ -122,6 +125,12 @@ namespace BundleTestsAutomation.UI
             Controls.Add(cmbPcmVersion);
             Controls.Add(btnValidatePcm);
 
+            // Affichage de la ComboBox pour la version du PCM
+            lblProgress.Text = "Sélectionnez la version du PCM :";
+            lblProgress.Visible = true;
+            cmbPcmVersion.Visible = true;
+            btnValidatePcm.Visible = true;
+
             // Sélection du répertoire du bundle au lancement
             folderBrowserDialog = new FolderBrowserDialog
             {
@@ -130,17 +139,37 @@ namespace BundleTestsAutomation.UI
                 ShowNewFolderButton = false
             };
 
-            if (folderBrowserDialog.ShowDialog(this) != DialogResult.OK)
-            {
-                MessageBox.Show(this, "Aucun répertoire sélectionné. L'application va se fermer.", "Erreur",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Application.Exit();
-                return;
-            }
+            this.Shown += MainForm_Shown;
 
             AppSettings.BundleDirectory = folderBrowserDialog.SelectedPath;
+        }
 
-            // Affichage de la ComboBox pour la version du PCM
+        private void MainForm_Shown(object? sender, EventArgs e)
+        {
+            while (true)
+            {
+                if (folderBrowserDialog.ShowDialog(this) == DialogResult.OK &&
+                    !string.IsNullOrWhiteSpace(folderBrowserDialog.SelectedPath))
+                {
+                    AppSettings.BundleDirectory = folderBrowserDialog.SelectedPath;
+                    break;
+                }
+
+                var result = MessageBox.Show(
+                    this,
+                    "Vous devez sélectionner un répertoire pour continuer.\n\nVoulez-vous réessayer ?",
+                    "Répertoire requis",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
+
+                if (result == DialogResult.No)
+                {
+                    this.Close();
+                    return;
+                }
+            }
+
+            // Version PCM
             lblProgress.Text = "Sélectionnez la version du PCM :";
             lblProgress.Visible = true;
             cmbPcmVersion.Visible = true;
@@ -282,6 +311,13 @@ namespace BundleTestsAutomation.UI
                 // Étape 6 : Sauvegarde (95% à 100%)
                 UpdateProgress(95, "Sauvegarde du BundleManifest...");
                 doc.Save(path);
+
+                // Supprime manuellement l'attribut encoding
+                string xmlContent = File.ReadAllText(path);
+                xmlContent = Regex.Replace(xmlContent, @"encoding=[""'][^""']*[""']", "");
+                File.WriteAllText(path, xmlContent);
+                //doc.Save(path);
+
                 UpdateProgress(100, "Finalisation...");
 
                 HideProgressBar();

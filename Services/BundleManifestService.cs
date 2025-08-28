@@ -363,7 +363,7 @@ namespace BundleTestsAutomation.Services
                     )
                 )
             );
-            var doc = new XDocument(new XDeclaration("1.0", null, null), bundle);
+            var doc = new XDocument(bundle);
             doc.Save(filePath);
         }
 
