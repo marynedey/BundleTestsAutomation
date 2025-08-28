@@ -79,8 +79,8 @@ namespace BundleTestsAutomation
 
                 // --- Runlevels ---
                 new XElement("runlevels",
-                    new XAttribute("levels", "13"),
-                    new XAttribute("target", "12"),
+                    new XAttribute("levels", "14"),
+                    new XAttribute("target", "13"),
                     new XComment(" MIST / LEAP / LSW "),
                     new XElement("level", new XAttribute("name", "Level0"), new XAttribute("id", "0")),
                     new XComment(" RAS "),
@@ -106,7 +106,9 @@ namespace BundleTestsAutomation
                     new XComment(" CAID "),
                     new XElement("level", new XAttribute("name", "Level11"), new XAttribute("id", "11"), new XAttribute("start.delay", "30")),
                     new XComment(" RxWin "),
-                    new XElement("level", new XAttribute("name", "Level12"), new XAttribute("id", "12"), new XAttribute("start.delay", "10"))
+                    new XElement("level", new XAttribute("name", "Level12"), new XAttribute("id", "12"), new XAttribute("start.delay", "10")),
+                    new XComment(" GPStoCAN "),
+                    new XElement("level", new XAttribute("name", "Level13"), new XAttribute("id", "13"), new XAttribute("start.delay", "4"))
                 ),
 
                 // --- Packages ---
@@ -316,6 +318,18 @@ namespace BundleTestsAutomation
                         new XAttribute("type", "PKG"),
                         new XAttribute("version", ""),
                         new XAttribute("runlevel", "12"),
+                        new XElement("permissions", new XAttribute("type", "deny"))
+                    ),
+                    new XComment(" Runlevel 13 "),
+                    // Runlevel 12
+                    new XElement("package",
+                        new XAttribute("digest", ""),
+                        new XAttribute("filename", ""),
+                        new XAttribute("name", "gpstocan"),
+                        new XAttribute("autostart", "true"),
+                        new XAttribute("type", "PKG"),
+                        new XAttribute("version", ""),
+                        new XAttribute("runlevel", "13"),
                         new XElement("permissions", new XAttribute("type", "deny"))
                     )
                 ),
