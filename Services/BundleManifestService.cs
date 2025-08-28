@@ -11,20 +11,6 @@ namespace BundleTestsAutomation.Services
 {
     public static class BundleManifestService
     {
-        public static string? GetBundleManifestPath()
-        {
-            DirectoryInfo? dir = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory);
-            while (dir != null && dir.Name != "BundleTestsAutomation")
-            {
-                dir = dir.Parent;
-            }
-            if (dir == null)
-            {
-                throw new DirectoryNotFoundException("Impossible de trouver le dossier BundleTestsAutomation.");
-            }
-            return Path.Combine(dir.FullName, "data", "BundleManifest.xml");
-        }
-
         public static void Generate(string filePath)
         {
             var bundle = new XElement("bundle",
@@ -341,7 +327,7 @@ namespace BundleTestsAutomation.Services
                         new XElement("permissions", new XAttribute("type", "deny"))
                     ),
                     new XComment(" Runlevel 13 "),
-                    // Runlevel 12
+                    // Runlevel 13
                     new XElement("package",
                         new XAttribute("digest", ""),
                         new XAttribute("filename", ""),
@@ -381,26 +367,6 @@ namespace BundleTestsAutomation.Services
             doc.Save(filePath);
         }
 
-        public static BundleInfo AskBundleInfo()
-        {
-            string version = Microsoft.VisualBasic.Interaction.InputBox(
-                "Veuillez entrer la version du bundle :",
-                "Saisie du Bundle Version",
-                "1.0.0"
-            );
-            string swId = Microsoft.VisualBasic.Interaction.InputBox(
-                "Veuillez entrer le sw_id :",
-                "Saisie du sw_id",
-                "IVECOINTERCITY3"
-            );
-            string swPartNumber = Microsoft.VisualBasic.Interaction.InputBox(
-                "Veuillez entrer le sw_part_number :",
-                "Saisie du sw_part_number",
-                "0000000000"
-            );
-            return new BundleInfo { Version = version, SwId = swId, SwPartNumber = swPartNumber };
-        }
-
         public static void UpdateWirelessManagerArg2(XDocument doc, string newValue)
         {
             var wmPackage = doc.Root?
@@ -423,40 +389,79 @@ namespace BundleTestsAutomation.Services
             dsePackage.SetAttributeValue("name", "dsecitybus");
         }
 
-        public static void UpdatePackages(XDocument doc, string rootFolder)
+        public static void UpdatePackages(XDocument doc, string rootFolder, Action<int, int, string>? progressCallback = null)
         {
+            // Dictionnaire des noms spéciaux (pour la correspondance nom de package <> nom de fichier/dossier)
             var specialNames = new Dictionary<string, string>
             {
-                {"eHorizonISA", "ehoisa"},
-                {"BSW", "leap"}
+                { "eHorizonISA", "ehoisa" },
+                { "BSW", "leap" }
             };
-            foreach (var package in doc.Root?.Element("packages")?.Elements("package") ?? Enumerable.Empty<XElement>())
+
+            // Récupérer la liste des packages dans le XML
+            var packages = doc.Root?.Element("packages")?.Elements("package").ToList();
+            if (packages == null || packages.Count == 0)
             {
+                progressCallback?.Invoke(0, 0, "Aucun package trouvé dans le BundleManifest.");
+                return;
+            }
+
+            int totalPackages = packages.Count;
+            int currentPackage = 0;
+
+            foreach (var package in packages)
+            {
+                currentPackage++;
                 string packageName = package.Attribute("name")?.Value ?? "";
-                if (string.IsNullOrWhiteSpace(packageName)) continue;
-                string searchName = specialNames.ContainsKey(packageName) ? specialNames[packageName] : packageName;
+                if (string.IsNullOrWhiteSpace(packageName))
+                {
+                    progressCallback?.Invoke(currentPackage, totalPackages, $"Package sans nom ignoré.");
+                    continue;
+                }
+
+                progressCallback?.Invoke(currentPackage, totalPackages, $"Traitement du package {packageName}...");
+
+                // Nom à rechercher (utilise le nom spécial si disponible, sinon le nom du package)
+                string searchName = specialNames.ContainsKey(packageName) ? specialNames[packageName] : packageName.ToLower();
+
+                // Cherche un dossier correspondant
                 var matchingDir = Directory.GetDirectories(rootFolder)
                     .FirstOrDefault(d => Path.GetFileName(d).IndexOf(searchName, StringComparison.OrdinalIgnoreCase) >= 0);
+
+                // Si aucun dossier trouvé, cherche un fichier
                 var matchingFile = matchingDir == null
                     ? Directory.GetFiles(rootFolder)
                         .FirstOrDefault(f => Path.GetFileName(f).IndexOf(searchName, StringComparison.OrdinalIgnoreCase) >= 0)
                     : null;
+
+                // Nom du fichier/dossier trouvé
                 string? matchedName = matchingDir != null
                     ? Path.GetFileName(matchingDir)
                     : matchingFile != null
                         ? Path.GetFileName(matchingFile)
                         : null;
-                if (matchedName == null) continue;
+
+                if (matchedName == null)
+                {
+                    progressCallback?.Invoke(currentPackage, totalPackages, $"Aucun fichier/dossier trouvé pour {packageName}.");
+                    continue;
+                }
+
                 package.SetAttributeValue("filename", matchedName);
+
                 string version = ExtractVersion(matchedName);
                 package.SetAttributeValue("version", version);
+
                 string fullPath = Path.Combine(rootFolder, matchedName);
+
+                // Calcule du digest (SHA-256)
                 if (File.Exists(fullPath))
                 {
                     package.SetAttributeValue("digest", HashService.ComputeSha256HashFromFile(fullPath));
                 }
                 else if (Directory.Exists(fullPath))
                 {
+                    // Pour un dossier : concaténer le contenu des fichiers pour calculer le hash
                     var allFiles = Directory.GetFiles(fullPath, "*.*", SearchOption.AllDirectories);
                     StringBuilder sb = new StringBuilder();
                     foreach (var file in allFiles.OrderBy(f => f))
@@ -464,6 +469,10 @@ namespace BundleTestsAutomation.Services
                         sb.Append(File.ReadAllText(file));
                     }
                     package.SetAttributeValue("digest", HashService.ComputeSha256Hash(sb.ToString()));
+                }
+                else
+                {
+                    progressCallback?.Invoke(currentPackage, totalPackages, $"Chemin introuvable : {fullPath}");
                 }
             }
         }
