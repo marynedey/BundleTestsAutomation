@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Windows.Forms;
 using System.Xml.Linq;
@@ -323,9 +324,15 @@ namespace BundleTestsAutomation
             // --- Mise à jour du runlevel 4 ---
             UpdateWirelessManagerArg2(doc, infos.swId);
 
+            // --- Mise à jour de l'argument name du DSE pour les IVECOCITYBUS ---
+            if (infos.swId.StartsWith("IVECOCITYBUS", StringComparison.OrdinalIgnoreCase))
+            {
+                UpdateDSEName(doc, infos.swId);
+            }
+                
             // --- Mise à jour des packages ---
             // A utiliser dans la version finie: string rootFolder = Path.Combine(dir.FullName, "data", "Bundle"); ; // le dossier racine où chercher
-            string rootFolder = @"\\naslyon\PROJETS_VT\VIVERIS\2025 STAGE Automatisation Tests Bundles - Maryne DEY\Documentation IVECO\Exemples_Bundle\BundleExemple_IVECOINTERCITY3_5803336623_v1.17.0_PROD\IVECOINTERCITY3_5803336623_v1.17.0_PROD";
+            string rootFolder = @"\\naslyon\PROJETS_VT\VIVERIS\2025 STAGE Automatisation Tests Bundles - Maryne DEY\Documentation IVECO\Official_bundles\IVECOCITYBUS_5803336620_v1.17.1_PROD";
             UpdatePackages(doc, rootFolder);
 
             doc.Save(path);
@@ -388,21 +395,8 @@ namespace BundleTestsAutomation
 
                 package.SetAttributeValue("filename", matchedName);
 
-                // Mise à jour du numéro de version : prendre tout ce qui suit le dernier tiret jusqu'à la première lettre
-                string version = "";
-                int lastDash = matchedName.LastIndexOf('-');
-                if (lastDash >= 0 && lastDash < matchedName.Length - 1)
-                {
-                    string afterDash = matchedName.Substring(lastDash + 1);
-                    foreach (char c in afterDash)
-                    {
-                        if (char.IsDigit(c) || c == '.')
-                            version += c;
-                        else
-                            break;
-                    }
-                }
-
+                // Mise à jour du numéro de version
+                string version = ExtractVersion(matchedName);
                 package.SetAttributeValue("version", version);
 
                 // Mise à jour du digest
@@ -430,6 +424,45 @@ namespace BundleTestsAutomation
                     }
                 }
             }
+        }
+
+        private static string ExtractVersion(string matchedName)
+        {
+            // On récupère seulement le nom de fichier/dossier sans extension
+            string nameWithoutExt = Path.GetFileNameWithoutExtension(matchedName);
+
+            // Chercher la première séquence qui commence par un chiffre
+            int startIndex = -1;
+            for (int i = 0; i < nameWithoutExt.Length; i++)
+            {
+                if (char.IsDigit(nameWithoutExt[i]))
+                {
+                    startIndex = i;
+                    break;
+                }
+            }
+
+            if (startIndex == -1) return "";
+
+            // Construire la version : chiffres, points, tirets autorisés
+            string version = "";
+            for (int i = startIndex; i < nameWithoutExt.Length; i++)
+            {
+                char c = nameWithoutExt[i];
+                if (char.IsDigit(c) || c == '.' || c == '-')
+                {
+                    version += c;
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+            // Supprimer un éventuel '.' ou '-' final parasite
+            version = version.TrimEnd('.', '-');
+
+            return version;
         }
 
         private (string version, string swId, string swPartNumber) AskBundleInfo()
@@ -469,6 +502,20 @@ namespace BundleTestsAutomation
             var allArgs = args?.Elements("arg").ToList();
             string oldValue = allArgs?[1].Attribute("value")?.Value ?? "";
             allArgs?[1].SetAttributeValue("value", newValue);
+        }
+
+        private void UpdateDSEName(XDocument doc, string newValue)
+        {
+            // Trouver le package avec name="dse"
+            var dsePackage = doc.Root?
+                .Element("packages")?
+                .Elements("package")
+                .FirstOrDefault(p => p.Attribute("name")?.Value == "dse");
+
+            if (dsePackage == null) return;
+
+            // Changer le name du package en dsecitybus
+            dsePackage.SetAttributeValue("name", "dsecitybus");
         }
         #endregion
     }
