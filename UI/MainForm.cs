@@ -29,30 +29,105 @@ namespace BundleTestsAutomation.UI
 
         public MainForm()
         {
-            Text = "CSV Management";
-            Width = 1200;
-            Height = 700;
+            Text = "Automatisation des tests de bundle";
+            Width = 1400;
+            Height = 800;
             StartPosition = FormStartPosition.CenterScreen;
 
-            // Initialisation des boutons
-            btnLoad = new Button { Text = "Charger un CSV", Dock = DockStyle.Top, Height = 42 };
+            // --- Boutons CSV ---
+            btnLoad = new Button { Text = "Charger un CSV", Height = 40, Dock = DockStyle.Top };
             btnLoad.Click += BtnLoad_Click;
 
-            btnLoadCANdata = new Button { Text = "Charger data CANalyzer", Dock = DockStyle.Top, Height = 42 };
+            btnLoadCANdata = new Button { Text = "Charger data CANalyzer", Height = 40, Dock = DockStyle.Top };
             btnLoadCANdata.Click += BtnLoadCANdata_Click;
 
-            btnCompare = new Button { Text = "Comparer 2 CSV", Dock = DockStyle.Top, Height = 42 };
+            btnCompare = new Button { Text = "Comparer 2 CSV", Height = 40, Dock = DockStyle.Top };
             btnCompare.Click += BtnCompare_Click;
 
-            btnGenerateBundleManifest = new Button { Text = "Générer le Bundle Manifest", Dock = DockStyle.Top, Height = 42 };
+            var groupCsv = new GroupBox
+            {
+                Text = "Gestion CSV",
+                Dock = DockStyle.Top,
+                Height = 160,
+                Padding = new Padding(10)
+            };
+            groupCsv.Controls.Add(btnCompare);
+            groupCsv.Controls.Add(btnLoadCANdata);
+            groupCsv.Controls.Add(btnLoad);
+
+            // --- Boutons Manifest + PCM + Progression ---
+            btnGenerateBundleManifest = new Button { Text = "Générer le Bundle Manifest", Height = 40, Dock = DockStyle.Top };
             btnGenerateBundleManifest.Click += BtnGenerateBundleManifest_Click;
 
-            // SplitContainer pour les grilles
+            cmbPcmVersion = new ComboBox
+            {
+                Dock = DockStyle.Top,
+                DropDownStyle = ComboBoxStyle.DropDownList,
+                Height = 30,
+                Visible = true
+            };
+            for (int i = 1; i <= 10; i++)
+                cmbPcmVersion.Items.Add(i);
+            cmbPcmVersion.SelectedIndex = 2;
+
+            btnValidatePcm = new Button
+            {
+                Text = "Valider la version du PCM",
+                Dock = DockStyle.Top,
+                Height = 30,
+                Visible = true
+            };
+            btnValidatePcm.Click += BtnValidatePcm_Click;
+
+            lblProgress = new Label
+            {
+                Dock = DockStyle.Top,
+                TextAlign = ContentAlignment.MiddleCenter,
+                Height = 50,
+                Text = "Prêt",
+                Visible = false,
+                AutoSize = false
+            };
+
+            progressBar = new ProgressBar
+            {
+                Dock = DockStyle.Top,
+                Height = 20,
+                Minimum = 0,
+                Maximum = 100,
+                Value = 0,
+                Visible = false
+            };
+
+            var groupManifest = new GroupBox
+            {
+                Text = "Bundle Manifest",
+                Dock = DockStyle.Top,
+                Height = 220,
+                Padding = new Padding(10)
+            };
+            groupManifest.Controls.Add(progressBar);
+            groupManifest.Controls.Add(lblProgress);
+            groupManifest.Controls.Add(btnValidatePcm);
+            groupManifest.Controls.Add(cmbPcmVersion);
+            groupManifest.Controls.Add(btnGenerateBundleManifest);
+
+            // --- Panneau gauche ---
+            var panelLeft = new Panel
+            {
+                Dock = DockStyle.Left,
+                Width = 280,
+                Padding = new Padding(10)
+            };
+            panelLeft.Controls.Add(groupManifest);
+            panelLeft.Controls.Add(groupCsv);
+
+            // --- SplitContainer pour les grilles ---
             var split = new SplitContainer
             {
                 Dock = DockStyle.Fill,
                 Orientation = Orientation.Vertical,
-                SplitterDistance = Width / 2
+                SplitterDistance = (Width - panelLeft.Width) / 2
             };
 
             gridLeft = CreateGrid();
@@ -60,7 +135,7 @@ namespace BundleTestsAutomation.UI
             split.Panel1.Controls.Add(gridLeft);
             split.Panel2.Controls.Add(gridRight);
 
-            // OpenFileDialog pour les CSV
+            // --- OpenFileDialog ---
             ofd = new OpenFileDialog
             {
                 Title = "Sélectionnez un fichier CSV",
@@ -69,69 +144,15 @@ namespace BundleTestsAutomation.UI
                 Multiselect = false
             };
 
-            // Synchronisation du scroll
+            // Scroll synchronisé
             gridLeft.Scroll += Grid_Scroll;
             gridRight.Scroll += Grid_Scroll;
 
-            // Barre de progression
-            progressBar = new ProgressBar
-            {
-                Dock = DockStyle.Bottom,
-                Height = 20,
-                Minimum = 0,
-                Maximum = 100,
-                Value = 0,
-                Visible = false
-            };
-
-            lblProgress = new Label
-            {
-                Dock = DockStyle.Bottom,
-                TextAlign = ContentAlignment.MiddleCenter,
-                Height = 20,
-                Text = "Prêt",
-                Visible = false
-            };
-
-            // ComboBox pour la version du PCM
-            cmbPcmVersion = new ComboBox
-            {
-                Dock = DockStyle.Bottom,
-                DropDownStyle = ComboBoxStyle.DropDownList,
-                Height = 30,
-                Visible = false
-            };
-            for (int i = 1; i <= 10; i++)
-                cmbPcmVersion.Items.Add(i);
-            cmbPcmVersion.SelectedIndex = 2; // Valeur par défaut : 3
-
-            // Bouton pour valider la version du PCM
-            btnValidatePcm = new Button
-            {
-                Text = "Valider la version du PCM",
-                Dock = DockStyle.Bottom,
-                Height = 30,
-                Visible = false
-            };
-            btnValidatePcm.Click += BtnValidatePcm_Click;
-
+            // Ajout des contrôles
             Controls.Add(split);
-            Controls.Add(btnLoad);
-            Controls.Add(btnLoadCANdata);
-            Controls.Add(btnCompare);
-            Controls.Add(btnGenerateBundleManifest);
-            Controls.Add(progressBar);
-            Controls.Add(lblProgress);
-            Controls.Add(cmbPcmVersion);
-            Controls.Add(btnValidatePcm);
+            Controls.Add(panelLeft);
 
-            // Affichage de la ComboBox pour la version du PCM
-            lblProgress.Text = "Sélectionnez la version du PCM :";
-            lblProgress.Visible = true;
-            cmbPcmVersion.Visible = true;
-            btnValidatePcm.Visible = true;
-
-            // Sélection du répertoire du bundle au lancement
+            // Sélection du répertoire au lancement
             folderBrowserDialog = new FolderBrowserDialog
             {
                 Description = "Sélectionnez le répertoire du bundle à traiter",
@@ -168,12 +189,6 @@ namespace BundleTestsAutomation.UI
                     return;
                 }
             }
-
-            // Version PCM
-            lblProgress.Text = "Sélectionnez la version du PCM :";
-            lblProgress.Visible = true;
-            cmbPcmVersion.Visible = true;
-            btnValidatePcm.Visible = true;
         }
 
         private DataGridView CreateGrid()
