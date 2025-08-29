@@ -207,6 +207,13 @@ namespace BundleTestsAutomation.UI
         private void BtnLoad_Click(object? sender, EventArgs e)
         {
             if (ofd.ShowDialog(this) != DialogResult.OK) return;
+
+            // Supprime les données et colonnes précédentes
+            gridLeft.Rows.Clear();
+            gridLeft.Columns.Clear();
+            gridRight.Rows.Clear();
+            gridRight.Columns.Clear();
+
             var rows = CsvService.ReadCsv(ofd.FileName);
             CsvService.DisplayCsv(rows, gridLeft);
             Text = $"CSV Management - {Path.GetFileName(ofd.FileName)}";
@@ -220,6 +227,13 @@ namespace BundleTestsAutomation.UI
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+            // Supprime les données et colonnes précédentes
+            gridLeft.Rows.Clear();
+            gridLeft.Columns.Clear();
+            gridRight.Rows.Clear();
+            gridRight.Columns.Clear();
+
             var rows = CsvService.ReadCsv(AppSettings.DataFullCsvPath)
                 .Where(r => !string.Join(",", r).Contains("System", StringComparison.OrdinalIgnoreCase))
                 .ToList();
@@ -275,15 +289,39 @@ namespace BundleTestsAutomation.UI
         {
             try
             {
-                ShowProgressBar(100);
-
-                if (string.IsNullOrEmpty(AppSettings.BundleDirectory))
+                while (!AppSettings.IsValidBundleDirectory(AppSettings.BundleDirectory))
                 {
-                    MessageBox.Show(this, "Aucun répertoire de bundle sélectionné.", "Erreur",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    HideProgressBar();
-                    return;
+                    var result = MessageBox.Show(
+                        "Le dossier sélectionné n'a pas le format attendu.\nVoulez-vous choisir un nouveau dossier ?",
+                        "Dossier invalide",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Warning);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        using var fbd = new FolderBrowserDialog
+                        {
+                            Description = "Sélectionnez le répertoire du bundle à traiter",
+                            UseDescriptionForTitle = true,
+                            ShowNewFolderButton = false
+                        };
+
+                        if (fbd.ShowDialog() == DialogResult.OK)
+                        {
+                            AppSettings.BundleDirectory = fbd.SelectedPath;
+                        }
+                        else
+                        {
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        return;
+                    }
                 }
+
+                ShowProgressBar(100);
 
                 string path = AppSettings.BundleManifestPath;
 
@@ -327,12 +365,9 @@ namespace BundleTestsAutomation.UI
                 UpdateProgress(95, "Sauvegarde du BundleManifest...");
                 doc.Save(path);
 
-                // --- Corrections manuelles du XML (pas top mais j'ai pas trouvé mieux pour le moment) ---
-                // Supprime manuellement l'attribut encoding
+                // --- Corrections manuelles du XML ---
                 string xmlContent = File.ReadAllText(path);
-                xmlContent = Regex.Replace(xmlContent, @"encoding=[""'][^""']*[""']", "");
-
-                // Supprime les attributs xmlns vides et l'ajoute correctement
+                xmlContent = System.Text.RegularExpressions.Regex.Replace(xmlContent, @"encoding=[""'][^""']*[""']", "");
                 xmlContent = xmlContent.Replace(" xmlns=\"\"", "");
                 int index = xmlContent.IndexOf("<Signature");
                 if (index >= 0)
@@ -346,7 +381,6 @@ namespace BundleTestsAutomation.UI
                 File.WriteAllText(path, xmlContent);
 
                 UpdateProgress(100, "Finalisation...");
-
                 HideProgressBar();
 
                 // Message de confirmation
