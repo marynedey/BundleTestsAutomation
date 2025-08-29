@@ -493,12 +493,6 @@ namespace BundleTestsAutomation.Services
                     }
                 }
             }
-            catch (OperationCanceledException)
-            {
-                // Ne pas propager l'exception, juste sortir proprement
-                progressCallback?.Invoke(0, 0, "Génération annulée par l'utilisateur.");
-                return;
-            }
             catch (Exception ex)
             {
                 progressCallback?.Invoke(0, 0, $"Erreur lors de la mise à jour des packages : {ex.Message}");

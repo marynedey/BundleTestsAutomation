@@ -361,6 +361,8 @@ namespace BundleTestsAutomation.UI
 
         private async void BtnGenerateBundleManifest_Click(object? sender, EventArgs e)
         {
+            bool isCancelled = false;
+
             try
             {
                 cancellationTokenSource = new CancellationTokenSource();
@@ -444,6 +446,7 @@ namespace BundleTestsAutomation.UI
                 }
                 catch (OperationCanceledException)
                 {
+                    isCancelled = true;
                     HideProgressBar();
                     MessageBox.Show("La génération a été annulée.", "Annulation", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     btnCancelGenerate.Visible = false;
@@ -473,7 +476,9 @@ namespace BundleTestsAutomation.UI
                 HideProgressBar();
 
                 // Message de confirmation
-                MessageBox.Show(
+                if (!isCancelled)
+                {
+                    MessageBox.Show(
                     $"Le Bundle Manifest a été généré avec succès !\n\n" +
                     $"Version: {infos.Version}\n" +
                     $"sw_id: {infos.SwId}\n" +
@@ -482,6 +487,7 @@ namespace BundleTestsAutomation.UI
                     "Fichier généré",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
+                }
             }
             catch (Exception ex)
             {
