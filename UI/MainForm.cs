@@ -26,13 +26,15 @@ namespace BundleTestsAutomation.UI
         private readonly FolderBrowserDialog folderBrowserDialog;
         private readonly ComboBox cmbPcmVersion;
         private readonly Button btnValidatePcm;
+        private readonly Label lblCsvDiffCount;
+        private readonly DataGridView gridDifferences;
+        private readonly Label lblCsvCompareTitle;
 
         public MainForm()
         {
             Text = "Automatisation des tests de bundle";
-            Width = 1400;
-            Height = 800;
             StartPosition = FormStartPosition.CenterScreen;
+            WindowState = FormWindowState.Maximized;
 
             // --- Boutons CSV ---
             btnLoad = new Button { Text = "Charger un CSV", Height = 40, Dock = DockStyle.Top };
@@ -82,11 +84,10 @@ namespace BundleTestsAutomation.UI
             lblProgress = new Label
             {
                 Dock = DockStyle.Top,
-                TextAlign = ContentAlignment.MiddleCenter,
+                TextAlign = ContentAlignment.TopLeft,
                 Height = 50,
-                Text = "Prêt",
-                Visible = false,
-                AutoSize = false
+                AutoSize = false,
+                Visible = false
             };
 
             progressBar = new ProgressBar
@@ -127,13 +128,52 @@ namespace BundleTestsAutomation.UI
             {
                 Dock = DockStyle.Fill,
                 Orientation = Orientation.Vertical,
-                SplitterDistance = (Width - panelLeft.Width) / 2
+                SplitterDistance = (this.ClientSize.Width - panelLeft.Width) / 2,
+                IsSplitterFixed = false
             };
 
             gridLeft = CreateGrid();
+            gridLeft.Dock = DockStyle.Fill;
             gridRight = CreateGrid();
+            gridRight.Dock = DockStyle.Fill;
             split.Panel1.Controls.Add(gridLeft);
             split.Panel2.Controls.Add(gridRight);
+
+            // --- Panel pour les différences sous les grilles ---
+            var panelDifferences = new Panel
+            {
+                Dock = DockStyle.Bottom,
+                Height = 230
+            };
+
+            lblCsvCompareTitle = new Label
+            {
+                Dock = DockStyle.Top,
+                Height = 30,
+                TextAlign = ContentAlignment.MiddleCenter,
+                Font = new Font(FontFamily.GenericSansSerif, 10, FontStyle.Bold)
+            };
+
+            lblCsvDiffCount = new Label
+            {
+                Dock = DockStyle.Top,
+                Height = 25,
+                TextAlign = ContentAlignment.MiddleLeft,
+                Font = new Font(FontFamily.GenericSansSerif, 9, FontStyle.Regular)
+            };
+
+            gridDifferences = new DataGridView
+            {
+                Dock = DockStyle.Fill,
+                ReadOnly = true,
+                AllowUserToAddRows = false,
+                AllowUserToDeleteRows = false,
+                AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+            };
+
+            panelDifferences.Controls.Add(gridDifferences);
+            panelDifferences.Controls.Add(lblCsvDiffCount);
+            panelDifferences.Controls.Add(lblCsvCompareTitle);
 
             // --- OpenFileDialog ---
             ofd = new OpenFileDialog
@@ -148,11 +188,20 @@ namespace BundleTestsAutomation.UI
             gridLeft.Scroll += Grid_Scroll;
             gridRight.Scroll += Grid_Scroll;
 
-            // Ajout des contrôles
-            Controls.Add(split);
+            // --- Panel central pour les grilles et différences avec padding ---
+            var panelCenter = new Panel
+            {
+                Dock = DockStyle.Fill,
+                Padding = new Padding(10, 10, 10, 10) // gauche, haut, droite, bas
+            };
+            panelCenter.Controls.Add(panelDifferences); // doit être ajouté avant split pour que dock fill fonctionne correctement
+            panelCenter.Controls.Add(split);
+
+            // --- Ajout des contrôles principaux ---
+            Controls.Add(panelCenter);
             Controls.Add(panelLeft);
 
-            // Sélection du répertoire au lancement
+            // --- Sélection du répertoire au lancement ---
             folderBrowserDialog = new FolderBrowserDialog
             {
                 Description = "Sélectionnez le répertoire du bundle à traiter",
@@ -164,6 +213,7 @@ namespace BundleTestsAutomation.UI
 
             AppSettings.BundleDirectory = folderBrowserDialog.SelectedPath;
         }
+
 
         private void MainForm_Shown(object? sender, EventArgs e)
         {
@@ -247,11 +297,22 @@ namespace BundleTestsAutomation.UI
             var file1 = ofd.FileName;
             if (ofd.ShowDialog(this) != DialogResult.OK) return;
             var file2 = ofd.FileName;
+
             var rows1 = CsvService.ReadCsv(file1);
             var rows2 = CsvService.ReadCsv(file2);
+
             CsvService.DisplayCsv(rows1, gridLeft);
             CsvService.DisplayCsv(rows2, gridRight);
-            CsvService.HighlightDifferences(rows1, rows2, gridLeft, gridRight);
+
+            // Afficher les noms de fichiers au-dessus des grilles
+            lblCsvCompareTitle.Text = $"Comparaison : {Path.GetFileName(file1)} vs {Path.GetFileName(file2)}";
+
+            // Highlight et récupérer uniquement les différences
+            int totalDiffs = CsvService.HighlightDifferences(rows1, rows2, gridLeft, gridRight, out var diffRows);
+
+            // Afficher le total au-dessus de gridDifferences
+            lblCsvDiffCount.Text = $"Total différences : {totalDiffs}";
+            CsvService.DisplayCsv(diffRows, gridDifferences);
         }
 
         private void Grid_Scroll(object? sender, ScrollEventArgs e)

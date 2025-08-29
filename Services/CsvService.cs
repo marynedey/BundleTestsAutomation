@@ -44,22 +44,25 @@ namespace BundleTestsAutomation.Services
             }
         }
 
-        public static void HighlightDifferences(List<CsvRow> rows1, List<CsvRow> rows2, DataGridView gridLeft, DataGridView gridRight)
+        public static int HighlightDifferences(
+            List<CsvRow> rows1,
+            List<CsvRow> rows2,
+            DataGridView gridLeft,
+            DataGridView gridRight,
+            out List<CsvRow> diffRows)
         {
+            diffRows = new List<CsvRow>();
+            int totalDifferences = 0;
             int rowCount = Math.Max(rows1.Count, rows2.Count);
 
-            // S'assure que les grilles ont assez de lignes
-            while (gridLeft.Rows.Count < rowCount - 1) // -1 car la première ligne est l'en-tête
-                gridLeft.Rows.Add();
-            while (gridRight.Rows.Count < rowCount - 1)
-                gridRight.Rows.Add();
-
-            for (int i = 1; i < rowCount; i++) // Commence à 1 pour ignorer l'en-tête
+            for (int i = 0; i < rowCount; i++)
             {
                 var row1 = i < rows1.Count ? rows1[i] : new CsvRow(new List<string>());
                 var row2 = i < rows2.Count ? rows2[i] : new CsvRow(new List<string>());
-
                 int colCount = Math.Max(row1.Count, row2.Count);
+
+                var diffRow = new List<string>();
+                bool rowHasDiff = false;
 
                 for (int j = 0; j < colCount; j++)
                 {
@@ -68,14 +71,28 @@ namespace BundleTestsAutomation.Services
 
                     if (val1 != val2)
                     {
-                        if (i - 1 < gridLeft.Rows.Count && j < gridLeft.Columns.Count)
-                            gridLeft.Rows[i - 1].Cells[j].Style.BackColor = System.Drawing.Color.LightCoral;
+                        totalDifferences++;
+                        rowHasDiff = true;
 
-                        if (i - 1 < gridRight.Rows.Count && j < gridRight.Columns.Count)
+                        // Highlight dans les grilles principales
+                        if (i < gridLeft.Rows.Count && j < gridLeft.Columns.Count)
+                            gridLeft.Rows[i - 1].Cells[j].Style.BackColor = System.Drawing.Color.LightCoral;
+                        if (i < gridRight.Rows.Count && j < gridRight.Columns.Count)
                             gridRight.Rows[i - 1].Cells[j].Style.BackColor = System.Drawing.Color.LightCoral;
+
+                        diffRow.Add($"{val1} → {val2}");
+                    }
+                    else
+                    {
+                        diffRow.Add("");
                     }
                 }
+
+                if (rowHasDiff)
+                    diffRows.Add(new CsvRow(diffRow));
             }
+
+            return totalDifferences;
         }
 
         public static void SyncGridScroll(DataGridView sourceGrid, DataGridView targetGrid)
