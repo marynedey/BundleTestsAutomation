@@ -29,6 +29,8 @@ namespace BundleTestsAutomation.UI
         private readonly Label lblCsvDiffCount;
         private readonly DataGridView gridDifferences;
         private readonly Label lblCsvCompareTitle;
+        private CancellationTokenSource? cancellationTokenSource;
+        private readonly Button btnCancelGenerate;
 
         public MainForm()
         {
@@ -104,7 +106,7 @@ namespace BundleTestsAutomation.UI
             {
                 Text = "Bundle Manifest",
                 Dock = DockStyle.Top,
-                Height = 220,
+                Height = 300,
                 Padding = new Padding(10)
             };
             groupManifest.Controls.Add(progressBar);
@@ -112,6 +114,17 @@ namespace BundleTestsAutomation.UI
             groupManifest.Controls.Add(btnValidatePcm);
             groupManifest.Controls.Add(cmbPcmVersion);
             groupManifest.Controls.Add(btnGenerateBundleManifest);
+
+            btnCancelGenerate = new Button
+            {
+                Text = "Annuler la génération",
+                Height = 40,
+                Dock = DockStyle.Top,
+                Visible = false
+            };
+            btnCancelGenerate.Click += BtnCancelGenerate_Click;
+            groupManifest.Controls.Add(btnCancelGenerate);
+            groupManifest.Controls.SetChildIndex(btnCancelGenerate, 0); // Place le bouton en haut
 
             // --- Panneau gauche ---
             var panelLeft = new Panel
@@ -350,6 +363,10 @@ namespace BundleTestsAutomation.UI
         {
             try
             {
+                cancellationTokenSource = new CancellationTokenSource();
+                btnCancelGenerate.Visible = true;
+                btnGenerateBundleManifest.Enabled = false;
+
                 while (!AppSettings.IsValidBundleDirectory(AppSettings.BundleDirectory))
                 {
                     var result = MessageBox.Show(
@@ -357,7 +374,6 @@ namespace BundleTestsAutomation.UI
                         "Dossier invalide",
                         MessageBoxButtons.YesNo,
                         MessageBoxIcon.Warning);
-
                     if (result == DialogResult.Yes)
                     {
                         using var fbd = new FolderBrowserDialog
@@ -366,24 +382,26 @@ namespace BundleTestsAutomation.UI
                             UseDescriptionForTitle = true,
                             ShowNewFolderButton = false
                         };
-
                         if (fbd.ShowDialog() == DialogResult.OK)
                         {
                             AppSettings.BundleDirectory = fbd.SelectedPath;
                         }
                         else
                         {
+                            btnCancelGenerate.Visible = false;
+                            btnGenerateBundleManifest.Enabled = true;
                             return;
                         }
                     }
                     else
                     {
+                        btnCancelGenerate.Visible = false;
+                        btnGenerateBundleManifest.Enabled = true;
                         return;
                     }
                 }
 
                 ShowProgressBar(100);
-
                 string path = AppSettings.BundleManifestPath;
 
                 // Étape 1 : Génération du template (5%)
@@ -412,15 +430,26 @@ namespace BundleTestsAutomation.UI
                 UpdateProgress(20, "Préparation de la mise à jour des packages...");
                 string rootFolder = AppSettings.BundleDirectory ?? string.Empty;
 
-                await Task.Run(() =>
+                try
                 {
-                    BundleManifestService.UpdateWirelessManagerArg2(doc, infos.SwId);
-                    if (infos.SwId.StartsWith("IVECOCITYBUS", StringComparison.OrdinalIgnoreCase))
+                    await Task.Run(() =>
                     {
-                        BundleManifestService.UpdateDSEName(doc, infos.SwId);
-                    }
-                    BundleManifestService.UpdatePackages(doc, rootFolder, UpdatePackageProgress);
-                });
+                        BundleManifestService.UpdateWirelessManagerArg2(doc, infos.SwId);
+                        if (infos.SwId.StartsWith("IVECOCITYBUS", StringComparison.OrdinalIgnoreCase))
+                        {
+                            BundleManifestService.UpdateDSEName(doc, infos.SwId);
+                        }
+                        BundleManifestService.UpdatePackages(doc, rootFolder, UpdatePackageProgress, cancellationTokenSource.Token);
+                    }, cancellationTokenSource.Token);
+                }
+                catch (OperationCanceledException)
+                {
+                    HideProgressBar();
+                    MessageBox.Show("La génération a été annulée.", "Annulation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    btnCancelGenerate.Visible = false;
+                    btnGenerateBundleManifest.Enabled = true;
+                    return;
+                }
 
                 // Étape 6 : Sauvegarde (95% à 100%)
                 UpdateProgress(95, "Sauvegarde du BundleManifest...");
@@ -428,7 +457,7 @@ namespace BundleTestsAutomation.UI
 
                 // --- Corrections manuelles du XML ---
                 string xmlContent = File.ReadAllText(path);
-                xmlContent = System.Text.RegularExpressions.Regex.Replace(xmlContent, @"encoding=[""'][^""']*[""']", "");
+                xmlContent = Regex.Replace(xmlContent, @"encoding=[""'][^""']*[""']", "");
                 xmlContent = xmlContent.Replace(" xmlns=\"\"", "");
                 int index = xmlContent.IndexOf("<Signature");
                 if (index >= 0)
@@ -440,7 +469,6 @@ namespace BundleTestsAutomation.UI
                     }
                 }
                 File.WriteAllText(path, xmlContent);
-
                 UpdateProgress(100, "Finalisation...");
                 HideProgressBar();
 
@@ -458,8 +486,20 @@ namespace BundleTestsAutomation.UI
             catch (Exception ex)
             {
                 HideProgressBar();
-                MessageBox.Show(this, $"Une erreur est survenue : {ex.Message}", "Erreur",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(this, $"Une erreur est survenue : {ex.Message}", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                btnCancelGenerate.Visible = false;
+                btnGenerateBundleManifest.Enabled = true;
+            }
+        }
+
+        private void BtnCancelGenerate_Click(object? sender, EventArgs e)
+        {
+            if (cancellationTokenSource != null && !cancellationTokenSource.IsCancellationRequested)
+            {
+                cancellationTokenSource.Cancel();
             }
         }
 
@@ -493,7 +533,19 @@ namespace BundleTestsAutomation.UI
         {
             int minValue = 20;
             int maxValue = 90;
-            int stepValue = minValue + (current * (maxValue - minValue) / total);
+            int stepValue;
+
+            if (total <= 0)
+            {
+                stepValue = minValue;
+            }
+            else
+            {
+                stepValue = minValue + (current * (maxValue - minValue) / total);
+                // S'assurer que stepValue reste dans les limites
+                stepValue = Math.Max(minValue, Math.Min(maxValue, stepValue));
+            }
+
             this.Invoke((MethodInvoker)delegate
             {
                 UpdateProgress(stepValue, $"{message} ({current}/{total})");

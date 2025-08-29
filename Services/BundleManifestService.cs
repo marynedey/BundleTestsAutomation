@@ -389,104 +389,120 @@ namespace BundleTestsAutomation.Services
             dsePackage.SetAttributeValue("name", "dsecitybus");
         }
 
-        public static void UpdatePackages(XDocument doc, string rootFolder, Action<int, int, string>? progressCallback = null)
+        public static void UpdatePackages(XDocument doc, string rootFolder, Action<int, int, string>? progressCallback = null, CancellationToken cancellationToken = default)
         {
-            // Dictionnaire des noms spéciaux (pour la correspondance nom de package <> nom de fichier/dossier)
-            var specialNames = new Dictionary<string, string>
+            try
             {
-                { "eHorizonISA", "ehoisa" },
-                { "BSW", "leap" }
-            };
-
-            // Récupérer la liste des packages dans le XML
-            var packages = doc.Root?.Element("packages")?.Elements("package").ToList();
-            if (packages == null || packages.Count == 0)
-            {
-                progressCallback?.Invoke(0, 0, "Aucun package trouvé dans le BundleManifest.");
-                return;
-            }
-
-            int totalPackages = packages.Count;
-            int currentPackage = 0;
-            int nbBasicSoftwares = 0;
-
-            foreach (var package in packages)
-            {
-                currentPackage++;
-                string packageName = package.Attribute("name")?.Value ?? "";
-
-                var runlevelAttr = package.Attribute("runlevel");
-                if (runlevelAttr == null)
+                // Dictionnaire des noms spéciaux (pour la correspondance nom de package <> nom de fichier/dossier)
+                var specialNames = new Dictionary<string, string>
                 {
-                    nbBasicSoftwares++;
+                    { "eHorizonISA", "ehoisa" },
+                    { "BSW", "leap" }
+                };
+
+                // Récupérer la liste des packages dans le XML
+                var packages = doc.Root?.Element("packages")?.Elements("package").ToList();
+                if (packages == null || packages.Count == 0)
+                {
+                    progressCallback?.Invoke(0, 0, "Aucun package trouvé dans le BundleManifest.");
+                    return;
                 }
 
-                if (currentPackage > nbBasicSoftwares)
+                int totalPackages = packages.Count;
+                int currentPackage = 0;
+                int nbBasicSoftwares = 0;
+
+                foreach (var package in packages)
                 {
-                    package.SetAttributeValue("runlevel", currentPackage - nbBasicSoftwares);
-                }
+                    cancellationToken.ThrowIfCancellationRequested();
 
-                if (string.IsNullOrWhiteSpace(packageName))
-                {
-                    progressCallback?.Invoke(currentPackage, totalPackages, $"Package sans nom ignoré.");
-                    continue;
-                }
+                    currentPackage++;
+                    string packageName = package.Attribute("name")?.Value ?? "";
 
-                progressCallback?.Invoke(currentPackage, totalPackages, $"Traitement du package {packageName}...");
+                    var runlevelAttr = package.Attribute("runlevel");
+                    if (runlevelAttr == null)
+                    {
+                        nbBasicSoftwares++;
+                    }
 
-                // Nom à rechercher (utilise le nom spécial si disponible, sinon le nom du package)
-                string searchName = specialNames.ContainsKey(packageName) ? specialNames[packageName] : packageName.ToLower();
+                    if (currentPackage > nbBasicSoftwares)
+                    {
+                        package.SetAttributeValue("runlevel", currentPackage - nbBasicSoftwares);
+                    }
 
-                // Cherche un dossier correspondant
-                var matchingDir = Directory.GetDirectories(rootFolder)
-                    .FirstOrDefault(d => Path.GetFileName(d).IndexOf(searchName, StringComparison.OrdinalIgnoreCase) >= 0);
+                    if (string.IsNullOrWhiteSpace(packageName))
+                    {
+                        progressCallback?.Invoke(currentPackage, totalPackages, $"Package sans nom ignoré.");
+                        continue;
+                    }
 
-                // Si aucun dossier trouvé, cherche un fichier
-                var matchingFile = matchingDir == null
-                    ? Directory.GetFiles(rootFolder)
-                        .FirstOrDefault(f => Path.GetFileName(f).IndexOf(searchName, StringComparison.OrdinalIgnoreCase) >= 0)
-                    : null;
+                    progressCallback?.Invoke(currentPackage, totalPackages, $"Traitement du package {packageName}...");
 
-                // Nom du fichier/dossier trouvé
-                string? matchedName = matchingDir != null
-                    ? Path.GetFileName(matchingDir)
-                    : matchingFile != null
-                        ? Path.GetFileName(matchingFile)
+                    // Nom à rechercher (utilise le nom spécial si disponible, sinon le nom du package)
+                    string searchName = specialNames.ContainsKey(packageName) ? specialNames[packageName] : packageName.ToLower();
+
+                    // Cherche un dossier correspondant
+                    var matchingDir = Directory.GetDirectories(rootFolder)
+                        .FirstOrDefault(d => Path.GetFileName(d).IndexOf(searchName, StringComparison.OrdinalIgnoreCase) >= 0);
+
+                    // Si aucun dossier trouvé, cherche un fichier
+                    var matchingFile = matchingDir == null
+                        ? Directory.GetFiles(rootFolder)
+                            .FirstOrDefault(f => Path.GetFileName(f).IndexOf(searchName, StringComparison.OrdinalIgnoreCase) >= 0)
                         : null;
 
-                if (matchedName == null)
-                {
-                    progressCallback?.Invoke(currentPackage, totalPackages, $"Aucun fichier/dossier trouvé pour {packageName}.");
-                    continue;
-                }
+                    // Nom du fichier/dossier trouvé
+                    string? matchedName = matchingDir != null
+                        ? Path.GetFileName(matchingDir)
+                        : matchingFile != null
+                            ? Path.GetFileName(matchingFile)
+                            : null;
 
-                package.SetAttributeValue("filename", matchedName);
-
-                string version = ExtractVersion(matchedName);
-                package.SetAttributeValue("version", version);
-
-                string fullPath = Path.Combine(rootFolder, matchedName);
-
-                // Calcule du digest (SHA-256)
-                if (File.Exists(fullPath))
-                {
-                    package.SetAttributeValue("digest", HashService.ComputeSha256HashFromFile(fullPath));
-                }
-                else if (Directory.Exists(fullPath))
-                {
-                    // Pour un dossier : concaténer le contenu des fichiers pour calculer le hash
-                    var allFiles = Directory.GetFiles(fullPath, "*.*", SearchOption.AllDirectories);
-                    StringBuilder sb = new StringBuilder();
-                    foreach (var file in allFiles.OrderBy(f => f))
+                    if (matchedName == null)
                     {
-                        sb.Append(File.ReadAllText(file));
+                        progressCallback?.Invoke(currentPackage, totalPackages, $"Aucun fichier/dossier trouvé pour {packageName}.");
+                        continue;
                     }
-                    package.SetAttributeValue("digest", HashService.ComputeSha256Hash(sb.ToString()));
+
+                    package.SetAttributeValue("filename", matchedName);
+
+                    string version = ExtractVersion(matchedName);
+                    package.SetAttributeValue("version", version);
+
+                    string fullPath = Path.Combine(rootFolder, matchedName);
+
+                    // Calcule du digest (SHA-256)
+                    if (File.Exists(fullPath))
+                    {
+                        package.SetAttributeValue("digest", HashService.ComputeSha256HashFromFile(fullPath));
+                    }
+                    else if (Directory.Exists(fullPath))
+                    {
+                        // Pour un dossier : concaténer le contenu des fichiers pour calculer le hash
+                        var allFiles = Directory.GetFiles(fullPath, "*.*", SearchOption.AllDirectories);
+                        StringBuilder sb = new StringBuilder();
+                        foreach (var file in allFiles.OrderBy(f => f))
+                        {
+                            sb.Append(File.ReadAllText(file));
+                        }
+                        package.SetAttributeValue("digest", HashService.ComputeSha256Hash(sb.ToString()));
+                    }
+                    else
+                    {
+                        progressCallback?.Invoke(currentPackage, totalPackages, $"Chemin introuvable : {fullPath}");
+                    }
                 }
-                else
-                {
-                    progressCallback?.Invoke(currentPackage, totalPackages, $"Chemin introuvable : {fullPath}");
-                }
+            }
+            catch (OperationCanceledException)
+            {
+                // Ne pas propager l'exception, juste sortir proprement
+                progressCallback?.Invoke(0, 0, "Génération annulée par l'utilisateur.");
+                return;
+            }
+            catch (Exception ex)
+            {
+                progressCallback?.Invoke(0, 0, $"Erreur lors de la mise à jour des packages : {ex.Message}");
+                throw; // Propager les autres exceptions
             }
         }
 
