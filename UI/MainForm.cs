@@ -312,15 +312,13 @@ namespace BundleTestsAutomation.UI
                 UpdateProgress(95, "Sauvegarde du BundleManifest...");
                 doc.Save(path);
 
+                // --- Corrections manuelles du XML (pas top mais j'ai pas trouvé mieux pour le moment) ---
                 // Supprime manuellement l'attribut encoding
                 string xmlContent = File.ReadAllText(path);
                 xmlContent = Regex.Replace(xmlContent, @"encoding=[""'][^""']*[""']", "");
 
-                // Supprimer les attributs xmlns vides ou doublons
+                // Supprime les attributs xmlns vides et l'ajoute correctement
                 xmlContent = xmlContent.Replace(" xmlns=\"\"", "");
-                xmlContent = Regex.Replace(xmlContent, @"xmlns=""http://www\.w3\.org/2000/09/xmldsig#""", "");
-
-                // Ajouter l'attribut xmlns correctement
                 int index = xmlContent.IndexOf("<Signature");
                 if (index >= 0)
                 {
@@ -330,14 +328,13 @@ namespace BundleTestsAutomation.UI
                         xmlContent = xmlContent.Insert(endIndex, " xmlns=\"http://www.w3.org/2000/09/xmldsig#\"");
                     }
                 }
-
                 File.WriteAllText(path, xmlContent);
 
                 UpdateProgress(100, "Finalisation...");
 
                 HideProgressBar();
 
-                // Messages de confirmation
+                // Message de confirmation
                 MessageBox.Show(
                     $"Le Bundle Manifest a été généré avec succès !\n\n" +
                     $"Version: {infos.Version}\n" +
@@ -345,19 +342,6 @@ namespace BundleTestsAutomation.UI
                     $"sw_part_number: {infos.SwPartNumber}\n\n" +
                     $"Chemin du fichier :\n{path}",
                     "Fichier généré",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
-
-                MessageBox.Show(
-                    $"Veuillez supprimer le type d'encodage en première ligne du XML.\n\n" +
-                    $"Il suffit de supprimer l'argument encoding et sa valeur associée.",
-                    "WARNING",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
-
-                MessageBox.Show(
-                    $"Veuillez entrer l'argument xmlns dans <Signature> : http://www.w3.org/2000/09/xmldsig#",
-                    "WARNING",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }
