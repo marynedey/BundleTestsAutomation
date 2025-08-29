@@ -150,7 +150,7 @@ namespace BundleTestsAutomation.Services
                         new XAttribute("autostart", "true"),
                         new XAttribute("type", "PKG"),
                         new XAttribute("version", ""),
-                        new XAttribute("runlevel", "1"),
+                        new XAttribute("runlevel", ""),
                         new XElement("execution",
                             new XElement("args",
                                 new XComment(" STOP target runlevel "),
@@ -170,7 +170,7 @@ namespace BundleTestsAutomation.Services
                         new XAttribute("autostart", "true"),
                         new XAttribute("type", "PKG"),
                         new XAttribute("version", ""),
-                        new XAttribute("runlevel", "2"),
+                        new XAttribute("runlevel", ""),
                         new XElement("permissions", new XAttribute("type", "deny")),
                         new XElement("execution",
                             new XElement("args",
@@ -191,7 +191,7 @@ namespace BundleTestsAutomation.Services
                         new XAttribute("autostart", "true"),
                         new XAttribute("type", "PKG"),
                         new XAttribute("version", ""),
-                        new XAttribute("runlevel", "3"),
+                        new XAttribute("runlevel", ""),
                         new XElement("permissions", new XAttribute("type", "deny"))
                     ),
                     new XComment(" Runlevel 4 "),
@@ -203,7 +203,7 @@ namespace BundleTestsAutomation.Services
                         new XAttribute("autostart", "true"),
                         new XAttribute("type", "PKG"),
                         new XAttribute("version", ""),
-                        new XAttribute("runlevel", "4"),
+                        new XAttribute("runlevel", ""),
                         new XElement("execution",
                             new XElement("args",
                                 new XElement("arg", new XAttribute("value", "--type")),
@@ -221,7 +221,7 @@ namespace BundleTestsAutomation.Services
                         new XAttribute("autostart", "true"),
                         new XAttribute("type", "PKG"),
                         new XAttribute("version", ""),
-                        new XAttribute("runlevel", "5"),
+                        new XAttribute("runlevel", ""),
                         new XElement("permissions", new XAttribute("type", "deny"))
                     ),
                     new XComment(" Runlevel 6 "),
@@ -233,7 +233,7 @@ namespace BundleTestsAutomation.Services
                         new XAttribute("autostart", "true"),
                         new XAttribute("type", "PKG"),
                         new XAttribute("version", ""),
-                        new XAttribute("runlevel", "6"),
+                        new XAttribute("runlevel", ""),
                         new XElement("permissions", new XAttribute("type", "deny"))
                     ),
                     new XComment(" Runlevel 7 "),
@@ -245,7 +245,7 @@ namespace BundleTestsAutomation.Services
                         new XAttribute("autostart", "true"),
                         new XAttribute("type", "PKG"),
                         new XAttribute("version", ""),
-                        new XAttribute("runlevel", "7"),
+                        new XAttribute("runlevel", ""),
                         new XElement("permissions", new XAttribute("type", "deny"))
                     ),
                     new XComment(" Runlevel 8 "),
@@ -257,7 +257,7 @@ namespace BundleTestsAutomation.Services
                         new XAttribute("autostart", "true"),
                         new XAttribute("type", "PKG"),
                         new XAttribute("version", ""),
-                        new XAttribute("runlevel", "8"),
+                        new XAttribute("runlevel", ""),
                         new XElement("permissions", new XAttribute("type", "deny"))
                     ),
                     new XComment(" Runlevel 9 "),
@@ -269,7 +269,7 @@ namespace BundleTestsAutomation.Services
                         new XAttribute("autostart", "true"),
                         new XAttribute("type", "PKG"),
                         new XAttribute("version", ""),
-                        new XAttribute("runlevel", "9"),
+                        new XAttribute("runlevel", ""),
                         new XElement("permissions", new XAttribute("type", "deny"))
                     ),
                     new XComment(" Runlevel 10 "),
@@ -281,7 +281,7 @@ namespace BundleTestsAutomation.Services
                         new XAttribute("autostart", "true"),
                         new XAttribute("type", "PKG"),
                         new XAttribute("version", ""),
-                        new XAttribute("runlevel", "10"),
+                        new XAttribute("runlevel", ""),
                         new XElement("sandbox", new XAttribute("image", "mmi"), ""),
                         new XElement("execution",
                             new XElement("args",
@@ -311,7 +311,7 @@ namespace BundleTestsAutomation.Services
                         new XAttribute("autostart", "false"),
                         new XAttribute("type", "PKG"),
                         new XAttribute("version", ""),
-                        new XAttribute("runlevel", "11"),
+                        new XAttribute("runlevel", ""),
                         new XElement("permissions", new XAttribute("type", "deny"))
                     ),
                     new XComment(" Runlevel 12 "),
@@ -323,7 +323,7 @@ namespace BundleTestsAutomation.Services
                         new XAttribute("autostart", "true"),
                         new XAttribute("type", "PKG"),
                         new XAttribute("version", ""),
-                        new XAttribute("runlevel", "12"),
+                        new XAttribute("runlevel", ""),
                         new XElement("permissions", new XAttribute("type", "deny"))
                     ),
                     new XComment(" Runlevel 13 "),
@@ -335,7 +335,7 @@ namespace BundleTestsAutomation.Services
                         new XAttribute("autostart", "true"),
                         new XAttribute("type", "PKG"),
                         new XAttribute("version", ""),
-                        new XAttribute("runlevel", "13"),
+                        new XAttribute("runlevel", ""),
                         new XElement("permissions", new XAttribute("type", "deny"))
                     )
                 ),
@@ -408,11 +408,24 @@ namespace BundleTestsAutomation.Services
 
             int totalPackages = packages.Count;
             int currentPackage = 0;
+            int nbBasicSoftwares = 0;
 
             foreach (var package in packages)
             {
                 currentPackage++;
                 string packageName = package.Attribute("name")?.Value ?? "";
+
+                var runlevelAttr = package.Attribute("runlevel");
+                if (runlevelAttr == null)
+                {
+                    nbBasicSoftwares++;
+                }
+
+                if (currentPackage > nbBasicSoftwares)
+                {
+                    package.SetAttributeValue("runlevel", currentPackage - nbBasicSoftwares);
+                }
+
                 if (string.IsNullOrWhiteSpace(packageName))
                 {
                     progressCallback?.Invoke(currentPackage, totalPackages, $"Package sans nom ignoré.");
