@@ -45,6 +45,7 @@ namespace BundleTestsAutomation.UI
         // --- Logs controls ---
         private TextBox txtLogDisplay;
         private Button btnRefreshLogs;
+        private TextBox txtLogResults;
 
         // --- Dialogs ---
         private OpenFileDialog ofd;
@@ -216,6 +217,15 @@ namespace BundleTestsAutomation.UI
             btnRefreshLogs.Click += BtnRefreshLogs_Click;
             panelContent.Controls.Add(btnRefreshLogs);
 
+            // --- SplitContainer vertical pour logs + résultats ---
+            var split = new SplitContainer
+            {
+                Dock = DockStyle.Fill,
+                Orientation = Orientation.Horizontal,
+                SplitterWidth = 6
+            };
+            panelContent.Controls.Add(split);
+
             // --- TextBox pour afficher les logs ---
             txtLogDisplay = new TextBox
             {
@@ -225,10 +235,23 @@ namespace BundleTestsAutomation.UI
                 ReadOnly = true,
                 Font = new Font("Consolas", 10)
             };
-            panelContent.Controls.Add(txtLogDisplay);
+            split.Panel1.Controls.Add(txtLogDisplay);
+
+            // --- TextBox pour afficher les résultats ---
+            txtLogResults = new TextBox
+            {
+                Dock = DockStyle.Fill,
+                Multiline = true,
+                ScrollBars = ScrollBars.Vertical,
+                ReadOnly = true,
+                Font = new Font("Consolas", 10),
+                BackColor = Color.LightYellow
+            };
+            split.Panel2.Controls.Add(txtLogResults);
 
             btnRefreshLogs.BringToFront();
-            txtLogDisplay.BringToFront();
+            split.BringToFront();
+            split.SplitterDistance = panelContent.Height / 2;
         }
         #endregion
 
@@ -542,25 +565,26 @@ namespace BundleTestsAutomation.UI
         {
             var logLines = File.ReadAllLines(filePath).ToList();
 
-            ILogTester tester = null;
+            // Afficher tous les logs
+            txtLogDisplay.Text = string.Join(Environment.NewLine, logLines);
 
+            ILogTester? tester = null;
             string fileName = Path.GetFileName(filePath).ToLower();
             if (fileName.Contains("tigr"))
             {
                 tester = new TigrAgentLogTester();
             }
-            // else if pour d'autres applications à venir
 
             if (tester != null)
             {
                 var errors = tester.TestLogs(logLines);
-                txtLogDisplay.Text = errors.Count > 0
+                txtLogResults.Text = errors.Count > 0
                     ? string.Join(Environment.NewLine, errors)
                     : "Aucune anomalie détectée dans les logs.";
             }
             else
             {
-                txtLogDisplay.Text = "Aucun test disponible pour ce type de log.";
+                txtLogResults.Text = "Aucun test disponible pour ce type de log.";
             }
         }
         #endregion

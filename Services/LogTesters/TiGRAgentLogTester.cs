@@ -11,7 +11,7 @@ public class TigrAgentLogTester : ILogTester
 
         string[] expectedSequence = new[]
         {
-            "navigation antenna ifo",
+            "navigation antenna info",
             "type of antenna: 2",
             "antenna state: 1",
             "ongpsantennastatus received: 1"
