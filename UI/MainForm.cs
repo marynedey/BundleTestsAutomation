@@ -4,33 +4,49 @@ using System;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml;
 using System.Xml.Linq;
 
 namespace BundleTestsAutomation.UI
 {
     public class MainForm : Form
     {
-        private readonly Button btnLoad;
-        private readonly Button btnLoadCANdata;
-        private readonly Button btnCompare;
-        private readonly Button btnGenerateBundleManifest;
-        private readonly DataGridView gridLeft;
-        private readonly DataGridView gridRight;
-        private readonly OpenFileDialog ofd;
-        private readonly ProgressBar progressBar;
-        private readonly Label lblProgress;
-        private readonly FolderBrowserDialog folderBrowserDialog;
-        private readonly ComboBox cmbPcmVersion;
-        private readonly Button btnValidatePcm;
-        private readonly Label lblCsvDiffCount;
-        private readonly DataGridView gridDifferences;
-        private readonly Label lblCsvCompareTitle;
+        // --- Panels dynamiques ---
+        private Panel panelMenu;
+        private Panel panelContent;
+
+        // --- Menu buttons ---
+        private Button btnMenuCsv;
+        private Button btnMenuBundleManifest;
+        private Button btnMenuLogs;
+
+        // --- CSV controls ---
+        private Button btnLoad;
+        private Button btnLoadCANdata;
+        private Button btnCompare;
+        private DataGridView gridLeft;
+        private DataGridView gridRight;
+        private DataGridView gridDifferences;
+        private Label lblCsvDiffCount;
+        private Label lblCsvCompareTitle;
+
+        // --- Bundle Manifest controls ---
+        private Button btnGenerateBundleManifest;
+        private ComboBox cmbPcmVersion;
+        private Button btnValidatePcm;
+        private ProgressBar progressBar;
+        private Label lblProgress;
+        private Button btnCancelGenerate;
+
+        // --- Dialogs ---
+        private OpenFileDialog ofd;
+        private FolderBrowserDialog folderBrowserDialog;
+
+        // --- Cancellation ---
         private CancellationTokenSource? cancellationTokenSource;
-        private readonly Button btnCancelGenerate;
 
         public MainForm()
         {
@@ -38,7 +54,40 @@ namespace BundleTestsAutomation.UI
             StartPosition = FormStartPosition.CenterScreen;
             WindowState = FormWindowState.Maximized;
 
-            // --- Boutons CSV ---
+            // --- Panel content dynamique ---
+            panelContent = new Panel { Dock = DockStyle.Fill, BackColor = Color.White, Padding = new Padding(10) };
+            Controls.Add(panelContent);
+
+            // --- Panel menu ---
+            panelMenu = new Panel { Dock = DockStyle.Top, Height = 50, BackColor = Color.LightGray };
+            Controls.Add(panelMenu);
+
+            btnMenuCsv = new Button { Text = "CSV", Width = 100, Height = 40, Location = new Point(10, 5) };
+            btnMenuCsv.Click += (s, e) => ShowMenuCsv();
+            btnMenuBundleManifest = new Button { Text = "Bundle Manifest", Width = 150, Height = 40, Location = new Point(120, 5) };
+            btnMenuBundleManifest.Click += (s, e) => ShowMenuBundleManifest();
+            btnMenuLogs = new Button { Text = "Logs", Width = 100, Height = 40, Location = new Point(280, 5) };
+            btnMenuLogs.Click += (s, e) => ShowMenuLogs();
+
+            panelMenu.Controls.Add(btnMenuCsv);
+            panelMenu.Controls.Add(btnMenuBundleManifest);
+            panelMenu.Controls.Add(btnMenuLogs);
+
+            // --- Initialiser contrôles ---
+            InitializeCsvControls();
+            InitializeBundleManifestControls();
+            InitializeDialogs();
+            InitializeGrids();
+
+            // --- Afficher CSV par défaut ---
+            ShowMenuCsv();
+
+            this.Shown += MainForm_Shown;
+        }
+
+        #region Initialisation Controls
+        private void InitializeCsvControls()
+        {
             btnLoad = new Button { Text = "Charger un CSV", Height = 40, Dock = DockStyle.Top };
             btnLoad.Click += BtnLoad_Click;
 
@@ -48,212 +97,119 @@ namespace BundleTestsAutomation.UI
             btnCompare = new Button { Text = "Comparer 2 CSV", Height = 40, Dock = DockStyle.Top };
             btnCompare.Click += BtnCompare_Click;
 
-            var groupCsv = new GroupBox
-            {
-                Text = "Gestion CSV",
-                Dock = DockStyle.Top,
-                Height = 160,
-                Padding = new Padding(10)
-            };
-            groupCsv.Controls.Add(btnCompare);
-            groupCsv.Controls.Add(btnLoadCANdata);
-            groupCsv.Controls.Add(btnLoad);
+            lblCsvCompareTitle = new Label { Dock = DockStyle.Top, Height = 30, TextAlign = ContentAlignment.MiddleCenter, Font = new Font(FontFamily.GenericSansSerif, 10, FontStyle.Bold) };
+            lblCsvDiffCount = new Label { Dock = DockStyle.Top, Height = 25, TextAlign = ContentAlignment.MiddleLeft, Font = new Font(FontFamily.GenericSansSerif, 9, FontStyle.Regular) };
+        }
 
-            // --- Boutons Manifest + PCM + Progression ---
+        private void InitializeBundleManifestControls()
+        {
             btnGenerateBundleManifest = new Button { Text = "Générer le Bundle Manifest", Height = 40, Dock = DockStyle.Top };
             btnGenerateBundleManifest.Click += BtnGenerateBundleManifest_Click;
 
-            cmbPcmVersion = new ComboBox
-            {
-                Dock = DockStyle.Top,
-                DropDownStyle = ComboBoxStyle.DropDownList,
-                Height = 30,
-                Visible = true
-            };
-            for (int i = 1; i <= 10; i++)
-                cmbPcmVersion.Items.Add(i);
+            cmbPcmVersion = new ComboBox { Dock = DockStyle.Top, DropDownStyle = ComboBoxStyle.DropDownList, Height = 30 };
+            for (int i = 1; i <= 10; i++) cmbPcmVersion.Items.Add(i);
             cmbPcmVersion.SelectedIndex = 2;
 
-            btnValidatePcm = new Button
-            {
-                Text = "Valider la version du PCM",
-                Dock = DockStyle.Top,
-                Height = 30,
-                Visible = true
-            };
+            btnValidatePcm = new Button { Text = "Valider la version du PCM", Dock = DockStyle.Top, Height = 30 };
             btnValidatePcm.Click += BtnValidatePcm_Click;
 
-            lblProgress = new Label
-            {
-                Dock = DockStyle.Top,
-                TextAlign = ContentAlignment.TopLeft,
-                Height = 50,
-                AutoSize = false,
-                Visible = false
-            };
+            progressBar = new ProgressBar { Dock = DockStyle.Top, Height = 20, Minimum = 0, Maximum = 100, Value = 0, Visible = false };
+            lblProgress = new Label { Dock = DockStyle.Top, Height = 50, AutoSize = false, Visible = false };
 
-            progressBar = new ProgressBar
-            {
-                Dock = DockStyle.Top,
-                Height = 20,
-                Minimum = 0,
-                Maximum = 100,
-                Value = 0,
-                Visible = false
-            };
-
-            var groupManifest = new GroupBox
-            {
-                Text = "Bundle Manifest",
-                Dock = DockStyle.Top,
-                Height = 300,
-                Padding = new Padding(10)
-            };
-            groupManifest.Controls.Add(progressBar);
-            groupManifest.Controls.Add(lblProgress);
-            groupManifest.Controls.Add(btnValidatePcm);
-            groupManifest.Controls.Add(cmbPcmVersion);
-            groupManifest.Controls.Add(btnGenerateBundleManifest);
-
-            btnCancelGenerate = new Button
-            {
-                Text = "Annuler la génération",
-                Height = 40,
-                Dock = DockStyle.Top,
-                Visible = false
-            };
+            btnCancelGenerate = new Button { Text = "Annuler la génération", Height = 40, Dock = DockStyle.Top, Visible = false };
             btnCancelGenerate.Click += BtnCancelGenerate_Click;
-            groupManifest.Controls.Add(btnCancelGenerate);
-            groupManifest.Controls.SetChildIndex(btnCancelGenerate, 0); // Place le bouton en haut
+        }
 
-            // --- Panneau gauche ---
-            var panelLeft = new Panel
-            {
-                Dock = DockStyle.Left,
-                Width = 280,
-                Padding = new Padding(10)
-            };
-            panelLeft.Controls.Add(groupManifest);
-            panelLeft.Controls.Add(groupCsv);
+        private void InitializeGrids()
+        {
+            gridLeft = CreateGrid();
+            gridRight = CreateGrid();
+            gridDifferences = new DataGridView { Dock = DockStyle.Fill, ReadOnly = true, AllowUserToAddRows = false, AllowUserToDeleteRows = false, AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells };
+
+            gridLeft.AllowUserToAddRows = false;
+            gridRight.AllowUserToAddRows = false;
+            gridDifferences.AllowUserToAddRows = false;
+
+            gridLeft.Scroll += Grid_Scroll;
+            gridRight.Scroll += Grid_Scroll;
+        }
+
+        private void InitializeDialogs()
+        {
+            ofd = new OpenFileDialog { Title = "Sélectionnez un fichier CSV", Filter = "Fichiers CSV (*.csv)|*.csv", CheckFileExists = true, Multiselect = false };
+            folderBrowserDialog = new FolderBrowserDialog { Description = "Sélectionnez le répertoire du bundle à traiter", UseDescriptionForTitle = true, ShowNewFolderButton = false };
+        }
+        #endregion
+
+        #region Menu dynamique
+        private void ShowMenuCsv()
+        {
+            panelContent.Controls.Clear();
+
+            // --- Boutons CSV ---
+            var panelButtons = new Panel { Dock = DockStyle.Top, Height = 150 };
+            panelButtons.Controls.Add(btnCompare);
+            panelButtons.Controls.Add(btnLoadCANdata);
+            panelButtons.Controls.Add(btnLoad);
+
+            panelContent.Controls.Add(panelButtons);
+
+            // --- Différences en bas ---
+            var panelDiffs = new Panel { Dock = DockStyle.Bottom, Height = 200 };
+            panelDiffs.Controls.Add(gridDifferences);
+            panelDiffs.Controls.Add(lblCsvDiffCount);
+            panelDiffs.Controls.Add(lblCsvCompareTitle);
+
+            panelContent.Controls.Add(panelDiffs);
 
             // --- SplitContainer pour les grilles ---
             var split = new SplitContainer
             {
                 Dock = DockStyle.Fill,
                 Orientation = Orientation.Vertical,
-                SplitterDistance = (this.ClientSize.Width - panelLeft.Width) / 2,
-                IsSplitterFixed = false
+                SplitterWidth = 6
             };
-
-            gridLeft = CreateGrid();
             gridLeft.Dock = DockStyle.Fill;
-            gridRight = CreateGrid();
             gridRight.Dock = DockStyle.Fill;
             split.Panel1.Controls.Add(gridLeft);
             split.Panel2.Controls.Add(gridRight);
 
-            // --- Panel pour les différences sous les grilles ---
-            var panelDifferences = new Panel
-            {
-                Dock = DockStyle.Bottom,
-                Height = 230
-            };
+            panelContent.Controls.Add(split);
+            split.SplitterDistance = split.ClientSize.Width / 2;
 
-            lblCsvCompareTitle = new Label
-            {
-                Dock = DockStyle.Top,
-                Height = 30,
-                TextAlign = ContentAlignment.MiddleCenter,
-                Font = new Font(FontFamily.GenericSansSerif, 10, FontStyle.Bold)
-            };
-
-            lblCsvDiffCount = new Label
-            {
-                Dock = DockStyle.Top,
-                Height = 25,
-                TextAlign = ContentAlignment.MiddleLeft,
-                Font = new Font(FontFamily.GenericSansSerif, 9, FontStyle.Regular)
-            };
-
-            gridDifferences = new DataGridView
-            {
-                Dock = DockStyle.Fill,
-                ReadOnly = true,
-                AllowUserToAddRows = false,
-                AllowUserToDeleteRows = false,
-                AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
-            };
-
-            panelDifferences.Controls.Add(gridDifferences);
-            panelDifferences.Controls.Add(lblCsvDiffCount);
-            panelDifferences.Controls.Add(lblCsvCompareTitle);
-
-            // --- OpenFileDialog ---
-            ofd = new OpenFileDialog
-            {
-                Title = "Sélectionnez un fichier CSV",
-                Filter = "Fichiers CSV (*.csv)|*.csv",
-                CheckFileExists = true,
-                Multiselect = false
-            };
-
-            // Scroll synchronisé
-            gridLeft.Scroll += Grid_Scroll;
-            gridRight.Scroll += Grid_Scroll;
-
-            // --- Panel central pour les grilles et différences avec padding ---
-            var panelCenter = new Panel
-            {
-                Dock = DockStyle.Fill,
-                Padding = new Padding(10, 10, 10, 10) // gauche, haut, droite, bas
-            };
-            panelCenter.Controls.Add(panelDifferences); // doit être ajouté avant split pour que dock fill fonctionne correctement
-            panelCenter.Controls.Add(split);
-
-            // --- Ajout des contrôles principaux ---
-            Controls.Add(panelCenter);
-            Controls.Add(panelLeft);
-
-            // --- Sélection du répertoire au lancement ---
-            folderBrowserDialog = new FolderBrowserDialog
-            {
-                Description = "Sélectionnez le répertoire du bundle à traiter",
-                UseDescriptionForTitle = true,
-                ShowNewFolderButton = false
-            };
-
-            this.Shown += MainForm_Shown;
-
-            AppSettings.BundleDirectory = folderBrowserDialog.SelectedPath;
+            panelButtons.BringToFront();
+            panelDiffs.BringToFront();
+            split.BringToFront();
         }
 
-
-        private void MainForm_Shown(object? sender, EventArgs e)
+        private void ShowMenuBundleManifest()
         {
-            while (true)
-            {
-                if (folderBrowserDialog.ShowDialog(this) == DialogResult.OK &&
-                    !string.IsNullOrWhiteSpace(folderBrowserDialog.SelectedPath))
-                {
-                    AppSettings.BundleDirectory = folderBrowserDialog.SelectedPath;
-                    break;
-                }
+            panelContent.Controls.Clear();
 
-                var result = MessageBox.Show(
-                    this,
-                    "Vous devez sélectionner un répertoire pour continuer.\n\nVoulez-vous réessayer ?",
-                    "Répertoire requis",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Warning);
+            var panelManifest = new Panel { Dock = DockStyle.Top, Height = 300 };
+            panelManifest.Controls.Add(btnGenerateBundleManifest);
+            panelManifest.Controls.Add(cmbPcmVersion);
+            panelManifest.Controls.Add(btnValidatePcm);
+            panelManifest.Controls.Add(progressBar);
+            panelManifest.Controls.Add(lblProgress);
+            panelManifest.Controls.Add(btnCancelGenerate);
 
-                if (result == DialogResult.No)
-                {
-                    this.Close();
-                    return;
-                }
-            }
+            panelContent.Controls.Add(panelManifest);
         }
 
+        private void ShowMenuLogs()
+        {
+            panelContent.Controls.Clear();
+
+            var btnRefreshLogs = new Button { Text = "Rafraîchir Logs", Dock = DockStyle.Top, Height = 40 };
+            var txtLogs = new TextBox { Multiline = true, ScrollBars = ScrollBars.Vertical, Dock = DockStyle.Fill };
+
+            panelContent.Controls.Add(txtLogs);
+            panelContent.Controls.Add(btnRefreshLogs);
+        }
+        #endregion
+
+        #region Grid Helper
         private DataGridView CreateGrid()
         {
             return new DataGridView
@@ -267,11 +223,21 @@ namespace BundleTestsAutomation.UI
             };
         }
 
+        private void Grid_Scroll(object? sender, ScrollEventArgs e)
+        {
+            if (sender is DataGridView sourceGrid)
+            {
+                DataGridView targetGrid = sourceGrid == gridLeft ? gridRight : gridLeft;
+                CsvService.SyncGridScroll(sourceGrid, targetGrid);
+            }
+        }
+        #endregion
+
+        #region CSV Event Handlers
         private void BtnLoad_Click(object? sender, EventArgs e)
         {
             if (ofd.ShowDialog(this) != DialogResult.OK) return;
 
-            // Supprime les données et colonnes précédentes
             gridLeft.Rows.Clear();
             gridLeft.Columns.Clear();
             gridRight.Rows.Clear();
@@ -286,12 +252,10 @@ namespace BundleTestsAutomation.UI
         {
             if (!File.Exists(AppSettings.DataFullCsvPath))
             {
-                MessageBox.Show(this, "Le fichier data_full.csv est introuvable.", "Erreur",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(this, "Le fichier data_full.csv est introuvable.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // Supprime les données et colonnes précédentes
             gridLeft.Rows.Clear();
             gridLeft.Columns.Clear();
             gridRight.Rows.Clear();
@@ -317,32 +281,20 @@ namespace BundleTestsAutomation.UI
             CsvService.DisplayCsv(rows1, gridLeft);
             CsvService.DisplayCsv(rows2, gridRight);
 
-            // Afficher les noms de fichiers au-dessus des grilles
             lblCsvCompareTitle.Text = $"Comparaison : {Path.GetFileName(file1)} vs {Path.GetFileName(file2)}";
 
-            // Highlight et récupérer uniquement les différences
             int totalDiffs = CsvService.HighlightDifferences(rows1, rows2, gridLeft, gridRight, out var diffRows);
-
-            // Afficher le total au-dessus de gridDifferences
             lblCsvDiffCount.Text = $"Total différences : {totalDiffs}";
             CsvService.DisplayCsv(diffRows, gridDifferences);
         }
+        #endregion
 
-        private void Grid_Scroll(object? sender, ScrollEventArgs e)
-        {
-            if (sender is DataGridView sourceGrid)
-            {
-                DataGridView targetGrid = sourceGrid == gridLeft ? gridRight : gridLeft;
-                CsvService.SyncGridScroll(sourceGrid, targetGrid);
-            }
-        }
-
+        #region Bundle Manifest Event Handlers
         private void BtnValidatePcm_Click(object? sender, EventArgs e)
         {
             if (cmbPcmVersion.SelectedItem == null)
             {
-                MessageBox.Show(this, "Veuillez sélectionner une version de PCM.", "Erreur",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(this, "Veuillez sélectionner une version de PCM.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -350,13 +302,6 @@ namespace BundleTestsAutomation.UI
             cmbPcmVersion.Visible = false;
             btnValidatePcm.Visible = false;
             lblProgress.Visible = false;
-
-            MessageBox.Show(this,
-                $"Version du PCM définie sur {AppSettings.PcmVersion}.\n" +
-                $"Le sw_id sera : {AppSettings.ExtractBundleInfoFromDirectoryWithoutPcm().SwId}{AppSettings.PcmVersion}",
-                "Version du PCM",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
         }
 
         private async void BtnGenerateBundleManifest_Click(object? sender, EventArgs e)
@@ -504,9 +449,7 @@ namespace BundleTestsAutomation.UI
         private void BtnCancelGenerate_Click(object? sender, EventArgs e)
         {
             if (cancellationTokenSource != null && !cancellationTokenSource.IsCancellationRequested)
-            {
                 cancellationTokenSource.Cancel();
-            }
         }
 
         private void ShowProgressBar(int maxValue)
@@ -557,5 +500,31 @@ namespace BundleTestsAutomation.UI
                 UpdateProgress(stepValue, $"{message} ({current}/{total})");
             });
         }
+        #endregion
+
+        #region Form Shown
+        private void MainForm_Shown(object? sender, EventArgs e)
+        {
+            while (true)
+            {
+                if (folderBrowserDialog.ShowDialog(this) == DialogResult.OK &&
+                    !string.IsNullOrWhiteSpace(folderBrowserDialog.SelectedPath))
+                {
+                    AppSettings.BundleDirectory = folderBrowserDialog.SelectedPath;
+                    break;
+                }
+
+                var result = MessageBox.Show(this,
+                    "Vous devez sélectionner un répertoire pour continuer.\n\nVoulez-vous réessayer ?",
+                    "Répertoire requis", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.No)
+                {
+                    this.Close();
+                    return;
+                }
+            }
+        }
+        #endregion
     }
 }

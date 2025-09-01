@@ -1,4 +1,4 @@
-"System	12-0005 Time-Sync: Deactivating software time synchronization. (HW-Sync active for all channels or <= 1 HW participating in SW-Sync)."
+"System	2-0005 Time-Sync: Deactivating software time synchronization. (HW-Sync active for all channels or <= 1 HW participating in SW-Sync)."
 "System	Start of measurement 03:51:27.827 pm"
 "System	01-0003 CAN 1 (Classical CAN)Bus with 500000 BPS."
 "CAPL	MaxVsl_FEED1C: 256"

@@ -40,6 +40,7 @@ namespace BundleTestsAutomation.Services
                 var values = new object[targetGrid.Columns.Count];
                 for (int i = 0; i < values.Length; i++)
                     values[i] = i < row.Count ? row[i] : "";
+
                 targetGrid.Rows.Add(values);
             }
         }
@@ -55,11 +56,39 @@ namespace BundleTestsAutomation.Services
             int totalDifferences = 0;
             int rowCount = Math.Max(rows1.Count, rows2.Count);
 
+            // Détermine le nombre maximum de colonnes pour toutes les lignes
+            int colCount = 0;
             for (int i = 0; i < rowCount; i++)
             {
                 var row1 = i < rows1.Count ? rows1[i] : new CsvRow(new List<string>());
                 var row2 = i < rows2.Count ? rows2[i] : new CsvRow(new List<string>());
-                int colCount = Math.Max(row1.Count, row2.Count);
+                colCount = Math.Max(colCount, Math.Max(row1.Count, row2.Count));
+            }
+
+            // Désactive le repainting
+            gridLeft.SuspendLayout();
+            gridRight.SuspendLayout();
+
+            // --- Colonnes ---
+            while (gridLeft.Columns.Count < colCount)
+                gridLeft.Columns.Add($"Col{gridLeft.Columns.Count}", $"Col{gridLeft.Columns.Count}");
+            while (gridRight.Columns.Count < colCount)
+                gridRight.Columns.Add($"Col{gridRight.Columns.Count}", $"Col{gridRight.Columns.Count}");
+
+            // --- Lignes ---
+            gridLeft.Rows.Clear();
+            gridRight.Rows.Clear();
+            for (int i = 0; i < rowCount; i++)
+            {
+                gridLeft.Rows.Add();
+                gridRight.Rows.Add();
+            }
+
+            // --- Comparaison cellule par cellule ---
+            for (int i = 0; i < rowCount; i++)
+            {
+                var row1 = i < rows1.Count ? rows1[i] : new CsvRow(new List<string>());
+                var row2 = i < rows2.Count ? rows2[i] : new CsvRow(new List<string>());
 
                 var diffRow = new List<string>();
                 bool rowHasDiff = false;
@@ -69,17 +98,15 @@ namespace BundleTestsAutomation.Services
                     string val1 = j < row1.Count ? row1[j] : "";
                     string val2 = j < row2.Count ? row2[j] : "";
 
+                    gridLeft.Rows[i].Cells[j].Value = val1;
+                    gridRight.Rows[i].Cells[j].Value = val2;
+
                     if (val1 != val2)
                     {
+                        gridLeft.Rows[i].Cells[j].Style.BackColor = System.Drawing.Color.LightCoral;
+                        gridRight.Rows[i].Cells[j].Style.BackColor = System.Drawing.Color.LightCoral;
                         totalDifferences++;
                         rowHasDiff = true;
-
-                        // Highlight dans les grilles principales
-                        if (i < gridLeft.Rows.Count && j < gridLeft.Columns.Count)
-                            gridLeft.Rows[i - 1].Cells[j].Style.BackColor = System.Drawing.Color.LightCoral;
-                        if (i < gridRight.Rows.Count && j < gridRight.Columns.Count)
-                            gridRight.Rows[i - 1].Cells[j].Style.BackColor = System.Drawing.Color.LightCoral;
-
                         diffRow.Add($"{val1} → {val2}");
                     }
                     else
@@ -91,6 +118,10 @@ namespace BundleTestsAutomation.Services
                 if (rowHasDiff)
                     diffRows.Add(new CsvRow(diffRow));
             }
+
+            // Réactive le repainting
+            gridLeft.ResumeLayout();
+            gridRight.ResumeLayout();
 
             return totalDifferences;
         }
