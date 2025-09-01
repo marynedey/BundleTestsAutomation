@@ -526,61 +526,41 @@ namespace BundleTestsAutomation.UI
         #endregion
 
         #region Logs Event Handlers
-        private void BtnRefreshLogs_Click(object? sender, EventArgs e)
+        private void BtnRefreshLogs_Click(object sender, EventArgs e)
         {
             using var ofd = new OpenFileDialog
             {
-                Title = "Sélectionnez un fichier de logs",
-                Filter = "Fichiers log (*.log;*.txt)|*.log;*.txt|Tous fichiers (*.*)|*.*",
-                CheckFileExists = true,
-                Multiselect = false
+                Filter = "All files (*.*)|*.*"
             };
 
-            if (ofd.ShowDialog() != DialogResult.OK)
-                return;
-
-            string selectedFile = ofd.FileName;
-            string directory = Path.GetDirectoryName(selectedFile)!;
-            string baseName = Path.GetFileNameWithoutExtension(selectedFile); // ex: "tigr"
-            string extension = Path.GetExtension(selectedFile);              // ex: ".log"
-
-            try
+            if (ofd.ShowDialog() == DialogResult.OK)
             {
-                // 1. On récupère tous les fichiers qui commencent par "tigr.log"
-                var logFiles = Directory.GetFiles(directory, baseName + extension + "*")
-                    .OrderBy(f =>
-                    {
-                        string suffix = f.Replace(baseName + extension, ""); // extrait .1, .2...
-                        if (string.IsNullOrEmpty(suffix)) return int.MaxValue; // le fichier tigr.log (le plus récent)
-                        if (int.TryParse(suffix.TrimStart('.'), out int n))
-                            return -n; // inverser car .5 est avant .4
-                        return int.MaxValue;
-                    })
-                    .Reverse() // remettre dans l'ordre croissant (5 → 1 → log)
-                    .ToList();
-
-                // 2. Combiner tout le contenu
-                var allLines = new List<string>();
-                foreach (var file in logFiles)
-                {
-                    string[] lines = File.ReadAllLines(file, Encoding.UTF8);
-                    allLines.AddRange(lines);
-                }
-
-                // 3. Filtrer uniquement les lignes contenant du JSON avec "Header"
-                var filteredLines = allLines
-                    .Where(line => line.Contains("{\"Header\":"))
-                    .ToArray();
-
-                // 4. Afficher dans la TextBox
-                txtLogDisplay.Lines = filteredLines;
-
-                txtLogDisplay.SelectionStart = txtLogDisplay.Text.Length;
-                txtLogDisplay.ScrollToCaret();
+                ProcessLogs(ofd.FileName);
             }
-            catch (Exception ex)
+        }
+        private void ProcessLogs(string filePath)
+        {
+            var logLines = File.ReadAllLines(filePath).ToList();
+
+            ILogTester tester = null;
+
+            string fileName = Path.GetFileName(filePath).ToLower();
+            if (fileName.Contains("tigr"))
             {
-                MessageBox.Show(this, $"Erreur lors de la lecture des logs : {ex.Message}", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                tester = new TigrAgentLogTester();
+            }
+            // else if pour d'autres applications à venir
+
+            if (tester != null)
+            {
+                var errors = tester.TestLogs(logLines);
+                txtLogDisplay.Text = errors.Count > 0
+                    ? string.Join(Environment.NewLine, errors)
+                    : "Aucune anomalie détectée dans les logs.";
+            }
+            else
+            {
+                txtLogDisplay.Text = "Aucun test disponible pour ce type de log.";
             }
         }
         #endregion
