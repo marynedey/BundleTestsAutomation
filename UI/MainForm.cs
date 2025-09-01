@@ -539,20 +539,48 @@ namespace BundleTestsAutomation.UI
             if (ofd.ShowDialog() != DialogResult.OK)
                 return;
 
-            string filePath = ofd.FileName;
+            string selectedFile = ofd.FileName;
+            string directory = Path.GetDirectoryName(selectedFile)!;
+            string baseName = Path.GetFileNameWithoutExtension(selectedFile); // ex: "tigr"
+            string extension = Path.GetExtension(selectedFile);              // ex: ".log"
 
             try
             {
-                string[] lines = File.ReadAllLines(filePath, Encoding.UTF8);
-                txtLogDisplay.Lines = lines;
+                // 1. On récupère tous les fichiers qui commencent par "tigr.log"
+                var logFiles = Directory.GetFiles(directory, baseName + extension + "*")
+                    .OrderBy(f =>
+                    {
+                        string suffix = f.Replace(baseName + extension, ""); // extrait .1, .2...
+                        if (string.IsNullOrEmpty(suffix)) return int.MaxValue; // le fichier tigr.log (le plus récent)
+                        if (int.TryParse(suffix.TrimStart('.'), out int n))
+                            return -n; // inverser car .5 est avant .4
+                        return int.MaxValue;
+                    })
+                    .Reverse() // remettre dans l'ordre croissant (5 → 1 → log)
+                    .ToList();
 
-                // Optionnel : scroll automatique vers le bas
+                // 2. Combiner tout le contenu
+                var allLines = new List<string>();
+                foreach (var file in logFiles)
+                {
+                    string[] lines = File.ReadAllLines(file, Encoding.UTF8);
+                    allLines.AddRange(lines);
+                }
+
+                // 3. Filtrer uniquement les lignes contenant du JSON avec "Header"
+                var filteredLines = allLines
+                    .Where(line => line.Contains("{\"Header\":"))
+                    .ToArray();
+
+                // 4. Afficher dans la TextBox
+                txtLogDisplay.Lines = filteredLines;
+
                 txtLogDisplay.SelectionStart = txtLogDisplay.Text.Length;
                 txtLogDisplay.ScrollToCaret();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(this, $"Impossible de lire le fichier : {ex.Message}", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(this, $"Erreur lors de la lecture des logs : {ex.Message}", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         #endregion
