@@ -4,6 +4,7 @@ using System;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
@@ -40,6 +41,10 @@ namespace BundleTestsAutomation.UI
         private ProgressBar progressBar;
         private Label lblProgress;
         private Button btnCancelGenerate;
+
+        // --- Logs controls ---
+        private TextBox txtLogDisplay;
+        private Button btnRefreshLogs;
 
         // --- Dialogs ---
         private OpenFileDialog ofd;
@@ -201,11 +206,29 @@ namespace BundleTestsAutomation.UI
         {
             panelContent.Controls.Clear();
 
-            var btnRefreshLogs = new Button { Text = "Rafraîchir Logs", Dock = DockStyle.Top, Height = 40 };
-            var txtLogs = new TextBox { Multiline = true, ScrollBars = ScrollBars.Vertical, Dock = DockStyle.Fill };
-
-            panelContent.Controls.Add(txtLogs);
+            // --- Bouton Rafraîchir ---
+            btnRefreshLogs = new Button
+            {
+                Text = "Rafraîchir / Choisir un fichier de logs",
+                Dock = DockStyle.Top,
+                Height = 40
+            };
+            btnRefreshLogs.Click += BtnRefreshLogs_Click;
             panelContent.Controls.Add(btnRefreshLogs);
+
+            // --- TextBox pour afficher les logs ---
+            txtLogDisplay = new TextBox
+            {
+                Dock = DockStyle.Fill,
+                Multiline = true,
+                ScrollBars = ScrollBars.Vertical,
+                ReadOnly = true,
+                Font = new Font("Consolas", 10)
+            };
+            panelContent.Controls.Add(txtLogDisplay);
+
+            btnRefreshLogs.BringToFront();
+            txtLogDisplay.BringToFront();
         }
         #endregion
 
@@ -499,6 +522,38 @@ namespace BundleTestsAutomation.UI
             {
                 UpdateProgress(stepValue, $"{message} ({current}/{total})");
             });
+        }
+        #endregion
+
+        #region Logs Event Handlers
+        private void BtnRefreshLogs_Click(object? sender, EventArgs e)
+        {
+            using var ofd = new OpenFileDialog
+            {
+                Title = "Sélectionnez un fichier de logs",
+                Filter = "Fichiers log (*.log;*.txt)|*.log;*.txt|Tous fichiers (*.*)|*.*",
+                CheckFileExists = true,
+                Multiselect = false
+            };
+
+            if (ofd.ShowDialog() != DialogResult.OK)
+                return;
+
+            string filePath = ofd.FileName;
+
+            try
+            {
+                string[] lines = File.ReadAllLines(filePath, Encoding.UTF8);
+                txtLogDisplay.Lines = lines;
+
+                // Optionnel : scroll automatique vers le bas
+                txtLogDisplay.SelectionStart = txtLogDisplay.Text.Length;
+                txtLogDisplay.ScrollToCaret();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, $"Impossible de lire le fichier : {ex.Message}", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         #endregion
 
