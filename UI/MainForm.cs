@@ -563,10 +563,9 @@ namespace BundleTestsAutomation.UI
         }
         private void ProcessLogs(string filePath)
         {
-            var logLines = File.ReadAllLines(filePath).ToList();
-
-            // Afficher tous les logs
-            txtLogDisplay.Text = string.Join(Environment.NewLine, logLines);
+            // Afficher les logs filtrés (filtrage simple)
+            string filteredLogs = LogService.ProcessLogs(filePath);
+            txtLogDisplay.Text = filteredLogs;
 
             ILogTester? tester = null;
             string fileName = Path.GetFileName(filePath).ToLower();
@@ -577,7 +576,7 @@ namespace BundleTestsAutomation.UI
 
             if (tester != null)
             {
-                var errors = tester.TestLogs(logLines);
+                var errors = tester.TestLogs(filePath);
                 txtLogResults.Text = errors.Count > 0
                     ? string.Join(Environment.NewLine, errors)
                     : "Aucune anomalie détectée dans les logs.";

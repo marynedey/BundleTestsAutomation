@@ -1,11 +1,28 @@
-﻿using System;
+﻿using BundleTestsAutomation.Services;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Text;
+using System.Text.Json;
+using System.Text.Json.Nodes;
+using System.Text.RegularExpressions;
 
 public class TigrAgentLogTester : ILogTester
 {
-    public List<string> TestLogs(IEnumerable<string> logLines)
+    public List<string> TestLogs(string filePath)
     {
+        List<string> antennaErrors = TestAntennaState(filePath);
+        List<string> batteryErrors = TestBatteryLvl(filePath);
+
+        List<string> errors = antennaErrors.Concat(batteryErrors).ToList();
+
+        return errors;
+    }
+
+    private List<string> TestAntennaState(string filePath)
+    {
+        var logLines = File.ReadAllLines(filePath).ToList();
         var issues = new List<string>();
         var lines = logLines.ToList();
 
@@ -38,6 +55,56 @@ public class TigrAgentLogTester : ILogTester
             if (!line.Contains(expectedSequence[i], StringComparison.OrdinalIgnoreCase))
             {
                 issues.Add($"Erreur à la ligne {lineIndex + 1} : attendu '{expectedSequence[i]}', trouvé '{line}'");
+            }
+        }
+
+        return issues;
+    }
+
+    private List<string> TestBatteryLvl(string filePath)
+    {
+        string filteredLogs = LogService.ProcessLogs(filePath);
+        var dateRegex = new Regex(@"^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}", RegexOptions.Multiline);
+
+        var socList = new List<int>();
+        var issues = new List<string>();
+
+        var matches = dateRegex.Matches(filteredLogs);
+
+        for (int i = 0; i < matches.Count; i++)
+        {
+            int startIndex = matches[i].Index;
+            int length = (i < matches.Count - 1) ? matches[i + 1].Index - startIndex : filteredLogs.Length - startIndex;
+            string line = filteredLogs.Substring(startIndex, length).Trim();
+
+            int braceIndex = line.IndexOf("{");
+            if (braceIndex < 0) continue;
+
+            string jsonPart = line.Substring(braceIndex);
+
+            try
+            {
+                using JsonDocument doc = JsonDocument.Parse(jsonPart);
+                if (doc.RootElement.TryGetProperty("EvtTRK", out JsonElement evtTrk))
+                {
+                    int vhm = evtTrk.GetProperty("VHM").GetInt32();
+                    if (vhm == 2 && evtTrk.TryGetProperty("SOC", out JsonElement socElem))
+                    {
+                        socList.Add(socElem.GetInt32());
+                    }
+                }
+            }
+            catch (JsonException)
+            {
+                // ignore les blocs JSON invalides
+            }
+        }
+
+        for (int i = 1; i < socList.Count; i++)
+        {
+            if (socList[i] > socList[i - 1])
+            {
+                issues.Add($"Erreur de SOC détectée : {socList[i - 1]}% -> {socList[i]}%");
             }
         }
 
