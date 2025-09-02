@@ -1,4 +1,5 @@
 ﻿using BundleTestsAutomation.Services;
+using BundleTestsAutomation.Services.LogTesters;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -10,14 +11,25 @@ using System.Text.RegularExpressions;
 
 public class TigrAgentLogTester : ILogTester
 {
-    public List<string> TestLogs(string filePath)
+    public List<TestResult> TestLogs(string filePath)
     {
-        List<string> antennaErrors = TestAntennaState(filePath);
-        List<string> batteryErrors = TestBatteryLvl(filePath);
+        var results = new List<TestResult>();
 
-        List<string> errors = antennaErrors.Concat(batteryErrors).ToList();
+        var antennaErrors = TestAntennaState(filePath);
+        results.Add(new TestResult
+        {
+            TestName = "Vérification de l'état de l'antenne",
+            Errors = antennaErrors
+        });
 
-        return errors;
+        var batteryErrors = TestBatteryLvl(filePath);
+        results.Add(new TestResult
+        {
+            TestName = "Vérification du niveau de batterie",
+            Errors = batteryErrors
+        });
+
+        return results;
     }
 
     private List<string> TestAntennaState(string filePath)

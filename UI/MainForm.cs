@@ -576,10 +576,8 @@ namespace BundleTestsAutomation.UI
 
             if (tester != null)
             {
-                var errors = tester.TestLogs(filePath);
-                txtLogResults.Text = errors.Count > 0
-                    ? string.Join(Environment.NewLine, errors)
-                    : "Aucune anomalie détectée dans les logs.";
+                var results = tester.TestLogs(filePath);
+                txtLogResults.Text = string.Join(Environment.NewLine, results);
             }
             else
             {
