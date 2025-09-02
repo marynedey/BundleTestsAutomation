@@ -13,28 +13,74 @@ public class TigrAgentLogTester : ILogTester
 {
     public List<TestResult> TestLogs(string filePath)
     {
-        var results = new List<TestResult>();
+        List<TestResult> results = new List<TestResult>();
 
-        var antennaErrors = TestAntennaState(filePath);
+        // --- Préparation des données ---
+        List<string> rawLogs = File.ReadAllLines(filePath).ToList();
+        string filteredLogs = LogService.ProcessLogs(filePath);
+
+        // --- Tests ---
+        List<string> antennaErrors = TestAntennaState(rawLogs);
         results.Add(new TestResult
         {
             TestName = "Vérification de l'état de l'antenne",
             Errors = antennaErrors
         });
 
-        var batteryErrors = TestBatteryLvl(filePath);
+        List<string> batteryErrors = TestBatteryLvl(filteredLogs);
         results.Add(new TestResult
         {
             TestName = "Vérification du niveau de batterie",
             Errors = batteryErrors
         });
 
+        List < string> motorSpeedErrors = TestMotorSpeed(filePath);
+        results.Add(new TestResult
+        {
+            TestName = "Vérification de la vitesse du moteur",
+            Errors = motorSpeedErrors
+        });
+
         return results;
     }
 
-    private List<string> TestAntennaState(string filePath)
+    private IEnumerable<JsonElement> ExtractJsonBlocks(string filteredLogs)
     {
-        var logLines = File.ReadAllLines(filePath).ToList();
+        var dateRegex = new Regex(@"^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}", RegexOptions.Multiline);
+        var matches = dateRegex.Matches(filteredLogs);
+
+        for (int i = 0; i < matches.Count; i++)
+        {
+            int startIndex = matches[i].Index;
+            int length = (i < matches.Count - 1) ? matches[i + 1].Index - startIndex : filteredLogs.Length - startIndex;
+            string line = filteredLogs.Substring(startIndex, length).Trim();
+
+            int braceIndex = line.IndexOf("{");
+            if (braceIndex < 0) continue;
+
+            string jsonPart = line.Substring(braceIndex);
+
+            JsonElement? parsedElement = default;
+            try
+            {
+                using JsonDocument doc = JsonDocument.Parse(jsonPart);
+                parsedElement = doc.RootElement.Clone();
+            }
+            catch (JsonException)
+            {
+                // ignore JSON invalide
+            }
+
+            if (parsedElement.HasValue)
+            {
+                yield return parsedElement.Value;
+            }
+        }
+    }
+
+
+    private List<string> TestAntennaState(List<string> logLines)
+    {
         var issues = new List<string>();
         var lines = logLines.ToList();
 
@@ -73,42 +119,20 @@ public class TigrAgentLogTester : ILogTester
         return issues;
     }
 
-    private List<string> TestBatteryLvl(string filePath)
+    private List<string> TestBatteryLvl(string filteredLogs)
     {
-        string filteredLogs = LogService.ProcessLogs(filePath);
-        var dateRegex = new Regex(@"^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}", RegexOptions.Multiline);
-
         var socList = new List<int>();
         var issues = new List<string>();
 
-        var matches = dateRegex.Matches(filteredLogs);
-
-        for (int i = 0; i < matches.Count; i++)
+        foreach (var json in ExtractJsonBlocks(filteredLogs))
         {
-            int startIndex = matches[i].Index;
-            int length = (i < matches.Count - 1) ? matches[i + 1].Index - startIndex : filteredLogs.Length - startIndex;
-            string line = filteredLogs.Substring(startIndex, length).Trim();
-
-            int braceIndex = line.IndexOf("{");
-            if (braceIndex < 0) continue;
-
-            string jsonPart = line.Substring(braceIndex);
-
-            try
+            if (json.TryGetProperty("EvtTRK", out JsonElement evtTrk))
             {
-                using JsonDocument doc = JsonDocument.Parse(jsonPart);
-                if (doc.RootElement.TryGetProperty("EvtTRK", out JsonElement evtTrk))
+                int vhm = evtTrk.GetProperty("VHM").GetInt32();
+                if (vhm == 2 && evtTrk.TryGetProperty("SOC", out JsonElement socElem))
                 {
-                    int vhm = evtTrk.GetProperty("VHM").GetInt32();
-                    if (vhm == 2 && evtTrk.TryGetProperty("SOC", out JsonElement socElem))
-                    {
-                        socList.Add(socElem.GetInt32());
-                    }
+                    socList.Add(socElem.GetInt32());
                 }
-            }
-            catch (JsonException)
-            {
-                // ignore les blocs JSON invalides
             }
         }
 
@@ -121,5 +145,11 @@ public class TigrAgentLogTester : ILogTester
         }
 
         return issues;
+    }
+
+
+    private List<string> TestMotorSpeed(string filteredLogs)
+    {
+        return new List<string>();
     }
 }
