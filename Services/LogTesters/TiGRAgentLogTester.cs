@@ -12,6 +12,8 @@ using BundleTestsAutomation.Models;
 
 public class TigrAgentLogTester : ILogTester
 {
+    public VehicleType currentType = AppSettings.VehicleTypeSelected;
+
     public List<TestResult> TestLogs(string filePath)
     {
         List<TestResult> results = new List<TestResult>();
@@ -40,6 +42,13 @@ public class TigrAgentLogTester : ILogTester
         {
             TestName = "Vérification de la vitesse du moteur",
             Errors = motorSpeedErrors
+        });
+
+        List<string> distanceErrors = TestDistanceTravelled(filteredLogs);
+        results.Add(new TestResult
+        {
+            TestName = "Vérification de la distance parcourue",
+            Errors = distanceErrors
         });
 
         return results;
@@ -149,30 +158,67 @@ public class TigrAgentLogTester : ILogTester
 
     private List<string> TestMotorSpeed(string filteredLogs)
     {
-        var socList = new List<int>();
         var issues = new List<string>();
-        VehicleType currentType = AppSettings.VehicleTypeSelected;
         int index = 0;
+        int nbErrors = 0;
 
         foreach (var json in ExtractJsonBlocks(filteredLogs))
         {
-            if (currentType == VehicleType.ICE)
+            if (json.TryGetProperty("EvtTRK", out JsonElement evtTrk))
             {
-                if (json.TryGetProperty("EvtTRK", out JsonElement evtTrk))
+                int vhm = evtTrk.GetProperty("VHM").GetInt32();
+                if (currentType == VehicleType.ICE)
                 {
-                    int vhm = evtTrk.GetProperty("VHM").GetInt32();
                     if (vhm == 2 && evtTrk.TryGetProperty("RPM", out JsonElement rpmElem))
                     {
                         int rpm = rpmElem.GetInt32();
-                        if (rpm == 0 || rpm == 2147483647)
+                        if (rpm == 0 || rpm == int.MaxValue)
                         {
                             issues.Add($"Erreur de vitesse détectée : {rpm} rpm alors que le véhicule roule (VHM = {vhm}) à l'index {index}");
+                            nbErrors++;
                         }
                     }
                 }
+                else if (currentType == VehicleType.EV)
+                {
+                    if (vhm == 2 && evtTrk.TryGetProperty("RPMEV", out JsonElement rpmevElem))
+                    {
+                        int msp = rpmevElem.GetInt32();
+                        if (msp == 0 || msp == int.MaxValue)
+                        {
+                            issues.Add($"Erreur de vitesse détectée : {msp} rpm alors que le véhicule roule (VHM = {vhm}) à l'index {index}");
+                            nbErrors++;
+                        }
+                    }
+                }
+                index++;
             }
-            index++;
         }
+        issues.Add($"{nbErrors*100/index}% d'erreurs"); // afin d'estimer si les integer max sont réellement à prendre en compte
+        return issues;
+    }
+
+    private List<string> TestDistanceTravelled(string filteredLogs)
+    {
+        var dstList = new List<int>();
+        var issues = new List<string>();
+
+        foreach (var json in ExtractJsonBlocks(filteredLogs))
+        {
+            if (json.TryGetProperty("EvtTRK", out JsonElement evtTrk) && evtTrk.TryGetProperty("DST", out JsonElement distElem))
+            {
+                dstList.Add(distElem.GetInt32());
+            }
+        }
+
+        for (int i = 1; i < dstList.Count; i++)
+        {
+            if (dstList[i] < dstList[i - 1])
+            {
+                issues.Add($"Erreur de distance parcourue détectée : {dstList[i - 1]} -> {dstList[i]}");
+            }
+        }
+
         return issues;
     }
 }
