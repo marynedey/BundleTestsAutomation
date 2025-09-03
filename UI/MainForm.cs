@@ -41,6 +41,8 @@ namespace BundleTestsAutomation.UI
         private ProgressBar progressBar;
         private Label lblProgress;
         private Button btnCancelGenerate;
+        private TextBox txtBundleManifest;
+        private TextBox txtTitreManifest;
 
         // --- Logs controls ---
         private TextBox txtLogDisplay;
@@ -111,6 +113,8 @@ namespace BundleTestsAutomation.UI
 
         private void InitializeBundleManifestControls()
         {
+            txtTitreManifest = new TextBox { Text = "Bundle Manifest généré:", Height = 40, Dock = DockStyle.Top };
+
             btnGenerateBundleManifest = new Button { Text = "Générer le Bundle Manifest", Height = 40, Dock = DockStyle.Top };
             btnGenerateBundleManifest.Click += BtnGenerateBundleManifest_Click;
 
@@ -204,15 +208,40 @@ namespace BundleTestsAutomation.UI
         {
             panelContent.Controls.Clear();
 
-            var panelManifest = new Panel { Dock = DockStyle.Top, Height = 300 };
-            panelManifest.Controls.Add(btnGenerateBundleManifest);
-            panelManifest.Controls.Add(cmbPcmVersion);
-            panelManifest.Controls.Add(btnValidatePcm);
-            panelManifest.Controls.Add(progressBar);
-            panelManifest.Controls.Add(lblProgress);
-            panelManifest.Controls.Add(btnCancelGenerate);
+            txtTitreManifest = new TextBox
+            {
+                Text = "Bundle Manifest généré:",
+                Height = 40,
+                Dock = DockStyle.Top,
+                ReadOnly = true,
+                BackColor = panelContent.BackColor,
+                BorderStyle = BorderStyle.None,
+                Font = new Font("Consolas", 10)
+            };
+            panelContent.Controls.Add(txtTitreManifest);
 
-            panelContent.Controls.Add(panelManifest);
+            // --- TextBox pour afficher le bundle manifest ---
+            txtBundleManifest = new TextBox
+            {
+                Dock = DockStyle.Fill,
+                Multiline = true,
+                ScrollBars = ScrollBars.Vertical,
+                ReadOnly = true,
+                Font = new Font("Consolas", 10),
+                BackColor = Color.LightYellow
+            };
+            panelContent.Controls.Add(txtBundleManifest);
+
+            var panelButtons = new Panel { Dock = DockStyle.Top, Height = 250 };
+
+            panelButtons.Controls.Add(btnGenerateBundleManifest);
+            panelButtons.Controls.Add(cmbPcmVersion);
+            panelButtons.Controls.Add(btnValidatePcm);
+            panelButtons.Controls.Add(progressBar);
+            panelButtons.Controls.Add(lblProgress);
+            panelButtons.Controls.Add(btnCancelGenerate);
+
+            panelContent.Controls.Add(panelButtons);
         }
 
         private void ShowMenuLogs()
@@ -497,6 +526,8 @@ namespace BundleTestsAutomation.UI
                 File.WriteAllText(path, xmlContent);
                 UpdateProgress(100, "Finalisation...");
                 HideProgressBar();
+
+                txtBundleManifest.Text = xmlContent;
 
                 // Message de confirmation
                 if (!isCancelled)
