@@ -8,6 +8,7 @@ using System.Text;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Text.RegularExpressions;
+using BundleTestsAutomation.Models;
 
 public class TigrAgentLogTester : ILogTester
 {
@@ -34,7 +35,7 @@ public class TigrAgentLogTester : ILogTester
             Errors = batteryErrors
         });
 
-        List < string> motorSpeedErrors = TestMotorSpeed(filePath);
+        List < string> motorSpeedErrors = TestMotorSpeed(filteredLogs);
         results.Add(new TestResult
         {
             TestName = "Vérification de la vitesse du moteur",
@@ -77,7 +78,6 @@ public class TigrAgentLogTester : ILogTester
             }
         }
     }
-
 
     private List<string> TestAntennaState(List<string> logLines)
     {
@@ -147,9 +147,32 @@ public class TigrAgentLogTester : ILogTester
         return issues;
     }
 
-
     private List<string> TestMotorSpeed(string filteredLogs)
     {
-        return new List<string>();
+        var socList = new List<int>();
+        var issues = new List<string>();
+        VehicleType currentType = AppSettings.VehicleTypeSelected;
+        int index = 0;
+
+        foreach (var json in ExtractJsonBlocks(filteredLogs))
+        {
+            if (currentType == VehicleType.ICE)
+            {
+                if (json.TryGetProperty("EvtTRK", out JsonElement evtTrk))
+                {
+                    int vhm = evtTrk.GetProperty("VHM").GetInt32();
+                    if (vhm == 2 && evtTrk.TryGetProperty("RPM", out JsonElement rpmElem))
+                    {
+                        int rpm = rpmElem.GetInt32();
+                        if (rpm == 0 || rpm == 2147483647)
+                        {
+                            issues.Add($"Erreur de vitesse détectée : {rpm} rpm alors que le véhicule roule (VHM = {vhm}) à l'index {index}");
+                        }
+                    }
+                }
+            }
+            index++;
+        }
+        return issues;
     }
 }

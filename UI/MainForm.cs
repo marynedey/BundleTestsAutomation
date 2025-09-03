@@ -46,6 +46,7 @@ namespace BundleTestsAutomation.UI
         private TextBox txtLogDisplay;
         private Button btnRefreshLogs;
         private TextBox txtLogResults;
+        private ComboBox cmbVehicleType;
 
         // --- Dialogs ---
         private OpenFileDialog ofd;
@@ -84,6 +85,7 @@ namespace BundleTestsAutomation.UI
             InitializeBundleManifestControls();
             InitializeDialogs();
             InitializeGrids();
+            InitializeLogsControls();
 
             // --- Afficher CSV par défaut ---
             ShowMenuCsv();
@@ -124,6 +126,16 @@ namespace BundleTestsAutomation.UI
 
             btnCancelGenerate = new Button { Text = "Annuler la génération", Height = 40, Dock = DockStyle.Top, Visible = false };
             btnCancelGenerate.Click += BtnCancelGenerate_Click;
+        }
+
+        private void InitializeLogsControls()
+        {
+            cmbVehicleType= new ComboBox { DropDownStyle = ComboBoxStyle.DropDownList, Height = 30, Width = 200 };
+            foreach (VehicleType type in Enum.GetValues(typeof(VehicleType)))
+            {
+                cmbVehicleType.Items.Add(type);
+            }
+            cmbVehicleType.SelectedIndex = 0;
         }
 
         private void InitializeGrids()
@@ -207,6 +219,14 @@ namespace BundleTestsAutomation.UI
         {
             panelContent.Controls.Clear();
 
+            // --- Panel en haut pour bouton + combobox ---
+            var panelTop = new Panel
+            {
+                Dock = DockStyle.Top,
+                Height = 80 // hauteur pour bouton + combobox
+            };
+            panelContent.Controls.Add(panelTop);
+
             // --- Bouton Rafraîchir ---
             btnRefreshLogs = new Button
             {
@@ -215,7 +235,18 @@ namespace BundleTestsAutomation.UI
                 Height = 40
             };
             btnRefreshLogs.Click += BtnRefreshLogs_Click;
-            panelContent.Controls.Add(btnRefreshLogs);
+            panelTop.Controls.Add(btnRefreshLogs);
+
+            // --- ComboBox Type de véhicule ---
+            cmbVehicleType.Left = (panelContent.ClientSize.Width - cmbVehicleType.Width) / 2;
+            cmbVehicleType.Top = btnRefreshLogs.Bottom + 5;
+            cmbVehicleType.Anchor = AnchorStyles.Top; // reste en haut si redimensionnement
+            cmbVehicleType.SelectedIndexChanged += (s, e) =>
+            {
+                AppSettings.VehicleTypeSelected = (VehicleType)cmbVehicleType.SelectedItem;
+            };
+
+            panelTop.Controls.Add(cmbVehicleType);
 
             // --- SplitContainer vertical pour logs + résultats ---
             var split = new SplitContainer
@@ -250,6 +281,7 @@ namespace BundleTestsAutomation.UI
             split.Panel2.Controls.Add(txtLogResults);
 
             btnRefreshLogs.BringToFront();
+            cmbVehicleType.BringToFront();
             split.BringToFront();
             split.SplitterDistance = panelContent.Height / 2;
         }

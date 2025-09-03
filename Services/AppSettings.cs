@@ -11,6 +11,8 @@ namespace BundleTestsAutomation.Services
 
         // Version du PCM (par défaut 3)
         public static int PcmVersion { get; set; } = 3;
+        // Type de véhicule (par défaut ICE)
+        public static VehicleType VehicleTypeSelected { get; set; } = VehicleType.ICE;
 
         public static string BundleManifestPath =>
             Path.Combine(BundleDirectory ?? string.Empty, "BundleManifest.xml");
