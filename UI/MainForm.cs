@@ -21,8 +21,7 @@ namespace BundleTestsAutomation.UI
 
         // --- Menu buttons ---
         private Button btnMenuCsv;
-        private Button btnMenuBundleManifest;
-        private Button btnMenuLogs;
+        private Button btnMenuTiGR;
 
         // --- CSV controls ---
         private Button btnLoad;
@@ -34,16 +33,6 @@ namespace BundleTestsAutomation.UI
         private Label lblCsvDiffCount;
         private Label lblCsvCompareTitle;
 
-        // --- Bundle Manifest controls ---
-        private Button btnGenerateBundleManifest;
-        private ComboBox cmbPcmVersion;
-        private Button btnValidatePcm;
-        private ProgressBar progressBar;
-        private Label lblProgress;
-        private Button btnCancelGenerate;
-        private TextBox txtBundleManifest;
-        private TextBox txtTitreManifest;
-
         // --- Logs controls ---
         private TextBox txtLogDisplay;
         private Button btnRefreshLogs;
@@ -53,9 +42,6 @@ namespace BundleTestsAutomation.UI
         // --- Dialogs ---
         private OpenFileDialog ofd;
         private FolderBrowserDialog folderBrowserDialog;
-
-        // --- Cancellation ---
-        private CancellationTokenSource? cancellationTokenSource;
 
         public MainForm()
         {
@@ -73,26 +59,20 @@ namespace BundleTestsAutomation.UI
 
             btnMenuCsv = new Button { Text = "CSV", Width = 100, Height = 40, Location = new Point(10, 5) };
             btnMenuCsv.Click += (s, e) => ShowMenuCsv();
-            btnMenuBundleManifest = new Button { Text = "Bundle Manifest", Width = 150, Height = 40, Location = new Point(120, 5) };
-            btnMenuBundleManifest.Click += (s, e) => ShowMenuBundleManifest();
-            btnMenuLogs = new Button { Text = "Logs", Width = 100, Height = 40, Location = new Point(280, 5) };
-            btnMenuLogs.Click += (s, e) => ShowMenuLogs();
+            btnMenuTiGR = new Button { Text = "TiGR", Width = 100, Height = 40, Location = new Point(120, 5) };
+            btnMenuTiGR.Click += (s, e) => ShowMenuTiGR();
 
             panelMenu.Controls.Add(btnMenuCsv);
-            panelMenu.Controls.Add(btnMenuBundleManifest);
-            panelMenu.Controls.Add(btnMenuLogs);
+            panelMenu.Controls.Add(btnMenuTiGR);
 
             // --- Initialiser contrôles ---
             InitializeCsvControls();
-            InitializeBundleManifestControls();
             InitializeDialogs();
             InitializeGrids();
-            InitializeLogsControls();
+            InitializeTiGRControls();
 
             // --- Afficher CSV par défaut ---
             ShowMenuCsv();
-
-            this.Shown += MainForm_Shown;
         }
 
         #region Initialisation Controls
@@ -111,28 +91,7 @@ namespace BundleTestsAutomation.UI
             lblCsvDiffCount = new Label { Dock = DockStyle.Top, Height = 25, TextAlign = ContentAlignment.MiddleLeft, Font = new Font(FontFamily.GenericSansSerif, 9, FontStyle.Regular) };
         }
 
-        private void InitializeBundleManifestControls()
-        {
-            txtTitreManifest = new TextBox { Text = "Bundle Manifest généré:", Height = 40, Dock = DockStyle.Top };
-
-            btnGenerateBundleManifest = new Button { Text = "Générer le Bundle Manifest", Height = 40, Dock = DockStyle.Top };
-            btnGenerateBundleManifest.Click += BtnGenerateBundleManifest_Click;
-
-            cmbPcmVersion = new ComboBox { Dock = DockStyle.Top, DropDownStyle = ComboBoxStyle.DropDownList, Height = 30 };
-            for (int i = 1; i <= 10; i++) cmbPcmVersion.Items.Add(i);
-            cmbPcmVersion.SelectedIndex = 2;
-
-            btnValidatePcm = new Button { Text = "Valider la version du PCM", Dock = DockStyle.Top, Height = 30 };
-            btnValidatePcm.Click += BtnValidatePcm_Click;
-
-            progressBar = new ProgressBar { Dock = DockStyle.Top, Height = 20, Minimum = 0, Maximum = 100, Value = 0, Visible = false };
-            lblProgress = new Label { Dock = DockStyle.Top, Height = 50, AutoSize = false, Visible = false };
-
-            btnCancelGenerate = new Button { Text = "Annuler la génération", Height = 40, Dock = DockStyle.Top, Visible = false };
-            btnCancelGenerate.Click += BtnCancelGenerate_Click;
-        }
-
-        private void InitializeLogsControls()
+        private void InitializeTiGRControls()
         {
             cmbVehicleType= new ComboBox { DropDownStyle = ComboBoxStyle.DropDownList, Height = 30, Width = 200 };
             foreach (VehicleType type in Enum.GetValues(typeof(VehicleType)))
@@ -203,48 +162,7 @@ namespace BundleTestsAutomation.UI
             panelDiffs.BringToFront();
             split.BringToFront();
         }
-
-        private void ShowMenuBundleManifest()
-        {
-            panelContent.Controls.Clear();
-
-            txtTitreManifest = new TextBox
-            {
-                Text = "Bundle Manifest généré:",
-                Height = 40,
-                Dock = DockStyle.Top,
-                ReadOnly = true,
-                BackColor = panelContent.BackColor,
-                BorderStyle = BorderStyle.None,
-                Font = new Font("Consolas", 10)
-            };
-            panelContent.Controls.Add(txtTitreManifest);
-
-            // --- TextBox pour afficher le bundle manifest ---
-            txtBundleManifest = new TextBox
-            {
-                Dock = DockStyle.Fill,
-                Multiline = true,
-                ScrollBars = ScrollBars.Vertical,
-                ReadOnly = true,
-                Font = new Font("Consolas", 10),
-                BackColor = Color.LightYellow
-            };
-            panelContent.Controls.Add(txtBundleManifest);
-
-            var panelButtons = new Panel { Dock = DockStyle.Top, Height = 250 };
-
-            panelButtons.Controls.Add(btnGenerateBundleManifest);
-            panelButtons.Controls.Add(cmbPcmVersion);
-            panelButtons.Controls.Add(btnValidatePcm);
-            panelButtons.Controls.Add(progressBar);
-            panelButtons.Controls.Add(lblProgress);
-            panelButtons.Controls.Add(btnCancelGenerate);
-
-            panelContent.Controls.Add(panelButtons);
-        }
-
-        private void ShowMenuLogs()
+        private void ShowMenuTiGR()
         {
             panelContent.Controls.Clear();
 
@@ -396,221 +314,6 @@ namespace BundleTestsAutomation.UI
         }
         #endregion
 
-        #region Bundle Manifest Event Handlers
-        private void BtnValidatePcm_Click(object? sender, EventArgs e)
-        {
-            if (cmbPcmVersion.SelectedItem == null)
-            {
-                MessageBox.Show(this, "Veuillez sélectionner une version de PCM.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            AppSettings.PcmVersion = (int)cmbPcmVersion.SelectedItem;
-            cmbPcmVersion.Visible = false;
-            btnValidatePcm.Visible = false;
-            lblProgress.Visible = false;
-        }
-
-        private async void BtnGenerateBundleManifest_Click(object? sender, EventArgs e)
-        {
-            bool isCancelled = false;
-
-            try
-            {
-                cancellationTokenSource = new CancellationTokenSource();
-                btnCancelGenerate.Visible = true;
-                btnGenerateBundleManifest.Enabled = false;
-
-                while (!AppSettings.IsValidBundleDirectory(AppSettings.BundleDirectory))
-                {
-                    var result = MessageBox.Show(
-                        "Le dossier sélectionné n'a pas le format attendu.\nVoulez-vous choisir un nouveau dossier ?",
-                        "Dossier invalide",
-                        MessageBoxButtons.YesNo,
-                        MessageBoxIcon.Warning);
-                    if (result == DialogResult.Yes)
-                    {
-                        using var fbd = new FolderBrowserDialog
-                        {
-                            Description = "Sélectionnez le répertoire du bundle à traiter",
-                            UseDescriptionForTitle = true,
-                            ShowNewFolderButton = false
-                        };
-                        if (fbd.ShowDialog() == DialogResult.OK)
-                        {
-                            AppSettings.BundleDirectory = fbd.SelectedPath;
-                        }
-                        else
-                        {
-                            btnCancelGenerate.Visible = false;
-                            btnGenerateBundleManifest.Enabled = true;
-                            return;
-                        }
-                    }
-                    else
-                    {
-                        btnCancelGenerate.Visible = false;
-                        btnGenerateBundleManifest.Enabled = true;
-                        return;
-                    }
-                }
-
-                ShowProgressBar(100);
-                string path = AppSettings.BundleManifestPath;
-
-                // Étape 1 : Génération du template (5%)
-                UpdateProgress(5, "Génération du template XML...");
-                BundleManifestService.Generate(path);
-
-                // Étape 2 : Chargement du document XML (10%)
-                UpdateProgress(10, "Chargement du document XML...");
-                var doc = XDocument.Load(path);
-
-                // Étape 3 : Extraction des infos (15%)
-                UpdateProgress(15, "Extraction des informations du Bundle...");
-                var infos = AppSettings.ExtractBundleInfoFromDirectory();
-
-                // Étape 4 : Mise à jour des attributs du bundle (20%)
-                UpdateProgress(20, "Mise à jour des attributs du Bundle...");
-                var bundle = doc.Root;
-                if (bundle != null)
-                {
-                    bundle.SetAttributeValue("version", infos.Version);
-                    bundle.SetAttributeValue("sw_id", infos.SwId);
-                    bundle.SetAttributeValue("sw_part_number", infos.SwPartNumber);
-                }
-
-                // Étape 5 : Mise à jour des packages (20% à 90%)
-                UpdateProgress(20, "Préparation de la mise à jour des packages...");
-                string rootFolder = AppSettings.BundleDirectory ?? string.Empty;
-
-                try
-                {
-                    await Task.Run(() =>
-                    {
-                        BundleManifestService.UpdateWirelessManagerArg2(doc, infos.SwId);
-                        if (infos.SwId.StartsWith("IVECOCITYBUS", StringComparison.OrdinalIgnoreCase))
-                        {
-                            BundleManifestService.UpdateDSEName(doc, infos.SwId);
-                        }
-                        BundleManifestService.UpdatePackages(doc, rootFolder, UpdatePackageProgress, cancellationTokenSource.Token);
-                    }, cancellationTokenSource.Token);
-                }
-                catch (OperationCanceledException)
-                {
-                    isCancelled = true;
-                    HideProgressBar();
-                    MessageBox.Show("La génération a été annulée.", "Annulation", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    btnCancelGenerate.Visible = false;
-                    btnGenerateBundleManifest.Enabled = true;
-                    return;
-                }
-
-                // Étape 6 : Sauvegarde (95% à 100%)
-                UpdateProgress(95, "Sauvegarde du BundleManifest...");
-                doc.Save(path);
-
-                // --- Corrections manuelles du XML ---
-                string xmlContent = File.ReadAllText(path);
-                xmlContent = Regex.Replace(xmlContent, @"encoding=[""'][^""']*[""']", "");
-                xmlContent = xmlContent.Replace(" xmlns=\"\"", "");
-                int index = xmlContent.IndexOf("<Signature");
-                if (index >= 0)
-                {
-                    int endIndex = xmlContent.IndexOf(">", index);
-                    if (endIndex >= 0 && !xmlContent.Substring(index, endIndex - index).Contains("xmlns=\"http://www.w3.org/2000/09/xmldsig#\""))
-                    {
-                        xmlContent = xmlContent.Insert(endIndex, " xmlns=\"http://www.w3.org/2000/09/xmldsig#\"");
-                    }
-                }
-                File.WriteAllText(path, xmlContent);
-                UpdateProgress(100, "Finalisation...");
-                HideProgressBar();
-
-                txtBundleManifest.Text = xmlContent;
-
-                // Message de confirmation
-                if (!isCancelled)
-                {
-                    MessageBox.Show(
-                    $"Le Bundle Manifest a été généré avec succès !\n\n" +
-                    $"Version: {infos.Version}\n" +
-                    $"sw_id: {infos.SwId}\n" +
-                    $"sw_part_number: {infos.SwPartNumber}\n\n" +
-                    $"Chemin du fichier :\n{path}",
-                    "Fichier généré",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
-                }
-            }
-            catch (Exception ex)
-            {
-                HideProgressBar();
-                MessageBox.Show(this, $"Une erreur est survenue : {ex.Message}", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                btnCancelGenerate.Visible = false;
-                btnGenerateBundleManifest.Enabled = true;
-            }
-        }
-
-        private void BtnCancelGenerate_Click(object? sender, EventArgs e)
-        {
-            if (cancellationTokenSource != null && !cancellationTokenSource.IsCancellationRequested)
-                cancellationTokenSource.Cancel();
-        }
-
-        private void ShowProgressBar(int maxValue)
-        {
-            progressBar.Value = 0;
-            progressBar.Maximum = maxValue;
-            progressBar.Visible = true;
-            lblProgress.Visible = true;
-            lblProgress.Text = "Début de la génération...";
-            Application.DoEvents();
-        }
-
-        private void UpdateProgress(int value, string message)
-        {
-            if (value > progressBar.Maximum) value = progressBar.Maximum;
-            progressBar.Value = value;
-            lblProgress.Text = $"{message} ({value}%)";
-            Application.DoEvents();
-        }
-
-        private void HideProgressBar()
-        {
-            progressBar.Value = 0;
-            progressBar.Visible = false;
-            lblProgress.Visible = false;
-            lblProgress.Text = "Prêt";
-        }
-
-        private void UpdatePackageProgress(int current, int total, string message)
-        {
-            int minValue = 20;
-            int maxValue = 90;
-            int stepValue;
-
-            if (total <= 0)
-            {
-                stepValue = minValue;
-            }
-            else
-            {
-                stepValue = minValue + (current * (maxValue - minValue) / total);
-                // S'assurer que stepValue reste dans les limites
-                stepValue = Math.Max(minValue, Math.Min(maxValue, stepValue));
-            }
-
-            this.Invoke((MethodInvoker)delegate
-            {
-                UpdateProgress(stepValue, $"{message} ({current}/{total})");
-            });
-        }
-        #endregion
-
         #region Logs Event Handlers
         private void BtnRefreshLogs_Click(object sender, EventArgs e)
         {
@@ -645,31 +348,6 @@ namespace BundleTestsAutomation.UI
             else
             {
                 txtLogResults.Text = "Aucun test disponible pour ce type de log.";
-            }
-        }
-        #endregion
-
-        #region Form Shown
-        private void MainForm_Shown(object? sender, EventArgs e)
-        {
-            while (true)
-            {
-                if (folderBrowserDialog.ShowDialog(this) == DialogResult.OK &&
-                    !string.IsNullOrWhiteSpace(folderBrowserDialog.SelectedPath))
-                {
-                    AppSettings.BundleDirectory = folderBrowserDialog.SelectedPath;
-                    break;
-                }
-
-                var result = MessageBox.Show(this,
-                    "Vous devez sélectionner un répertoire pour continuer.\n\nVoulez-vous réessayer ?",
-                    "Répertoire requis", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-                if (result == DialogResult.No)
-                {
-                    this.Close();
-                    return;
-                }
             }
         }
         #endregion

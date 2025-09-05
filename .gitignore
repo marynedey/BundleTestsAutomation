@@ -5,11 +5,6 @@
 bin/
 obj/
 Anagrafica_BUS_MY_24_DTC_table_1.4.xlsx
-data/BundleManifest.xml
-data/BundleManifest_empty.xml
 Properties/
 UI/MainForm.resx
 automatisation.ico
-data/TiGR/structure.jsx
-data/TiGR/tigragent_FCEV.log
-data/TiGR/tigragent_test.log
