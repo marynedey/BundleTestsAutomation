@@ -1,5 +1,6 @@
 ﻿using BundleTestsAutomation.Models;
 using BundleTestsAutomation.Services;
+using BundleTestsAutomation.Services.LogTesters;
 using System;
 using System.Drawing;
 using System.IO;
@@ -36,7 +37,7 @@ namespace BundleTestsAutomation.UI
         // --- Logs controls ---
         private TextBox txtLogDisplay;
         private Button btnRefreshLogs;
-        private TextBox txtLogResults;
+        private RichTextBox txtLogResults;
         private ComboBox cmbVehicleType;
 
         // --- Dialogs ---
@@ -72,7 +73,7 @@ namespace BundleTestsAutomation.UI
             InitializeTiGRControls();
 
             // --- Afficher CSV par défaut ---
-            ShowMenuCsv();
+            ShowMenuTiGR();
         }
 
         #region Initialisation Controls
@@ -211,17 +212,18 @@ namespace BundleTestsAutomation.UI
                 Multiline = true,
                 ScrollBars = ScrollBars.Vertical,
                 ReadOnly = true,
-                Font = new Font("Consolas", 10)
+                Font = new Font("Consolas", 10),
+                Height = 30
             };
             split.Panel1.Controls.Add(txtLogDisplay);
 
             // --- TextBox pour afficher les résultats ---
-            txtLogResults = new TextBox
+            txtLogResults = new RichTextBox
             {
                 Dock = DockStyle.Fill,
-                Multiline = true,
-                ScrollBars = ScrollBars.Vertical,
                 ReadOnly = true,
+                Multiline = true,
+                ScrollBars = RichTextBoxScrollBars.Vertical,
                 Font = new Font("Consolas", 10),
                 BackColor = Color.LightYellow
             };
@@ -343,11 +345,34 @@ namespace BundleTestsAutomation.UI
             if (tester != null)
             {
                 var results = tester.TestLogs(filePath);
-                txtLogResults.Text = string.Join(Environment.NewLine, results);
+                DisplayTestResults(results);
             }
             else
             {
                 txtLogResults.Text = "Aucun test disponible pour ce type de log.";
+            }
+        }
+
+        private void DisplayTestResults(List<TestResult> results)
+        {
+            txtLogResults.Clear();
+            foreach (var result in results)
+            {
+                // Choix de la couleur selon le statut
+                Color color = result.IsOk ? Color.Green : Color.Red;
+
+                txtLogResults.SelectionStart = txtLogResults.TextLength;
+                txtLogResults.SelectionLength = 0;
+                txtLogResults.SelectionColor = color;
+
+                txtLogResults.AppendText($"{result.TestName}: {result.Status}{Environment.NewLine}");
+
+                // Remet la couleur par défaut pour les messages
+                txtLogResults.SelectionColor = Color.Black;
+                foreach (var e in result.Errors)
+                {
+                    txtLogResults.AppendText($"\t{e}{Environment.NewLine}");
+                }
             }
         }
         #endregion

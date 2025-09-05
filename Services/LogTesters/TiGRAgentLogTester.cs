@@ -51,6 +51,27 @@ public class TigrAgentLogTester : ILogTester
             Errors = distanceErrors
         });
 
+        List<string> gpsErrors = TestGpsCoordinates(filteredLogs);
+        results.Add(new TestResult
+        {
+            TestName = "Vérification des coordonnées GPS",
+            Errors = gpsErrors
+        });
+
+        List<string> intMaxErrors = TestEvtTrkFields(filteredLogs);
+        results.Add(new TestResult
+        {
+            TestName = "Vérification du nombre d'integer max",
+            Errors = intMaxErrors
+        });
+
+        List<string> breakErrors = TestBrakeStatus(filteredLogs);
+        results.Add(new TestResult
+        {
+            TestName = "Vérification du freinage",
+            Errors = breakErrors
+        });
+
         return results;
     }
 
@@ -132,6 +153,7 @@ public class TigrAgentLogTester : ILogTester
     {
         var socList = new List<int>();
         var issues = new List<string>();
+        int index = 0;
 
         foreach (var json in ExtractJsonBlocks(filteredLogs))
         {
@@ -142,6 +164,7 @@ public class TigrAgentLogTester : ILogTester
                 {
                     socList.Add(socElem.GetInt32());
                 }
+                index++;
             }
         }
 
@@ -149,7 +172,7 @@ public class TigrAgentLogTester : ILogTester
         {
             if (socList[i] > socList[i - 1])
             {
-                issues.Add($"Erreur de SOC détectée : {socList[i - 1]}% -> {socList[i]}%");
+                issues.Add($"Erreur de SOC détectée : {socList[i - 1]}% -> {socList[i]}% à l'index {index}");
             }
         }
 
@@ -161,6 +184,7 @@ public class TigrAgentLogTester : ILogTester
         var issues = new List<string>();
         int index = 0;
         int nbErrors = 0;
+        int errorRate = 0;
 
         foreach (var json in ExtractJsonBlocks(filteredLogs))
         {
@@ -194,7 +218,16 @@ public class TigrAgentLogTester : ILogTester
                 index++;
             }
         }
-        issues.Add($"{nbErrors*100/index}% d'erreurs"); // afin d'estimer si les integer max sont réellement à prendre en compte
+
+        if (index > 0)
+        {
+            errorRate = nbErrors * 100 / index;
+            if (errorRate > 0)
+            {
+                issues.Add($"{errorRate}% d'erreurs"); // afin d'estimer si les integer max sont réellement à prendre en compte
+            }
+        }
+
         return issues;
     }
 
@@ -217,6 +250,156 @@ public class TigrAgentLogTester : ILogTester
             {
                 issues.Add($"Erreur de distance parcourue détectée : {dstList[i - 1]} -> {dstList[i]}");
             }
+        }
+
+        return issues;
+    }
+
+    private List<string> TestGpsCoordinates(string filteredLogs)
+    {
+        var issues = new List<string>();
+        int index = 0;
+        int nbErrors = 0;
+        int errorRate = 0;
+
+        foreach (var json in ExtractJsonBlocks(filteredLogs))
+        {
+            if (json.TryGetProperty("GPSInfo", out JsonElement gpsInfo))
+            {
+                if (gpsInfo.TryGetProperty("LAT", out JsonElement latElem) &&
+                    gpsInfo.TryGetProperty("LON", out JsonElement lonElem))
+                {
+                    try
+                    {
+                        int rawLat = latElem.GetInt32();
+                        int rawLon = lonElem.GetInt32();
+
+                        // Vérifie si les valeurs sont invalides
+                        if (rawLat == int.MaxValue || rawLon == int.MaxValue)
+                        {
+                            issues.Add($"Coordonnées invalides à l'index {index} : lat={rawLat}, lon={rawLon}");
+                            nbErrors++;
+                        }
+                        else
+                        {
+                            // Conversion en degrés
+                            double lat = rawLat / 60000.0;
+                            double lon = rawLon / 60000.0;
+
+                            // Vérification des bornes valides
+                            if (lat < -90 || lat > 90 || lon < -180 || lon > 180)
+                            {
+                                issues.Add($"Coordonnées hors limites à l'index {index} : lat={lat}, lon={lon}");
+                                nbErrors++;
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        issues.Add($"Erreur extraction coordonnées à l'index {index} : {ex.Message}");
+                        nbErrors++;
+                    }
+                }
+                else
+                {
+                    issues.Add($"gpsinfo présent mais lat/lon manquants à l'index {index}");
+                    nbErrors++;
+                }
+            }
+
+            index++;
+        }
+
+        if (index > 0)
+        {
+            errorRate = nbErrors * 100 / index;
+            if (errorRate > 0)
+            {
+                issues.Add($"{errorRate}% d'erreurs"); // afin d'estimer si les integer max sont réellement à prendre en compte
+            }
+        }
+
+        return issues;
+    }
+
+    private List<string> TestEvtTrkFields(string filteredLogs)
+    {
+        var issues = new List<string>();
+        int index = 0;
+        int nbErrors = 0;
+        int totalValues = 0;
+
+        foreach (var json in ExtractJsonBlocks(filteredLogs))
+        {
+            if (json.TryGetProperty("EvtTRK", out JsonElement evtTrk))
+            {
+                foreach (var property in evtTrk.EnumerateObject())
+                {
+                    totalValues++;
+                    if (property.Value.ValueKind == JsonValueKind.Number &&
+                        property.Value.TryGetInt32(out int val) &&
+                        val == int.MaxValue)
+                    {
+                        //issues.Add($"Valeur Max détectée dans EvtTRK: {property.Name} = {val} à l'index {index}");
+                        nbErrors++;
+                    }
+                }
+            }
+            index++;
+        }
+
+        if (totalValues > 0)
+        {
+            double errorRate = (double)nbErrors * 100 / totalValues;
+            issues.Add($"{errorRate:F2}% des valeurs de EvtTRK sont à int.MaxValue");
+        }
+        else
+        {
+            issues.Add("Aucune valeur trouvée dans EvtTRK.");
+        }
+
+        return issues;
+    }
+
+    private List<string> TestBrakeStatus(string filteredLogs)
+    {
+        var issues = new List<string>();
+        int index = 0;
+        int nbErrors = 0;
+
+        if (currentType != VehicleType.EV)
+        {
+            issues.Add("Test BRKSTS ignoré (applicable uniquement aux véhicules EV)");
+            return issues;
+        }
+
+        foreach (var json in ExtractJsonBlocks(filteredLogs))
+        {
+            if (json.TryGetProperty("EvtTRK", out JsonElement evtTrk))
+            {
+                if (evtTrk.TryGetProperty("BRKSTS", out JsonElement brkstsElem) &&
+                    brkstsElem.ValueKind == JsonValueKind.Number)
+                {
+                    int value = brkstsElem.GetInt32();
+                    if (value != 0 && value != 1)
+                    {
+                        issues.Add($"Erreur BRKSTS : valeur invalide {value} à l'index {index} (attendu 0 ou 1).");
+                        nbErrors++;
+                    }
+                }
+                else
+                {
+                    issues.Add($"Erreur BRKSTS : champ manquant ou invalide à l'index {index}.");
+                    nbErrors++;
+                }
+            }
+            index++;
+        }
+
+        if (index > 0)
+        {
+            double errorRate = (double)nbErrors * 100 / index;
+            issues.Add($"{errorRate:F2}% d'erreurs BRKSTS détectées.");
         }
 
         return issues;

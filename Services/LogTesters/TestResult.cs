@@ -9,12 +9,24 @@ namespace BundleTestsAutomation.Services.LogTesters
     public class TestResult
     {
         public string TestName { get; set; } = "";
-        public List<string> Errors { get; set; } = new List<string>();
-        public bool HasErrors => Errors.Count > 0;
+
+        public List<string> Errors { get; set; } = new();
+
+        // Retourne vrai si aucune erreur critique (ligne qui commence par "- Erreur")
+        public bool IsOk => !Errors.Any(e => e.StartsWith("Erreur", StringComparison.OrdinalIgnoreCase)
+                                          || e.StartsWith("- Erreur", StringComparison.OrdinalIgnoreCase));
+
+        public string Status => IsOk ? "OK" : "KO";
+
         public override string ToString()
         {
-            if (!HasErrors) return $"{TestName}: OK";
-            return $"{TestName}: KO\r\n- {string.Join("\r\n- ", Errors)}";
+            var sb = new StringBuilder();
+            sb.AppendLine($"{TestName}: {Status}");
+            foreach (var e in Errors)
+            {
+                sb.AppendLine($"\t{e}");
+            }
+            return sb.ToString();
         }
     }
 }
