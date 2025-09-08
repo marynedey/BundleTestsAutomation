@@ -4,15 +4,16 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Text.Json;
-using System.Text.Json.Nodes;
 using System.Text.RegularExpressions;
 using BundleTestsAutomation.Models;
 
 public class TigrAgentLogTester : ILogTester
 {
     public VehicleType currentType = AppSettings.VehicleTypeSelected;
+
+    // Nouvelle structure pour stocker date + JSON
+    public record LogEntry(DateTime Timestamp, JsonElement Json);
 
     public List<TestResult> TestLogs(string filePath)
     {
@@ -23,59 +24,52 @@ public class TigrAgentLogTester : ILogTester
         string filteredLogs = LogService.ProcessLogs(filePath);
 
         // --- Tests ---
-        List<string> antennaErrors = TestAntennaState(rawLogs);
         results.Add(new TestResult
         {
             TestName = "Vérification de l'état de l'antenne",
-            Errors = antennaErrors
+            Errors = TestAntennaState(rawLogs)
         });
 
-        List<string> batteryErrors = TestBatteryLvl(filteredLogs);
         results.Add(new TestResult
         {
             TestName = "Vérification du niveau de batterie",
-            Errors = batteryErrors
+            Errors = TestBatteryLvl(filteredLogs)
         });
 
-        List < string> motorSpeedErrors = TestMotorSpeed(filteredLogs);
         results.Add(new TestResult
         {
             TestName = "Vérification de la vitesse du moteur",
-            Errors = motorSpeedErrors
+            Errors = TestMotorSpeed(filteredLogs)
         });
 
-        List<string> distanceErrors = TestDistanceTravelled(filteredLogs);
         results.Add(new TestResult
         {
             TestName = "Vérification de la distance parcourue",
-            Errors = distanceErrors
+            Errors = TestDistanceTravelled(filteredLogs)
         });
 
-        List<string> gpsErrors = TestGpsCoordinates(filteredLogs);
         results.Add(new TestResult
         {
             TestName = "Vérification des coordonnées GPS",
-            Errors = gpsErrors
+            Errors = TestGpsCoordinates(filteredLogs)
         });
 
-        List<string> intMaxErrors = TestEvtTrkFields(filteredLogs);
         results.Add(new TestResult
         {
             TestName = "Vérification du nombre d'integer max",
-            Errors = intMaxErrors
+            Errors = TestEvtTrkFields(filteredLogs)
         });
 
-        List<string> breakErrors = TestBrakeStatus(filteredLogs);
         results.Add(new TestResult
         {
             TestName = "Vérification du freinage",
-            Errors = breakErrors
+            Errors = TestBrakeStatus(filteredLogs)
         });
 
         return results;
     }
 
-    private IEnumerable<JsonElement> ExtractJsonBlocks(string filteredLogs)
+    private IEnumerable<LogEntry> ExtractJsonBlocks(string filteredLogs)
     {
         var dateRegex = new Regex(@"^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}", RegexOptions.Multiline);
         var matches = dateRegex.Matches(filteredLogs);
@@ -83,28 +77,33 @@ public class TigrAgentLogTester : ILogTester
         for (int i = 0; i < matches.Count; i++)
         {
             int startIndex = matches[i].Index;
-            int length = (i < matches.Count - 1) ? matches[i + 1].Index - startIndex : filteredLogs.Length - startIndex;
+            int length = (i < matches.Count - 1)
+                ? matches[i + 1].Index - startIndex
+                : filteredLogs.Length - startIndex;
             string line = filteredLogs.Substring(startIndex, length).Trim();
+
+            if (!DateTime.TryParse(matches[i].Value, out var timestamp))
+                continue;
 
             int braceIndex = line.IndexOf("{");
             if (braceIndex < 0) continue;
 
             string jsonPart = line.Substring(braceIndex);
 
-            JsonElement? parsedElement = default;
+            JsonElement? parsedJson = null;
             try
             {
                 using JsonDocument doc = JsonDocument.Parse(jsonPart);
-                parsedElement = doc.RootElement.Clone();
+                parsedJson = doc.RootElement.Clone();
             }
             catch (JsonException)
             {
-                // ignore JSON invalide
+                // JSON invalide → on ignore
             }
 
-            if (parsedElement.HasValue)
+            if (parsedJson.HasValue)
             {
-                yield return parsedElement.Value;
+                yield return new LogEntry(timestamp, parsedJson.Value);
             }
         }
     }
@@ -112,9 +111,7 @@ public class TigrAgentLogTester : ILogTester
     private List<string> TestAntennaState(List<string> logLines)
     {
         var issues = new List<string>();
-        var lines = logLines.ToList();
-
-        string[] expectedSequence = new[]
+        string[] expectedSequence =
         {
             "navigation antenna info",
             "type of antenna: 2",
@@ -122,8 +119,7 @@ public class TigrAgentLogTester : ILogTester
             "ongpsantennastatus received: 1"
         };
 
-        int startIndex = lines.FindIndex(l => l.IndexOf("antenna", StringComparison.OrdinalIgnoreCase) >= 0);
-
+        int startIndex = logLines.FindIndex(l => l.IndexOf("antenna", StringComparison.OrdinalIgnoreCase) >= 0);
         if (startIndex == -1)
         {
             issues.Add("Aucune ligne contenant 'antenna' trouvée.");
@@ -133,16 +129,16 @@ public class TigrAgentLogTester : ILogTester
         for (int i = 0; i < expectedSequence.Length; i++)
         {
             int lineIndex = startIndex + i;
-            if (lineIndex >= lines.Count)
+            if (lineIndex >= logLines.Count)
             {
                 issues.Add($"Ligne attendue '{expectedSequence[i]}' manquante à la fin du fichier.");
                 break;
             }
 
-            string line = lines[lineIndex];
+            string line = logLines[lineIndex];
             if (!line.Contains(expectedSequence[i], StringComparison.OrdinalIgnoreCase))
             {
-                issues.Add($"Erreur à la ligne {lineIndex + 1} : attendu '{expectedSequence[i]}', trouvé '{line}'");
+                issues.Add($"Erreur : attendu '{expectedSequence[i]}', trouvé '{line}'");
             }
         }
 
@@ -151,28 +147,27 @@ public class TigrAgentLogTester : ILogTester
 
     private List<string> TestBatteryLvl(string filteredLogs)
     {
-        var socList = new List<int>();
+        var socList = new List<(DateTime Timestamp, int Value)>();
         var issues = new List<string>();
-        int index = 0;
 
-        foreach (var json in ExtractJsonBlocks(filteredLogs))
+        foreach (var entry in ExtractJsonBlocks(filteredLogs))
         {
+            var json = entry.Json;
             if (json.TryGetProperty("EvtTRK", out JsonElement evtTrk))
             {
                 int vhm = evtTrk.GetProperty("VHM").GetInt32();
                 if (vhm == 2 && evtTrk.TryGetProperty("SOC", out JsonElement socElem))
                 {
-                    socList.Add(socElem.GetInt32());
+                    socList.Add((entry.Timestamp, socElem.GetInt32()));
                 }
-                index++;
             }
         }
 
         for (int i = 1; i < socList.Count; i++)
         {
-            if (socList[i] > socList[i - 1])
+            if (socList[i].Value > socList[i - 1].Value)
             {
-                issues.Add($"Erreur de SOC détectée : {socList[i - 1]}% -> {socList[i]}% à l'index {index}");
+                issues.Add($"[{socList[i].Timestamp}] Erreur de SOC : {socList[i - 1].Value}% -> {socList[i].Value}%");
             }
         }
 
@@ -182,15 +177,16 @@ public class TigrAgentLogTester : ILogTester
     private List<string> TestMotorSpeed(string filteredLogs)
     {
         var issues = new List<string>();
-        int index = 0;
         int nbErrors = 0;
-        int errorRate = 0;
+        int total = 0;
 
-        foreach (var json in ExtractJsonBlocks(filteredLogs))
+        foreach (var entry in ExtractJsonBlocks(filteredLogs))
         {
+            var json = entry.Json;
             if (json.TryGetProperty("EvtTRK", out JsonElement evtTrk))
             {
                 int vhm = evtTrk.GetProperty("VHM").GetInt32();
+
                 if (currentType == VehicleType.ICE)
                 {
                     if (vhm == 2 && evtTrk.TryGetProperty("RPM", out JsonElement rpmElem))
@@ -198,7 +194,7 @@ public class TigrAgentLogTester : ILogTester
                         int rpm = rpmElem.GetInt32();
                         if (rpm == 0 || rpm == int.MaxValue)
                         {
-                            issues.Add($"Erreur de vitesse détectée : {rpm} rpm alors que le véhicule roule (VHM = {vhm}) à l'index {index}");
+                            issues.Add($"[{entry.Timestamp}] Erreur RPM ICE : {rpm} alors que le véhicule roule");
                             nbErrors++;
                         }
                     }
@@ -207,24 +203,25 @@ public class TigrAgentLogTester : ILogTester
                 {
                     if (vhm == 2 && evtTrk.TryGetProperty("RPMEV", out JsonElement rpmevElem))
                     {
-                        int msp = rpmevElem.GetInt32();
-                        if (msp == 0 || msp == int.MaxValue)
+                        int rpmEv = rpmevElem.GetInt32();
+                        if (rpmEv == 0 || rpmEv == int.MaxValue)
                         {
-                            issues.Add($"Erreur de vitesse détectée : {msp} rpm alors que le véhicule roule (VHM = {vhm}) à l'index {index}");
+                            issues.Add($"[{entry.Timestamp}] Erreur RPM EV : {rpmEv} alors que le véhicule roule");
                             nbErrors++;
                         }
                     }
                 }
-                index++;
+
+                total++;
             }
         }
 
-        if (index > 0)
+        if (total > 0)
         {
-            errorRate = nbErrors * 100 / index;
+            int errorRate = nbErrors * 100 / total;
             if (errorRate > 0)
             {
-                issues.Add($"{errorRate}% d'erreurs"); // afin d'estimer si les integer max sont réellement à prendre en compte
+                issues.Add($"{errorRate}% d'erreurs de vitesse moteur");
             }
         }
 
@@ -233,22 +230,24 @@ public class TigrAgentLogTester : ILogTester
 
     private List<string> TestDistanceTravelled(string filteredLogs)
     {
-        var dstList = new List<int>();
+        var dstList = new List<(DateTime Timestamp, int Value)>();
         var issues = new List<string>();
 
-        foreach (var json in ExtractJsonBlocks(filteredLogs))
+        foreach (var entry in ExtractJsonBlocks(filteredLogs))
         {
-            if (json.TryGetProperty("EvtTRK", out JsonElement evtTrk) && evtTrk.TryGetProperty("DST", out JsonElement distElem))
+            var json = entry.Json;
+            if (json.TryGetProperty("EvtTRK", out JsonElement evtTrk) &&
+                evtTrk.TryGetProperty("DST", out JsonElement distElem))
             {
-                dstList.Add(distElem.GetInt32());
+                dstList.Add((entry.Timestamp, distElem.GetInt32()));
             }
         }
 
         for (int i = 1; i < dstList.Count; i++)
         {
-            if (dstList[i] < dstList[i - 1])
+            if (dstList[i].Value < dstList[i - 1].Value)
             {
-                issues.Add($"Erreur de distance parcourue détectée : {dstList[i - 1]} -> {dstList[i]}");
+                issues.Add($"[{dstList[i].Timestamp}] Erreur distance : {dstList[i - 1].Value} -> {dstList[i].Value}");
             }
         }
 
@@ -258,64 +257,52 @@ public class TigrAgentLogTester : ILogTester
     private List<string> TestGpsCoordinates(string filteredLogs)
     {
         var issues = new List<string>();
-        int index = 0;
         int nbErrors = 0;
-        int errorRate = 0;
+        int total = 0;
 
-        foreach (var json in ExtractJsonBlocks(filteredLogs))
+        foreach (var entry in ExtractJsonBlocks(filteredLogs))
         {
+            var json = entry.Json;
             if (json.TryGetProperty("GPSInfo", out JsonElement gpsInfo))
             {
+                total++;
                 if (gpsInfo.TryGetProperty("LAT", out JsonElement latElem) &&
                     gpsInfo.TryGetProperty("LON", out JsonElement lonElem))
                 {
-                    try
-                    {
-                        int rawLat = latElem.GetInt32();
-                        int rawLon = lonElem.GetInt32();
+                    int rawLat = latElem.GetInt32();
+                    int rawLon = lonElem.GetInt32();
 
-                        // Vérifie si les valeurs sont invalides
-                        if (rawLat == int.MaxValue || rawLon == int.MaxValue)
+                    if (rawLat == int.MaxValue || rawLon == int.MaxValue)
+                    {
+                        issues.Add($"[{entry.Timestamp}] Coordonnées invalides : lat={rawLat}, lon={rawLon}");
+                        nbErrors++;
+                    }
+                    else
+                    {
+                        double lat = rawLat / 60000.0;
+                        double lon = rawLon / 60000.0;
+
+                        if (lat < -90 || lat > 90 || lon < -180 || lon > 180)
                         {
-                            issues.Add($"Coordonnées invalides à l'index {index} : lat={rawLat}, lon={rawLon}");
+                            issues.Add($"[{entry.Timestamp}] Coordonnées hors limites : lat={lat}, lon={lon}");
                             nbErrors++;
                         }
-                        else
-                        {
-                            // Conversion en degrés
-                            double lat = rawLat / 60000.0;
-                            double lon = rawLon / 60000.0;
-
-                            // Vérification des bornes valides
-                            if (lat < -90 || lat > 90 || lon < -180 || lon > 180)
-                            {
-                                issues.Add($"Coordonnées hors limites à l'index {index} : lat={lat}, lon={lon}");
-                                nbErrors++;
-                            }
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        issues.Add($"Erreur extraction coordonnées à l'index {index} : {ex.Message}");
-                        nbErrors++;
                     }
                 }
                 else
                 {
-                    issues.Add($"gpsinfo présent mais lat/lon manquants à l'index {index}");
+                    issues.Add($"[{entry.Timestamp}] gpsinfo présent mais lat/lon manquants");
                     nbErrors++;
                 }
             }
-
-            index++;
         }
 
-        if (index > 0)
+        if (total > 0)
         {
-            errorRate = nbErrors * 100 / index;
+            int errorRate = nbErrors * 100 / total;
             if (errorRate > 0)
             {
-                issues.Add($"{errorRate}% d'erreurs"); // afin d'estimer si les integer max sont réellement à prendre en compte
+                issues.Add($"{errorRate}% d'erreurs GPS");
             }
         }
 
@@ -325,12 +312,12 @@ public class TigrAgentLogTester : ILogTester
     private List<string> TestEvtTrkFields(string filteredLogs)
     {
         var issues = new List<string>();
-        int index = 0;
         int nbErrors = 0;
         int totalValues = 0;
 
-        foreach (var json in ExtractJsonBlocks(filteredLogs))
+        foreach (var entry in ExtractJsonBlocks(filteredLogs))
         {
+            var json = entry.Json;
             if (json.TryGetProperty("EvtTRK", out JsonElement evtTrk))
             {
                 foreach (var property in evtTrk.EnumerateObject())
@@ -340,12 +327,10 @@ public class TigrAgentLogTester : ILogTester
                         property.Value.TryGetInt32(out int val) &&
                         val == int.MaxValue)
                     {
-                        //issues.Add($"Valeur Max détectée dans EvtTRK: {property.Name} = {val} à l'index {index}");
                         nbErrors++;
                     }
                 }
             }
-            index++;
         }
 
         if (totalValues > 0)
@@ -364,42 +349,43 @@ public class TigrAgentLogTester : ILogTester
     private List<string> TestBrakeStatus(string filteredLogs)
     {
         var issues = new List<string>();
-        int index = 0;
         int nbErrors = 0;
+        int total = 0;
 
         if (currentType != VehicleType.EV)
         {
-            issues.Add("Test BRKSTS ignoré (applicable uniquement aux véhicules EV)");
+            issues.Add("Test BRKSTS ignoré (uniquement véhicules EV)");
             return issues;
         }
 
-        foreach (var json in ExtractJsonBlocks(filteredLogs))
+        foreach (var entry in ExtractJsonBlocks(filteredLogs))
         {
+            var json = entry.Json;
             if (json.TryGetProperty("EvtTRK", out JsonElement evtTrk))
             {
+                total++;
                 if (evtTrk.TryGetProperty("BRKSTS", out JsonElement brkstsElem) &&
                     brkstsElem.ValueKind == JsonValueKind.Number)
                 {
                     int value = brkstsElem.GetInt32();
                     if (value != 0 && value != 1)
                     {
-                        issues.Add($"Erreur BRKSTS : valeur invalide {value} à l'index {index} (attendu 0 ou 1).");
+                        issues.Add($"[{entry.Timestamp}] Erreur BRKSTS : valeur {value} (attendu 0 ou 1)");
                         nbErrors++;
                     }
                 }
                 else
                 {
-                    issues.Add($"Erreur BRKSTS : champ manquant ou invalide à l'index {index}.");
+                    issues.Add($"[{entry.Timestamp}] Erreur BRKSTS : champ manquant ou invalide");
                     nbErrors++;
                 }
             }
-            index++;
         }
 
-        if (index > 0)
+        if (total > 0)
         {
-            double errorRate = (double)nbErrors * 100 / index;
-            issues.Add($"{errorRate:F2}% d'erreurs BRKSTS détectées.");
+            double errorRate = (double)nbErrors * 100 / total;
+            issues.Add($"{errorRate:F2}% d'erreurs BRKSTS");
         }
 
         return issues;
