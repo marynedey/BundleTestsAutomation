@@ -22,7 +22,7 @@ namespace BundleTestsAutomation.UI
 
         // --- Menu buttons ---
         private Button btnMenuCsv;
-        private Button btnMenuTiGR;
+        private Button btnMenuLogs;
 
         // --- CSV controls ---
         private Button btnLoad;
@@ -60,20 +60,20 @@ namespace BundleTestsAutomation.UI
 
             btnMenuCsv = new Button { Text = "CSV", Width = 100, Height = 40, Location = new Point(10, 5) };
             btnMenuCsv.Click += (s, e) => ShowMenuCsv();
-            btnMenuTiGR = new Button { Text = "TiGR", Width = 100, Height = 40, Location = new Point(120, 5) };
-            btnMenuTiGR.Click += (s, e) => ShowMenuTiGR();
+            btnMenuLogs = new Button { Text = "LOGS", Width = 100, Height = 40, Location = new Point(120, 5) };
+            btnMenuLogs.Click += (s, e) => ShowMenuLogs();
 
             panelMenu.Controls.Add(btnMenuCsv);
-            panelMenu.Controls.Add(btnMenuTiGR);
+            panelMenu.Controls.Add(btnMenuLogs);
 
             // --- Initialiser contrôles ---
             InitializeCsvControls();
             InitializeDialogs();
             InitializeGrids();
-            InitializeTiGRControls();
+            InitializeLogsControls();
 
             // --- Afficher CSV par défaut ---
-            ShowMenuTiGR();
+            ShowMenuLogs();
         }
 
         #region Initialisation Controls
@@ -92,7 +92,7 @@ namespace BundleTestsAutomation.UI
             lblCsvDiffCount = new Label { Dock = DockStyle.Top, Height = 25, TextAlign = ContentAlignment.MiddleLeft, Font = new Font(FontFamily.GenericSansSerif, 9, FontStyle.Regular) };
         }
 
-        private void InitializeTiGRControls()
+        private void InitializeLogsControls()
         {
             cmbVehicleType= new ComboBox { DropDownStyle = ComboBoxStyle.DropDownList, Height = 30, Width = 200 };
             foreach (VehicleType type in Enum.GetValues(typeof(VehicleType)))
@@ -163,7 +163,7 @@ namespace BundleTestsAutomation.UI
             panelDiffs.BringToFront();
             split.BringToFront();
         }
-        private void ShowMenuTiGR()
+        private void ShowMenuLogs()
         {
             panelContent.Controls.Clear();
 
@@ -340,6 +340,10 @@ namespace BundleTestsAutomation.UI
             if (fileName.Contains("tigr"))
             {
                 tester = new TigrAgentLogTester();
+            }
+            else if (fileName.Contains("diagnostic"))
+            {
+                tester = new DiagnosticLoggerLogTester();
             }
 
             if (tester != null)

@@ -12,9 +12,10 @@ namespace BundleTestsAutomation.Services.LogTesters
 
         public List<string> Errors { get; set; } = new();
 
-        // Retourne vrai si aucune erreur critique (ligne qui commence par "- Erreur")
-        public bool IsOk => !Errors.Any(e => e.StartsWith("Erreur", StringComparison.OrdinalIgnoreCase)
-                                          || e.StartsWith("- Erreur", StringComparison.OrdinalIgnoreCase));
+        // Considérer comme KO toutes les lignes contenant certains mots-clés
+        private static readonly string[] ErrorKeywords = { "Erreur", "KO", "critical", "invalid" };
+
+        public bool IsOk => !Errors.Any(e => ErrorKeywords.Any(k => e.Contains(k, StringComparison.OrdinalIgnoreCase)));
 
         public string Status => IsOk ? "OK" : "KO";
 
