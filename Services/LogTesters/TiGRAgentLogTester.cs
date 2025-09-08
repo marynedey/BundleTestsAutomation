@@ -12,8 +12,12 @@ public class TigrAgentLogTester : ILogTester
 {
     public VehicleType currentType = AppSettings.VehicleTypeSelected;
 
-    // Nouvelle structure pour stocker date + JSON
-    public record LogEntry(DateTime Timestamp, JsonElement Json);
+    // --- Structure pour conserver le JSON + timestamp associé ---
+    private class LogEntry
+    {
+        public DateTime Timestamp { get; set; }
+        public JsonElement Json { get; set; }
+    }
 
     public List<TestResult> TestLogs(string filePath)
     {
@@ -69,9 +73,10 @@ public class TigrAgentLogTester : ILogTester
         return results;
     }
 
+    // --- Extraction JSON + timestamp ---
     private IEnumerable<LogEntry> ExtractJsonBlocks(string filteredLogs)
     {
-        var dateRegex = new Regex(@"^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}", RegexOptions.Multiline);
+        var dateRegex = new Regex(@"^(?<ts>\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})", RegexOptions.Multiline);
         var matches = dateRegex.Matches(filteredLogs);
 
         for (int i = 0; i < matches.Count; i++)
@@ -80,38 +85,44 @@ public class TigrAgentLogTester : ILogTester
             int length = (i < matches.Count - 1)
                 ? matches[i + 1].Index - startIndex
                 : filteredLogs.Length - startIndex;
-            string line = filteredLogs.Substring(startIndex, length).Trim();
 
-            if (!DateTime.TryParse(matches[i].Value, out var timestamp))
-                continue;
-
-            int braceIndex = line.IndexOf("{");
+            string block = filteredLogs.Substring(startIndex, length).Trim();
+            int braceIndex = block.IndexOf("{");
             if (braceIndex < 0) continue;
 
-            string jsonPart = line.Substring(braceIndex);
+            string jsonPart = block.Substring(braceIndex);
 
-            JsonElement? parsedJson = null;
+            DateTime ts = DateTime.MinValue;
+            if (DateTime.TryParse(matches[i].Groups["ts"].Value, out var parsedTs))
+                ts = parsedTs;
+
+            JsonElement? parsed = null;
             try
             {
                 using JsonDocument doc = JsonDocument.Parse(jsonPart);
-                parsedJson = doc.RootElement.Clone();
+                parsed = doc.RootElement.Clone();
             }
             catch (JsonException)
             {
-                // JSON invalide → on ignore
+                // JSON invalide → ignoré
             }
 
-            if (parsedJson.HasValue)
+            if (parsed.HasValue)
             {
-                yield return new LogEntry(timestamp, parsedJson.Value);
+                yield return new LogEntry
+                {
+                    Timestamp = ts,
+                    Json = parsed.Value
+                };
             }
         }
     }
 
+    // --- Test antenne (pas de timestamp disponible) ---
     private List<string> TestAntennaState(List<string> logLines)
     {
         var issues = new List<string>();
-        string[] expectedSequence =
+        string[] expectedSequence = new[]
         {
             "navigation antenna info",
             "type of antenna: 2",
@@ -120,6 +131,7 @@ public class TigrAgentLogTester : ILogTester
         };
 
         int startIndex = logLines.FindIndex(l => l.IndexOf("antenna", StringComparison.OrdinalIgnoreCase) >= 0);
+
         if (startIndex == -1)
         {
             issues.Add("Aucune ligne contenant 'antenna' trouvée.");
@@ -138,55 +150,55 @@ public class TigrAgentLogTester : ILogTester
             string line = logLines[lineIndex];
             if (!line.Contains(expectedSequence[i], StringComparison.OrdinalIgnoreCase))
             {
-                issues.Add($"Erreur : attendu '{expectedSequence[i]}', trouvé '{line}'");
+                issues.Add($"Erreur à la ligne {lineIndex + 1} : attendu '{expectedSequence[i]}', trouvé '{line}'");
             }
         }
 
         return issues;
     }
 
+    // --- Test niveau de batterie ---
     private List<string> TestBatteryLvl(string filteredLogs)
     {
-        var socList = new List<(DateTime Timestamp, int Value)>();
         var issues = new List<string>();
+        int prevSoc = -1;
 
         foreach (var entry in ExtractJsonBlocks(filteredLogs))
         {
             var json = entry.Json;
+
             if (json.TryGetProperty("EvtTRK", out JsonElement evtTrk))
             {
                 int vhm = evtTrk.GetProperty("VHM").GetInt32();
                 if (vhm == 2 && evtTrk.TryGetProperty("SOC", out JsonElement socElem))
                 {
-                    socList.Add((entry.Timestamp, socElem.GetInt32()));
+                    int soc = socElem.GetInt32();
+                    if (prevSoc != -1 && soc > prevSoc)
+                    {
+                        issues.Add($"[{entry.Timestamp}] Erreur de SOC : {prevSoc}% -> {soc}%");
+                    }
+                    prevSoc = soc;
                 }
-            }
-        }
-
-        for (int i = 1; i < socList.Count; i++)
-        {
-            if (socList[i].Value > socList[i - 1].Value)
-            {
-                issues.Add($"[{socList[i].Timestamp}] Erreur de SOC : {socList[i - 1].Value}% -> {socList[i].Value}%");
             }
         }
 
         return issues;
     }
 
+    // --- Test vitesse moteur ---
     private List<string> TestMotorSpeed(string filteredLogs)
     {
         var issues = new List<string>();
-        int nbErrors = 0;
         int total = 0;
+        int nbErrors = 0;
 
         foreach (var entry in ExtractJsonBlocks(filteredLogs))
         {
             var json = entry.Json;
+
             if (json.TryGetProperty("EvtTRK", out JsonElement evtTrk))
             {
                 int vhm = evtTrk.GetProperty("VHM").GetInt32();
-
                 if (currentType == VehicleType.ICE)
                 {
                     if (vhm == 2 && evtTrk.TryGetProperty("RPM", out JsonElement rpmElem))
@@ -203,15 +215,14 @@ public class TigrAgentLogTester : ILogTester
                 {
                     if (vhm == 2 && evtTrk.TryGetProperty("RPMEV", out JsonElement rpmevElem))
                     {
-                        int rpmEv = rpmevElem.GetInt32();
-                        if (rpmEv == 0 || rpmEv == int.MaxValue)
+                        int msp = rpmevElem.GetInt32();
+                        if (msp == 0 || msp == int.MaxValue)
                         {
-                            issues.Add($"[{entry.Timestamp}] Erreur RPM EV : {rpmEv} alors que le véhicule roule");
+                            issues.Add($"[{entry.Timestamp}] Erreur RPM EV : {msp} alors que le véhicule roule");
                             nbErrors++;
                         }
                     }
                 }
-
                 total++;
             }
         }
@@ -220,73 +231,78 @@ public class TigrAgentLogTester : ILogTester
         {
             int errorRate = nbErrors * 100 / total;
             if (errorRate > 0)
-            {
                 issues.Add($"{errorRate}% d'erreurs de vitesse moteur");
-            }
         }
 
         return issues;
     }
 
+    // --- Test distance parcourue ---
     private List<string> TestDistanceTravelled(string filteredLogs)
     {
-        var dstList = new List<(DateTime Timestamp, int Value)>();
         var issues = new List<string>();
+        int prevDist = -1;
 
         foreach (var entry in ExtractJsonBlocks(filteredLogs))
         {
             var json = entry.Json;
+
             if (json.TryGetProperty("EvtTRK", out JsonElement evtTrk) &&
                 evtTrk.TryGetProperty("DST", out JsonElement distElem))
             {
-                dstList.Add((entry.Timestamp, distElem.GetInt32()));
-            }
-        }
-
-        for (int i = 1; i < dstList.Count; i++)
-        {
-            if (dstList[i].Value < dstList[i - 1].Value)
-            {
-                issues.Add($"[{dstList[i].Timestamp}] Erreur distance : {dstList[i - 1].Value} -> {dstList[i].Value}");
+                int dist = distElem.GetInt32();
+                if (prevDist != -1 && dist < prevDist)
+                {
+                    issues.Add($"[{entry.Timestamp}] Erreur de distance : {prevDist} -> {dist}");
+                }
+                prevDist = dist;
             }
         }
 
         return issues;
     }
 
+    // --- Test coordonnées GPS ---
     private List<string> TestGpsCoordinates(string filteredLogs)
     {
         var issues = new List<string>();
-        int nbErrors = 0;
-        int total = 0;
+        int total = 0, nbErrors = 0;
 
         foreach (var entry in ExtractJsonBlocks(filteredLogs))
         {
             var json = entry.Json;
+
             if (json.TryGetProperty("GPSInfo", out JsonElement gpsInfo))
             {
-                total++;
                 if (gpsInfo.TryGetProperty("LAT", out JsonElement latElem) &&
                     gpsInfo.TryGetProperty("LON", out JsonElement lonElem))
                 {
-                    int rawLat = latElem.GetInt32();
-                    int rawLon = lonElem.GetInt32();
-
-                    if (rawLat == int.MaxValue || rawLon == int.MaxValue)
+                    try
                     {
-                        issues.Add($"[{entry.Timestamp}] Coordonnées invalides : lat={rawLat}, lon={rawLon}");
-                        nbErrors++;
-                    }
-                    else
-                    {
-                        double lat = rawLat / 60000.0;
-                        double lon = rawLon / 60000.0;
+                        int rawLat = latElem.GetInt32();
+                        int rawLon = lonElem.GetInt32();
 
-                        if (lat < -90 || lat > 90 || lon < -180 || lon > 180)
+                        if (rawLat == int.MaxValue || rawLon == int.MaxValue)
                         {
-                            issues.Add($"[{entry.Timestamp}] Coordonnées hors limites : lat={lat}, lon={lon}");
+                            issues.Add($"[{entry.Timestamp}] Coordonnées invalides : lat={rawLat}, lon={rawLon}");
                             nbErrors++;
                         }
+                        else
+                        {
+                            double lat = rawLat / 60000.0;
+                            double lon = rawLon / 60000.0;
+
+                            if (lat < -90 || lat > 90 || lon < -180 || lon > 180)
+                            {
+                                issues.Add($"[{entry.Timestamp}] Coordonnées hors limites : lat={lat}, lon={lon}");
+                                nbErrors++;
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        issues.Add($"[{entry.Timestamp}] Erreur extraction coordonnées : {ex.Message}");
+                        nbErrors++;
                     }
                 }
                 else
@@ -295,29 +311,29 @@ public class TigrAgentLogTester : ILogTester
                     nbErrors++;
                 }
             }
+            total++;
         }
 
         if (total > 0)
         {
             int errorRate = nbErrors * 100 / total;
             if (errorRate > 0)
-            {
                 issues.Add($"{errorRate}% d'erreurs GPS");
-            }
         }
 
         return issues;
     }
 
+    // --- Test champs intergers max dans EvtTRK ---
     private List<string> TestEvtTrkFields(string filteredLogs)
     {
         var issues = new List<string>();
-        int nbErrors = 0;
-        int totalValues = 0;
+        int nbErrors = 0, totalValues = 0;
 
         foreach (var entry in ExtractJsonBlocks(filteredLogs))
         {
             var json = entry.Json;
+
             if (json.TryGetProperty("EvtTRK", out JsonElement evtTrk))
             {
                 foreach (var property in evtTrk.EnumerateObject())
@@ -346,46 +362,48 @@ public class TigrAgentLogTester : ILogTester
         return issues;
     }
 
+    // --- Test freinage ---
     private List<string> TestBrakeStatus(string filteredLogs)
     {
         var issues = new List<string>();
-        int nbErrors = 0;
-        int total = 0;
+        int total = 0, nbErrors = 0;
 
         if (currentType != VehicleType.EV)
         {
-            issues.Add("Test BRKSTS ignoré (uniquement véhicules EV)");
+            issues.Add("Test BRKSTS ignoré (applicable uniquement aux véhicules EV)");
             return issues;
         }
 
         foreach (var entry in ExtractJsonBlocks(filteredLogs))
         {
             var json = entry.Json;
+
             if (json.TryGetProperty("EvtTRK", out JsonElement evtTrk))
             {
-                total++;
                 if (evtTrk.TryGetProperty("BRKSTS", out JsonElement brkstsElem) &&
                     brkstsElem.ValueKind == JsonValueKind.Number)
                 {
                     int value = brkstsElem.GetInt32();
                     if (value != 0 && value != 1)
                     {
-                        issues.Add($"[{entry.Timestamp}] Erreur BRKSTS : valeur {value} (attendu 0 ou 1)");
+                        issues.Add($"[{entry.Timestamp}] Erreur BRKSTS : {value} (attendu 0 ou 1)");
                         nbErrors++;
                     }
                 }
                 else
                 {
-                    issues.Add($"[{entry.Timestamp}] Erreur BRKSTS : champ manquant ou invalide");
+                    issues.Add($"[{entry.Timestamp}] Champ BRKSTS manquant ou invalide");
                     nbErrors++;
                 }
+                total++;
             }
         }
 
         if (total > 0)
         {
             double errorRate = (double)nbErrors * 100 / total;
-            issues.Add($"{errorRate:F2}% d'erreurs BRKSTS");
+            if (errorRate > 0)
+                issues.Add($"{errorRate:F2}% d'erreurs BRKSTS détectées");
         }
 
         return issues;
