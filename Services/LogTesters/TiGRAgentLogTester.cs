@@ -28,12 +28,7 @@ public class TigrAgentLogTester : ILogTester
         string allLogs = File.ReadAllText(filePath);
 
         // --- Vérification globale des logs ERROR ---
-        var errorLines = allLogs
-            .Split(new[] { "\r\n", "\n" }, StringSplitOptions.None)
-            .Select(LogService.ParseLogLine)
-            .Where(l => l.Level == LogLevel.Error)
-            .Select(l => $"[{l.Timestamp:yyyy-MM-dd HH:mm:ss}] {l.Message}")
-            .ToList();
+        var errorLines = LogService.GetErrorLines(filePath);
 
         results.Add(new TestResult
         {

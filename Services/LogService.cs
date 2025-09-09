@@ -108,5 +108,19 @@ namespace BundleTestsAutomation.Services
                 Message = msg
             };
         }
+
+        public static List<string> GetErrorLines(string logFilePath)
+        {
+            if (!File.Exists(logFilePath))
+                throw new FileNotFoundException("Fichier log introuvable", logFilePath);
+
+            var allLogs = File.ReadAllText(logFilePath);
+            return allLogs
+                .Split(new[] { "\r\n", "\n" }, StringSplitOptions.None)
+                .Select(ParseLogLine) // Parse chaque ligne en LogMessage
+                .Where(l => l.Level == LogLevel.Error) // On filtre les ERROR
+                .Select(l => $"[{l.Timestamp:yyyy-MM-dd HH:mm:ss}] {l.Message}") // Format lisible
+                .ToList();
+        }
     }
 }
