@@ -8,7 +8,7 @@ using System.Text.Json;
 using System.Text.RegularExpressions;
 using BundleTestsAutomation.Models;
 
-public class TigrAgentLogTester : ILogTester
+public class TigrAgentLogTester : ITester
 {
     public VehicleType currentType = AppSettings.VehicleTypeSelected;
 
@@ -19,7 +19,7 @@ public class TigrAgentLogTester : ILogTester
         public JsonElement Json { get; set; }
     }
 
-    public List<TestResult> TestLogs(string filePath)
+    public List<TestResult> Test(string filePath)
     {
         List<TestResult> results = new List<TestResult>();
 

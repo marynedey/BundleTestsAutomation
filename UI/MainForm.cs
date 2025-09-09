@@ -335,20 +335,26 @@ namespace BundleTestsAutomation.UI
             string allLogs = File.ReadAllText(filePath);
             txtLogDisplay.Text = allLogs;
 
-            ILogTester? tester = null;
-            string fileName = Path.GetFileName(filePath).ToLower();
-            if (fileName.Contains("tigr"))
+            ITester? tester = null;
+            string? directory = Path.GetDirectoryName(filePath);
+            string folderName = directory != null ? new DirectoryInfo(directory).Name.ToLower() : "";
+
+            if (folderName.Contains("tigr"))
             {
                 tester = new TigrAgentLogTester();
             }
-            else if (fileName.Contains("diagnostic"))
+            else if (folderName.Contains("diagnostic"))
             {
                 tester = new DiagnosticLoggerLogTester();
+            }
+            else if (folderName.Contains("isa"))
+            {
+                tester = new ISAConfigTester();
             }
 
             if (tester != null)
             {
-                var results = tester.TestLogs(filePath);
+                var results = tester.Test(filePath);
                 DisplayTestResults(results);
             }
             else
