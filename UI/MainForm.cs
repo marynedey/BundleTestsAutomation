@@ -1,16 +1,6 @@
 ﻿using BundleTestsAutomation.Models;
 using BundleTestsAutomation.Services;
-using BundleTestsAutomation.Services.LogTesters;
-using System;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Xml.Linq;
+using BundleTestsAutomation.Services.TesterService;
 
 namespace BundleTestsAutomation.UI
 {

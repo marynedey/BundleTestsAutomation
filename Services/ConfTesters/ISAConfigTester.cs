@@ -1,4 +1,4 @@
-﻿using BundleTestsAutomation.Services.LogTesters;
+﻿using BundleTestsAutomation.Services.TesterService;
 
 public class ISAConfigTester : ITester
 {

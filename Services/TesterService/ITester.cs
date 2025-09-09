@@ -1,4 +1,4 @@
-﻿using BundleTestsAutomation.Services.LogTesters;
+﻿using BundleTestsAutomation.Services.TesterService;
 
 public interface ITester
 {
