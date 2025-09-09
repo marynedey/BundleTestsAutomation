@@ -1,0 +1,270 @@
+07-24 15:36:09.314 MAIN :  STARTING APPLICATION sgwlogger version 2.1.0
+07-24 15:36:09.348 Application::SetConfigurationParameters() : 
+m_conf_uuid: 00000000-0000-0000-0000-000000000000
+m_conf_enabled: false
+m_conf_tester_present_enabled: true
+m_conf_upload_enabled: true
+m_wait_for_internet: true
+m_ecu_connect_retry_period: 15000
+m_dtc_wait_timeout: 4
+m_upload_wait_timeout: 20000
+m_deadlock_end_req_count: 4
+m_shutdown_postpone: 60
+m_internet_interval: 120000
+
+07-24 15:36:24.701 Configuration registered with uuid = 00000000-0000-0000-0000-000000000000
+07-24 15:36:24.791 Saving in current configuration
+07-24 15:36:24.794 RestartThreadManager new configuration accepted, triggering restart
+07-24 15:36:24.794 New configuration accepted  uuid : 7011874631642741937
+  {"configurationId":"IVG_CROSS24_SGWLOGGER_ON_V02","enabled":true,"tester_present_enabled":true,"ecu_connect_retry_period":15000,"upload_enabled":true,"dtc_wait_timeout":1,"upload_wait_timeout":20000,"deadlock_end_req_count":4,"shutdown_postpone":60,"wait_for_internet":true,"internet_interval":120000,"spn_list":[521085,521086],"retry_strategy":[{"error":241,"retry_count":3,"retry_interval":15000},{"error":244,"retry_count":3,"retry_interval":15000},{"error":33,"retry_count":3,"retry_interval":15000}]}
+07-24 15:36:24.794 configuration saved   uuid : 7011874631642741937
+content:
+ {"configurationId":"IVG_CROSS24_SGWLOGGER_ON_V02","deadlock_end_req_count":4,"dtc_wait_timeout":1,"ecu_connect_retry_period":15000,"enabled":true,"internet_interval":120000,"retry_strategy":[{"error":241,"retry_count":3,"retry_interval":15000},{"error":244,"retry_count":3,"retry_interval":15000},{"error":33,"retry_count":3,"retry_interval":15000}],"shutdown_postpone":60,"spn_list":[521085,521086],"tester_present_enabled":true,"upload_enabled":true,"upload_wait_timeout":20000,"uuid":"7011874631642741937","wait_for_internet":true}
+07-24 15:36:24.857 Application::SetConfigurationParameters() : 
+m_conf_uuid: 7011874631642741937
+m_conf_enabled: true
+m_conf_tester_present_enabled: true
+m_conf_upload_enabled: true
+m_wait_for_internet: true
+m_ecu_connect_retry_period: 15000
+m_dtc_wait_timeout: 1
+m_upload_wait_timeout: 20000
+m_deadlock_end_req_count: 4
+m_shutdown_postpone: 60
+m_internet_interval: 120000
+
+07-24 15:36:40.101 SGWLogger main thread STARTING!
+07-24 15:36:40.101 SecureLogThread() THREAD_INIT
+07-24 15:36:40.145 Configuration registered with uuid = 7011874631642741937
+07-24 15:36:40.146 SecureLogThread() THREAD_CHECK_TEST_PRESENT
+07-24 15:36:40.155 SecureLogThread() THREAD_CHECK_TEST_PRESENT
+07-24 15:58:07.216 MAIN :  STARTING APPLICATION sgwlogger version 2.1.0
+07-24 15:58:07.243 Application::SetConfigurationParameters() : 
+m_conf_uuid: 7011874631642741937
+m_conf_enabled: true
+m_conf_tester_present_enabled: true
+m_conf_upload_enabled: true
+m_wait_for_internet: true
+m_ecu_connect_retry_period: 15000
+m_dtc_wait_timeout: 1
+m_upload_wait_timeout: 20000
+m_deadlock_end_req_count: 4
+m_shutdown_postpone: 60
+m_internet_interval: 120000
+
+07-24 15:58:22.611 SGWLogger main thread STARTING!
+07-24 15:58:22.611 SecureLogThread() THREAD_INIT
+07-24 15:58:22.658 SecureLogThread() THREAD_CHECK_TEST_PRESENT
+07-24 15:58:22.663 Configuration registered with uuid = 7011874631642741937
+08-21 07:49:23.754 MAIN :  STARTING APPLICATION sgwlogger version 2.1.0
+08-21 07:49:23.774 Application::SetConfigurationParameters() : 
+m_conf_uuid: 7011874631642741937
+m_conf_enabled: true
+m_conf_tester_present_enabled: true
+m_conf_upload_enabled: true
+m_wait_for_internet: true
+m_ecu_connect_retry_period: 15000
+m_dtc_wait_timeout: 1
+m_upload_wait_timeout: 20000
+m_deadlock_end_req_count: 4
+m_shutdown_postpone: 60
+m_internet_interval: 120000
+
+08-21 07:49:39.053 SGWLogger main thread STARTING!
+08-21 07:49:39.053 SecureLogThread() THREAD_INIT
+08-21 07:49:39.089 SecureLogThread() THREAD_CHECK_TEST_PRESENT
+08-21 07:49:39.126 Configuration registered with uuid = 7011874631642741937
+08-21 08:22:27.542 RestartThreadManager unrecovble error detected, triggering restart
+08-21 08:22:27.608 SGWLogger main thread STOPPING!
+08-21 08:22:29.296 Application::SetConfigurationParameters() : 
+m_conf_uuid: 7011874631642741937
+m_conf_enabled: true
+m_conf_tester_present_enabled: true
+m_conf_upload_enabled: true
+m_wait_for_internet: true
+m_ecu_connect_retry_period: 15000
+m_dtc_wait_timeout: 1
+m_upload_wait_timeout: 20000
+m_deadlock_end_req_count: 4
+m_shutdown_postpone: 60
+m_internet_interval: 120000
+
+08-21 08:22:37.049 sgwlogger: application terminated ... bye
+08-21 08:29:06.566 MAIN :  STARTING APPLICATION sgwlogger version 2.1.0
+08-21 08:29:06.590 Application::SetConfigurationParameters() : 
+m_conf_uuid: 7011874631642741937
+m_conf_enabled: true
+m_conf_tester_present_enabled: true
+m_conf_upload_enabled: true
+m_wait_for_internet: true
+m_ecu_connect_retry_period: 15000
+m_dtc_wait_timeout: 1
+m_upload_wait_timeout: 20000
+m_deadlock_end_req_count: 4
+m_shutdown_postpone: 60
+m_internet_interval: 120000
+
+08-21 08:29:21.856 SGWLogger main thread STARTING!
+08-21 08:29:21.857 SecureLogThread() THREAD_INIT
+08-21 08:29:21.908 Configuration registered with uuid = 7011874631642741937
+08-21 08:29:21.915 SecureLogThread() THREAD_CHECK_TEST_PRESENT
+08-21 15:02:43.679 MAIN :  STARTING APPLICATION sgwlogger version 2.1.0
+08-21 15:02:43.700 Application::SetConfigurationParameters() : 
+m_conf_uuid: 7011874631642741937
+m_conf_enabled: true
+m_conf_tester_present_enabled: true
+m_conf_upload_enabled: true
+m_wait_for_internet: true
+m_ecu_connect_retry_period: 15000
+m_dtc_wait_timeout: 1
+m_upload_wait_timeout: 20000
+m_deadlock_end_req_count: 4
+m_shutdown_postpone: 60
+m_internet_interval: 120000
+
+08-21 15:02:58.988 SGWLogger main thread STARTING!
+08-21 15:02:58.988 SecureLogThread() THREAD_INIT
+08-21 15:02:59.042 Configuration registered with uuid = 7011874631642741937
+08-21 15:02:59.046 SecureLogThread() THREAD_CHECK_TEST_PRESENT
+08-22 07:41:11.747 MAIN :  STARTING APPLICATION sgwlogger version 2.1.0
+08-22 07:41:11.767 Application::SetConfigurationParameters() : 
+m_conf_uuid: 7011874631642741937
+m_conf_enabled: true
+m_conf_tester_present_enabled: true
+m_conf_upload_enabled: true
+m_wait_for_internet: true
+m_ecu_connect_retry_period: 15000
+m_dtc_wait_timeout: 1
+m_upload_wait_timeout: 20000
+m_deadlock_end_req_count: 4
+m_shutdown_postpone: 60
+m_internet_interval: 120000
+
+08-22 07:41:27.071 SGWLogger main thread STARTING!
+08-22 07:41:27.072 SecureLogThread() THREAD_INIT
+08-22 07:41:27.117 SecureLogThread() THREAD_CHECK_TEST_PRESENT
+08-22 07:41:27.120 Configuration registered with uuid = 7011874631642741937
+08-22 08:38:26.937 MAIN :  STARTING APPLICATION sgwlogger version 2.1.0
+08-22 08:38:26.957 Application::SetConfigurationParameters() : 
+m_conf_uuid: 7011874631642741937
+m_conf_enabled: true
+m_conf_tester_present_enabled: true
+m_conf_upload_enabled: true
+m_wait_for_internet: true
+m_ecu_connect_retry_period: 15000
+m_dtc_wait_timeout: 1
+m_upload_wait_timeout: 20000
+m_deadlock_end_req_count: 4
+m_shutdown_postpone: 60
+m_internet_interval: 120000
+
+08-22 08:38:42.253 SGWLogger main thread STARTING!
+08-22 08:38:42.253 SecureLogThread() THREAD_INIT
+08-22 08:38:42.303 SecureLogThread() THREAD_CHECK_TEST_PRESENT
+08-22 08:38:42.323 Configuration registered with uuid = 7011874631642741937
+08-22 08:40:24.688 RestartThreadManager unrecovble error detected, triggering restart
+08-22 08:40:24.691 SGWLogger main thread STOPPING!
+08-22 08:40:25.087 Application::SetConfigurationParameters() : 
+m_conf_uuid: 7011874631642741937
+m_conf_enabled: true
+m_conf_tester_present_enabled: true
+m_conf_upload_enabled: true
+m_wait_for_internet: true
+m_ecu_connect_retry_period: 15000
+m_dtc_wait_timeout: 1
+m_upload_wait_timeout: 20000
+m_deadlock_end_req_count: 4
+m_shutdown_postpone: 60
+m_internet_interval: 120000
+
+08-22 08:40:29.531 sgwlogger: application terminated ... bye
+08-22 08:45:35.715 MAIN :  STARTING APPLICATION sgwlogger version 2.1.0
+08-22 08:45:35.735 Application::SetConfigurationParameters() : 
+m_conf_uuid: 7011874631642741937
+m_conf_enabled: true
+m_conf_tester_present_enabled: true
+m_conf_upload_enabled: true
+m_wait_for_internet: true
+m_ecu_connect_retry_period: 15000
+m_dtc_wait_timeout: 1
+m_upload_wait_timeout: 20000
+m_deadlock_end_req_count: 4
+m_shutdown_postpone: 60
+m_internet_interval: 120000
+
+08-22 08:45:51.026 SGWLogger main thread STARTING!
+08-22 08:45:51.027 SecureLogThread() THREAD_INIT
+08-22 08:45:51.064 Configuration registered with uuid = 7011874631642741937
+08-22 08:45:51.075 SecureLogThread() THREAD_CHECK_TEST_PRESENT
+08-25 07:13:04.512 MAIN :  STARTING APPLICATION sgwlogger version 2.1.0
+08-25 07:13:04.538 Application::SetConfigurationParameters() : 
+m_conf_uuid: 7011874631642741937
+m_conf_enabled: true
+m_conf_tester_present_enabled: true
+m_conf_upload_enabled: true
+m_wait_for_internet: true
+m_ecu_connect_retry_period: 15000
+m_dtc_wait_timeout: 1
+m_upload_wait_timeout: 20000
+m_deadlock_end_req_count: 4
+m_shutdown_postpone: 60
+m_internet_interval: 120000
+
+08-25 07:13:19.813 SGWLogger main thread STARTING!
+08-25 07:13:19.814 SecureLogThread() THREAD_INIT
+08-25 07:13:19.859 SecureLogThread() THREAD_CHECK_TEST_PRESENT
+08-25 07:13:19.877 Configuration registered with uuid = 7011874631642741937
+09-03 07:07:13.246 MAIN :  STARTING APPLICATION sgwlogger version 2.1.0
+09-03 07:07:13.268 Application::SetConfigurationParameters() : 
+m_conf_uuid: 7011874631642741937
+m_conf_enabled: true
+m_conf_tester_present_enabled: true
+m_conf_upload_enabled: true
+m_wait_for_internet: true
+m_ecu_connect_retry_period: 15000
+m_dtc_wait_timeout: 1
+m_upload_wait_timeout: 20000
+m_deadlock_end_req_count: 4
+m_shutdown_postpone: 60
+m_internet_interval: 120000
+
+09-03 07:07:28.558 SGWLogger main thread STARTING!
+09-03 07:07:28.558 SecureLogThread() THREAD_INIT
+09-03 07:07:28.615 Configuration registered with uuid = 7011874631642741937
+09-03 07:07:28.618 SecureLogThread() THREAD_CHECK_TEST_PRESENT
+09-04 19:05:24.220 MAIN :  STARTING APPLICATION sgwlogger version 2.1.0
+09-04 19:05:24.242 Application::SetConfigurationParameters() : 
+m_conf_uuid: 7011874631642741937
+m_conf_enabled: true
+m_conf_tester_present_enabled: true
+m_conf_upload_enabled: true
+m_wait_for_internet: true
+m_ecu_connect_retry_period: 15000
+m_dtc_wait_timeout: 1
+m_upload_wait_timeout: 20000
+m_deadlock_end_req_count: 4
+m_shutdown_postpone: 60
+m_internet_interval: 120000
+
+09-04 19:05:39.520 SGWLogger main thread STARTING!
+09-04 19:05:39.520 SecureLogThread() THREAD_INIT
+09-04 19:05:39.559 Configuration registered with uuid = 7011874631642741937
+09-04 19:05:39.562 SecureLogThread() THREAD_CHECK_TEST_PRESENT
+09-05 09:41:03.061 MAIN :  STARTING APPLICATION sgwlogger version 2.1.0
+09-05 09:41:03.080 Application::SetConfigurationParameters() : 
+m_conf_uuid: 7011874631642741937
+m_conf_enabled: true
+m_conf_tester_present_enabled: true
+m_conf_upload_enabled: true
+m_wait_for_internet: true
+m_ecu_connect_retry_period: 15000
+m_dtc_wait_timeout: 1
+m_upload_wait_timeout: 20000
+m_deadlock_end_req_count: 4
+m_shutdown_postpone: 60
+m_internet_interval: 120000
+
+09-05 09:41:18.364 SGWLogger main thread STARTING!
+09-05 09:41:18.364 SecureLogThread() THREAD_INIT
+09-05 09:41:18.424 SecureLogThread() THREAD_CHECK_TEST_PRESENT
+09-05 09:41:18.457 Configuration registered with uuid = 7011874631642741937

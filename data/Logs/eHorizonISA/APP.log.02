@@ -1,0 +1,1151 @@
+2025-08-25 07:10:55,021 [INFO] APP/UDS.cpp/runTask()/222 - Get DID: 41416 size: 8
+2025-08-25 07:10:55,023 [INFO] APP/Gateway.cpp/runTask()/433 - Core socket appeared.
+2025-08-25 07:10:55,034 [ERROR] APP/CanBus.cpp/runTask()/367 - SocketHandler == nullptr
+2025-08-25 07:10:55,057 [INFO] APP/BorderCountriesReader.cpp/readFences()/74 - /opt/appl/data/apps/apps_data/eHorizonISA/resources/borders-country-code.xml file loaded
+2025-08-25 07:10:55,072 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-08-25 07:10:55,072 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: cs.iso
+2025-08-25 07:10:55,072 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/cs.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/cs
+2025-08-25 07:10:55,072 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-08-25 07:10:55,072 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: cs.iso to data/apps/external/eHMap/cs.iso
+2025-08-25 07:10:55,072 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/cs.iso to data/apps/external/eHMap/cs.iso
+2025-08-25 07:10:55,072 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/cs to data/apps/apps_data/eHorizonISA/maps/navi/cs
+2025-08-25 07:10:55,083 [INFO] APP/StateMonitor.cpp/onEvent()/248 - === Started Ev_TransitionCompleted for 2, mInternalEvent:0
+2025-08-25 07:10:55,083 [INFO] APP/StateMonitor.cpp/onEvent()/253 - === Ev_TransitionCompleted for RunState, mInternalEvent:0
+2025-08-25 07:10:55,103 [INFO] APP/UDS.cpp/readDid()/704 - Read DID: 41415 vector_size: 4
+2025-08-25 07:10:55,103 [INFO] APP/UDS.cpp/readDid()/705 - Read DID: 41415 vectorHex <0x {00 b4 00 c8 }>
+2025-08-25 07:10:55,104 [INFO] APP/VehicleInfoReceiver.cpp/onReceiveData()/209 - Vehicle Weight read from UDS = 19
+2025-08-25 07:10:55,112 [INFO] APP/UDS.cpp/sendDidFromBsw()/592 - Sent DID from BSW: 41415 size: 4
+2025-08-25 07:10:55,112 [INFO] APP/UDS.cpp/runTask()/222 - Get DID: 41415 size: 4
+2025-08-25 07:10:55,134 [ERROR] APP/CanBus.cpp/runTask()/367 - SocketHandler == nullptr
+2025-08-25 07:10:55,169 [INFO] APP/UDS.cpp/readDid()/704 - Read DID: 869 vector_size: 1
+2025-08-25 07:10:55,169 [INFO] APP/UDS.cpp/readDid()/705 - Read DID: 869 vectorHex <0x {01 }>
+2025-08-25 07:10:55,170 [INFO] APP/UDS.cpp/sendDidFromBsw()/592 - Sent DID from BSW: 869 size: 1
+2025-08-25 07:10:55,170 [INFO] APP/UDS.cpp/runTask()/222 - Get DID: 869 size: 1
+2025-08-25 07:10:55,176 [INFO] APP/VehicleInfoReceiver.cpp/parseJsonRegardingToVehType()/244 - NSL .json parsed properly.
+2025-08-25 07:10:55,206 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-08-25 07:10:55,206 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: ru.iso
+2025-08-25 07:10:55,206 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/ru.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/ru
+2025-08-25 07:10:55,206 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-08-25 07:10:55,206 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: ru.iso to data/apps/external/eHMap/ru.iso
+2025-08-25 07:10:55,206 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/ru.iso to data/apps/external/eHMap/ru.iso
+2025-08-25 07:10:55,207 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/ru to data/apps/apps_data/eHorizonISA/maps/navi/ru
+2025-08-25 07:10:55,249 [INFO] APP/UDS.cpp/writeDid()/766 - Set DID: 61707 vector_size: 64
+2025-08-25 07:10:55,249 [INFO] APP/UDS.cpp/writeDid()/767 - Set DID: 61707 vectorHex <0x {49 56 45 43 4f 5f 50 43 4d 33 5f 65 48 5f 49 53 41 5f 30 33 2e 30 31 2e 30 31 3b 45 48 4f ... }>
+2025-08-25 07:10:55,249 [INFO] APP/UDS.cpp/runTask()/270 - Set DID: 61707 size: 64
+2025-08-25 07:10:55,317 [INFO] APP/CanBus.cpp/runTask()/338 - CAN socket path/opt/appl/var/can_sockets/can_stream_30049
+2025-08-25 07:10:55,318 [INFO] APP/udPsoCkeT.cpp/openConn()/138 - Successfully created socket: CanSocket
+2025-08-25 07:10:55,319 [INFO] APP/udPsoCkeT.cpp/openConn()/160 - Successfully connected socket: CanSocket with descriptor: 90
+2025-08-25 07:10:55,351 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-08-25 07:10:55,352 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: ell.iso
+2025-08-25 07:10:55,352 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/ell.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/ell
+2025-08-25 07:10:55,352 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-08-25 07:10:55,352 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: ell.iso to data/apps/external/eHMap/ell.iso
+2025-08-25 07:10:55,353 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/ell.iso to data/apps/external/eHMap/ell.iso
+2025-08-25 07:10:55,355 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/ell to data/apps/apps_data/eHorizonISA/maps/navi/ell
+2025-08-25 07:10:55,460 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-08-25 07:10:55,461 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: bnl.iso
+2025-08-25 07:10:55,461 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/bnl.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/bnl
+2025-08-25 07:10:55,461 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-08-25 07:10:55,461 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: bnl.iso to data/apps/external/eHMap/bnl.iso
+2025-08-25 07:10:55,461 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/bnl.iso to data/apps/external/eHMap/bnl.iso
+2025-08-25 07:10:55,461 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/bnl to data/apps/apps_data/eHorizonISA/maps/navi/bnl
+2025-08-25 07:10:55,555 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-08-25 07:10:55,555 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: gr.iso
+2025-08-25 07:10:55,555 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/gr.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/gr
+2025-08-25 07:10:55,555 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-08-25 07:10:55,555 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: gr.iso to data/apps/external/eHMap/gr.iso
+2025-08-25 07:10:55,555 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/gr.iso to data/apps/external/eHMap/gr.iso
+2025-08-25 07:10:55,556 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/gr to data/apps/apps_data/eHorizonISA/maps/navi/gr
+2025-08-25 07:10:55,722 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-08-25 07:10:55,722 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: uk.iso
+2025-08-25 07:10:55,722 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/uk.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/uk
+2025-08-25 07:10:55,722 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-08-25 07:10:55,722 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: uk.iso to data/apps/external/eHMap/uk.iso
+2025-08-25 07:10:55,722 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/uk.iso to data/apps/external/eHMap/uk.iso
+2025-08-25 07:10:55,723 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/uk to data/apps/apps_data/eHorizonISA/maps/navi/uk
+2025-08-25 07:10:55,782 [INFO] APP/GenericDebounceProcessor.cpp/setDTC()/374 - DTC set to inactive and occ decremented: ParameterLoadingError
+2025-08-25 07:10:55,852 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-08-25 07:10:55,852 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: ukr.iso
+2025-08-25 07:10:55,852 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/ukr.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/ukr
+2025-08-25 07:10:55,853 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-08-25 07:10:55,853 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: ukr.iso to data/apps/external/eHMap/ukr.iso
+2025-08-25 07:10:55,853 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/ukr.iso to data/apps/external/eHMap/ukr.iso
+2025-08-25 07:10:55,853 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/ukr to data/apps/apps_data/eHorizonISA/maps/navi/ukr
+2025-08-25 07:10:55,974 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-08-25 07:10:55,974 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: pl.iso
+2025-08-25 07:10:55,974 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/pl.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/pl
+2025-08-25 07:10:55,974 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-08-25 07:10:55,975 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: pl.iso to data/apps/external/eHMap/pl.iso
+2025-08-25 07:10:55,975 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/pl.iso to data/apps/external/eHMap/pl.iso
+2025-08-25 07:10:55,975 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/pl to data/apps/apps_data/eHorizonISA/maps/navi/pl
+2025-08-25 07:10:56,119 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-08-25 07:10:56,119 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: cz.iso
+2025-08-25 07:10:56,120 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/cz.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/cz
+2025-08-25 07:10:56,120 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-08-25 07:10:56,120 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: cz.iso to data/apps/external/eHMap/cz.iso
+2025-08-25 07:10:56,121 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/cz.iso to data/apps/external/eHMap/cz.iso
+2025-08-25 07:10:56,121 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/cz to data/apps/apps_data/eHorizonISA/maps/navi/cz
+2025-08-25 07:10:56,241 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-08-25 07:10:56,241 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: isr.iso
+2025-08-25 07:10:56,241 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/isr.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/isr
+2025-08-25 07:10:56,242 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-08-25 07:10:56,242 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: isr.iso to data/apps/external/eHMap/isr.iso
+2025-08-25 07:10:56,242 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/isr.iso to data/apps/external/eHMap/isr.iso
+2025-08-25 07:10:56,242 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/isr to data/apps/apps_data/eHorizonISA/maps/navi/isr
+2025-08-25 07:10:56,409 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-08-25 07:10:56,409 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: country_borders.tar
+2025-08-25 07:10:56,409 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: isl.iso
+2025-08-25 07:10:56,410 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/isl.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/isl
+2025-08-25 07:10:56,410 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-08-25 07:10:56,410 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: isl.iso to data/apps/external/eHMap/isl.iso
+2025-08-25 07:10:56,410 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/isl.iso to data/apps/external/eHMap/isl.iso
+2025-08-25 07:10:56,410 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/isl to data/apps/apps_data/eHorizonISA/maps/navi/isl
+2025-08-25 07:10:56,538 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-08-25 07:10:56,539 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: resources-manifest.xml
+2025-08-25 07:10:56,539 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: al.iso
+2025-08-25 07:10:56,539 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/al.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/al
+2025-08-25 07:10:56,540 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-08-25 07:10:56,540 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: al.iso to data/apps/external/eHMap/al.iso
+2025-08-25 07:10:56,540 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/al.iso to data/apps/external/eHMap/al.iso
+2025-08-25 07:10:56,540 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/al to data/apps/apps_data/eHorizonISA/maps/navi/al
+2025-08-25 07:10:56,653 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-08-25 07:10:56,653 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: si.iso
+2025-08-25 07:10:56,654 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/si.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/si
+2025-08-25 07:10:56,654 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-08-25 07:10:56,654 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: si.iso to data/apps/external/eHMap/si.iso
+2025-08-25 07:10:56,654 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/si.iso to data/apps/external/eHMap/si.iso
+2025-08-25 07:10:56,654 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/si to data/apps/apps_data/eHorizonISA/maps/navi/si
+2025-08-25 07:10:56,754 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-08-25 07:10:56,754 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: fall.iso
+2025-08-25 07:10:56,754 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/fall.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/fall
+2025-08-25 07:10:56,754 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-08-25 07:10:56,754 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: fall.iso to data/apps/external/eHMap/fall.iso
+2025-08-25 07:10:56,754 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/fall.iso to data/apps/external/eHMap/fall.iso
+2025-08-25 07:10:56,754 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/fall to data/apps/apps_data/eHorizonISA/maps/navi/fall
+2025-08-25 07:10:56,899 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-08-25 07:10:56,899 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: sc.iso
+2025-08-25 07:10:56,900 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/sc.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/sc
+2025-08-25 07:10:56,900 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-08-25 07:10:56,900 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: sc.iso to data/apps/external/eHMap/sc.iso
+2025-08-25 07:10:56,900 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/sc.iso to data/apps/external/eHMap/sc.iso
+2025-08-25 07:10:56,900 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/sc to data/apps/apps_data/eHorizonISA/maps/navi/sc
+2025-08-25 07:10:57,022 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-08-25 07:10:57,022 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: i.iso
+2025-08-25 07:10:57,022 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/i.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/i
+2025-08-25 07:10:57,022 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-08-25 07:10:57,023 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: i.iso to data/apps/external/eHMap/i.iso
+2025-08-25 07:10:57,023 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/i.iso to data/apps/external/eHMap/i.iso
+2025-08-25 07:10:57,023 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/i to data/apps/apps_data/eHorizonISA/maps/navi/i
+2025-08-25 07:10:57,171 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-08-25 07:10:57,172 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: sk.iso
+2025-08-25 07:10:57,172 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/sk.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/sk
+2025-08-25 07:10:57,172 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-08-25 07:10:57,172 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: sk.iso to data/apps/external/eHMap/sk.iso
+2025-08-25 07:10:57,172 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/sk.iso to data/apps/external/eHMap/sk.iso
+2025-08-25 07:10:57,172 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/sk to data/apps/apps_data/eHorizonISA/maps/navi/sk
+2025-08-25 07:10:57,311 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-08-25 07:10:57,311 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: md.iso
+2025-08-25 07:10:57,311 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/md.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/md
+2025-08-25 07:10:57,311 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-08-25 07:10:57,311 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: md.iso to data/apps/external/eHMap/md.iso
+2025-08-25 07:10:57,311 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/md.iso to data/apps/external/eHMap/md.iso
+2025-08-25 07:10:57,311 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/md to data/apps/apps_data/eHorizonISA/maps/navi/md
+2025-08-25 07:10:57,425 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-08-25 07:10:57,425 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: kos.iso
+2025-08-25 07:10:57,425 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/kos.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/kos
+2025-08-25 07:10:57,425 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-08-25 07:10:57,425 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: kos.iso to data/apps/external/eHMap/kos.iso
+2025-08-25 07:10:57,425 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/kos.iso to data/apps/external/eHMap/kos.iso
+2025-08-25 07:10:57,425 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/kos to data/apps/apps_data/eHorizonISA/maps/navi/kos
+2025-08-25 07:10:57,547 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-08-25 07:10:57,547 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: .resources-manifest.xml
+2025-08-25 07:10:57,547 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: ro.iso
+2025-08-25 07:10:57,548 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/ro.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/ro
+2025-08-25 07:10:57,548 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-08-25 07:10:57,548 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: ro.iso to data/apps/external/eHMap/ro.iso
+2025-08-25 07:10:57,548 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/ro.iso to data/apps/external/eHMap/ro.iso
+2025-08-25 07:10:57,548 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/ro to data/apps/apps_data/eHorizonISA/maps/navi/ro
+2025-08-25 07:10:57,726 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-08-25 07:10:57,726 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: blr.iso
+2025-08-25 07:10:57,726 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/blr.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/blr
+2025-08-25 07:10:57,726 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-08-25 07:10:57,726 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: blr.iso to data/apps/external/eHMap/blr.iso
+2025-08-25 07:10:57,727 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/blr.iso to data/apps/external/eHMap/blr.iso
+2025-08-25 07:10:57,727 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/blr to data/apps/apps_data/eHorizonISA/maps/navi/blr
+2025-08-25 07:10:57,877 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-08-25 07:10:57,879 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: sp.iso
+2025-08-25 07:10:57,880 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/sp.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/sp
+2025-08-25 07:10:57,880 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-08-25 07:10:57,880 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: sp.iso to data/apps/external/eHMap/sp.iso
+2025-08-25 07:10:57,881 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/sp.iso to data/apps/external/eHMap/sp.iso
+2025-08-25 07:10:57,882 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/sp to data/apps/apps_data/eHorizonISA/maps/navi/sp
+2025-08-25 07:10:58,018 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-08-25 07:10:58,019 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: hr.iso
+2025-08-25 07:10:58,019 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/hr.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/hr
+2025-08-25 07:10:58,019 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-08-25 07:10:58,019 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: hr.iso to data/apps/external/eHMap/hr.iso
+2025-08-25 07:10:58,019 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/hr.iso to data/apps/external/eHMap/hr.iso
+2025-08-25 07:10:58,019 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/hr to data/apps/apps_data/eHorizonISA/maps/navi/hr
+2025-08-25 07:10:58,202 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-08-25 07:10:58,202 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: hu.iso
+2025-08-25 07:10:58,202 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/hu.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/hu
+2025-08-25 07:10:58,202 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-08-25 07:10:58,202 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: hu.iso to data/apps/external/eHMap/hu.iso
+2025-08-25 07:10:58,202 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/hu.iso to data/apps/external/eHMap/hu.iso
+2025-08-25 07:10:58,202 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/hu to data/apps/apps_data/eHorizonISA/maps/navi/hu
+2025-08-25 07:10:58,321 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-08-25 07:10:58,321 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: tr.iso
+2025-08-25 07:10:58,321 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/tr.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/tr
+2025-08-25 07:10:58,322 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-08-25 07:10:58,322 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: tr.iso to data/apps/external/eHMap/tr.iso
+2025-08-25 07:10:58,323 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/tr.iso to data/apps/external/eHMap/tr.iso
+2025-08-25 07:10:58,323 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/tr to data/apps/apps_data/eHorizonISA/maps/navi/tr
+2025-08-25 07:10:58,406 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-08-25 07:10:58,406 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: mlt.iso
+2025-08-25 07:10:58,406 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/mlt.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/mlt
+2025-08-25 07:10:58,406 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-08-25 07:10:58,406 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: mlt.iso to data/apps/external/eHMap/mlt.iso
+2025-08-25 07:10:58,406 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/mlt.iso to data/apps/external/eHMap/mlt.iso
+2025-08-25 07:10:58,406 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/mlt to data/apps/apps_data/eHorizonISA/maps/navi/mlt
+2025-08-25 07:10:58,670 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-08-25 07:10:58,670 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: cy.iso
+2025-08-25 07:10:58,670 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/cy.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/cy
+2025-08-25 07:10:58,670 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-08-25 07:10:58,670 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: cy.iso to data/apps/external/eHMap/cy.iso
+2025-08-25 07:10:58,671 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/cy.iso to data/apps/external/eHMap/cy.iso
+2025-08-25 07:10:58,677 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/cy to data/apps/apps_data/eHorizonISA/maps/navi/cy
+2025-08-25 07:10:58,802 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-08-25 07:10:58,802 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: mk.iso
+2025-08-25 07:10:58,802 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/mk.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/mk
+2025-08-25 07:10:58,802 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-08-25 07:10:58,803 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: mk.iso to data/apps/external/eHMap/mk.iso
+2025-08-25 07:10:58,803 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/mk.iso to data/apps/external/eHMap/mk.iso
+2025-08-25 07:10:58,803 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/mk to data/apps/apps_data/eHorizonISA/maps/navi/mk
+2025-08-25 07:10:58,935 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-08-25 07:10:58,935 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: bg.iso
+2025-08-25 07:10:58,935 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/bg.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/bg
+2025-08-25 07:10:58,935 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-08-25 07:10:58,935 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: bg.iso to data/apps/external/eHMap/bg.iso
+2025-08-25 07:10:58,935 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/bg.iso to data/apps/external/eHMap/bg.iso
+2025-08-25 07:10:58,935 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/bg to data/apps/apps_data/eHorizonISA/maps/navi/bg
+2025-08-25 07:10:59,085 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-08-25 07:10:59,086 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/300 - Closed.../opt/appl/data/apps/apps_data/eHorizonISA/shared
+2025-08-25 07:10:59,086 [INFO] APP/SpaceManagement.cpp/runTask()/361 - Iso mounted at startup
+2025-08-25 07:10:59,086 [INFO] APP/SpaceManagement.cpp/runTask()/395 - Country borders corruption file does not exist
+2025-08-25 07:10:59,087 [INFO] APP/SpaceManagement.cpp/runTask()/402 - Country_borders is installed
+2025-08-25 07:10:59,099 [INFO] APP/Gateway.cpp/onEvent()/168 - StartUp mount done
+2025-08-25 07:10:59,099 [INFO] APP/Gateway.cpp/onEvent()/171 - Check manifests
+2025-08-25 07:10:59,622 [INFO] APP/EolUpdate.cpp/checkManifests()/162 - Eol manifest version: 1.1.0-08-2024
+2025-08-25 07:10:59,623 [INFO] APP/EolUpdate.cpp/checkManifests()/163 - Internal manifest version: 1.1.0-08-2024
+2025-08-25 07:10:59,623 [INFO] APP/EolUpdate.cpp/checkManifests()/210 - Manifests have the same version
+2025-08-25 07:10:59,632 [INFO] APP/RequestUpdateManager.cpp/start()/87 - UpdateManager is started
+2025-08-25 07:10:59,633 [INFO] APP/DIDSubscriber.cpp/send()/114 - Start map info reading
+2025-08-25 07:10:59,634 [INFO] APP/StateMonitor.cpp/setSystemState()/964 - === eHorizonISA enters ACTIVE state.
+2025-08-25 07:10:59,638 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/gr/navigation/db/cdrom.toc successfully opened
+2025-08-25 07:10:59,638 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/isl/navigation/db/cdrom.toc successfully opened
+2025-08-25 07:10:59,639 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/bg/navigation/db/cdrom.toc successfully opened
+2025-08-25 07:10:59,639 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/hu/navigation/db/cdrom.toc successfully opened
+2025-08-25 07:10:59,640 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/ell/navigation/db/cdrom.toc successfully opened
+2025-08-25 07:10:59,641 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/ru/navigation/db/cdrom.toc successfully opened
+2025-08-25 07:10:59,641 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/ach/navigation/db/cdrom.toc successfully opened
+2025-08-25 07:10:59,642 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/cz/navigation/db/cdrom.toc successfully opened
+2025-08-25 07:10:59,642 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/kos/navigation/db/cdrom.toc successfully opened
+2025-08-25 07:10:59,644 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/isr/navigation/db/cdrom.toc successfully opened
+2025-08-25 07:10:59,645 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/pl/navigation/db/cdrom.toc successfully opened
+2025-08-25 07:10:59,647 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/hr/navigation/db/cdrom.toc successfully opened
+2025-08-25 07:10:59,648 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/md/navigation/db/cdrom.toc successfully opened
+2025-08-25 07:10:59,649 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/cy/navigation/db/cdrom.toc successfully opened
+2025-08-25 07:10:59,652 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/mlt/navigation/db/cdrom.toc successfully opened
+2025-08-25 07:10:59,654 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/al/navigation/db/cdrom.toc successfully opened
+2025-08-25 07:10:59,657 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/ukr/navigation/db/cdrom.toc successfully opened
+2025-08-25 07:10:59,659 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/gall/navigation/db/cdrom.toc successfully opened
+2025-08-25 07:10:59,660 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/cs/navigation/db/cdrom.toc successfully opened
+2025-08-25 07:10:59,667 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/tr/navigation/db/cdrom.toc successfully opened
+2025-08-25 07:10:59,668 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/ro/navigation/db/cdrom.toc successfully opened
+2025-08-25 07:10:59,668 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/ba/navigation/db/cdrom.toc successfully opened
+2025-08-25 07:10:59,669 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/mk/navigation/db/cdrom.toc successfully opened
+2025-08-25 07:10:59,669 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/bnl/navigation/db/cdrom.toc successfully opened
+2025-08-25 07:10:59,670 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/uk/navigation/db/cdrom.toc successfully opened
+2025-08-25 07:10:59,671 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/blr/navigation/db/cdrom.toc successfully opened
+2025-08-25 07:10:59,671 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/i/navigation/db/cdrom.toc successfully opened
+2025-08-25 07:10:59,672 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/fall/navigation/db/cdrom.toc successfully opened
+2025-08-25 07:10:59,672 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/sc/navigation/db/cdrom.toc successfully opened
+2025-08-25 07:10:59,680 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/si/navigation/db/cdrom.toc successfully opened
+2025-08-25 07:10:59,681 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/sp/navigation/db/cdrom.toc successfully opened
+2025-08-25 07:10:59,681 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/sk/navigation/db/cdrom.toc successfully opened
+2025-08-25 07:10:59,685 [INFO] APP/DIDSubscriber.cpp/sendDidToUDS()/509 - Sent DID from MAP: 871 size: 30
+2025-08-25 07:10:59,688 [INFO] APP/DIDSubscriber.cpp/sendDidToUDS()/509 - Sent DID from MAP: 61706 size: 35
+2025-08-25 07:10:59,691 [INFO] APP/DIDSubscriber.cpp/sendDidToUDS()/509 - Sent DID from MAP: 64771 size: 350
+2025-08-25 07:10:59,694 [INFO] APP/DIDSubscriber.cpp/sendDidToUDS()/509 - Sent DID from MAP: 64772 size: 245
+2025-08-25 07:10:59,694 [INFO] APP/DIDSubscriber.cpp/runTask()/431 - MapInfo DIDs sent to UDS!
+2025-08-25 07:10:59,724 [INFO] APP/MapRegionRank.cpp/start()/73 - Client on COUNTRYCODE_PORT is opened
+2025-08-25 07:10:59,739 [INFO] APP/UDS.cpp/writeDid()/766 - Set DID: 871 vector_size: 30
+2025-08-25 07:10:59,739 [INFO] APP/UDS.cpp/writeDid()/767 - Set DID: 871 vectorHex <0x {31 2e 31 2e 30 2d 30 38 2d 32 30 32 34 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 }>
+2025-08-25 07:10:59,739 [INFO] APP/UDS.cpp/runTask()/270 - Set DID: 871 size: 30
+2025-08-25 07:10:59,801 [INFO] APP/UDS.cpp/writeDid()/766 - Set DID: 61706 vector_size: 35
+2025-08-25 07:10:59,802 [INFO] APP/UDS.cpp/writeDid()/767 - Set DID: 61706 vectorHex <0x {45 55 20 41 73 69 61 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 ... }>
+2025-08-25 07:10:59,802 [INFO] APP/UDS.cpp/runTask()/270 - Set DID: 61706 size: 35
+2025-08-25 07:10:59,802 [INFO] APP/UDS.cpp/writeDid()/760 - DID: 64771, sent to VolatileDIDs
+2025-08-25 07:10:59,802 [INFO] APP/UDS.cpp/runTask()/270 - Set DID: 64771 size: 350
+2025-08-25 07:10:59,802 [INFO] APP/UDS.cpp/writeDid()/760 - DID: 64772, sent to VolatileDIDs
+2025-08-25 07:10:59,802 [INFO] APP/UDS.cpp/runTask()/270 - Set DID: 64772 size: 245
+2025-08-25 07:10:59,916 [INFO] APP/FaultHandler.cpp/setDTCState()/429 - setDTCState: MapLoadingError
+2025-08-25 07:10:59,916 [INFO] APP/GenericDebounceProcessor.cpp/setDTCState()/130 - Setting DTC MapLoadingError with state 0
+2025-08-25 07:10:59,918 [INFO] APP/GenericDebounceProcessor.cpp/setDTC()/374 - DTC set to inactive and occ decremented: MapLoadingError
+2025-08-25 07:10:59,921 [INFO] APP/SpaceManagement.cpp/onReceiveData()/334 - New locked resource received: fall
+2025-08-25 07:11:01,023 [INFO] APP/NationalSpeedLimits.cpp/onReceiveData()/231 - New Country Code received: CZ
+2025-08-25 07:11:01,023 [INFO] APP/SpaceManagement.cpp/onReceiveData()/334 - New locked resource received: cz
+2025-08-25 07:11:01,024 [INFO] APP/MapRegionRank.cpp/updateRateOfCountry()/190 - Reset currentRegion flag for: fall
+2025-08-25 07:11:01,024 [INFO] APP/MapRegionRank.cpp/updateRateOfCountry()/164 - currentRegion is set for: cz
+2025-08-25 07:11:01,024 [INFO] APP/MapRegionRank.cpp/updateRateOfCountry()/172 - Rank is incremented 13 for region: cz
+2025-08-25 07:11:01,025 [INFO] APP/MapRegionRank.cpp/updateRateOfCountry()/181 - Resource was updated
+2025-08-25 07:11:01,026 [INFO] APP/ManifestHandler.cpp/saveManifest()/485 - /opt/appl/data/apps/apps_data/eHorizonISA/shared/.resources-manifest.xml was successfully updated and saved!
+2025-08-25 07:11:01,027 [INFO] APP/MapRegionRank.cpp/updateRateOfCountry()/200 - Changes were saved in the manifest
+2025-08-25 07:11:01,344 [INFO] APP/StateMonitor.cpp/setSystemState()/977 - === eHorizonISA enters AVAILABLE state.
+2025-08-25 07:11:01,345 [INFO] APP/FaultHandler.cpp/setDTCState()/429 - setDTCState: MapLoadingError
+2025-08-25 07:11:01,345 [INFO] APP/GenericDebounceProcessor.cpp/setDTCState()/130 - Setting DTC MapLoadingError with state 0
+2025-08-25 07:11:01,348 [INFO] APP/GenericDebounceProcessor.cpp/setDTC()/374 - DTC set to inactive and occ decremented: MapLoadingError
+2025-08-25 07:11:15,733 [INFO] APP/HealthMonitor.cpp/runTask()/141 - RAM fault inactive. Usage: 31164kb
+2025-08-25 07:11:15,733 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 0%
+2025-08-25 07:11:15,733 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC RAM not in list
+2025-08-25 07:11:15,733 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC RAM
+2025-08-25 07:11:15,734 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-08-25 07:11:15,734 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-08-25 07:11:54,886 [INFO] APP/GenericDebounceProcessor.cpp/setDTC()/374 - DTC set to inactive and occ decremented: GpsError
+2025-08-25 07:12:35,034 [INFO] APP/Gateway.cpp/runTask()/470 - Check for db existence started
+2025-08-25 07:12:35,035 [INFO] APP/DbUpdate.cpp/checkExistenceOfDb()/73 - Country_borders is installed
+2025-08-25 07:12:35,035 [INFO] APP/Gateway.cpp/runTask()/482 - All sockets appeared. Shadow sent
+2025-08-25 07:12:35,036 [INFO] APP/ShadowClient.cpp/ParseXml()/116 - {"ResourceManifestVersion":"1.1.0-08-2024","Maps":[{"mapName":"country_borders","mapVersion":"0.1.2.8"},{"mapName":"fall","mapVersion":"0.6.0.0"},{"mapName":"sp","mapVersion":"0.6.0.0"},{"mapName":"sc","mapVersion":"0.5.0.0"},{"mapName":"gall","mapVersion":"0.7.0.0"},{"mapName":"i","mapVersion":"0.5.0.0"},{"mapName":"tr","mapVersion":"0.5.0.0"},{"mapName":"pl","mapVersion":"0.5.0.0"},{"mapName":"uk","mapVersion":"0.5.0.0"},{"mapName":"gr","mapVersion":"0.5.0.0"},{"mapName":"ach","mapVersion":"0.5.0.0"},{"mapName":"ru","mapVersion":"0.5.0.0"},{"mapName":"bnl","mapVersion":"0.5.0.0"},{"mapName":"cz","mapVersion":"0.5.0.0"}]}
+2025-08-25 07:12:35,064 [INFO] APP/ShadowClient.cpp/runTask()/195 - Shadow sent
+2025-08-25 07:13:55,056 [INFO] APP/GeofenceRequester.cpp/onReceiveData()/142 - New RequestCommand: sID: "0"
+sDetails: "cz"
+updateRequest {
+  updateType: GEOFENCE_REQUEST
+}
+
+2025-08-25 07:13:55,057 [INFO] APP/RequestUpdateManager.cpp/addRequestCommand()/162 - Received CMD: sID: "0"
+sDetails: "cz"
+updateRequest {
+  updateType: GEOFENCE_REQUEST
+}
+
+2025-08-25 07:13:55,257 [INFO] APP/RequestUpdateManager.cpp/runTask()/310 - Process cmd: sID: "0"
+sDetails: "cz"
+updateRequest {
+  updateType: GEOFENCE_REQUEST
+}
+
+2025-08-25 07:13:55,508 [INFO] APP/RequestUpdateManager.cpp/runTask()/341 - ProcessCommand
+2025-08-25 07:13:55,759 [INFO] APP/RequestUpdateManager.cpp/runTask()/730 - Update not needed
+2025-08-25 07:45:25,320 [INFO] APP/GeofenceRequester.cpp/onReceiveData()/142 - New RequestCommand: sID: "0"
+sDetails: "pl"
+updateRequest {
+  updateType: GEOFENCE_REQUEST
+}
+
+2025-08-25 07:45:25,320 [INFO] APP/RequestUpdateManager.cpp/addRequestCommand()/162 - Received CMD: sID: "0"
+sDetails: "pl"
+updateRequest {
+  updateType: GEOFENCE_REQUEST
+}
+
+2025-08-25 07:45:25,457 [INFO] APP/RequestUpdateManager.cpp/runTask()/310 - Process cmd: sID: "0"
+sDetails: "pl"
+updateRequest {
+  updateType: GEOFENCE_REQUEST
+}
+
+2025-08-25 07:45:25,707 [INFO] APP/RequestUpdateManager.cpp/runTask()/341 - ProcessCommand
+2025-08-25 07:45:25,958 [INFO] APP/RequestUpdateManager.cpp/runTask()/730 - Update not needed
+2025-08-25 07:47:08,709 [INFO] APP/StateMonitor.cpp/setSystemState()/964 - === eHorizonISA enters ACTIVE state.
+2025-08-25 07:47:08,862 [INFO] APP/NationalSpeedLimits.cpp/onReceiveData()/231 - New Country Code received: FR
+2025-08-25 07:47:08,862 [INFO] APP/SpaceManagement.cpp/onReceiveData()/334 - New locked resource received: fall
+2025-08-25 07:47:08,863 [INFO] APP/MapRegionRank.cpp/updateRateOfCountry()/164 - currentRegion is set for: fall
+2025-08-25 07:47:08,863 [INFO] APP/MapRegionRank.cpp/updateRateOfCountry()/172 - Rank is incremented 68 for region: fall
+2025-08-25 07:47:08,863 [INFO] APP/MapRegionRank.cpp/updateRateOfCountry()/181 - Resource was updated
+2025-08-25 07:47:08,864 [INFO] APP/MapRegionRank.cpp/updateRateOfCountry()/190 - Reset currentRegion flag for: cz
+2025-08-25 07:47:08,865 [INFO] APP/ManifestHandler.cpp/saveManifest()/485 - /opt/appl/data/apps/apps_data/eHorizonISA/shared/.resources-manifest.xml was successfully updated and saved!
+2025-08-25 07:47:08,865 [INFO] APP/MapRegionRank.cpp/updateRateOfCountry()/200 - Changes were saved in the manifest
+2025-08-25 07:47:08,876 [INFO] APP/StateMonitor.cpp/setSystemState()/977 - === eHorizonISA enters AVAILABLE state.
+2025-08-25 07:47:08,880 [INFO] APP/FaultHandler.cpp/setDTCState()/429 - setDTCState: MapLoadingError
+2025-08-25 07:47:08,881 [INFO] APP/GenericDebounceProcessor.cpp/setDTCState()/130 - Setting DTC MapLoadingError with state 0
+2025-08-25 07:47:08,882 [INFO] APP/GenericDebounceProcessor.cpp/setDTC()/374 - DTC set to inactive and occ decremented: MapLoadingError
+2025-08-25 07:49:55,353 [INFO] APP/GeofenceRequester.cpp/onReceiveData()/142 - New RequestCommand: sID: "0"
+sDetails: "fall"
+updateRequest {
+  updateType: GEOFENCE_REQUEST
+}
+
+2025-08-25 07:49:55,353 [INFO] APP/RequestUpdateManager.cpp/addRequestCommand()/162 - Received CMD: sID: "0"
+sDetails: "fall"
+updateRequest {
+  updateType: GEOFENCE_REQUEST
+}
+
+2025-08-25 07:49:55,376 [INFO] APP/RequestUpdateManager.cpp/runTask()/310 - Process cmd: sID: "0"
+sDetails: "fall"
+updateRequest {
+  updateType: GEOFENCE_REQUEST
+}
+
+2025-08-25 07:49:55,628 [INFO] APP/RequestUpdateManager.cpp/runTask()/341 - ProcessCommand
+2025-08-25 07:49:55,879 [INFO] APP/RequestUpdateManager.cpp/runTask()/730 - Update not needed
+2025-08-25 12:55:36,672 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-08-25 12:55:36,672 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-08-25 12:55:36,672 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-08-25 12:55:57,937 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3.2%
+2025-08-25 12:55:57,937 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-08-25 12:55:57,937 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-08-25 13:09:44,374 [INFO] APP/StateMonitor.cpp/setSystemState()/964 - === eHorizonISA enters ACTIVE state.
+2025-08-25 13:49:27,103 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.8%
+2025-08-25 13:49:27,104 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-08-25 13:49:27,104 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-08-25 13:49:48,449 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3.8%
+2025-08-25 13:49:48,449 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-08-25 13:49:48,449 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-03 07:05:03,439 [INFO] APP/Application.cpp/init()/101 - Application version: IVECO_PCM3_eH_ISA_03.01.01
+2025-09-03 07:05:03,442 [INFO] APP/StateMonitor.cpp/StateMonitor()/81 - Successfully opened State Monitor server
+2025-09-03 07:05:03,443 [INFO] APP/StateMonitor.cpp/setSystemState()/943 - === eHorizonISA enters DISABLED state.
+2025-09-03 07:05:03,443 [INFO] APP/CommandBus.cpp/registerComponent()/110 - Component State_Monitor successfully registered.
+2025-09-03 07:05:03,444 [INFO] APP/CommandBus.cpp/registerComponent()/110 - Component AppFault successfully registered.
+2025-09-03 07:05:03,445 [INFO] APP/CommandBus.cpp/registerComponent()/110 - Component Engine successfully registered.
+2025-09-03 07:05:03,446 [INFO] APP/CommandBus.cpp/registerComponent()/110 - Component GNSS_Component successfully registered.
+2025-09-03 07:05:03,446 [INFO] APP/CommandBus.cpp/registerComponent()/110 - Component Configuration successfully registered.
+2025-09-03 07:05:03,447 [INFO] APP/CommandBus.cpp/registerComponent()/110 - Component CAN successfully registered.
+2025-09-03 07:05:03,448 [INFO] APP/CommandBus.cpp/registerComponent()/110 - Component HealthMonitor successfully registered.
+2025-09-03 07:05:03,448 [INFO] APP/CommandBus.cpp/registerComponent()/110 - Component Geofence successfully registered.
+2025-09-03 07:05:03,448 [INFO] APP/CommandBus.cpp/registerComponent()/110 - Component NSL successfully registered.
+2025-09-03 07:05:03,448 [INFO] APP/CommandBus.cpp/registerComponent()/110 - Component Gateway successfully registered.
+2025-09-03 07:05:03,449 [INFO] APP/CommandBus.cpp/registerComponent()/110 - Component UDS successfully registered.
+2025-09-03 07:05:03,452 [INFO] APP/Application.cpp/getStartAppReason()/377 - Startup reason: Normal boot
+2025-09-03 07:05:03,453 [INFO] APP/Application.cpp/getStartAppReason()/523 - WakeupConditionType: NONE_YET
+2025-09-03 07:05:03,456 [INFO] APP/Application.cpp/run()/179 - Connected to state machine
+2025-09-03 07:05:03,458 [INFO] APP/Fault.cpp/onEvent()/147 - Event init for Fault
+2025-09-03 07:05:03,459 [ERROR] APP/Thread.cpp/spawnThread()/692 - Cannot set the name 0onGeofence for thread -2034270016: unknown error.
+2025-09-03 07:05:03,459 [INFO] APP/Gateway.cpp/onEvent()/151 - Ev_Init Gateway
+2025-09-03 07:05:03,462 [INFO] APP/DIDSubscriber.cpp/init()/82 - Opened DID MAP Server
+2025-09-03 07:05:03,469 [INFO] APP/ConfigurationManager.cpp/onEvent()/198 - Received Init Event
+2025-09-03 07:05:03,471 [INFO] APP/ManifestHandler.cpp/init()/78 - Server opened on MANIFEST_HANDLER_PORT
+2025-09-03 07:05:03,475 [ERROR] APP/ConfigurationManager.cpp/start()/70 - New downloaded configuration is not available.
+2025-09-03 07:05:03,478 [INFO] APP/ConfigurationConsistency.cpp/runTask()/135 - ConfigurationConsistency -> config is accurate
+2025-09-03 07:05:03,506 [INFO] APP/StateMonitor.cpp/onEvent()/155 - mKlOffServerPtr Server open
+2025-09-03 07:05:03,507 [INFO] APP/ISOHandler.cpp/extract()/319 - Extract /opt/appl/data/apps/apps_data/eHorizonISA/shared/* to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/
+2025-09-03 07:05:03,508 [INFO] APP/ISOHandler.cpp/extract()/323 - All entries
+2025-09-03 07:05:03,508 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/266 - Opened.../opt/appl/data/apps/apps_data/eHorizonISA/shared
+2025-09-03 07:05:03,511 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: ach.iso
+2025-09-03 07:05:03,511 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/ach.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/ach
+2025-09-03 07:05:03,512 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-09-03 07:05:03,513 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: ach.iso to data/apps/external/eHMap/ach.iso
+2025-09-03 07:05:03,513 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/ach.iso to data/apps/external/eHMap/ach.iso
+2025-09-03 07:05:03,513 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/ach to data/apps/apps_data/eHorizonISA/maps/navi/ach
+2025-09-03 07:05:03,521 [INFO] APP/StateMonitor.cpp/startApplicationStateListener()/631 - Acquired LEAP ApplicationStateConsumerResource
+2025-09-03 07:05:03,523 [INFO] APP/StateMonitor.cpp/startApplicationStateListener()/638 - Acquired LEAP ApplicationStateMachine
+2025-09-03 07:05:03,540 [INFO] APP/StateMonitor.cpp/startApplicationStateListener()/660 - LEAP ApplicationListener is activated
+2025-09-03 07:05:03,546 [INFO] APP/StateMonitor.cpp/startDigitalInputStateListener()/737 - Acquired LEAP DigitalInputConsumerResource
+2025-09-03 07:05:03,547 [INFO] APP/StateMonitor.cpp/startDigitalInputStateListener()/744 - Acquired LEAP DigitalInputStateMachine
+2025-09-03 07:05:03,550 [INFO] APP/StateMonitor.cpp/handleApplicationStateChange()/559 - LEAP Old state = 0; New state = 1
+2025-09-03 07:05:03,550 [INFO] APP/StateMonitor.cpp/handleApplicationStateChange()/593 - LEAP: OFF
+2025-09-03 07:05:03,552 [INFO] APP/StateMonitor.cpp/startDigitalInputStateListener()/766 - LEAP DigitalInputListener is activated
+2025-09-03 07:05:03,553 [INFO] APP/StateMonitor.cpp/handleApplicationStateChange()/559 - LEAP Old state = 1; New state = 2
+2025-09-03 07:05:03,554 [INFO] APP/StateMonitor.cpp/handleApplicationStateChange()/566 - LEAP: START
+2025-09-03 07:05:03,564 [INFO] APP/StateMonitor.cpp/handleDigitalInputStateChange()/502 - Digital input state changed. StateID: 1 DigitalInputId:0; new state: 2; diag: 0OldState = 0
+2025-09-03 07:05:03,565 [INFO] APP/StateMonitor.cpp/handleDigitalInputStateChange()/523 - KL15 on, opening CAN.
+2025-09-03 07:05:03,572 [INFO] APP/StateMonitor.cpp/handleApplicationStateChange()/559 - LEAP Old state = 2; New state = 3
+2025-09-03 07:05:03,573 [INFO] APP/StateMonitor.cpp/handleApplicationStateChange()/580 - LEAP: RUN
+2025-09-03 07:05:03,573 [INFO] APP/StateMonitor.cpp/changeActiveState()/314 - Application state OffState left.
+2025-09-03 07:05:03,573 [INFO] APP/StateMonitor.cpp/changeActiveState()/321 - Application state StartState entered.
+2025-09-03 07:05:03,573 [INFO] APP/StateMonitor.cpp/setSystemState()/951 - === eHorizonISA enters INACTIVE state.
+2025-09-03 07:05:03,573 [INFO] APP/Application.cpp/onReceiveData()/224 - === Received NewState=1 Details=<3>
+2025-09-03 07:05:03,574 [INFO] APP/Application.cpp/onReceiveData()/254 - === TRANSITION COMPLETED for <State=1>
+2025-09-03 07:05:03,574 [INFO] APP/StateMonitor.cpp/sendData()/360 - StateMonitor Server sent message <NewState=1>
+2025-09-03 07:05:03,580 [INFO] APP/Fault.cpp/start()/71 - FaultHandler Server open
+2025-09-03 07:05:03,580 [INFO] APP/FaultHandler.cpp/start()/90 - DM1CanId set to: 419351068
+2025-09-03 07:05:03,580 [INFO] APP/FaultHandler.cpp/start()/98 - GpsErrorDebTime set to: 60
+2025-09-03 07:05:03,581 [INFO] APP/NationalSpeedLimits.cpp/onEvent()/90 - TSRISCanId read from conf:436153116
+2025-09-03 07:05:03,587 [INFO] APP/Gateway.cpp/onEvent()/209 - Ev_Start Gateway
+2025-09-03 07:05:03,587 [INFO] APP/Gateway.cpp/start()/338 - Start objs
+2025-09-03 07:05:03,591 [INFO] APP/Geofence.cpp/init()/159 - Server opened on GEOFENCE_PORT
+2025-09-03 07:05:03,596 [INFO] APP/HealthMonitor.cpp/start()/73 - HealthMonitorLoggingTime: 15
+2025-09-03 07:05:03,596 [INFO] APP/Geofence.cpp/init()/178 - Server opened on GEOFENCE_COUTRIES_PORT
+2025-09-03 07:05:03,603 [INFO] APP/NationalSpeedLimits.cpp/onEvent()/108 - Client opened on COUNTRYCODE_PORT
+2025-09-03 07:05:03,612 [INFO] APP/GeofenceRequester.cpp/start()/75 - Client opened on GEOFENCE_PORT
+2025-09-03 07:05:03,614 [INFO] APP/FaultHandler.cpp/start()/110 - Resources fetched successfully!
+2025-09-03 07:05:03,619 [INFO] APP/UDS.cpp/start()/343 - Get the DID control resource
+2025-09-03 07:05:03,633 [INFO] APP/NationalSpeedLimits.cpp/onEvent()/120 - NationalSL Server open
+2025-09-03 07:05:03,638 [INFO] APP/FaultHandler.cpp/start()/126 - DTC JSON Parsed:
+FaultList {
+  name: "ParameterLoadingError"
+  dtcId: 196334
+}
+FaultList {
+  name: "MapLoadingError"
+  dtcId: 327396
+}
+FaultList {
+  name: "GpsError"
+  dtcId: 5497087
+}
+
+2025-09-03 07:05:03,639 [INFO] APP/FaultHandler.cpp/start()/144 - Init state for GpsError is: 0
+2025-09-03 07:05:03,639 [INFO] APP/FaultHandler.cpp/start()/144 - Init state for MapLoadingError is: 0
+2025-09-03 07:05:03,639 [INFO] APP/FaultHandler.cpp/start()/144 - Init state for ParameterLoadingError is: 0
+2025-09-03 07:05:03,639 [INFO] APP/FaultHandler.cpp/setDTCState()/429 - setDTCState: ParameterLoadingError
+2025-09-03 07:05:03,662 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-09-03 07:05:03,662 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: ba.iso
+2025-09-03 07:05:03,662 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/ba.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/ba
+2025-09-03 07:05:03,674 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-09-03 07:05:03,675 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: ba.iso to data/apps/external/eHMap/ba.iso
+2025-09-03 07:05:03,675 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/ba.iso to data/apps/external/eHMap/ba.iso
+2025-09-03 07:05:03,675 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/ba to data/apps/apps_data/eHorizonISA/maps/navi/ba
+2025-09-03 07:05:03,672 [INFO] APP/SpaceManagement.cpp/start()/101 - Client opened on COUNTRYCODE_PORT
+2025-09-03 07:05:03,673 [INFO] APP/UDS.cpp/start()/356 - DID Client opened
+2025-09-03 07:05:03,702 [INFO] APP/CanBus.cpp/onEvent()/226 - Setting parameters for the CAN
+2025-09-03 07:05:03,709 [INFO] APP/VehicleInfoReceiver.cpp/start()/83 - Client opened on DID_BSW_PORT
+2025-09-03 07:05:03,709 [INFO] APP/VehicleInfoReceiver.cpp/start()/97 - JSONPath read from conf: /opt/appl/data/apps/apps_data/eHorizonISA/resources/nationalSpeedLimits.json
+2025-09-03 07:05:03,717 [INFO] APP/SpaceManagement.cpp/start()/117 - Client opened on LOADED_MAP_PORT
+2025-09-03 07:05:03,718 [INFO] APP/Gateway.cpp/start()/363 - RemoteRequester created
+2025-09-03 07:05:03,842 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-09-03 07:05:03,843 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: gall.iso
+2025-09-03 07:05:03,843 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/gall.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/gall
+2025-09-03 07:05:03,843 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-09-03 07:05:03,844 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: gall.iso to data/apps/external/eHMap/gall.iso
+2025-09-03 07:05:03,844 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/gall.iso to data/apps/external/eHMap/gall.iso
+2025-09-03 07:05:03,844 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/gall to data/apps/apps_data/eHorizonISA/maps/navi/gall
+2025-09-03 07:05:03,845 [INFO] APP/StateMonitor.cpp/onEvent()/248 - === Started Ev_TransitionCompleted for 1, mInternalEvent:0
+2025-09-03 07:05:03,845 [INFO] APP/StateMonitor.cpp/changeActiveState()/314 - Application state StartState left.
+2025-09-03 07:05:03,845 [INFO] APP/StateMonitor.cpp/changeActiveState()/321 - Application state RunState entered.
+2025-09-03 07:05:03,845 [INFO] APP/Application.cpp/onReceiveData()/224 - === Received NewState=2 Details=<>
+2025-09-03 07:05:03,846 [INFO] APP/Application.cpp/onReceiveData()/254 - === TRANSITION COMPLETED for <State=2>
+2025-09-03 07:05:03,850 [INFO] APP/StateMonitor.cpp/sendData()/360 - StateMonitor Server sent message <NewState=2>
+2025-09-03 07:05:03,850 [INFO] APP/StateMonitor.cpp/onEvent()/253 - === Ev_TransitionCompleted for StartState, mInternalEvent:0
+2025-09-03 07:05:03,884 [INFO] APP/UDS.cpp/onEvent()/141 - Sent DID: SW Version 
+2025-09-03 07:05:03,885 [INFO] APP/UDS.cpp/sendSwVersionDid()/479 - Sent DID: 61707 size: 64
+2025-09-03 07:05:03,896 [INFO] APP/UDS.cpp/sendSwVersionDid()/480 - Sent DID: 61707 <IVECO_PCM3_eH_ISA_03.01.01;EHOR_5.6.70_RC1;                     >
+2025-09-03 07:05:03,889 [INFO] APP/Gateway.cpp/onEvent()/231 - Ev_Run Gateway
+2025-09-03 07:05:03,901 [INFO] APP/Gateway.cpp/runTask()/405 - Web socket appeared.
+2025-09-03 07:05:03,902 [INFO] APP/RemoteRequester.cpp/startWebServices()/86 - Created handle resources
+2025-09-03 07:05:03,903 [INFO] APP/HandleResources.cpp/Start()/91 - Handle resources started
+2025-09-03 07:05:03,917 [INFO] APP/RemoteRequester.cpp/startWebServices()/93 - Created handle upload
+2025-09-03 07:05:03,929 [INFO] APP/FaultHandler.cpp/setDTCState()/429 - setDTCState: GpsError
+2025-09-03 07:05:03,936 [ERROR] APP/CanBus.cpp/runTask()/367 - SocketHandler == nullptr
+2025-09-03 07:05:03,937 [INFO] APP/BorderRegionsReader.cpp/readFences()/76 - /opt/appl/data/apps/apps_data/eHorizonISA/resources/borders.xml file loaded
+2025-09-03 07:05:03,941 [INFO] APP/HandleUpload.cpp/Start()/86 - Handle upload started
+2025-09-03 07:05:03,956 [INFO] APP/Gateway.cpp/runTask()/419 - Communication socket appeared.
+2025-09-03 07:05:03,993 [INFO] APP/Gateway.cpp/runTask()/433 - Core socket appeared.
+2025-09-03 07:05:04,012 [INFO] APP/UDS.cpp/writeDid()/766 - Set DID: 61707 vector_size: 64
+2025-09-03 07:05:04,013 [INFO] APP/UDS.cpp/writeDid()/767 - Set DID: 61707 vectorHex <0x {49 56 45 43 4f 5f 50 43 4d 33 5f 65 48 5f 49 53 41 5f 30 33 2e 30 31 2e 30 31 3b 45 48 4f ... }>
+2025-09-03 07:05:04,014 [INFO] APP/UDS.cpp/runTask()/270 - Set DID: 61707 size: 64
+2025-09-03 07:05:04,026 [INFO] APP/BorderCountriesReader.cpp/readFences()/74 - /opt/appl/data/apps/apps_data/eHorizonISA/resources/borders-country-code.xml file loaded
+2025-09-03 07:05:04,037 [ERROR] APP/CanBus.cpp/runTask()/367 - SocketHandler == nullptr
+2025-09-03 07:05:04,040 [INFO] APP/UDS.cpp/readDid()/704 - Read DID: 41416 vector_size: 8
+2025-09-03 07:05:04,041 [INFO] APP/UDS.cpp/readDid()/705 - Read DID: 41416 vectorHex <0x {4d 33 20 20 20 20 20 20 }>
+2025-09-03 07:05:04,049 [INFO] APP/UDS.cpp/sendDidFromBsw()/592 - Sent DID from BSW: 41416 size: 8
+2025-09-03 07:05:04,049 [INFO] APP/VehicleInfoReceiver.cpp/onReceiveData()/167 - Vehicle Type set to: 3
+2025-09-03 07:05:04,049 [INFO] APP/UDS.cpp/runTask()/222 - Get DID: 41416 size: 8
+2025-09-03 07:05:04,066 [INFO] APP/StateMonitor.cpp/onEvent()/248 - === Started Ev_TransitionCompleted for 2, mInternalEvent:0
+2025-09-03 07:05:04,066 [INFO] APP/StateMonitor.cpp/onEvent()/253 - === Ev_TransitionCompleted for RunState, mInternalEvent:0
+2025-09-03 07:05:04,089 [INFO] APP/UDS.cpp/readDid()/704 - Read DID: 41415 vector_size: 4
+2025-09-03 07:05:04,089 [INFO] APP/UDS.cpp/readDid()/705 - Read DID: 41415 vectorHex <0x {00 b4 00 c8 }>
+2025-09-03 07:05:04,090 [INFO] APP/UDS.cpp/sendDidFromBsw()/592 - Sent DID from BSW: 41415 size: 4
+2025-09-03 07:05:04,090 [INFO] APP/UDS.cpp/runTask()/222 - Get DID: 41415 size: 4
+2025-09-03 07:05:04,090 [INFO] APP/VehicleInfoReceiver.cpp/onReceiveData()/209 - Vehicle Weight read from UDS = 19
+2025-09-03 07:05:04,135 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-09-03 07:05:04,136 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: cs.iso
+2025-09-03 07:05:04,136 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/cs.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/cs
+2025-09-03 07:05:04,136 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-09-03 07:05:04,136 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: cs.iso to data/apps/external/eHMap/cs.iso
+2025-09-03 07:05:04,136 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/cs.iso to data/apps/external/eHMap/cs.iso
+2025-09-03 07:05:04,136 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/cs to data/apps/apps_data/eHorizonISA/maps/navi/cs
+2025-09-03 07:05:04,144 [ERROR] APP/CanBus.cpp/runTask()/367 - SocketHandler == nullptr
+2025-09-03 07:05:04,144 [INFO] APP/UDS.cpp/readDid()/704 - Read DID: 869 vector_size: 1
+2025-09-03 07:05:04,144 [INFO] APP/UDS.cpp/readDid()/705 - Read DID: 869 vectorHex <0x {01 }>
+2025-09-03 07:05:04,145 [INFO] APP/UDS.cpp/sendDidFromBsw()/592 - Sent DID from BSW: 869 size: 1
+2025-09-03 07:05:04,145 [INFO] APP/UDS.cpp/runTask()/222 - Get DID: 869 size: 1
+2025-09-03 07:05:04,215 [INFO] APP/VehicleInfoReceiver.cpp/parseJsonRegardingToVehType()/244 - NSL .json parsed properly.
+2025-09-03 07:05:04,264 [INFO] APP/CanBus.cpp/runTask()/338 - CAN socket path/opt/appl/var/can_sockets/can_stream_30047
+2025-09-03 07:05:04,265 [INFO] APP/udPsoCkeT.cpp/openConn()/138 - Successfully created socket: CanSocket
+2025-09-03 07:05:04,265 [INFO] APP/udPsoCkeT.cpp/openConn()/160 - Successfully connected socket: CanSocket with descriptor: 90
+2025-09-03 07:05:04,270 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-09-03 07:05:04,273 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: ru.iso
+2025-09-03 07:05:04,274 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/ru.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/ru
+2025-09-03 07:05:04,275 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-09-03 07:05:04,275 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: ru.iso to data/apps/external/eHMap/ru.iso
+2025-09-03 07:05:04,275 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/ru.iso to data/apps/external/eHMap/ru.iso
+2025-09-03 07:05:04,277 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/ru to data/apps/apps_data/eHorizonISA/maps/navi/ru
+2025-09-03 07:05:04,382 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-09-03 07:05:04,382 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: ell.iso
+2025-09-03 07:05:04,382 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/ell.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/ell
+2025-09-03 07:05:04,382 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-09-03 07:05:04,383 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: ell.iso to data/apps/external/eHMap/ell.iso
+2025-09-03 07:05:04,383 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/ell.iso to data/apps/external/eHMap/ell.iso
+2025-09-03 07:05:04,383 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/ell to data/apps/apps_data/eHorizonISA/maps/navi/ell
+2025-09-03 07:05:04,495 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-09-03 07:05:04,495 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: bnl.iso
+2025-09-03 07:05:04,495 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/bnl.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/bnl
+2025-09-03 07:05:04,495 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-09-03 07:05:04,496 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: bnl.iso to data/apps/external/eHMap/bnl.iso
+2025-09-03 07:05:04,496 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/bnl.iso to data/apps/external/eHMap/bnl.iso
+2025-09-03 07:05:04,496 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/bnl to data/apps/apps_data/eHorizonISA/maps/navi/bnl
+2025-09-03 07:05:04,634 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-09-03 07:05:04,634 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: gr.iso
+2025-09-03 07:05:04,635 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/gr.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/gr
+2025-09-03 07:05:04,635 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-09-03 07:05:04,637 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: gr.iso to data/apps/external/eHMap/gr.iso
+2025-09-03 07:05:04,638 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/gr.iso to data/apps/external/eHMap/gr.iso
+2025-09-03 07:05:04,638 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/gr to data/apps/apps_data/eHorizonISA/maps/navi/gr
+2025-09-03 07:05:04,647 [INFO] APP/GenericDebounceProcessor.cpp/setDTC()/374 - DTC set to inactive and occ decremented: ParameterLoadingError
+2025-09-03 07:05:04,770 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-09-03 07:05:04,770 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: uk.iso
+2025-09-03 07:05:04,770 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/uk.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/uk
+2025-09-03 07:05:04,770 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-09-03 07:05:04,771 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: uk.iso to data/apps/external/eHMap/uk.iso
+2025-09-03 07:05:04,771 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/uk.iso to data/apps/external/eHMap/uk.iso
+2025-09-03 07:05:04,771 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/uk to data/apps/apps_data/eHorizonISA/maps/navi/uk
+2025-09-03 07:05:04,906 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-09-03 07:05:04,906 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: ukr.iso
+2025-09-03 07:05:04,906 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/ukr.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/ukr
+2025-09-03 07:05:04,906 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-09-03 07:05:04,906 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: ukr.iso to data/apps/external/eHMap/ukr.iso
+2025-09-03 07:05:04,907 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/ukr.iso to data/apps/external/eHMap/ukr.iso
+2025-09-03 07:05:04,907 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/ukr to data/apps/apps_data/eHorizonISA/maps/navi/ukr
+2025-09-03 07:05:05,037 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-09-03 07:05:05,037 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: pl.iso
+2025-09-03 07:05:05,037 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/pl.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/pl
+2025-09-03 07:05:05,037 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-09-03 07:05:05,038 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: pl.iso to data/apps/external/eHMap/pl.iso
+2025-09-03 07:05:05,038 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/pl.iso to data/apps/external/eHMap/pl.iso
+2025-09-03 07:05:05,038 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/pl to data/apps/apps_data/eHorizonISA/maps/navi/pl
+2025-09-03 07:05:05,209 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-09-03 07:05:05,209 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: cz.iso
+2025-09-03 07:05:05,209 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/cz.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/cz
+2025-09-03 07:05:05,209 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-09-03 07:05:05,209 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: cz.iso to data/apps/external/eHMap/cz.iso
+2025-09-03 07:05:05,209 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/cz.iso to data/apps/external/eHMap/cz.iso
+2025-09-03 07:05:05,209 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/cz to data/apps/apps_data/eHorizonISA/maps/navi/cz
+2025-09-03 07:05:05,320 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-09-03 07:05:05,320 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: isr.iso
+2025-09-03 07:05:05,320 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/isr.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/isr
+2025-09-03 07:05:05,320 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-09-03 07:05:05,321 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: isr.iso to data/apps/external/eHMap/isr.iso
+2025-09-03 07:05:05,321 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/isr.iso to data/apps/external/eHMap/isr.iso
+2025-09-03 07:05:05,321 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/isr to data/apps/apps_data/eHorizonISA/maps/navi/isr
+2025-09-03 07:05:05,478 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-09-03 07:05:05,478 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: country_borders.tar
+2025-09-03 07:05:05,478 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: isl.iso
+2025-09-03 07:05:05,479 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/isl.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/isl
+2025-09-03 07:05:05,479 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-09-03 07:05:05,479 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: isl.iso to data/apps/external/eHMap/isl.iso
+2025-09-03 07:05:05,479 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/isl.iso to data/apps/external/eHMap/isl.iso
+2025-09-03 07:05:05,479 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/isl to data/apps/apps_data/eHorizonISA/maps/navi/isl
+2025-09-03 07:05:05,625 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-09-03 07:05:05,625 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: resources-manifest.xml
+2025-09-03 07:05:05,625 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: al.iso
+2025-09-03 07:05:05,626 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/al.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/al
+2025-09-03 07:05:05,626 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-09-03 07:05:05,626 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: al.iso to data/apps/external/eHMap/al.iso
+2025-09-03 07:05:05,626 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/al.iso to data/apps/external/eHMap/al.iso
+2025-09-03 07:05:05,626 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/al to data/apps/apps_data/eHorizonISA/maps/navi/al
+2025-09-03 07:05:05,743 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-09-03 07:05:05,743 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: si.iso
+2025-09-03 07:05:05,743 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/si.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/si
+2025-09-03 07:05:05,744 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-09-03 07:05:05,744 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: si.iso to data/apps/external/eHMap/si.iso
+2025-09-03 07:05:05,744 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/si.iso to data/apps/external/eHMap/si.iso
+2025-09-03 07:05:05,744 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/si to data/apps/apps_data/eHorizonISA/maps/navi/si
+2025-09-03 07:05:05,875 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-09-03 07:05:05,876 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: fall.iso
+2025-09-03 07:05:05,876 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/fall.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/fall
+2025-09-03 07:05:05,878 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-09-03 07:05:05,878 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: fall.iso to data/apps/external/eHMap/fall.iso
+2025-09-03 07:05:05,879 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/fall.iso to data/apps/external/eHMap/fall.iso
+2025-09-03 07:05:05,879 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/fall to data/apps/apps_data/eHorizonISA/maps/navi/fall
+2025-09-03 07:05:06,007 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-09-03 07:05:06,008 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: sc.iso
+2025-09-03 07:05:06,008 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/sc.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/sc
+2025-09-03 07:05:06,008 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-09-03 07:05:06,008 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: sc.iso to data/apps/external/eHMap/sc.iso
+2025-09-03 07:05:06,008 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/sc.iso to data/apps/external/eHMap/sc.iso
+2025-09-03 07:05:06,008 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/sc to data/apps/apps_data/eHorizonISA/maps/navi/sc
+2025-09-03 07:05:06,180 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-09-03 07:05:06,180 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: i.iso
+2025-09-03 07:05:06,180 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/i.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/i
+2025-09-03 07:05:06,181 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-09-03 07:05:06,181 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: i.iso to data/apps/external/eHMap/i.iso
+2025-09-03 07:05:06,181 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/i.iso to data/apps/external/eHMap/i.iso
+2025-09-03 07:05:06,181 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/i to data/apps/apps_data/eHorizonISA/maps/navi/i
+2025-09-03 07:05:06,340 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-09-03 07:05:06,341 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: sk.iso
+2025-09-03 07:05:06,342 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/sk.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/sk
+2025-09-03 07:05:06,342 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-09-03 07:05:06,342 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: sk.iso to data/apps/external/eHMap/sk.iso
+2025-09-03 07:05:06,344 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/sk.iso to data/apps/external/eHMap/sk.iso
+2025-09-03 07:05:06,344 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/sk to data/apps/apps_data/eHorizonISA/maps/navi/sk
+2025-09-03 07:05:06,490 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-09-03 07:05:06,492 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: md.iso
+2025-09-03 07:05:06,493 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/md.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/md
+2025-09-03 07:05:06,493 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-09-03 07:05:06,493 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: md.iso to data/apps/external/eHMap/md.iso
+2025-09-03 07:05:06,493 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/md.iso to data/apps/external/eHMap/md.iso
+2025-09-03 07:05:06,494 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/md to data/apps/apps_data/eHorizonISA/maps/navi/md
+2025-09-03 07:05:06,636 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-09-03 07:05:06,636 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: kos.iso
+2025-09-03 07:05:06,636 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/kos.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/kos
+2025-09-03 07:05:06,637 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-09-03 07:05:06,637 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: kos.iso to data/apps/external/eHMap/kos.iso
+2025-09-03 07:05:06,637 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/kos.iso to data/apps/external/eHMap/kos.iso
+2025-09-03 07:05:06,637 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/kos to data/apps/apps_data/eHorizonISA/maps/navi/kos
+2025-09-03 07:05:06,748 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-09-03 07:05:06,748 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: .resources-manifest.xml
+2025-09-03 07:05:06,748 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: ro.iso
+2025-09-03 07:05:06,748 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/ro.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/ro
+2025-09-03 07:05:06,748 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-09-03 07:05:06,748 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: ro.iso to data/apps/external/eHMap/ro.iso
+2025-09-03 07:05:06,748 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/ro.iso to data/apps/external/eHMap/ro.iso
+2025-09-03 07:05:06,749 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/ro to data/apps/apps_data/eHorizonISA/maps/navi/ro
+2025-09-03 07:05:06,848 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-09-03 07:05:06,848 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: blr.iso
+2025-09-03 07:05:06,849 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/blr.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/blr
+2025-09-03 07:05:06,849 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-09-03 07:05:06,849 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: blr.iso to data/apps/external/eHMap/blr.iso
+2025-09-03 07:05:06,849 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/blr.iso to data/apps/external/eHMap/blr.iso
+2025-09-03 07:05:06,849 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/blr to data/apps/apps_data/eHorizonISA/maps/navi/blr
+2025-09-03 07:05:06,982 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-09-03 07:05:06,982 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: sp.iso
+2025-09-03 07:05:06,982 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/sp.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/sp
+2025-09-03 07:05:06,982 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-09-03 07:05:06,984 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: sp.iso to data/apps/external/eHMap/sp.iso
+2025-09-03 07:05:06,984 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/sp.iso to data/apps/external/eHMap/sp.iso
+2025-09-03 07:05:06,984 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/sp to data/apps/apps_data/eHorizonISA/maps/navi/sp
+2025-09-03 07:05:07,152 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-09-03 07:05:07,152 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: hr.iso
+2025-09-03 07:05:07,152 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/hr.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/hr
+2025-09-03 07:05:07,153 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-09-03 07:05:07,153 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: hr.iso to data/apps/external/eHMap/hr.iso
+2025-09-03 07:05:07,153 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/hr.iso to data/apps/external/eHMap/hr.iso
+2025-09-03 07:05:07,153 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/hr to data/apps/apps_data/eHorizonISA/maps/navi/hr
+2025-09-03 07:05:07,302 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-09-03 07:05:07,302 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: hu.iso
+2025-09-03 07:05:07,306 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/hu.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/hu
+2025-09-03 07:05:07,307 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-09-03 07:05:07,307 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: hu.iso to data/apps/external/eHMap/hu.iso
+2025-09-03 07:05:07,307 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/hu.iso to data/apps/external/eHMap/hu.iso
+2025-09-03 07:05:07,307 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/hu to data/apps/apps_data/eHorizonISA/maps/navi/hu
+2025-09-03 07:05:07,445 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-09-03 07:05:07,445 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: tr.iso
+2025-09-03 07:05:07,445 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/tr.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/tr
+2025-09-03 07:05:07,445 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-09-03 07:05:07,446 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: tr.iso to data/apps/external/eHMap/tr.iso
+2025-09-03 07:05:07,446 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/tr.iso to data/apps/external/eHMap/tr.iso
+2025-09-03 07:05:07,446 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/tr to data/apps/apps_data/eHorizonISA/maps/navi/tr
+2025-09-03 07:05:07,642 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-09-03 07:05:07,642 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: mlt.iso
+2025-09-03 07:05:07,642 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/mlt.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/mlt
+2025-09-03 07:05:07,642 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-09-03 07:05:07,644 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: mlt.iso to data/apps/external/eHMap/mlt.iso
+2025-09-03 07:05:07,644 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/mlt.iso to data/apps/external/eHMap/mlt.iso
+2025-09-03 07:05:07,644 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/mlt to data/apps/apps_data/eHorizonISA/maps/navi/mlt
+2025-09-03 07:05:07,819 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-09-03 07:05:07,819 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: cy.iso
+2025-09-03 07:05:07,819 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/cy.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/cy
+2025-09-03 07:05:07,819 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-09-03 07:05:07,819 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: cy.iso to data/apps/external/eHMap/cy.iso
+2025-09-03 07:05:07,819 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/cy.iso to data/apps/external/eHMap/cy.iso
+2025-09-03 07:05:07,820 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/cy to data/apps/apps_data/eHorizonISA/maps/navi/cy
+2025-09-03 07:05:07,948 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-09-03 07:05:07,948 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: mk.iso
+2025-09-03 07:05:07,949 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/mk.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/mk
+2025-09-03 07:05:07,949 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-09-03 07:05:07,949 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: mk.iso to data/apps/external/eHMap/mk.iso
+2025-09-03 07:05:07,949 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/mk.iso to data/apps/external/eHMap/mk.iso
+2025-09-03 07:05:07,949 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/mk to data/apps/apps_data/eHorizonISA/maps/navi/mk
+2025-09-03 07:05:08,081 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-09-03 07:05:08,084 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/273 - Handle item: bg.iso
+2025-09-03 07:05:08,084 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/283 - Try with /opt/appl/data/apps/apps_data/eHorizonISA/shared/bg.iso to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/bg
+2025-09-03 07:05:08,084 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/290 - Not mounted
+2025-09-03 07:05:08,085 [INFO] APP/ISOHandler.cpp/getExternalPath()/114 - Apended: bg.iso to data/apps/external/eHMap/bg.iso
+2025-09-03 07:05:08,085 [INFO] APP/ISOHandler.cpp/getExternalPath()/116 - Converted: /opt/appl/data/apps/apps_data/eHorizonISA/shared/bg.iso to data/apps/external/eHMap/bg.iso
+2025-09-03 07:05:08,085 [INFO] APP/ISOHandler.cpp/getRelativeInternal()/139 - convert /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/bg to data/apps/apps_data/eHorizonISA/maps/navi/bg
+2025-09-03 07:05:08,196 [INFO] APP/ISOHandler.cpp/handleISOResource()/166 - Mounted!
+2025-09-03 07:05:08,196 [INFO] APP/ISOHandler.cpp/handleMultiISOResources()/300 - Closed.../opt/appl/data/apps/apps_data/eHorizonISA/shared
+2025-09-03 07:05:08,196 [INFO] APP/SpaceManagement.cpp/runTask()/361 - Iso mounted at startup
+2025-09-03 07:05:08,197 [INFO] APP/SpaceManagement.cpp/runTask()/395 - Country borders corruption file does not exist
+2025-09-03 07:05:08,197 [INFO] APP/SpaceManagement.cpp/runTask()/402 - Country_borders is installed
+2025-09-03 07:05:08,199 [INFO] APP/Gateway.cpp/onEvent()/168 - StartUp mount done
+2025-09-03 07:05:08,199 [INFO] APP/Gateway.cpp/onEvent()/171 - Check manifests
+2025-09-03 07:05:08,818 [INFO] APP/EolUpdate.cpp/checkManifests()/162 - Eol manifest version: 1.1.0-08-2024
+2025-09-03 07:05:08,818 [INFO] APP/EolUpdate.cpp/checkManifests()/163 - Internal manifest version: 1.1.0-08-2024
+2025-09-03 07:05:08,818 [INFO] APP/EolUpdate.cpp/checkManifests()/210 - Manifests have the same version
+2025-09-03 07:05:08,820 [INFO] APP/RequestUpdateManager.cpp/start()/87 - UpdateManager is started
+2025-09-03 07:05:08,820 [INFO] APP/DIDSubscriber.cpp/send()/114 - Start map info reading
+2025-09-03 07:05:08,821 [INFO] APP/StateMonitor.cpp/setSystemState()/964 - === eHorizonISA enters ACTIVE state.
+2025-09-03 07:05:08,822 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/gr/navigation/db/cdrom.toc successfully opened
+2025-09-03 07:05:08,823 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/isl/navigation/db/cdrom.toc successfully opened
+2025-09-03 07:05:08,825 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/bg/navigation/db/cdrom.toc successfully opened
+2025-09-03 07:05:08,826 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/hu/navigation/db/cdrom.toc successfully opened
+2025-09-03 07:05:08,827 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/ell/navigation/db/cdrom.toc successfully opened
+2025-09-03 07:05:08,827 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/ru/navigation/db/cdrom.toc successfully opened
+2025-09-03 07:05:08,828 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/ach/navigation/db/cdrom.toc successfully opened
+2025-09-03 07:05:08,829 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/cz/navigation/db/cdrom.toc successfully opened
+2025-09-03 07:05:08,829 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/kos/navigation/db/cdrom.toc successfully opened
+2025-09-03 07:05:08,830 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/isr/navigation/db/cdrom.toc successfully opened
+2025-09-03 07:05:08,831 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/pl/navigation/db/cdrom.toc successfully opened
+2025-09-03 07:05:08,832 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/hr/navigation/db/cdrom.toc successfully opened
+2025-09-03 07:05:08,834 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/md/navigation/db/cdrom.toc successfully opened
+2025-09-03 07:05:08,835 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/cy/navigation/db/cdrom.toc successfully opened
+2025-09-03 07:05:08,836 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/mlt/navigation/db/cdrom.toc successfully opened
+2025-09-03 07:05:08,836 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/al/navigation/db/cdrom.toc successfully opened
+2025-09-03 07:05:08,837 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/ukr/navigation/db/cdrom.toc successfully opened
+2025-09-03 07:05:08,838 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/gall/navigation/db/cdrom.toc successfully opened
+2025-09-03 07:05:08,839 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/cs/navigation/db/cdrom.toc successfully opened
+2025-09-03 07:05:08,839 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/tr/navigation/db/cdrom.toc successfully opened
+2025-09-03 07:05:08,839 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/ro/navigation/db/cdrom.toc successfully opened
+2025-09-03 07:05:08,840 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/ba/navigation/db/cdrom.toc successfully opened
+2025-09-03 07:05:08,840 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/mk/navigation/db/cdrom.toc successfully opened
+2025-09-03 07:05:08,841 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/bnl/navigation/db/cdrom.toc successfully opened
+2025-09-03 07:05:08,842 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/uk/navigation/db/cdrom.toc successfully opened
+2025-09-03 07:05:08,844 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/blr/navigation/db/cdrom.toc successfully opened
+2025-09-03 07:05:08,845 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/i/navigation/db/cdrom.toc successfully opened
+2025-09-03 07:05:08,845 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/fall/navigation/db/cdrom.toc successfully opened
+2025-09-03 07:05:08,846 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/sc/navigation/db/cdrom.toc successfully opened
+2025-09-03 07:05:08,846 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/si/navigation/db/cdrom.toc successfully opened
+2025-09-03 07:05:08,847 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/sp/navigation/db/cdrom.toc successfully opened
+2025-09-03 07:05:08,847 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/sk/navigation/db/cdrom.toc successfully opened
+2025-09-03 07:05:08,851 [INFO] APP/DIDSubscriber.cpp/sendDidToUDS()/509 - Sent DID from MAP: 871 size: 30
+2025-09-03 07:05:08,857 [INFO] APP/DIDSubscriber.cpp/sendDidToUDS()/509 - Sent DID from MAP: 61706 size: 35
+2025-09-03 07:05:08,860 [INFO] APP/DIDSubscriber.cpp/sendDidToUDS()/509 - Sent DID from MAP: 64771 size: 350
+2025-09-03 07:05:08,864 [INFO] APP/DIDSubscriber.cpp/sendDidToUDS()/509 - Sent DID from MAP: 64772 size: 245
+2025-09-03 07:05:08,864 [INFO] APP/DIDSubscriber.cpp/runTask()/431 - MapInfo DIDs sent to UDS!
+2025-09-03 07:05:08,903 [INFO] APP/UDS.cpp/writeDid()/766 - Set DID: 871 vector_size: 30
+2025-09-03 07:05:08,903 [INFO] APP/UDS.cpp/writeDid()/767 - Set DID: 871 vectorHex <0x {31 2e 31 2e 30 2d 30 38 2d 32 30 32 34 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 }>
+2025-09-03 07:05:08,904 [INFO] APP/MapRegionRank.cpp/start()/73 - Client on COUNTRYCODE_PORT is opened
+2025-09-03 07:05:08,906 [INFO] APP/UDS.cpp/runTask()/270 - Set DID: 871 size: 30
+2025-09-03 07:05:08,959 [INFO] APP/UDS.cpp/writeDid()/766 - Set DID: 61706 vector_size: 35
+2025-09-03 07:05:08,960 [INFO] APP/UDS.cpp/writeDid()/767 - Set DID: 61706 vectorHex <0x {45 55 20 41 73 69 61 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 ... }>
+2025-09-03 07:05:08,960 [INFO] APP/UDS.cpp/runTask()/270 - Set DID: 61706 size: 35
+2025-09-03 07:05:08,960 [INFO] APP/UDS.cpp/writeDid()/760 - DID: 64771, sent to VolatileDIDs
+2025-09-03 07:05:08,960 [INFO] APP/UDS.cpp/runTask()/270 - Set DID: 64771 size: 350
+2025-09-03 07:05:08,960 [INFO] APP/UDS.cpp/writeDid()/760 - DID: 64772, sent to VolatileDIDs
+2025-09-03 07:05:08,960 [INFO] APP/UDS.cpp/runTask()/270 - Set DID: 64772 size: 245
+2025-09-03 07:05:09,105 [INFO] APP/FaultHandler.cpp/setDTCState()/429 - setDTCState: MapLoadingError
+2025-09-03 07:05:09,105 [INFO] APP/GenericDebounceProcessor.cpp/setDTCState()/130 - Setting DTC MapLoadingError with state 0
+2025-09-03 07:05:09,106 [INFO] APP/GenericDebounceProcessor.cpp/setDTC()/374 - DTC set to inactive and occ decremented: MapLoadingError
+2025-09-03 07:05:09,106 [INFO] APP/SpaceManagement.cpp/onReceiveData()/334 - New locked resource received: fall
+2025-09-03 07:05:09,901 [INFO] APP/NationalSpeedLimits.cpp/onReceiveData()/231 - New Country Code received: CZ
+2025-09-03 07:05:09,902 [INFO] APP/MapRegionRank.cpp/updateRateOfCountry()/190 - Reset currentRegion flag for: fall
+2025-09-03 07:05:09,902 [INFO] APP/MapRegionRank.cpp/updateRateOfCountry()/164 - currentRegion is set for: cz
+2025-09-03 07:05:09,902 [INFO] APP/MapRegionRank.cpp/updateRateOfCountry()/172 - Rank is incremented 14 for region: cz
+2025-09-03 07:05:09,902 [INFO] APP/MapRegionRank.cpp/updateRateOfCountry()/181 - Resource was updated
+2025-09-03 07:05:09,902 [INFO] APP/SpaceManagement.cpp/onReceiveData()/334 - New locked resource received: cz
+2025-09-03 07:05:09,906 [INFO] APP/ManifestHandler.cpp/saveManifest()/485 - /opt/appl/data/apps/apps_data/eHorizonISA/shared/.resources-manifest.xml was successfully updated and saved!
+2025-09-03 07:05:09,906 [INFO] APP/MapRegionRank.cpp/updateRateOfCountry()/200 - Changes were saved in the manifest
+2025-09-03 07:05:10,068 [INFO] APP/StateMonitor.cpp/setSystemState()/977 - === eHorizonISA enters AVAILABLE state.
+2025-09-03 07:05:10,069 [INFO] APP/FaultHandler.cpp/setDTCState()/429 - setDTCState: MapLoadingError
+2025-09-03 07:05:10,070 [INFO] APP/GenericDebounceProcessor.cpp/setDTCState()/130 - Setting DTC MapLoadingError with state 0
+2025-09-03 07:05:10,074 [INFO] APP/GenericDebounceProcessor.cpp/setDTC()/374 - DTC set to inactive and occ decremented: MapLoadingError
+2025-09-03 07:05:24,836 [INFO] APP/HealthMonitor.cpp/runTask()/141 - RAM fault inactive. Usage: 35092kb
+2025-09-03 07:05:24,836 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 1.6%
+2025-09-03 07:05:24,836 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC RAM not in list
+2025-09-03 07:05:24,836 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC RAM
+2025-09-03 07:05:24,836 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-03 07:05:24,837 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-03 07:06:03,940 [INFO] APP/GenericDebounceProcessor.cpp/setDTC()/374 - DTC set to inactive and occ decremented: GpsError
+2025-09-03 07:06:43,996 [INFO] APP/Gateway.cpp/runTask()/470 - Check for db existence started
+2025-09-03 07:06:43,996 [INFO] APP/DbUpdate.cpp/checkExistenceOfDb()/73 - Country_borders is installed
+2025-09-03 07:06:43,996 [INFO] APP/Gateway.cpp/runTask()/482 - All sockets appeared. Shadow sent
+2025-09-03 07:06:43,997 [INFO] APP/ShadowClient.cpp/ParseXml()/116 - {"ResourceManifestVersion":"1.1.0-08-2024","Maps":[{"mapName":"country_borders","mapVersion":"0.1.2.8"},{"mapName":"fall","mapVersion":"0.6.0.0"},{"mapName":"sp","mapVersion":"0.6.0.0"},{"mapName":"sc","mapVersion":"0.5.0.0"},{"mapName":"gall","mapVersion":"0.7.0.0"},{"mapName":"i","mapVersion":"0.5.0.0"},{"mapName":"tr","mapVersion":"0.5.0.0"},{"mapName":"pl","mapVersion":"0.5.0.0"},{"mapName":"uk","mapVersion":"0.5.0.0"},{"mapName":"gr","mapVersion":"0.5.0.0"},{"mapName":"ach","mapVersion":"0.5.0.0"},{"mapName":"ru","mapVersion":"0.5.0.0"},{"mapName":"bnl","mapVersion":"0.5.0.0"},{"mapName":"cz","mapVersion":"0.5.0.0"}]}
+2025-09-03 07:06:44,017 [INFO] APP/ShadowClient.cpp/runTask()/195 - Shadow sent
+2025-09-03 07:08:04,015 [INFO] APP/GeofenceRequester.cpp/onReceiveData()/142 - New RequestCommand: sID: "0"
+sDetails: "cz"
+updateRequest {
+  updateType: GEOFENCE_REQUEST
+}
+
+2025-09-03 07:08:04,016 [INFO] APP/RequestUpdateManager.cpp/addRequestCommand()/162 - Received CMD: sID: "0"
+sDetails: "cz"
+updateRequest {
+  updateType: GEOFENCE_REQUEST
+}
+
+2025-09-03 07:08:04,199 [INFO] APP/RequestUpdateManager.cpp/runTask()/310 - Process cmd: sID: "0"
+sDetails: "cz"
+updateRequest {
+  updateType: GEOFENCE_REQUEST
+}
+
+2025-09-03 07:08:04,449 [INFO] APP/RequestUpdateManager.cpp/runTask()/341 - ProcessCommand
+2025-09-03 07:08:04,700 [INFO] APP/RequestUpdateManager.cpp/runTask()/730 - Update not needed
+2025-09-03 07:36:45,539 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-03 07:36:45,551 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-03 07:36:45,551 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-03 07:37:06,995 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3.2%
+2025-09-03 07:37:06,996 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-03 07:37:06,996 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-03 07:39:34,311 [INFO] APP/GeofenceRequester.cpp/onReceiveData()/142 - New RequestCommand: sID: "0"
+sDetails: "pl"
+updateRequest {
+  updateType: GEOFENCE_REQUEST
+}
+
+2025-09-03 07:39:34,311 [INFO] APP/RequestUpdateManager.cpp/addRequestCommand()/162 - Received CMD: sID: "0"
+sDetails: "pl"
+updateRequest {
+  updateType: GEOFENCE_REQUEST
+}
+
+2025-09-03 07:39:34,535 [INFO] APP/RequestUpdateManager.cpp/runTask()/310 - Process cmd: sID: "0"
+sDetails: "pl"
+updateRequest {
+  updateType: GEOFENCE_REQUEST
+}
+
+2025-09-03 07:39:34,788 [INFO] APP/RequestUpdateManager.cpp/runTask()/341 - ProcessCommand
+2025-09-03 07:39:35,049 [INFO] APP/RequestUpdateManager.cpp/runTask()/730 - Update not needed
+2025-09-03 07:43:34,413 [INFO] APP/StateMonitor.cpp/setSystemState()/964 - === eHorizonISA enters ACTIVE state.
+2025-09-03 07:43:34,620 [INFO] APP/NationalSpeedLimits.cpp/onReceiveData()/231 - New Country Code received: FR
+2025-09-03 07:43:34,620 [INFO] APP/SpaceManagement.cpp/onReceiveData()/334 - New locked resource received: fall
+2025-09-03 07:43:34,621 [INFO] APP/MapRegionRank.cpp/updateRateOfCountry()/164 - currentRegion is set for: fall
+2025-09-03 07:43:34,621 [INFO] APP/MapRegionRank.cpp/updateRateOfCountry()/172 - Rank is incremented 69 for region: fall
+2025-09-03 07:43:34,621 [INFO] APP/MapRegionRank.cpp/updateRateOfCountry()/181 - Resource was updated
+2025-09-03 07:43:34,621 [INFO] APP/MapRegionRank.cpp/updateRateOfCountry()/190 - Reset currentRegion flag for: cz
+2025-09-03 07:43:34,625 [INFO] APP/ManifestHandler.cpp/saveManifest()/485 - /opt/appl/data/apps/apps_data/eHorizonISA/shared/.resources-manifest.xml was successfully updated and saved!
+2025-09-03 07:43:34,625 [INFO] APP/MapRegionRank.cpp/updateRateOfCountry()/200 - Changes were saved in the manifest
+2025-09-03 07:43:35,059 [INFO] APP/StateMonitor.cpp/setSystemState()/977 - === eHorizonISA enters AVAILABLE state.
+2025-09-03 07:43:35,061 [INFO] APP/FaultHandler.cpp/setDTCState()/429 - setDTCState: MapLoadingError
+2025-09-03 07:43:35,061 [INFO] APP/GenericDebounceProcessor.cpp/setDTCState()/130 - Setting DTC MapLoadingError with state 0
+2025-09-03 07:43:35,062 [INFO] APP/GenericDebounceProcessor.cpp/setDTC()/374 - DTC set to inactive and occ decremented: MapLoadingError
+2025-09-03 07:44:04,367 [INFO] APP/GeofenceRequester.cpp/onReceiveData()/142 - New RequestCommand: sID: "0"
+sDetails: "fall"
+updateRequest {
+  updateType: GEOFENCE_REQUEST
+}
+
+2025-09-03 07:44:04,367 [INFO] APP/RequestUpdateManager.cpp/addRequestCommand()/162 - Received CMD: sID: "0"
+sDetails: "fall"
+updateRequest {
+  updateType: GEOFENCE_REQUEST
+}
+
+2025-09-03 07:44:04,613 [INFO] APP/RequestUpdateManager.cpp/runTask()/310 - Process cmd: sID: "0"
+sDetails: "fall"
+updateRequest {
+  updateType: GEOFENCE_REQUEST
+}
+
+2025-09-03 07:44:04,864 [INFO] APP/RequestUpdateManager.cpp/runTask()/341 - ProcessCommand
+2025-09-03 07:44:05,116 [INFO] APP/RequestUpdateManager.cpp/runTask()/730 - Update not needed
+2025-09-03 10:00:12,099 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-03 10:00:12,100 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-03 10:00:12,100 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-03 10:00:33,506 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.2%
+2025-09-03 10:00:33,506 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-03 10:00:33,507 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-03 11:19:04,472 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-03 11:19:04,472 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-03 11:19:04,472 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-03 11:19:25,801 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.4%
+2025-09-03 11:19:25,801 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-03 11:19:25,802 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-03 11:41:48,690 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-03 11:41:48,690 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-03 11:41:48,690 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-03 11:42:09,991 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 4%
+2025-09-03 11:42:09,992 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-03 11:42:09,992 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-03 12:40:45,027 [INFO] APP/StateMonitor.cpp/setSystemState()/964 - === eHorizonISA enters ACTIVE state.
+2025-09-03 14:19:59,197 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-03 14:19:59,198 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-03 14:19:59,198 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-03 14:20:20,467 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 1.4%
+2025-09-03 14:20:20,468 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-03 14:20:20,468 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-03 14:50:55,260 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-03 14:50:55,261 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-03 14:50:55,261 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-03 14:51:16,618 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.6%
+2025-09-03 14:51:16,619 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-03 14:51:16,619 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-03 14:58:02,181 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-03 14:58:02,182 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-03 14:58:02,184 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-03 14:58:23,476 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3%
+2025-09-03 14:58:23,477 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-03 14:58:23,477 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-03 15:55:36,208 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-03 15:55:36,208 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-03 15:55:36,208 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-03 15:55:57,511 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 1.4%
+2025-09-03 15:55:57,511 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-03 15:55:57,512 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-03 16:11:57,482 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.6%
+2025-09-03 16:11:57,482 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-03 16:11:57,482 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-03 16:12:18,688 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3.2%
+2025-09-03 16:12:18,689 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-03 16:12:18,689 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-03 16:19:46,247 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-03 16:19:46,248 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-03 16:19:46,248 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-03 16:20:07,674 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 4.4%
+2025-09-03 16:20:07,675 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-03 16:20:07,675 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-03 16:39:40,927 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 6%
+2025-09-03 16:39:40,928 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-03 16:39:40,928 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-03 16:40:02,285 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3%
+2025-09-03 16:40:02,285 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-03 16:40:02,285 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-03 16:41:06,342 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.6%
+2025-09-03 16:41:06,348 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-03 16:41:06,348 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-03 16:41:27,621 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.4%
+2025-09-03 16:41:27,622 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-03 16:41:27,622 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-03 17:20:34,519 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-03 17:20:34,520 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-03 17:20:34,520 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-03 17:20:55,842 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 1.4%
+2025-09-03 17:20:55,843 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-03 17:20:55,844 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-03 17:37:59,667 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-03 17:37:59,667 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-03 17:37:59,668 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-03 17:38:21,078 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 0%
+2025-09-03 17:38:21,079 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-03 17:38:21,079 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-03 18:00:45,257 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.6%
+2025-09-03 18:00:45,258 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-03 18:00:45,258 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-03 18:01:06,545 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3.2%
+2025-09-03 18:01:06,545 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-03 18:01:06,546 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-03 21:31:10,447 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-03 21:31:10,448 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-03 21:31:10,448 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-03 21:31:52,999 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.2%
+2025-09-03 21:31:52,999 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-03 21:31:52,999 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-03 21:33:39,645 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-03 21:33:39,646 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-03 21:33:39,646 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-03 21:34:00,911 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 5%
+2025-09-03 21:34:00,911 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-03 21:34:00,911 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-03 22:07:25,821 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-03 22:07:25,822 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-03 22:07:25,822 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-03 22:07:47,111 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 1.6%
+2025-09-03 22:07:47,111 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-03 22:07:47,111 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-03 23:37:43,018 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-03 23:37:43,018 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-03 23:37:43,018 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-03 23:38:04,392 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.4%
+2025-09-03 23:38:04,394 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-03 23:38:04,394 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-04 00:34:15,228 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-04 00:34:15,228 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-04 00:34:15,229 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-04 00:34:36,495 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.2%
+2025-09-04 00:34:36,495 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-04 00:34:36,496 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-04 01:27:13,218 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-04 01:27:13,218 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.8%
+2025-09-04 01:27:13,218 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-04 01:27:55,852 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.2%
+2025-09-04 01:27:55,853 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-04 01:27:55,853 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-04 04:57:20,187 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 6%
+2025-09-04 04:57:20,188 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-04 04:57:20,188 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-04 04:57:20,189 [ERROR] APP/Thread.cpp/spawnThread()/692 - Cannot set the name 9onAppFault for thread 1095102656: unknown error.
+2025-09-04 04:58:02,844 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2%
+2025-09-04 04:58:02,845 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-04 04:58:02,845 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-04 06:23:21,409 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-04 06:23:21,410 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-04 06:23:21,410 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-04 06:23:42,690 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 4%
+2025-09-04 06:23:42,691 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-04 06:23:42,691 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-04 06:35:04,716 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-04 06:35:04,716 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-04 06:35:04,716 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-04 06:35:25,944 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3.8%
+2025-09-04 06:35:25,945 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-04 06:35:25,945 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-04 07:17:02,182 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-04 07:17:02,183 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 6.2%
+2025-09-04 07:17:02,184 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-04 07:17:23,497 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3.4%
+2025-09-04 07:17:23,498 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-04 07:17:23,498 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-04 08:18:52,226 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-04 08:18:52,226 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-04 08:18:52,227 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-04 08:19:13,470 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 4%
+2025-09-04 08:19:13,470 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-04 08:19:13,470 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-04 08:44:48,737 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 6.8%
+2025-09-04 08:44:48,737 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-04 08:44:48,737 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-04 08:45:10,107 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2%
+2025-09-04 08:45:10,108 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-04 08:45:10,108 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-04 09:24:15,250 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-04 09:24:15,251 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-04 09:24:15,251 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-04 09:24:36,591 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 0.8%
+2025-09-04 09:24:36,591 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-04 09:24:36,591 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-04 12:21:16,804 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.6%
+2025-09-04 12:21:16,805 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-04 12:21:16,805 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-04 12:21:38,165 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.2%
+2025-09-04 12:21:38,165 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-04 12:21:38,166 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-04 12:39:03,445 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-04 12:39:03,445 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-04 12:39:03,446 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-04 12:39:24,854 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 1.4%
+2025-09-04 12:39:24,857 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-04 12:39:24,858 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-04 13:26:20,550 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-04 13:26:20,550 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-04 13:26:20,551 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-04 13:26:41,880 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3.6%
+2025-09-04 13:26:41,880 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-04 13:26:41,880 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-04 14:05:26,205 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-04 14:05:26,206 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-04 14:05:26,206 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-04 14:05:47,519 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.4%
+2025-09-04 14:05:47,519 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-04 14:05:47,519 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-04 14:29:35,791 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-04 14:29:35,792 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-04 14:29:35,792 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-04 14:29:57,143 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3%
+2025-09-04 14:29:57,143 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-04 14:29:57,144 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-04 14:45:34,709 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-04 14:45:34,710 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-04 14:45:34,710 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-04 14:45:55,988 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2%
+2025-09-04 14:45:55,989 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-04 14:45:55,989 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-04 15:15:47,161 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 6%
+2025-09-04 15:15:47,162 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-04 15:15:47,162 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-04 15:16:08,456 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3.8%
+2025-09-04 15:16:08,457 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-04 15:16:08,457 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-04 15:47:25,236 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-04 15:47:25,237 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-04 15:47:25,237 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-04 15:47:46,528 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 4%
+2025-09-04 15:47:46,528 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-04 15:47:46,528 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-04 18:35:35,002 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.6%
+2025-09-04 18:35:35,003 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-04 18:35:35,003 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-04 18:35:56,394 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 5%

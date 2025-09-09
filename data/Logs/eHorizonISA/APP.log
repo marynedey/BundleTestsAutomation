@@ -1,0 +1,992 @@
+2025-09-05 09:38:57,991 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/mk/navigation/db/cdrom.toc successfully opened
+2025-09-05 09:38:57,992 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/bnl/navigation/db/cdrom.toc successfully opened
+2025-09-05 09:38:57,994 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/uk/navigation/db/cdrom.toc successfully opened
+2025-09-05 09:38:57,995 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/blr/navigation/db/cdrom.toc successfully opened
+2025-09-05 09:38:57,995 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/i/navigation/db/cdrom.toc successfully opened
+2025-09-05 09:38:57,996 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/fall/navigation/db/cdrom.toc successfully opened
+2025-09-05 09:38:57,996 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/sc/navigation/db/cdrom.toc successfully opened
+2025-09-05 09:38:58,002 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/si/navigation/db/cdrom.toc successfully opened
+2025-09-05 09:38:58,003 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/sp/navigation/db/cdrom.toc successfully opened
+2025-09-05 09:38:58,004 [INFO] APP/DIDSubscriber.cpp/getCdromTocInformation()/673 - file: /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/sk/navigation/db/cdrom.toc successfully opened
+2025-09-05 09:38:58,009 [INFO] APP/DIDSubscriber.cpp/sendDidToUDS()/509 - Sent DID from MAP: 871 size: 30
+2025-09-05 09:38:58,014 [INFO] APP/DIDSubscriber.cpp/sendDidToUDS()/509 - Sent DID from MAP: 61706 size: 35
+2025-09-05 09:38:58,016 [INFO] APP/DIDSubscriber.cpp/sendDidToUDS()/509 - Sent DID from MAP: 64771 size: 350
+2025-09-05 09:38:58,021 [INFO] APP/DIDSubscriber.cpp/sendDidToUDS()/509 - Sent DID from MAP: 64772 size: 245
+2025-09-05 09:38:58,022 [INFO] APP/DIDSubscriber.cpp/runTask()/431 - MapInfo DIDs sent to UDS!
+2025-09-05 09:38:58,036 [INFO] APP/MapRegionRank.cpp/start()/73 - Client on COUNTRYCODE_PORT is opened
+2025-09-05 09:38:58,058 [INFO] APP/UDS.cpp/writeDid()/766 - Set DID: 871 vector_size: 30
+2025-09-05 09:38:58,058 [INFO] APP/UDS.cpp/writeDid()/767 - Set DID: 871 vectorHex <0x {31 2e 31 2e 30 2d 30 38 2d 32 30 32 34 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 }>
+2025-09-05 09:38:58,058 [INFO] APP/UDS.cpp/runTask()/270 - Set DID: 871 size: 30
+2025-09-05 09:38:58,121 [INFO] APP/UDS.cpp/writeDid()/766 - Set DID: 61706 vector_size: 35
+2025-09-05 09:38:58,122 [INFO] APP/UDS.cpp/writeDid()/767 - Set DID: 61706 vectorHex <0x {45 55 20 41 73 69 61 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 ... }>
+2025-09-05 09:38:58,122 [INFO] APP/UDS.cpp/runTask()/270 - Set DID: 61706 size: 35
+2025-09-05 09:38:58,122 [INFO] APP/UDS.cpp/writeDid()/760 - DID: 64771, sent to VolatileDIDs
+2025-09-05 09:38:58,122 [INFO] APP/UDS.cpp/runTask()/270 - Set DID: 64771 size: 350
+2025-09-05 09:38:58,122 [INFO] APP/UDS.cpp/writeDid()/760 - DID: 64772, sent to VolatileDIDs
+2025-09-05 09:38:58,122 [INFO] APP/UDS.cpp/runTask()/270 - Set DID: 64772 size: 245
+2025-09-05 09:38:58,239 [INFO] APP/SpaceManagement.cpp/onReceiveData()/334 - New locked resource received: fall
+2025-09-05 09:38:58,241 [INFO] APP/FaultHandler.cpp/setDTCState()/429 - setDTCState: MapLoadingError
+2025-09-05 09:38:58,243 [INFO] APP/GenericDebounceProcessor.cpp/setDTCState()/130 - Setting DTC MapLoadingError with state 0
+2025-09-05 09:38:58,244 [INFO] APP/GenericDebounceProcessor.cpp/setDTC()/374 - DTC set to inactive and occ decremented: MapLoadingError
+2025-09-05 09:38:59,311 [INFO] APP/NationalSpeedLimits.cpp/onReceiveData()/231 - New Country Code received: CZ
+2025-09-05 09:38:59,311 [INFO] APP/MapRegionRank.cpp/updateRateOfCountry()/190 - Reset currentRegion flag for: fall
+2025-09-05 09:38:59,312 [INFO] APP/MapRegionRank.cpp/updateRateOfCountry()/164 - currentRegion is set for: cz
+2025-09-05 09:38:59,312 [INFO] APP/MapRegionRank.cpp/updateRateOfCountry()/172 - Rank is incremented 16 for region: cz
+2025-09-05 09:38:59,312 [INFO] APP/MapRegionRank.cpp/updateRateOfCountry()/181 - Resource was updated
+2025-09-05 09:38:59,311 [INFO] APP/SpaceManagement.cpp/onReceiveData()/334 - New locked resource received: cz
+2025-09-05 09:38:59,314 [INFO] APP/ManifestHandler.cpp/saveManifest()/485 - /opt/appl/data/apps/apps_data/eHorizonISA/shared/.resources-manifest.xml was successfully updated and saved!
+2025-09-05 09:38:59,314 [INFO] APP/MapRegionRank.cpp/updateRateOfCountry()/200 - Changes were saved in the manifest
+2025-09-05 09:38:59,675 [INFO] APP/StateMonitor.cpp/setSystemState()/977 - === eHorizonISA enters AVAILABLE state.
+2025-09-05 09:38:59,677 [INFO] APP/FaultHandler.cpp/setDTCState()/429 - setDTCState: MapLoadingError
+2025-09-05 09:38:59,677 [INFO] APP/GenericDebounceProcessor.cpp/setDTCState()/130 - Setting DTC MapLoadingError with state 0
+2025-09-05 09:38:59,679 [INFO] APP/GenericDebounceProcessor.cpp/setDTC()/374 - DTC set to inactive and occ decremented: MapLoadingError
+2025-09-05 09:39:14,308 [INFO] APP/HealthMonitor.cpp/runTask()/141 - RAM fault inactive. Usage: 33212kb
+2025-09-05 09:39:14,309 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 0%
+2025-09-05 09:39:14,309 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-05 09:39:14,309 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-05 09:39:14,309 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC RAM not in list
+2025-09-05 09:39:14,311 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC RAM
+2025-09-05 09:39:53,384 [INFO] APP/GenericDebounceProcessor.cpp/setDTC()/374 - DTC set to inactive and occ decremented: GpsError
+2025-09-05 09:40:33,444 [INFO] APP/Gateway.cpp/runTask()/470 - Check for db existence started
+2025-09-05 09:40:33,444 [INFO] APP/DbUpdate.cpp/checkExistenceOfDb()/73 - Country_borders is installed
+2025-09-05 09:40:33,444 [INFO] APP/Gateway.cpp/runTask()/482 - All sockets appeared. Shadow sent
+2025-09-05 09:40:33,446 [INFO] APP/ShadowClient.cpp/ParseXml()/116 - {"ResourceManifestVersion":"1.1.0-08-2024","Maps":[{"mapName":"country_borders","mapVersion":"0.1.2.8"},{"mapName":"fall","mapVersion":"0.6.0.0"},{"mapName":"sp","mapVersion":"0.6.0.0"},{"mapName":"sc","mapVersion":"0.5.0.0"},{"mapName":"gall","mapVersion":"0.7.0.0"},{"mapName":"i","mapVersion":"0.5.0.0"},{"mapName":"tr","mapVersion":"0.5.0.0"},{"mapName":"pl","mapVersion":"0.5.0.0"},{"mapName":"uk","mapVersion":"0.5.0.0"},{"mapName":"gr","mapVersion":"0.5.0.0"},{"mapName":"ach","mapVersion":"0.5.0.0"},{"mapName":"ru","mapVersion":"0.5.0.0"},{"mapName":"bnl","mapVersion":"0.5.0.0"},{"mapName":"cz","mapVersion":"0.5.0.0"}]}
+2025-09-05 09:40:33,468 [INFO] APP/ShadowClient.cpp/runTask()/195 - Shadow sent
+2025-09-05 09:41:53,469 [INFO] APP/GeofenceRequester.cpp/onReceiveData()/142 - New RequestCommand: sID: "0"
+sDetails: "cz"
+updateRequest {
+  updateType: GEOFENCE_REQUEST
+}
+
+2025-09-05 09:41:53,469 [INFO] APP/RequestUpdateManager.cpp/addRequestCommand()/162 - Received CMD: sID: "0"
+sDetails: "cz"
+updateRequest {
+  updateType: GEOFENCE_REQUEST
+}
+
+2025-09-05 09:41:53,595 [INFO] APP/RequestUpdateManager.cpp/runTask()/310 - Process cmd: sID: "0"
+sDetails: "cz"
+updateRequest {
+  updateType: GEOFENCE_REQUEST
+}
+
+2025-09-05 09:41:53,845 [INFO] APP/RequestUpdateManager.cpp/runTask()/341 - ProcessCommand
+2025-09-05 09:41:54,096 [INFO] APP/RequestUpdateManager.cpp/runTask()/730 - Update not needed
+2025-09-05 10:13:23,783 [INFO] APP/GeofenceRequester.cpp/onReceiveData()/142 - New RequestCommand: sID: "0"
+sDetails: "pl"
+updateRequest {
+  updateType: GEOFENCE_REQUEST
+}
+
+2025-09-05 10:13:23,783 [INFO] APP/RequestUpdateManager.cpp/addRequestCommand()/162 - Received CMD: sID: "0"
+sDetails: "pl"
+updateRequest {
+  updateType: GEOFENCE_REQUEST
+}
+
+2025-09-05 10:13:23,837 [INFO] APP/RequestUpdateManager.cpp/runTask()/310 - Process cmd: sID: "0"
+sDetails: "pl"
+updateRequest {
+  updateType: GEOFENCE_REQUEST
+}
+
+2025-09-05 10:13:24,087 [INFO] APP/RequestUpdateManager.cpp/runTask()/341 - ProcessCommand
+2025-09-05 10:13:24,338 [INFO] APP/RequestUpdateManager.cpp/runTask()/730 - Update not needed
+2025-09-05 10:17:53,816 [INFO] APP/GeofenceRequester.cpp/onReceiveData()/142 - New RequestCommand: sID: "0"
+sDetails: "fall"
+updateRequest {
+  updateType: GEOFENCE_REQUEST
+}
+
+2025-09-05 10:17:53,816 [INFO] APP/RequestUpdateManager.cpp/addRequestCommand()/162 - Received CMD: sID: "0"
+sDetails: "fall"
+updateRequest {
+  updateType: GEOFENCE_REQUEST
+}
+
+2025-09-05 10:17:53,986 [INFO] APP/RequestUpdateManager.cpp/runTask()/310 - Process cmd: sID: "0"
+sDetails: "fall"
+updateRequest {
+  updateType: GEOFENCE_REQUEST
+}
+
+2025-09-05 10:17:54,236 [INFO] APP/RequestUpdateManager.cpp/runTask()/341 - ProcessCommand
+2025-09-05 10:17:54,487 [INFO] APP/RequestUpdateManager.cpp/runTask()/730 - Update not needed
+2025-09-05 10:43:56,278 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-05 10:43:56,279 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-05 10:43:56,279 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-05 10:44:17,539 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 1.6%
+2025-09-05 10:44:17,539 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-05 10:44:17,540 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-05 11:56:05,001 [INFO] APP/StateMonitor.cpp/setSystemState()/964 - === eHorizonISA enters ACTIVE state.
+2025-09-05 11:56:05,167 [INFO] APP/NationalSpeedLimits.cpp/onReceiveData()/231 - New Country Code received: FR
+2025-09-05 11:56:05,167 [INFO] APP/SpaceManagement.cpp/onReceiveData()/334 - New locked resource received: fall
+2025-09-05 11:56:05,168 [INFO] APP/MapRegionRank.cpp/updateRateOfCountry()/164 - currentRegion is set for: fall
+2025-09-05 11:56:05,168 [INFO] APP/MapRegionRank.cpp/updateRateOfCountry()/172 - Rank is incremented 71 for region: fall
+2025-09-05 11:56:05,168 [INFO] APP/MapRegionRank.cpp/updateRateOfCountry()/181 - Resource was updated
+2025-09-05 11:56:05,168 [INFO] APP/MapRegionRank.cpp/updateRateOfCountry()/190 - Reset currentRegion flag for: cz
+2025-09-05 11:56:05,171 [INFO] APP/ManifestHandler.cpp/saveManifest()/485 - /opt/appl/data/apps/apps_data/eHorizonISA/shared/.resources-manifest.xml was successfully updated and saved!
+2025-09-05 11:56:05,172 [INFO] APP/MapRegionRank.cpp/updateRateOfCountry()/200 - Changes were saved in the manifest
+2025-09-05 11:56:05,176 [INFO] APP/StateMonitor.cpp/setSystemState()/977 - === eHorizonISA enters AVAILABLE state.
+2025-09-05 11:56:05,178 [INFO] APP/FaultHandler.cpp/setDTCState()/429 - setDTCState: MapLoadingError
+2025-09-05 11:56:05,178 [INFO] APP/GenericDebounceProcessor.cpp/setDTCState()/130 - Setting DTC MapLoadingError with state 0
+2025-09-05 11:56:05,179 [INFO] APP/GenericDebounceProcessor.cpp/setDTC()/374 - DTC set to inactive and occ decremented: MapLoadingError
+2025-09-05 12:06:01,196 [INFO] APP/StateMonitor.cpp/setSystemState()/964 - === eHorizonISA enters ACTIVE state.
+2025-09-05 12:16:19,820 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-05 12:16:19,820 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-05 12:16:19,820 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-05 12:16:41,220 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3%
+2025-09-05 12:16:41,221 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-05 12:16:41,221 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-05 12:53:29,786 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.6%
+2025-09-05 12:53:29,786 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-05 12:53:29,787 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-05 12:53:51,008 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 1.6%
+2025-09-05 12:53:51,008 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-05 12:53:51,008 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-05 13:52:15,788 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 6%
+2025-09-05 13:52:15,788 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-05 13:52:15,788 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-05 13:52:36,976 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 1.2%
+2025-09-05 13:52:36,977 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-05 13:52:36,977 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-05 14:04:39,315 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-05 14:04:39,316 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 6.4%
+2025-09-05 14:04:39,316 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-05 14:05:00,595 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3.6%
+2025-09-05 14:05:00,596 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-05 14:05:00,596 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-05 14:16:36,699 [INFO] APP/StateMonitor.cpp/setSystemState()/977 - === eHorizonISA enters AVAILABLE state.
+2025-09-05 14:16:36,701 [INFO] APP/FaultHandler.cpp/setDTCState()/429 - setDTCState: MapLoadingError
+2025-09-05 14:16:36,701 [INFO] APP/GenericDebounceProcessor.cpp/setDTCState()/130 - Setting DTC MapLoadingError with state 0
+2025-09-05 14:16:36,703 [INFO] APP/GenericDebounceProcessor.cpp/setDTC()/374 - DTC set to inactive and occ decremented: MapLoadingError
+2025-09-05 14:16:50,687 [INFO] APP/StateMonitor.cpp/setSystemState()/964 - === eHorizonISA enters ACTIVE state.
+2025-09-05 14:17:24,684 [INFO] APP/StateMonitor.cpp/setSystemState()/977 - === eHorizonISA enters AVAILABLE state.
+2025-09-05 14:17:24,686 [INFO] APP/FaultHandler.cpp/setDTCState()/429 - setDTCState: MapLoadingError
+2025-09-05 14:17:24,686 [INFO] APP/GenericDebounceProcessor.cpp/setDTCState()/130 - Setting DTC MapLoadingError with state 0
+2025-09-05 14:17:24,687 [INFO] APP/GenericDebounceProcessor.cpp/setDTC()/374 - DTC set to inactive and occ decremented: MapLoadingError
+2025-09-05 14:17:26,684 [INFO] APP/StateMonitor.cpp/setSystemState()/964 - === eHorizonISA enters ACTIVE state.
+2025-09-05 14:17:27,659 [INFO] APP/StateMonitor.cpp/setSystemState()/977 - === eHorizonISA enters AVAILABLE state.
+2025-09-05 14:17:27,661 [INFO] APP/FaultHandler.cpp/setDTCState()/429 - setDTCState: MapLoadingError
+2025-09-05 14:17:27,661 [INFO] APP/GenericDebounceProcessor.cpp/setDTCState()/130 - Setting DTC MapLoadingError with state 0
+2025-09-05 14:17:27,663 [INFO] APP/GenericDebounceProcessor.cpp/setDTC()/374 - DTC set to inactive and occ decremented: MapLoadingError
+2025-09-05 14:17:29,702 [INFO] APP/StateMonitor.cpp/setSystemState()/964 - === eHorizonISA enters ACTIVE state.
+2025-09-05 14:17:43,179 [INFO] APP/StateMonitor.cpp/setSystemState()/977 - === eHorizonISA enters AVAILABLE state.
+2025-09-05 14:17:43,183 [INFO] APP/FaultHandler.cpp/setDTCState()/429 - setDTCState: MapLoadingError
+2025-09-05 14:17:43,183 [INFO] APP/GenericDebounceProcessor.cpp/setDTCState()/130 - Setting DTC MapLoadingError with state 0
+2025-09-05 14:17:43,184 [INFO] APP/GenericDebounceProcessor.cpp/setDTC()/374 - DTC set to inactive and occ decremented: MapLoadingError
+2025-09-05 14:17:58,679 [INFO] APP/StateMonitor.cpp/setSystemState()/964 - === eHorizonISA enters ACTIVE state.
+2025-09-05 14:18:01,707 [INFO] APP/StateMonitor.cpp/setSystemState()/977 - === eHorizonISA enters AVAILABLE state.
+2025-09-05 14:18:01,708 [INFO] APP/FaultHandler.cpp/setDTCState()/429 - setDTCState: MapLoadingError
+2025-09-05 14:18:01,708 [INFO] APP/GenericDebounceProcessor.cpp/setDTCState()/130 - Setting DTC MapLoadingError with state 0
+2025-09-05 14:18:01,711 [INFO] APP/GenericDebounceProcessor.cpp/setDTC()/374 - DTC set to inactive and occ decremented: MapLoadingError
+2025-09-05 14:18:03,699 [INFO] APP/StateMonitor.cpp/setSystemState()/964 - === eHorizonISA enters ACTIVE state.
+2025-09-05 14:18:15,688 [INFO] APP/StateMonitor.cpp/setSystemState()/977 - === eHorizonISA enters AVAILABLE state.
+2025-09-05 14:18:15,689 [INFO] APP/FaultHandler.cpp/setDTCState()/429 - setDTCState: MapLoadingError
+2025-09-05 14:18:15,691 [INFO] APP/GenericDebounceProcessor.cpp/setDTCState()/130 - Setting DTC MapLoadingError with state 0
+2025-09-05 14:18:15,692 [INFO] APP/GenericDebounceProcessor.cpp/setDTC()/374 - DTC set to inactive and occ decremented: MapLoadingError
+2025-09-05 14:18:27,673 [INFO] APP/StateMonitor.cpp/setSystemState()/964 - === eHorizonISA enters ACTIVE state.
+2025-09-05 14:18:39,706 [INFO] APP/StateMonitor.cpp/setSystemState()/977 - === eHorizonISA enters AVAILABLE state.
+2025-09-05 14:18:39,706 [INFO] APP/FaultHandler.cpp/setDTCState()/429 - setDTCState: MapLoadingError
+2025-09-05 14:18:39,707 [INFO] APP/GenericDebounceProcessor.cpp/setDTCState()/130 - Setting DTC MapLoadingError with state 0
+2025-09-05 14:18:39,708 [INFO] APP/GenericDebounceProcessor.cpp/setDTC()/374 - DTC set to inactive and occ decremented: MapLoadingError
+2025-09-05 14:20:13,694 [INFO] APP/StateMonitor.cpp/setSystemState()/964 - === eHorizonISA enters ACTIVE state.
+2025-09-05 14:40:24,122 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-05 14:40:24,122 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-05 14:40:24,122 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-05 14:40:45,430 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3.8%
+2025-09-05 14:40:45,430 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-05 14:40:45,430 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-05 14:47:07,755 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-05 14:47:07,756 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-05 14:47:07,756 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-05 14:47:29,008 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3.2%
+2025-09-05 14:47:29,008 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-05 14:47:29,008 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-05 15:25:42,771 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-05 15:25:42,771 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-05 15:25:42,771 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-05 15:26:03,988 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3.6%
+2025-09-05 15:26:03,989 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-05 15:26:03,990 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-05 15:31:43,820 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-05 15:31:43,820 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-05 15:31:43,821 [ERROR] APP/Thread.cpp/spawnThread()/692 - Cannot set the name 9onAppFault for thread 1800233152: unknown error.
+2025-09-05 15:31:43,821 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.6%
+2025-09-05 15:32:05,039 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.8%
+2025-09-05 15:32:05,040 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-05 15:32:05,040 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-05 15:32:05,041 [ERROR] APP/Thread.cpp/spawnThread()/692 - Cannot set the name 10onAppFault for thread 1800233152: unknown error.
+2025-09-05 16:07:07,534 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-05 16:07:07,535 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-05 16:07:07,535 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-05 16:07:50,024 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.4%
+2025-09-05 16:07:50,025 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-05 16:07:50,025 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-05 16:19:52,102 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-05 16:19:52,103 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-05 16:19:52,103 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-05 16:20:13,408 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3.2%
+2025-09-05 16:20:13,409 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-05 16:20:13,409 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-05 16:43:14,348 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-05 16:43:14,348 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-05 16:43:14,349 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-05 16:43:35,561 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.4%
+2025-09-05 16:43:35,562 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-05 16:43:35,562 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-05 16:52:26,625 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 6.6%
+2025-09-05 16:52:26,626 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-05 16:52:26,626 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-05 16:52:47,832 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3.2%
+2025-09-05 16:52:47,833 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-05 16:52:47,833 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-05 17:52:37,835 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-05 17:52:37,836 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-05 17:52:37,836 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-05 17:52:59,107 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3.8%
+2025-09-05 17:52:59,107 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-05 17:52:59,108 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-05 18:18:50,288 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-05 18:18:50,289 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-05 18:18:50,289 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-05 18:19:11,547 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-05 18:19:11,547 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 1.4%
+2025-09-05 18:19:11,547 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-05 20:37:38,259 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.6%
+2025-09-05 20:37:38,260 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-05 20:37:38,263 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-05 20:37:59,567 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 0.8%
+2025-09-05 20:37:59,568 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-05 20:37:59,569 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-05 21:09:29,825 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-05 21:09:29,826 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-05 21:09:29,826 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-05 21:09:51,026 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 4.6%
+2025-09-05 21:09:51,026 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-05 21:09:51,027 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-05 21:22:35,777 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-05 21:22:35,777 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-05 21:22:35,777 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-05 21:22:56,963 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 1.6%
+2025-09-05 21:22:56,963 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-05 21:22:56,963 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-05 23:24:43,785 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-05 23:24:43,785 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-05 23:24:43,785 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-05 23:25:05,049 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3%
+2025-09-05 23:25:05,049 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-05 23:25:05,049 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 00:12:10,272 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 6%
+2025-09-06 00:12:10,273 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 00:12:10,273 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 00:12:31,566 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 00:12:31,566 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3%
+2025-09-06 00:12:31,566 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 00:12:52,799 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 6.6%
+2025-09-06 00:12:52,799 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 00:12:52,800 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 00:13:14,011 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 0.8%
+2025-09-06 00:13:14,013 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 00:13:14,013 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 00:48:37,804 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 6%
+2025-09-06 00:48:37,805 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 00:48:37,805 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 00:48:59,047 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 00:48:59,047 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 00:48:59,047 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 4.2%
+2025-09-06 01:08:48,764 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-06 01:08:48,765 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 01:08:48,765 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 01:09:09,973 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 4.4%
+2025-09-06 01:09:09,974 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 01:09:09,974 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 02:00:08,812 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.6%
+2025-09-06 02:00:08,812 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 02:00:08,812 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 02:00:30,008 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 1.4%
+2025-09-06 02:00:30,009 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 02:00:30,009 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 02:06:09,768 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 02:06:09,768 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-06 02:06:09,768 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 02:06:31,037 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3.8%
+2025-09-06 02:06:31,038 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 02:06:31,038 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 02:12:32,292 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-06 02:12:32,293 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 02:12:32,293 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 02:12:53,549 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 4%
+2025-09-06 02:12:53,549 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 02:12:53,549 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 03:24:03,307 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 7.2%
+2025-09-06 03:24:03,307 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 03:24:03,307 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 03:24:24,559 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 4%
+2025-09-06 03:24:24,559 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 03:24:24,560 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 03:31:08,248 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-06 03:31:08,249 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 03:31:08,249 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 03:31:29,433 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.2%
+2025-09-06 03:31:29,435 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 03:31:29,436 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 03:56:58,959 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.6%
+2025-09-06 03:56:58,961 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 03:56:58,961 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 03:57:20,301 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 03:57:20,301 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3%
+2025-09-06 03:57:20,301 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 04:57:10,277 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 6%
+2025-09-06 04:57:10,277 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 04:57:10,278 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 04:57:31,517 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.2%
+2025-09-06 04:57:31,517 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 04:57:31,518 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 05:19:49,778 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-06 05:19:49,778 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 05:19:49,778 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 05:20:11,005 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 1.6%
+2025-09-06 05:20:11,005 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 05:20:11,005 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 06:09:23,762 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 06:09:23,762 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-06 06:09:23,762 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 06:09:44,943 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.4%
+2025-09-06 06:09:44,945 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 06:09:44,946 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 06:20:43,223 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-06 06:20:43,224 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 06:20:43,224 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 06:21:04,412 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 0.8%
+2025-09-06 06:21:04,413 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 06:21:04,413 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 06:38:46,233 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 6.4%
+2025-09-06 06:38:46,234 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 06:38:46,235 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 06:39:28,716 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 1.6%
+2025-09-06 06:39:28,716 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 06:39:28,719 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 07:23:43,800 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-06 07:23:43,801 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 07:23:43,801 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 07:24:05,089 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 4.4%
+2025-09-06 07:24:05,090 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 07:24:05,090 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 07:26:54,985 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 6.2%
+2025-09-06 07:26:54,985 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 07:26:54,985 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 07:27:16,196 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 1.6%
+2025-09-06 07:27:16,197 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 07:27:16,198 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 08:38:26,295 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 6.6%
+2025-09-06 08:38:26,295 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 08:38:26,295 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 08:38:47,582 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.6%
+2025-09-06 08:38:47,582 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 08:38:47,582 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 08:39:51,336 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-06 08:39:51,336 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 08:39:51,337 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 08:40:12,625 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.8%
+2025-09-06 08:40:12,625 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 08:40:12,625 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 09:05:42,314 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.6%
+2025-09-06 09:05:42,315 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 09:05:42,315 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 09:05:42,315 [ERROR] APP/Thread.cpp/spawnThread()/692 - Cannot set the name 9onAppFault for thread -1887448896: unknown error.
+2025-09-06 09:06:03,524 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 4.4%
+2025-09-06 09:06:03,524 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 09:06:03,525 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 09:38:37,817 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 6%
+2025-09-06 09:38:37,818 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 09:38:37,818 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 09:38:59,005 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.4%
+2025-09-06 09:38:59,006 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 09:38:59,006 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 11:13:52,576 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 6%
+2025-09-06 11:13:52,577 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 11:13:52,577 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 11:14:13,791 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 4%
+2025-09-06 11:14:13,791 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 11:14:13,791 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 12:01:40,353 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-06 12:01:40,353 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 12:01:40,353 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 12:02:01,537 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.4%
+2025-09-06 12:02:01,537 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 12:02:01,537 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 12:13:21,253 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-06 12:13:21,253 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 12:13:21,254 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 12:13:31,691 [INFO] APP/StateMonitor.cpp/setSystemState()/977 - === eHorizonISA enters AVAILABLE state.
+2025-09-06 12:13:31,692 [INFO] APP/FaultHandler.cpp/setDTCState()/429 - setDTCState: MapLoadingError
+2025-09-06 12:13:31,693 [INFO] APP/GenericDebounceProcessor.cpp/setDTCState()/130 - Setting DTC MapLoadingError with state 0
+2025-09-06 12:13:31,694 [INFO] APP/GenericDebounceProcessor.cpp/setDTC()/374 - DTC set to inactive and occ decremented: MapLoadingError
+2025-09-06 12:13:42,526 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3.8%
+2025-09-06 12:13:42,526 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 12:13:42,526 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 12:30:34,184 [INFO] APP/StateMonitor.cpp/setSystemState()/964 - === eHorizonISA enters ACTIVE state.
+2025-09-06 12:34:14,273 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 6%
+2025-09-06 12:34:14,273 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 12:34:14,274 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 12:34:35,472 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 0.8%
+2025-09-06 12:34:35,472 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 12:34:35,473 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 12:59:01,266 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 6.8%
+2025-09-06 12:59:01,267 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 12:59:01,268 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 12:59:22,542 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3.6%
+2025-09-06 12:59:22,542 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 12:59:22,543 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 14:43:07,484 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-06 14:43:07,484 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 14:43:07,485 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 14:43:50,012 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.8%
+2025-09-06 14:43:50,013 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 14:43:50,013 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 14:48:47,270 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 6%
+2025-09-06 14:48:47,272 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 14:48:47,272 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 14:49:08,521 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3%
+2025-09-06 14:49:08,521 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 14:49:08,521 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 15:38:00,329 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 6.6%
+2025-09-06 15:38:00,329 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 15:38:00,329 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 15:38:21,579 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 1.4%
+2025-09-06 15:38:21,580 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 15:38:21,580 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 16:20:08,296 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 16:20:08,296 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-06 16:20:08,296 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 16:20:29,514 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.4%
+2025-09-06 16:20:29,514 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 16:20:29,514 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 16:58:43,854 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 6.2%
+2025-09-06 16:58:43,855 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 16:58:43,855 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 16:59:05,008 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.4%
+2025-09-06 16:59:05,008 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 16:59:05,008 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 17:25:16,906 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-06 17:25:16,907 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 17:25:16,907 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 17:25:38,118 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.8%
+2025-09-06 17:25:38,119 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 17:25:38,119 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 18:33:58,319 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 6%
+2025-09-06 18:33:58,321 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 18:33:58,321 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 18:34:19,547 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 5%
+2025-09-06 18:34:19,547 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 18:34:19,547 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 18:53:47,720 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-06 18:53:47,721 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 18:53:47,721 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 18:54:08,892 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 0.8%
+2025-09-06 18:54:08,892 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 18:54:08,893 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 19:11:50,769 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 6%
+2025-09-06 19:11:50,770 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 19:11:50,770 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 19:12:12,044 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 4.6%
+2025-09-06 19:12:12,049 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 19:12:12,049 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 19:17:51,733 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-06 19:17:51,733 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 19:17:51,734 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 19:18:12,978 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 1.4%
+2025-09-06 19:18:12,978 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 19:18:12,978 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 20:16:16,561 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-06 20:16:16,562 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 20:16:16,562 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 20:16:37,766 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.4%
+2025-09-06 20:16:37,766 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 20:16:37,766 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 20:30:47,760 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 6%
+2025-09-06 20:30:47,760 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 20:30:47,761 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 20:31:09,002 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 0.8%
+2025-09-06 20:31:09,003 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 20:31:09,003 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 20:48:29,882 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 20:48:29,882 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 6.2%
+2025-09-06 20:48:29,882 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 20:48:51,068 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3.8%
+2025-09-06 20:48:51,068 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 20:48:51,068 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 20:49:54,741 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-06 20:49:54,742 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 20:49:54,742 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 20:50:15,973 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.2%
+2025-09-06 20:50:15,973 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 20:50:15,973 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 21:10:05,737 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-06 21:10:05,737 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 21:10:05,738 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 21:10:26,992 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 1.6%
+2025-09-06 21:10:26,992 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 21:10:26,993 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 21:22:07,805 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-06 21:22:07,806 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 21:22:07,806 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 21:22:29,064 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3.8%
+2025-09-06 21:22:29,065 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 21:22:29,065 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 21:55:03,336 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.8%
+2025-09-06 21:55:03,345 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 21:55:03,345 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 21:55:24,536 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.2%
+2025-09-06 21:55:24,537 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 21:55:24,537 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 22:42:51,257 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-06 22:42:51,257 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 22:42:51,257 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 22:43:12,480 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2%
+2025-09-06 22:43:12,480 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 22:43:12,480 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 23:09:03,146 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-06 23:09:03,148 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 23:09:03,151 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 23:09:24,346 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 23:09:24,347 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 23:09:24,346 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3.4%
+2025-09-06 23:15:04,058 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-06 23:15:04,058 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 23:15:04,059 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 23:15:25,271 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 4.4%
+2025-09-06 23:15:25,271 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 23:15:25,272 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 23:35:36,273 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.6%
+2025-09-06 23:35:36,274 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 23:35:36,274 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 23:35:57,485 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.4%
+2025-09-06 23:35:57,485 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 23:35:57,485 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 23:42:41,241 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-06 23:42:41,242 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 23:42:41,242 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 23:43:02,531 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 1.6%
+2025-09-06 23:43:02,531 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 23:43:02,532 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-06 23:43:02,533 [ERROR] APP/Thread.cpp/spawnThread()/692 - Cannot set the name 10onAppFault for thread -1887448896: unknown error.
+2025-09-06 23:56:08,529 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-06 23:56:08,529 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 23:56:08,529 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-06 23:56:51,051 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 1.6%
+2025-09-06 23:56:51,052 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-06 23:56:51,053 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 00:25:10,750 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 6%
+2025-09-07 00:25:10,752 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 00:25:10,752 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 00:25:32,003 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.4%
+2025-09-07 00:25:32,004 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 00:25:32,004 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 02:23:05,756 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-07 02:23:05,757 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 02:23:05,757 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 02:23:27,036 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 4.6%
+2025-09-07 02:23:27,037 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 02:23:27,037 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 03:13:21,768 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-07 03:13:21,768 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 03:13:21,769 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 03:13:42,993 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.6%
+2025-09-07 03:13:42,993 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 03:13:42,993 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 03:25:23,828 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-07 03:25:23,828 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 03:25:23,829 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 03:25:45,047 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 1.6%
+2025-09-07 03:25:45,048 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 03:25:45,048 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 03:32:07,562 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-07 03:32:07,562 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 03:32:07,562 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 03:32:28,811 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3.8%
+2025-09-07 03:32:28,812 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 03:32:28,812 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 03:44:52,223 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-07 03:44:52,224 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 03:44:52,224 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 03:45:13,453 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 0%
+2025-09-07 03:45:13,453 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 03:45:13,453 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 05:23:17,327 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-07 05:23:17,327 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 05:23:17,329 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 05:23:38,568 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3.8%
+2025-09-07 05:23:38,568 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 05:23:38,569 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 05:29:18,382 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-07 05:29:18,383 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 05:29:18,383 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 05:29:39,657 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3%
+2025-09-07 05:29:39,658 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 05:29:39,658 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 05:43:06,867 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.6%
+2025-09-07 05:43:06,867 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 05:43:06,868 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 05:43:28,095 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.4%
+2025-09-07 05:43:28,095 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 05:43:28,095 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 05:49:08,002 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-07 05:49:08,002 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 05:49:08,003 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 05:49:29,202 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.4%
+2025-09-07 05:49:29,202 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 05:49:29,202 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 07:13:23,402 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-07 07:13:23,402 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 07:13:23,403 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 07:13:44,601 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.2%
+2025-09-07 07:13:44,601 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 07:13:44,601 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 07:53:23,856 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-07 07:53:23,856 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 07:53:23,857 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 07:53:23,857 [ERROR] APP/Thread.cpp/spawnThread()/692 - Cannot set the name 9onAppFault for thread -1887448896: unknown error.
+2025-09-07 07:53:45,034 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3%
+2025-09-07 07:53:45,035 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 07:53:45,035 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 07:53:45,035 [ERROR] APP/Thread.cpp/spawnThread()/692 - Cannot set the name 10onAppFault for thread -1887448896: unknown error.
+2025-09-07 08:05:04,656 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-07 08:05:04,657 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 08:05:04,657 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 08:05:25,912 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 5%
+2025-09-07 08:05:25,913 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 08:05:25,913 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 08:11:26,993 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.6%
+2025-09-07 08:11:26,993 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 08:11:26,993 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 08:11:48,273 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 1.4%
+2025-09-07 08:11:48,274 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 08:11:48,274 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 08:23:07,845 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.6%
+2025-09-07 08:23:07,846 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 08:23:07,846 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 08:23:29,041 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3.2%
+2025-09-07 08:23:29,042 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 08:23:29,042 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 08:52:09,320 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-07 08:52:09,321 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 08:52:09,321 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 08:52:30,544 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.2%
+2025-09-07 08:52:30,544 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 08:52:30,544 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 09:16:35,818 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-07 09:16:35,818 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 09:16:35,818 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 09:16:57,009 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.4%
+2025-09-07 09:16:57,014 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 09:16:57,014 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 09:39:36,791 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 7.2%
+2025-09-07 09:39:36,792 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 09:39:36,792 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 09:39:58,004 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.4%
+2025-09-07 09:39:58,004 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 09:39:58,004 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 09:46:41,761 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.6%
+2025-09-07 09:46:41,762 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 09:46:41,762 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 09:47:02,988 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 4.4%
+2025-09-07 09:47:02,988 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 09:47:02,989 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 10:09:21,838 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-07 10:09:21,838 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 10:09:21,838 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 10:09:43,012 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 1.6%
+2025-09-07 10:09:43,013 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 10:09:43,013 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 10:43:42,304 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-07 10:43:42,305 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 10:43:42,305 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 10:44:03,504 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.4%
+2025-09-07 10:44:03,505 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 10:44:03,505 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 10:54:40,855 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.6%
+2025-09-07 10:54:40,855 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 10:54:40,855 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 10:55:02,100 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.4%
+2025-09-07 10:55:02,101 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 10:55:02,101 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 10:55:23,414 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.6%
+2025-09-07 10:55:23,414 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 10:55:23,415 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 10:55:44,621 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 1.6%
+2025-09-07 10:55:44,621 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 10:55:44,621 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 11:03:10,927 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-07 11:03:10,928 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 11:03:10,928 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 11:03:32,155 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.4%
+2025-09-07 11:03:32,164 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 11:03:32,165 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 11:55:13,325 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.8%
+2025-09-07 11:55:13,325 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 11:55:13,326 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 11:55:34,591 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 4.4%
+2025-09-07 11:55:34,592 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 11:55:34,593 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 12:09:02,006 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.8%
+2025-09-07 12:09:02,007 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 12:09:02,007 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 12:09:23,305 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3.8%
+2025-09-07 12:09:23,305 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 12:09:23,305 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 12:16:28,253 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 6%
+2025-09-07 12:16:28,253 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 12:16:28,253 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 12:16:49,478 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 0.8%
+2025-09-07 12:16:49,478 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 12:16:49,478 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 12:24:15,742 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-07 12:24:15,742 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 12:24:15,742 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 12:24:37,005 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 0.8%
+2025-09-07 12:24:37,005 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 12:24:37,005 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 12:34:53,285 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 6.4%
+2025-09-07 12:34:53,286 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 12:34:53,286 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 12:34:53,288 [ERROR] APP/Thread.cpp/spawnThread()/692 - Cannot set the name 9onAppFault for thread -1887448896: unknown error.
+2025-09-07 12:35:14,466 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 1.6%
+2025-09-07 12:35:14,466 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 12:35:14,466 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 13:20:12,547 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-07 13:20:12,548 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 13:20:12,548 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 13:20:33,770 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.4%
+2025-09-07 13:20:33,771 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 13:20:33,771 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 15:47:49,022 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-07 15:47:49,022 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 15:47:49,022 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 15:48:10,274 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 1.6%
+2025-09-07 15:48:10,275 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 15:48:10,275 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 16:24:59,779 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-07 16:24:59,784 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 16:24:59,784 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 16:25:21,011 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 16:25:21,011 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 0.8%
+2025-09-07 16:25:21,011 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 16:33:08,368 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 6%
+2025-09-07 16:33:08,369 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 16:33:08,369 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 16:33:29,570 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3%
+2025-09-07 16:33:29,571 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 16:33:29,572 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 17:00:02,839 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-07 17:00:02,839 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 17:00:02,841 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 17:00:24,107 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3.2%
+2025-09-07 17:00:24,107 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 17:00:24,107 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 17:06:25,316 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.8%
+2025-09-07 17:06:25,316 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 17:06:25,317 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 17:06:46,561 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3.2%
+2025-09-07 17:06:46,562 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 17:06:46,562 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 19:52:27,817 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.8%
+2025-09-07 19:52:27,818 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 19:52:27,818 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 19:52:49,006 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 4.6%
+2025-09-07 19:52:49,006 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 19:52:49,006 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 20:36:00,325 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-07 20:36:00,325 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 20:36:00,326 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 20:36:21,514 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 5%
+2025-09-07 20:36:21,514 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 20:36:21,514 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 21:56:00,354 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 21:56:00,354 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.8%
+2025-09-07 21:56:00,355 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 21:56:21,605 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3.6%
+2025-09-07 21:56:21,606 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 21:56:21,606 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 22:30:20,575 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-07 22:30:20,575 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 22:30:20,576 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 22:30:41,790 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 22:30:41,791 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 22:30:41,794 [ERROR] APP/Thread.cpp/spawnThread()/692 - Cannot set the name 10onAppFault for thread -1887448896: unknown error.
+2025-09-07 22:30:41,794 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.4%
+2025-09-07 22:55:49,788 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-07 22:55:49,789 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 22:55:49,789 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 22:56:11,048 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.8%
+2025-09-07 22:56:11,048 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 22:56:11,049 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 22:56:32,261 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 6%
+2025-09-07 22:56:32,265 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 22:56:32,265 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 22:56:53,526 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3%
+2025-09-07 22:56:53,526 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 22:56:53,526 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 23:15:18,337 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 6.2%
+2025-09-07 23:15:18,337 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 23:15:18,338 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 23:15:39,535 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 23:15:39,535 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3%
+2025-09-07 23:15:39,536 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-07 23:17:47,025 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-07 23:17:47,025 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 23:17:47,025 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-07 23:18:08,220 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.4%
+2025-09-07 23:18:08,221 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-07 23:18:08,221 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-08 00:14:05,272 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.6%
+2025-09-08 00:14:05,273 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 00:14:05,273 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-08 00:14:26,508 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3%
+2025-09-08 00:14:26,508 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 00:14:26,509 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-08 00:38:31,322 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-08 00:38:31,322 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 00:38:31,322 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-08 00:38:52,517 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3%
+2025-09-08 00:38:52,518 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 00:38:52,518 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-08 00:49:51,276 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-08 00:49:51,276 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 00:49:51,276 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-08 00:50:12,527 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 4%
+2025-09-08 00:50:12,527 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 00:50:12,528 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-08 02:08:28,312 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-08 02:08:28,312 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 02:08:28,312 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-08 02:08:49,639 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3.2%
+2025-09-08 02:08:49,639 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 02:08:49,639 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-08 02:11:18,294 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-08 02:11:18,295 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 02:11:18,295 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-08 02:11:39,454 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.4%
+2025-09-08 02:11:39,455 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 02:11:39,455 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-08 02:52:01,333 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-08 02:52:01,333 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 02:52:01,333 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-08 02:52:01,334 [ERROR] APP/Thread.cpp/spawnThread()/692 - Cannot set the name 9onAppFault for thread -1887448896: unknown error.
+2025-09-08 02:52:43,779 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3%
+2025-09-08 02:52:43,780 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 02:52:43,780 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-08 02:58:02,372 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.8%
+2025-09-08 02:58:02,372 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 02:58:02,373 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-08 02:58:23,539 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3.2%
+2025-09-08 02:58:23,540 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 02:58:23,540 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-08 02:59:06,021 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.8%
+2025-09-08 02:59:06,021 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 02:59:06,021 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-08 02:59:27,247 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2%
+2025-09-08 02:59:27,248 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 02:59:27,248 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-08 06:09:13,046 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-08 06:09:13,046 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 06:09:13,046 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-08 06:09:34,365 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 4.8%
+2025-09-08 06:09:34,366 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 06:09:34,366 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-08 06:51:21,289 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-08 06:51:21,290 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 06:51:21,291 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-08 06:51:42,465 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 1.6%
+2025-09-08 06:51:42,466 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 06:51:42,466 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-08 06:57:22,372 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 6%
+2025-09-08 06:57:22,372 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 06:57:22,372 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-08 06:57:43,573 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3%
+2025-09-08 06:57:43,573 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 06:57:43,573 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-08 07:05:52,487 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-08 07:05:52,488 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 07:05:52,488 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-08 07:06:13,703 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 0%
+2025-09-08 07:06:13,703 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 07:06:13,703 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-08 07:20:23,769 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-08 07:20:23,770 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 07:20:23,771 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-08 07:20:44,985 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 4.6%
+2025-09-08 07:20:44,985 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 07:20:44,986 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-08 07:21:06,327 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-08 07:21:06,328 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 07:21:06,328 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-08 07:21:48,778 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3%
+2025-09-08 07:21:48,778 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 07:21:48,779 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-08 07:29:43,677 [INFO] APP/StateMonitor.cpp/setSystemState()/977 - === eHorizonISA enters AVAILABLE state.
+2025-09-08 07:29:43,678 [INFO] APP/FaultHandler.cpp/setDTCState()/429 - setDTCState: MapLoadingError
+2025-09-08 07:29:43,678 [INFO] APP/GenericDebounceProcessor.cpp/setDTCState()/130 - Setting DTC MapLoadingError with state 0
+2025-09-08 07:29:43,680 [INFO] APP/GenericDebounceProcessor.cpp/setDTC()/374 - DTC set to inactive and occ decremented: MapLoadingError
+2025-09-08 07:44:23,182 [INFO] APP/StateMonitor.cpp/setSystemState()/964 - === eHorizonISA enters ACTIVE state.
+2025-09-08 10:06:26,273 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.6%
+2025-09-08 10:06:26,274 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 10:06:26,274 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-08 10:06:47,438 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3.6%
+2025-09-08 10:06:47,438 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 10:06:47,438 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-08 10:32:59,817 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-08 10:32:59,817 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 10:32:59,817 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-08 10:33:21,088 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3.8%
+2025-09-08 10:33:21,088 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 10:33:21,088 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-08 10:41:51,045 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 7%
+2025-09-08 10:41:51,046 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 10:41:51,046 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-08 10:42:12,274 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.4%
+2025-09-08 10:42:12,274 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 10:42:12,275 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-08 11:29:17,725 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 6%
+2025-09-08 11:29:17,726 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 11:29:17,726 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-08 11:29:39,018 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 4.2%
+2025-09-08 11:29:39,019 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 11:29:39,019 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-08 11:57:37,311 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-08 11:57:37,311 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 11:57:37,311 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-08 11:57:58,550 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 11:57:58,550 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-08 11:57:58,551 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3%
+2025-09-08 12:04:42,316 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-08 12:04:42,317 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 12:04:42,317 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-08 12:05:03,569 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 1.4%
+2025-09-08 12:05:03,570 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 12:05:03,571 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-08 12:17:05,823 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-08 12:17:05,823 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 12:17:05,823 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-08 12:17:27,040 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3%
+2025-09-08 12:17:27,041 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 12:17:27,041 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-08 12:31:58,276 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 6.2%
+2025-09-08 12:31:58,277 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 12:31:58,277 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-08 12:32:19,491 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 2.8%
+2025-09-08 12:32:19,493 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 12:32:19,493 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-08 12:39:03,079 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.2%
+2025-09-08 12:39:03,079 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 12:39:03,079 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-08 12:39:24,294 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 3%
+2025-09-08 12:39:24,295 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 12:39:24,295 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU
+2025-09-08 13:17:59,798 [ERROR] APP/HealthMonitor.cpp/runTask()/159 - CPU fault active. Usage: 5.4%
+2025-09-08 13:17:59,799 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 13:17:59,800 [ERROR] APP/Fault.cpp/onEvent()/170 - Failed to set DTC CPU
+2025-09-08 13:18:21,012 [INFO] APP/HealthMonitor.cpp/runTask()/176 - CPU fault inactive. Usage: 1.8%
+2025-09-08 13:18:21,013 [ERROR] APP/FaultHandler.cpp/setDTCState()/435 - DTC CPU not in list
+2025-09-08 13:18:21,013 [ERROR] APP/Fault.cpp/onEvent()/191 - Failed to set DTC CPU

@@ -1,0 +1,321 @@
+2025-07-24 15:33:59,486 [INFO] GNSS/VehiclePositionTx.cpp/start()/82 - VehiclePosition Server open
+2025-07-24 15:33:59,490 [INFO] GNSS/VehiclePositionTx.cpp/start()/93 - VehiclePositionTxId set to: 419361564
+2025-07-24 15:33:59,500 [INFO] GNSS/GNSS.cpp/onEvent()/145 - GNSS source set to NMEA
+2025-07-24 15:33:59,500 [INFO] GNSS/GnssMonitor.cpp/GnssMonitor()/56 - Logging started. Log format:
+2025-07-24 15:33:59,500 [INFO] GNSS/GnssMonitor.cpp/GnssMonitor()/57 - timestamp;fixState;latitude;longitude;altitude;heading;speed;ehpe;gdop;hdop;pdop;vdop;satellitesVisible;satellitesTracked;satellitesInFix
+2025-07-24 15:33:59,611 [INFO] GNSS/GnssMonitor.cpp/init()/103 - GNSS Server open
+2025-07-24 15:33:59,629 [INFO] GNSS/GnssMonitor.cpp/init()/139 - Active constellations set properly.
+2025-07-24 15:33:59,633 [INFO] GNSS/GnssMonitor.cpp/handleNewPosition()/225 - GPS fix - Valid position: 1753371239;4;45.775385;4.860177;260.736938;0.000000;0.000000;10.338568;0.000000;0.600000;0.900000;0.700000;34;34;20
+2025-07-24 15:33:59,647 [INFO] GNSS/AntennaState.cpp/handleAntennaStateChange()/82 - Antenna: 2, status: 1
+2025-07-24 15:33:59,650 [INFO] GNSS/AntennaState.cpp/handleAntennaStateChange()/82 - Antenna: 2, status: 1
+2025-07-24 15:33:59,711 [INFO] GNSS/NmeaSimulator.cpp/start()/114 - Path for .nmea file read from configuration: /opt/appl/data/apps/apps_data/eHorizonISA/resources/simulation.nmea
+2025-07-24 15:33:59,713 [INFO] GNSS/NmeaSimulator.cpp/start()/123 - NMEA File opened
+2025-07-24 15:33:59,808 [INFO] GNSS/GeofenceMonitor.cpp/start()/100 - GeofenceMonitor were started
+2025-07-24 15:33:59,871 [INFO] GNSS/GeofenceMonitor.cpp/start()/100 - GeofenceMonitor were started
+2025-07-24 15:33:59,872 [INFO] GNSS/NmeaSimulator.cpp/start()/188 - NMEA simulation started
+2025-07-24 15:33:59,882 [INFO] GNSS/SimulationMonitor.cpp/handleNavigationSimulationStateChange()/80 - Navigation simulation state machine, time: 1753371239, id: 2, old state: 1, new state: 2
+2025-07-24 15:36:59,847 [INFO] GNSS/GeofenceMonitor.cpp/performGeofenceStatusCheck()/212 - New region crossed 2 times: cz
+2025-07-24 15:36:59,848 [INFO] GNSS/GeofenceMonitor.cpp/runTask()/268 - Region crossed, position: 49.8189, 16.1281 -> report it
+2025-07-24 15:55:57,513 [INFO] GNSS/VehiclePositionTx.cpp/start()/82 - VehiclePosition Server open
+2025-07-24 15:55:57,515 [INFO] GNSS/VehiclePositionTx.cpp/start()/93 - VehiclePositionTxId set to: 419361564
+2025-07-24 15:55:57,520 [INFO] GNSS/GNSS.cpp/onEvent()/145 - GNSS source set to NMEA
+2025-07-24 15:55:57,522 [INFO] GNSS/GnssMonitor.cpp/GnssMonitor()/56 - Logging started. Log format:
+2025-07-24 15:55:57,523 [INFO] GNSS/GnssMonitor.cpp/GnssMonitor()/57 - timestamp;fixState;latitude;longitude;altitude;heading;speed;ehpe;gdop;hdop;pdop;vdop;satellitesVisible;satellitesTracked;satellitesInFix
+2025-07-24 15:55:57,656 [INFO] GNSS/GnssMonitor.cpp/init()/103 - GNSS Server open
+2025-07-24 15:55:57,690 [INFO] GNSS/GnssMonitor.cpp/init()/139 - Active constellations set properly.
+2025-07-24 15:55:57,729 [INFO] GNSS/AntennaState.cpp/handleAntennaStateChange()/82 - Antenna: 2, status: 1
+2025-07-24 15:55:57,731 [INFO] GNSS/AntennaState.cpp/handleAntennaStateChange()/82 - Antenna: 2, status: 1
+2025-07-24 15:55:57,784 [INFO] GNSS/NmeaSimulator.cpp/start()/114 - Path for .nmea file read from configuration: /opt/appl/data/apps/apps_data/eHorizonISA/resources/simulation.nmea
+2025-07-24 15:55:57,795 [INFO] GNSS/NmeaSimulator.cpp/start()/123 - NMEA File opened
+2025-07-24 15:55:57,841 [INFO] GNSS/GeofenceMonitor.cpp/start()/100 - GeofenceMonitor were started
+2025-07-24 15:55:57,845 [INFO] GNSS/GeofenceMonitor.cpp/start()/100 - GeofenceMonitor were started
+2025-07-24 15:55:57,869 [INFO] GNSS/NmeaSimulator.cpp/start()/188 - NMEA simulation started
+2025-07-24 15:55:57,875 [INFO] GNSS/SimulationMonitor.cpp/handleNavigationSimulationStateChange()/80 - Navigation simulation state machine, time: 1753372557, id: 2, old state: 1, new state: 2
+2025-07-24 15:55:57,935 [INFO] GNSS/GnssMonitor.cpp/handleNewPosition()/225 - GPS fix - Valid position: 1687779734;4;49.805981;16.116300;0.000000;2.400000;9.980223;1.000000;1.000000;1.000000;1.000000;1.000000;8;8;8
+2025-07-24 15:58:57,856 [INFO] GNSS/GeofenceMonitor.cpp/performGeofenceStatusCheck()/212 - New region crossed 2 times: cz
+2025-07-24 15:58:57,856 [INFO] GNSS/GeofenceMonitor.cpp/runTask()/268 - Region crossed, position: 49.8189, 16.1281 -> report it
+2025-07-24 16:30:28,111 [INFO] GNSS/GeofenceMonitor.cpp/performGeofenceStatusCheck()/212 - New region crossed 2 times: pl
+2025-07-24 16:30:28,112 [INFO] GNSS/GeofenceMonitor.cpp/runTask()/268 - Region crossed, position: 49.9492, 16.1585 -> report it
+2025-07-24 16:32:09,751 [INFO] GNSS/NmeaSimulator.cpp/runTask()/267 - End of NMEA simulation file
+2025-07-24 16:32:09,752 [INFO] GNSS/NmeaSimulator.cpp/runTask()/281 - NMEA File closed
+2025-07-24 16:32:09,752 [INFO] GNSS/NmeaSimulator.cpp/runTask()/289 - NMEA simulation finished
+2025-07-24 16:32:09,756 [INFO] GNSS/SimulationMonitor.cpp/handleNavigationSimulationStateChange()/80 - Navigation simulation state machine, time: 1753374729, id: 3, old state: 2, new state: 1
+2025-07-24 16:32:09,765 [INFO] GNSS/NavPowerState.cpp/handleNavigationPowerStateChange()/81 - NavPow state changed: oldstate = 0, newState = 2
+2025-07-24 16:34:58,144 [INFO] GNSS/GeofenceMonitor.cpp/performGeofenceStatusCheck()/212 - New region crossed 2 times: fall
+2025-07-24 16:34:58,144 [INFO] GNSS/GeofenceMonitor.cpp/runTask()/268 - Region crossed, position: 45.7753, 4.86002 -> report it
+2025-08-21 07:47:13,778 [INFO] GNSS/VehiclePositionTx.cpp/start()/82 - VehiclePosition Server open
+2025-08-21 07:47:13,781 [INFO] GNSS/VehiclePositionTx.cpp/start()/93 - VehiclePositionTxId set to: 419361564
+2025-08-21 07:47:13,793 [INFO] GNSS/GNSS.cpp/onEvent()/145 - GNSS source set to NMEA
+2025-08-21 07:47:13,794 [INFO] GNSS/GnssMonitor.cpp/GnssMonitor()/56 - Logging started. Log format:
+2025-08-21 07:47:13,796 [INFO] GNSS/GnssMonitor.cpp/GnssMonitor()/57 - timestamp;fixState;latitude;longitude;altitude;heading;speed;ehpe;gdop;hdop;pdop;vdop;satellitesVisible;satellitesTracked;satellitesInFix
+2025-08-21 07:47:13,930 [INFO] GNSS/GnssMonitor.cpp/init()/103 - GNSS Server open
+2025-08-21 07:47:13,948 [INFO] GNSS/GnssMonitor.cpp/init()/139 - Active constellations set properly.
+2025-08-21 07:47:14,036 [INFO] GNSS/AntennaState.cpp/handleAntennaStateChange()/82 - Antenna: 2, status: 2
+2025-08-21 07:47:14,068 [INFO] GNSS/NmeaSimulator.cpp/start()/114 - Path for .nmea file read from configuration: /opt/appl/data/apps/apps_data/eHorizonISA/resources/simulation.nmea
+2025-08-21 07:47:14,072 [INFO] GNSS/NmeaSimulator.cpp/start()/123 - NMEA File opened
+2025-08-21 07:47:14,109 [INFO] GNSS/GeofenceMonitor.cpp/start()/100 - GeofenceMonitor were started
+2025-08-21 07:47:14,126 [INFO] GNSS/GeofenceMonitor.cpp/start()/100 - GeofenceMonitor were started
+2025-08-21 07:47:14,155 [INFO] GNSS/NmeaSimulator.cpp/start()/188 - NMEA simulation started
+2025-08-21 07:47:14,175 [INFO] GNSS/SimulationMonitor.cpp/handleNavigationSimulationStateChange()/80 - Navigation simulation state machine, time: 1755762434, id: 2, old state: 1, new state: 2
+2025-08-21 07:47:14,228 [INFO] GNSS/GnssMonitor.cpp/handleNewPosition()/225 - GPS fix - Valid position: 1687779734;4;49.805981;16.116300;0.000000;2.400000;9.980223;1.000000;1.000000;1.000000;1.000000;1.000000;8;8;8
+2025-08-21 07:47:50,454 [INFO] GNSS/AntennaState.cpp/handleAntennaStateChange()/82 - Antenna: 2, status: 1
+2025-08-21 07:50:14,117 [INFO] GNSS/GeofenceMonitor.cpp/performGeofenceStatusCheck()/212 - New region crossed 2 times: cz
+2025-08-21 07:50:14,117 [INFO] GNSS/GeofenceMonitor.cpp/runTask()/268 - Region crossed, position: 49.8189, 16.1281 -> report it
+2025-08-21 08:21:44,441 [INFO] GNSS/GeofenceMonitor.cpp/performGeofenceStatusCheck()/212 - New region crossed 2 times: pl
+2025-08-21 08:21:44,445 [INFO] GNSS/GeofenceMonitor.cpp/runTask()/268 - Region crossed, position: 49.9489, 16.1587 -> report it
+2025-08-21 08:22:34,698 [INFO] GNSS/GeofenceMonitor.cpp/stop()/125 - GeofenceMonitor were stopped
+2025-08-21 08:22:34,963 [ERROR] GNSS/GnssMonitor.cpp/stop()/343 - Rx client cannot be closed regards null pointer
+2025-08-21 08:22:35,004 [INFO] GNSS/GnssMonitor.cpp/saveLastValidLocation()/520 - Store last valid location to NVM: 
+2025-08-21 08:22:35,007 [INFO] GNSS/GeofenceMonitor.cpp/stop()/125 - GeofenceMonitor were stopped
+2025-08-21 08:22:35,007 [INFO] GNSS/GnssMonitor.cpp/saveLastValidLocation()/521 - 1687781844;4;49.952734;16.155483;0.000000;312.899994;9.980223;1.000000;1.000000;1.000000;1.000000;1.000000;8;8;8
+2025-08-21 08:22:35,032 [INFO] GNSS/NmeaSimulator.cpp/stop()/233 - NMEA File closed
+2025-08-21 08:22:35,064 [INFO] GNSS/NmeaSimulator.cpp/stop()/239 - NMEA simulation stopped
+2025-08-21 08:22:35,138 [INFO] GNSS/SimulationMonitor.cpp/handleNavigationSimulationStateChange()/80 - Navigation simulation state machine, time: 1755764555, id: 3, old state: 2, new state: 1
+2025-08-21 08:22:35,380 [INFO] GNSS/NavPowerState.cpp/handleNavigationPowerStateChange()/81 - NavPow state changed: oldstate = 0, newState = 2
+2025-08-21 08:22:36,135 [INFO] GNSS/GNSS.cpp/onEvent()/520 - === STOP GNSS
+2025-08-21 08:26:57,165 [INFO] GNSS/VehiclePositionTx.cpp/start()/82 - VehiclePosition Server open
+2025-08-21 08:26:57,166 [INFO] GNSS/VehiclePositionTx.cpp/start()/93 - VehiclePositionTxId set to: 419361564
+2025-08-21 08:26:57,177 [INFO] GNSS/GNSS.cpp/onEvent()/145 - GNSS source set to NMEA
+2025-08-21 08:26:57,177 [INFO] GNSS/GnssMonitor.cpp/GnssMonitor()/56 - Logging started. Log format:
+2025-08-21 08:26:57,177 [INFO] GNSS/GnssMonitor.cpp/GnssMonitor()/57 - timestamp;fixState;latitude;longitude;altitude;heading;speed;ehpe;gdop;hdop;pdop;vdop;satellitesVisible;satellitesTracked;satellitesInFix
+2025-08-21 08:26:57,264 [INFO] GNSS/GnssMonitor.cpp/init()/103 - GNSS Server open
+2025-08-21 08:26:57,285 [INFO] GNSS/GnssMonitor.cpp/init()/139 - Active constellations set properly.
+2025-08-21 08:26:57,358 [INFO] GNSS/AntennaState.cpp/handleAntennaStateChange()/82 - Antenna: 2, status: 1
+2025-08-21 08:26:57,360 [INFO] GNSS/AntennaState.cpp/handleAntennaStateChange()/82 - Antenna: 2, status: 1
+2025-08-21 08:26:57,415 [INFO] GNSS/NmeaSimulator.cpp/start()/114 - Path for .nmea file read from configuration: /opt/appl/data/apps/apps_data/eHorizonISA/resources/simulation.nmea
+2025-08-21 08:26:57,416 [INFO] GNSS/NmeaSimulator.cpp/start()/123 - NMEA File opened
+2025-08-21 08:26:57,455 [INFO] GNSS/GeofenceMonitor.cpp/start()/100 - GeofenceMonitor were started
+2025-08-21 08:26:57,463 [INFO] GNSS/GeofenceMonitor.cpp/start()/100 - GeofenceMonitor were started
+2025-08-21 08:26:57,598 [INFO] GNSS/NmeaSimulator.cpp/start()/188 - NMEA simulation started
+2025-08-21 08:26:57,611 [INFO] GNSS/SimulationMonitor.cpp/handleNavigationSimulationStateChange()/80 - Navigation simulation state machine, time: 1755764817, id: 2, old state: 1, new state: 2
+2025-08-21 08:26:57,661 [INFO] GNSS/GnssMonitor.cpp/handleNewPosition()/225 - GPS fix - Valid position: 1687779734;4;49.805981;16.116300;0.000000;2.400000;9.980223;1.000000;1.000000;1.000000;1.000000;1.000000;8;8;8
+2025-08-21 08:29:57,473 [INFO] GNSS/GeofenceMonitor.cpp/performGeofenceStatusCheck()/212 - New region crossed 2 times: cz
+2025-08-21 08:29:57,474 [INFO] GNSS/GeofenceMonitor.cpp/runTask()/268 - Region crossed, position: 49.8189, 16.1281 -> report it
+2025-08-21 09:01:27,742 [INFO] GNSS/GeofenceMonitor.cpp/performGeofenceStatusCheck()/212 - New region crossed 2 times: pl
+2025-08-21 09:01:27,743 [INFO] GNSS/GeofenceMonitor.cpp/runTask()/268 - Region crossed, position: 49.9491, 16.1586 -> report it
+2025-08-21 09:03:10,095 [INFO] GNSS/NmeaSimulator.cpp/runTask()/267 - End of NMEA simulation file
+2025-08-21 09:03:10,095 [INFO] GNSS/NmeaSimulator.cpp/runTask()/281 - NMEA File closed
+2025-08-21 09:03:10,095 [INFO] GNSS/NmeaSimulator.cpp/runTask()/289 - NMEA simulation finished
+2025-08-21 09:03:10,113 [INFO] GNSS/SimulationMonitor.cpp/handleNavigationSimulationStateChange()/80 - Navigation simulation state machine, time: 1755766990, id: 3, old state: 2, new state: 1
+2025-08-21 09:03:10,129 [INFO] GNSS/NavPowerState.cpp/handleNavigationPowerStateChange()/81 - NavPow state changed: oldstate = 0, newState = 2
+2025-08-21 09:05:57,785 [INFO] GNSS/GeofenceMonitor.cpp/performGeofenceStatusCheck()/212 - New region crossed 2 times: fall
+2025-08-21 09:05:57,785 [INFO] GNSS/GeofenceMonitor.cpp/runTask()/268 - Region crossed, position: 45.7753, 4.86024 -> report it
+2025-08-21 15:00:33,731 [INFO] GNSS/VehiclePositionTx.cpp/start()/82 - VehiclePosition Server open
+2025-08-21 15:00:33,733 [INFO] GNSS/VehiclePositionTx.cpp/start()/93 - VehiclePositionTxId set to: 419361564
+2025-08-21 15:00:33,745 [INFO] GNSS/GNSS.cpp/onEvent()/145 - GNSS source set to NMEA
+2025-08-21 15:00:33,750 [INFO] GNSS/GnssMonitor.cpp/GnssMonitor()/56 - Logging started. Log format:
+2025-08-21 15:00:33,753 [INFO] GNSS/GnssMonitor.cpp/GnssMonitor()/57 - timestamp;fixState;latitude;longitude;altitude;heading;speed;ehpe;gdop;hdop;pdop;vdop;satellitesVisible;satellitesTracked;satellitesInFix
+2025-08-21 15:00:33,892 [INFO] GNSS/GnssMonitor.cpp/init()/103 - GNSS Server open
+2025-08-21 15:00:33,918 [INFO] GNSS/GnssMonitor.cpp/init()/139 - Active constellations set properly.
+2025-08-21 15:00:33,961 [INFO] GNSS/AntennaState.cpp/handleAntennaStateChange()/82 - Antenna: 2, status: 1
+2025-08-21 15:00:33,963 [INFO] GNSS/AntennaState.cpp/handleAntennaStateChange()/82 - Antenna: 2, status: 1
+2025-08-21 15:00:34,001 [INFO] GNSS/NmeaSimulator.cpp/start()/114 - Path for .nmea file read from configuration: /opt/appl/data/apps/apps_data/eHorizonISA/resources/simulation.nmea
+2025-08-21 15:00:34,002 [INFO] GNSS/NmeaSimulator.cpp/start()/123 - NMEA File opened
+2025-08-21 15:00:34,095 [INFO] GNSS/NmeaSimulator.cpp/start()/188 - NMEA simulation started
+2025-08-21 15:00:34,101 [INFO] GNSS/GeofenceMonitor.cpp/start()/100 - GeofenceMonitor were started
+2025-08-21 15:00:34,134 [INFO] GNSS/GeofenceMonitor.cpp/start()/100 - GeofenceMonitor were started
+2025-08-21 15:00:34,135 [INFO] GNSS/SimulationMonitor.cpp/handleNavigationSimulationStateChange()/80 - Navigation simulation state machine, time: 1755788434, id: 2, old state: 1, new state: 2
+2025-08-21 15:00:34,152 [INFO] GNSS/GnssMonitor.cpp/handleNewPosition()/225 - GPS fix - Valid position: 1687779734;4;49.805981;16.116300;0.000000;2.400000;9.980223;1.000000;1.000000;1.000000;1.000000;1.000000;8;8;8
+2025-08-21 15:03:34,100 [INFO] GNSS/GeofenceMonitor.cpp/performGeofenceStatusCheck()/212 - New region crossed 2 times: cz
+2025-08-21 15:03:34,101 [INFO] GNSS/GeofenceMonitor.cpp/runTask()/268 - Region crossed, position: 49.8189, 16.1281 -> report it
+2025-08-21 15:35:04,378 [INFO] GNSS/GeofenceMonitor.cpp/performGeofenceStatusCheck()/212 - New region crossed 2 times: pl
+2025-08-21 15:35:04,379 [INFO] GNSS/GeofenceMonitor.cpp/runTask()/268 - Region crossed, position: 49.9491, 16.1586 -> report it
+2025-08-21 15:36:47,033 [INFO] GNSS/NmeaSimulator.cpp/runTask()/267 - End of NMEA simulation file
+2025-08-21 15:36:47,033 [INFO] GNSS/NmeaSimulator.cpp/runTask()/281 - NMEA File closed
+2025-08-21 15:36:47,033 [INFO] GNSS/NmeaSimulator.cpp/runTask()/289 - NMEA simulation finished
+2025-08-21 15:36:47,042 [INFO] GNSS/SimulationMonitor.cpp/handleNavigationSimulationStateChange()/80 - Navigation simulation state machine, time: 1755790607, id: 3, old state: 2, new state: 1
+2025-08-21 15:36:47,053 [INFO] GNSS/NavPowerState.cpp/handleNavigationPowerStateChange()/81 - NavPow state changed: oldstate = 0, newState = 2
+2025-08-21 15:39:34,436 [INFO] GNSS/GeofenceMonitor.cpp/performGeofenceStatusCheck()/212 - New region crossed 2 times: fall
+2025-08-21 15:39:34,437 [INFO] GNSS/GeofenceMonitor.cpp/runTask()/268 - Region crossed, position: 45.7753, 4.86043 -> report it
+2025-08-22 07:39:01,865 [INFO] GNSS/VehiclePositionTx.cpp/start()/82 - VehiclePosition Server open
+2025-08-22 07:39:01,871 [INFO] GNSS/VehiclePositionTx.cpp/start()/93 - VehiclePositionTxId set to: 419361564
+2025-08-22 07:39:01,873 [INFO] GNSS/GNSS.cpp/onEvent()/145 - GNSS source set to NMEA
+2025-08-22 07:39:01,875 [INFO] GNSS/GnssMonitor.cpp/GnssMonitor()/56 - Logging started. Log format:
+2025-08-22 07:39:01,875 [INFO] GNSS/GnssMonitor.cpp/GnssMonitor()/57 - timestamp;fixState;latitude;longitude;altitude;heading;speed;ehpe;gdop;hdop;pdop;vdop;satellitesVisible;satellitesTracked;satellitesInFix
+2025-08-22 07:39:01,945 [INFO] GNSS/GnssMonitor.cpp/init()/103 - GNSS Server open
+2025-08-22 07:39:01,961 [INFO] GNSS/GnssMonitor.cpp/init()/139 - Active constellations set properly.
+2025-08-22 07:39:02,057 [INFO] GNSS/AntennaState.cpp/handleAntennaStateChange()/82 - Antenna: 2, status: 1
+2025-08-22 07:39:02,059 [INFO] GNSS/AntennaState.cpp/handleAntennaStateChange()/82 - Antenna: 2, status: 1
+2025-08-22 07:39:02,121 [INFO] GNSS/NmeaSimulator.cpp/start()/114 - Path for .nmea file read from configuration: /opt/appl/data/apps/apps_data/eHorizonISA/resources/simulation.nmea
+2025-08-22 07:39:02,121 [INFO] GNSS/NmeaSimulator.cpp/start()/123 - NMEA File opened
+2025-08-22 07:39:02,189 [INFO] GNSS/NmeaSimulator.cpp/start()/188 - NMEA simulation started
+2025-08-22 07:39:02,209 [INFO] GNSS/GeofenceMonitor.cpp/start()/100 - GeofenceMonitor were started
+2025-08-22 07:39:02,225 [INFO] GNSS/SimulationMonitor.cpp/handleNavigationSimulationStateChange()/80 - Navigation simulation state machine, time: 1755848342, id: 2, old state: 1, new state: 2
+2025-08-22 07:39:02,230 [INFO] GNSS/GeofenceMonitor.cpp/start()/100 - GeofenceMonitor were started
+2025-08-22 07:39:02,244 [INFO] GNSS/GnssMonitor.cpp/handleNewPosition()/225 - GPS fix - Valid position: 1687779734;4;49.805981;16.116300;0.000000;2.400000;9.980223;1.000000;1.000000;1.000000;1.000000;1.000000;8;8;8
+2025-08-22 07:42:02,147 [INFO] GNSS/GeofenceMonitor.cpp/performGeofenceStatusCheck()/212 - New region crossed 2 times: cz
+2025-08-22 07:42:02,147 [INFO] GNSS/GeofenceMonitor.cpp/runTask()/268 - Region crossed, position: 49.8189, 16.1281 -> report it
+2025-08-22 08:13:32,435 [INFO] GNSS/GeofenceMonitor.cpp/performGeofenceStatusCheck()/212 - New region crossed 2 times: pl
+2025-08-22 08:13:32,435 [INFO] GNSS/GeofenceMonitor.cpp/runTask()/268 - Region crossed, position: 49.9492, 16.1585 -> report it
+2025-08-22 08:15:14,144 [INFO] GNSS/NmeaSimulator.cpp/runTask()/267 - End of NMEA simulation file
+2025-08-22 08:15:14,145 [INFO] GNSS/NmeaSimulator.cpp/runTask()/281 - NMEA File closed
+2025-08-22 08:15:14,145 [INFO] GNSS/NmeaSimulator.cpp/runTask()/289 - NMEA simulation finished
+2025-08-22 08:15:14,152 [INFO] GNSS/SimulationMonitor.cpp/handleNavigationSimulationStateChange()/80 - Navigation simulation state machine, time: 1755850514, id: 3, old state: 2, new state: 1
+2025-08-22 08:15:14,160 [INFO] GNSS/NavPowerState.cpp/handleNavigationPowerStateChange()/81 - NavPow state changed: oldstate = 0, newState = 2
+2025-08-22 08:18:02,478 [INFO] GNSS/GeofenceMonitor.cpp/performGeofenceStatusCheck()/212 - New region crossed 2 times: fall
+2025-08-22 08:18:02,478 [INFO] GNSS/GeofenceMonitor.cpp/runTask()/268 - Region crossed, position: 45.7753, 4.86027 -> report it
+2025-08-22 08:36:17,178 [INFO] GNSS/VehiclePositionTx.cpp/start()/82 - VehiclePosition Server open
+2025-08-22 08:36:17,180 [INFO] GNSS/VehiclePositionTx.cpp/start()/93 - VehiclePositionTxId set to: 419361564
+2025-08-22 08:36:17,181 [INFO] GNSS/GNSS.cpp/onEvent()/145 - GNSS source set to NMEA
+2025-08-22 08:36:17,182 [INFO] GNSS/GnssMonitor.cpp/GnssMonitor()/56 - Logging started. Log format:
+2025-08-22 08:36:17,182 [INFO] GNSS/GnssMonitor.cpp/GnssMonitor()/57 - timestamp;fixState;latitude;longitude;altitude;heading;speed;ehpe;gdop;hdop;pdop;vdop;satellitesVisible;satellitesTracked;satellitesInFix
+2025-08-22 08:36:17,282 [INFO] GNSS/GnssMonitor.cpp/init()/103 - GNSS Server open
+2025-08-22 08:36:17,359 [INFO] GNSS/GnssMonitor.cpp/init()/139 - Active constellations set properly.
+2025-08-22 08:36:17,469 [INFO] GNSS/AntennaState.cpp/handleAntennaStateChange()/82 - Antenna: 2, status: 1
+2025-08-22 08:36:17,474 [INFO] GNSS/AntennaState.cpp/handleAntennaStateChange()/82 - Antenna: 2, status: 1
+2025-08-22 08:36:17,502 [INFO] GNSS/NmeaSimulator.cpp/start()/114 - Path for .nmea file read from configuration: /opt/appl/data/apps/apps_data/eHorizonISA/resources/simulation.nmea
+2025-08-22 08:36:17,502 [INFO] GNSS/NmeaSimulator.cpp/start()/123 - NMEA File opened
+2025-08-22 08:36:17,544 [INFO] GNSS/GeofenceMonitor.cpp/start()/100 - GeofenceMonitor were started
+2025-08-22 08:36:17,550 [INFO] GNSS/GeofenceMonitor.cpp/start()/100 - GeofenceMonitor were started
+2025-08-22 08:36:17,558 [INFO] GNSS/NmeaSimulator.cpp/start()/188 - NMEA simulation started
+2025-08-22 08:36:17,636 [INFO] GNSS/SimulationMonitor.cpp/handleNavigationSimulationStateChange()/80 - Navigation simulation state machine, time: 1755851777, id: 2, old state: 1, new state: 2
+2025-08-22 08:36:17,687 [INFO] GNSS/GnssMonitor.cpp/handleNewPosition()/225 - GPS fix - Valid position: 1687779734;4;49.805981;16.116300;0.000000;2.400000;9.980223;1.000000;1.000000;1.000000;1.000000;1.000000;8;8;8
+2025-08-22 08:39:17,544 [INFO] GNSS/GeofenceMonitor.cpp/performGeofenceStatusCheck()/212 - New region crossed 2 times: cz
+2025-08-22 08:39:17,544 [INFO] GNSS/GeofenceMonitor.cpp/runTask()/268 - Region crossed, position: 49.8189, 16.1281 -> report it
+2025-08-22 08:40:28,988 [INFO] GNSS/GeofenceMonitor.cpp/stop()/125 - GeofenceMonitor were stopped
+2025-08-22 08:40:29,536 [ERROR] GNSS/GnssMonitor.cpp/stop()/343 - Rx client cannot be closed regards null pointer
+2025-08-22 08:40:29,552 [INFO] GNSS/GeofenceMonitor.cpp/stop()/125 - GeofenceMonitor were stopped
+2025-08-22 08:40:29,560 [INFO] GNSS/GnssMonitor.cpp/saveLastValidLocation()/520 - Store last valid location to NVM: 
+2025-08-22 08:40:29,560 [INFO] GNSS/GnssMonitor.cpp/saveLastValidLocation()/521 - 1687779984;4;49.824731;16.128650;0.000000;25.299999;9.980223;1.000000;1.000000;1.000000;1.000000;1.000000;8;8;8
+2025-08-22 08:40:29,568 [INFO] GNSS/NmeaSimulator.cpp/stop()/233 - NMEA File closed
+2025-08-22 08:40:29,568 [INFO] GNSS/NmeaSimulator.cpp/stop()/239 - NMEA simulation stopped
+2025-08-22 08:40:29,577 [INFO] GNSS/SimulationMonitor.cpp/handleNavigationSimulationStateChange()/80 - Navigation simulation state machine, time: 1755852029, id: 3, old state: 2, new state: 1
+2025-08-22 08:40:29,707 [INFO] GNSS/NavPowerState.cpp/handleNavigationPowerStateChange()/81 - NavPow state changed: oldstate = 0, newState = 2
+2025-08-22 08:40:30,006 [INFO] GNSS/GNSS.cpp/onEvent()/520 - === STOP GNSS
+2025-08-22 08:43:25,679 [INFO] GNSS/VehiclePositionTx.cpp/start()/82 - VehiclePosition Server open
+2025-08-22 08:43:25,680 [INFO] GNSS/VehiclePositionTx.cpp/start()/93 - VehiclePositionTxId set to: 419361564
+2025-08-22 08:43:25,692 [INFO] GNSS/GNSS.cpp/onEvent()/145 - GNSS source set to NMEA
+2025-08-22 08:43:25,694 [INFO] GNSS/GnssMonitor.cpp/GnssMonitor()/56 - Logging started. Log format:
+2025-08-22 08:43:25,694 [INFO] GNSS/GnssMonitor.cpp/GnssMonitor()/57 - timestamp;fixState;latitude;longitude;altitude;heading;speed;ehpe;gdop;hdop;pdop;vdop;satellitesVisible;satellitesTracked;satellitesInFix
+2025-08-22 08:43:25,906 [INFO] GNSS/GnssMonitor.cpp/init()/103 - GNSS Server open
+2025-08-22 08:43:25,918 [INFO] GNSS/GnssMonitor.cpp/init()/139 - Active constellations set properly.
+2025-08-22 08:43:25,944 [INFO] GNSS/AntennaState.cpp/handleAntennaStateChange()/82 - Antenna: 2, status: 1
+2025-08-22 08:43:25,950 [INFO] GNSS/AntennaState.cpp/handleAntennaStateChange()/82 - Antenna: 2, status: 1
+2025-08-22 08:43:25,957 [INFO] GNSS/NmeaSimulator.cpp/start()/114 - Path for .nmea file read from configuration: /opt/appl/data/apps/apps_data/eHorizonISA/resources/simulation.nmea
+2025-08-22 08:43:25,958 [INFO] GNSS/NmeaSimulator.cpp/start()/123 - NMEA File opened
+2025-08-22 08:43:25,996 [INFO] GNSS/GeofenceMonitor.cpp/start()/100 - GeofenceMonitor were started
+2025-08-22 08:43:26,039 [INFO] GNSS/GeofenceMonitor.cpp/start()/100 - GeofenceMonitor were started
+2025-08-22 08:43:26,101 [INFO] GNSS/SimulationMonitor.cpp/handleNavigationSimulationStateChange()/80 - Navigation simulation state machine, time: 1755852206, id: 2, old state: 1, new state: 2
+2025-08-22 08:43:26,106 [INFO] GNSS/NmeaSimulator.cpp/start()/188 - NMEA simulation started
+2025-08-22 08:43:26,147 [INFO] GNSS/GnssMonitor.cpp/handleNewPosition()/225 - GPS fix - Valid position: 1687779734;4;49.805981;16.116300;0.000000;2.400000;9.980223;1.000000;1.000000;1.000000;1.000000;1.000000;8;8;8
+2025-08-22 08:46:26,002 [INFO] GNSS/GeofenceMonitor.cpp/performGeofenceStatusCheck()/212 - New region crossed 2 times: cz
+2025-08-22 08:46:26,002 [INFO] GNSS/GeofenceMonitor.cpp/runTask()/268 - Region crossed, position: 49.8189, 16.1281 -> report it
+2025-08-22 09:17:56,306 [INFO] GNSS/GeofenceMonitor.cpp/performGeofenceStatusCheck()/212 - New region crossed 2 times: pl
+2025-08-22 09:17:56,307 [INFO] GNSS/GeofenceMonitor.cpp/runTask()/268 - Region crossed, position: 49.9491, 16.1586 -> report it
+2025-08-22 09:19:39,374 [INFO] GNSS/NmeaSimulator.cpp/runTask()/267 - End of NMEA simulation file
+2025-08-22 09:19:39,374 [INFO] GNSS/NmeaSimulator.cpp/runTask()/281 - NMEA File closed
+2025-08-22 09:19:39,375 [INFO] GNSS/NmeaSimulator.cpp/runTask()/289 - NMEA simulation finished
+2025-08-22 09:19:39,383 [INFO] GNSS/SimulationMonitor.cpp/handleNavigationSimulationStateChange()/80 - Navigation simulation state machine, time: 1755854379, id: 3, old state: 2, new state: 1
+2025-08-22 09:19:39,392 [INFO] GNSS/NavPowerState.cpp/handleNavigationPowerStateChange()/81 - NavPow state changed: oldstate = 0, newState = 2
+2025-08-22 09:22:26,345 [INFO] GNSS/GeofenceMonitor.cpp/performGeofenceStatusCheck()/212 - New region crossed 2 times: fall
+2025-08-22 09:22:26,345 [INFO] GNSS/GeofenceMonitor.cpp/runTask()/268 - Region crossed, position: 45.7753, 4.86021 -> report it
+2025-08-25 07:10:54,600 [INFO] GNSS/VehiclePositionTx.cpp/start()/82 - VehiclePosition Server open
+2025-08-25 07:10:54,603 [INFO] GNSS/VehiclePositionTx.cpp/start()/93 - VehiclePositionTxId set to: 419361564
+2025-08-25 07:10:54,617 [INFO] GNSS/GNSS.cpp/onEvent()/145 - GNSS source set to NMEA
+2025-08-25 07:10:54,618 [INFO] GNSS/GnssMonitor.cpp/GnssMonitor()/56 - Logging started. Log format:
+2025-08-25 07:10:54,618 [INFO] GNSS/GnssMonitor.cpp/GnssMonitor()/57 - timestamp;fixState;latitude;longitude;altitude;heading;speed;ehpe;gdop;hdop;pdop;vdop;satellitesVisible;satellitesTracked;satellitesInFix
+2025-08-25 07:10:54,815 [INFO] GNSS/GnssMonitor.cpp/init()/103 - GNSS Server open
+2025-08-25 07:10:54,825 [INFO] GNSS/GnssMonitor.cpp/init()/139 - Active constellations set properly.
+2025-08-25 07:10:54,852 [INFO] GNSS/AntennaState.cpp/handleAntennaStateChange()/82 - Antenna: 2, status: 1
+2025-08-25 07:10:54,858 [INFO] GNSS/AntennaState.cpp/handleAntennaStateChange()/82 - Antenna: 2, status: 1
+2025-08-25 07:10:54,913 [INFO] GNSS/NmeaSimulator.cpp/start()/114 - Path for .nmea file read from configuration: /opt/appl/data/apps/apps_data/eHorizonISA/resources/simulation.nmea
+2025-08-25 07:10:54,926 [INFO] GNSS/NmeaSimulator.cpp/start()/123 - NMEA File opened
+2025-08-25 07:10:55,031 [INFO] GNSS/NmeaSimulator.cpp/start()/188 - NMEA simulation started
+2025-08-25 07:10:55,051 [INFO] GNSS/GnssMonitor.cpp/handleNewPosition()/225 - GPS fix - Valid position: 1756105854;5;47.000000;4.000000;-48.000000;0.000000;0.000000;326734.437500;0.000000;0.000000;0.000000;0.000000;0;0;0
+2025-08-25 07:10:55,056 [INFO] GNSS/GeofenceMonitor.cpp/start()/100 - GeofenceMonitor were started
+2025-08-25 07:10:55,069 [INFO] GNSS/GeofenceMonitor.cpp/start()/100 - GeofenceMonitor were started
+2025-08-25 07:10:55,071 [INFO] GNSS/SimulationMonitor.cpp/handleNavigationSimulationStateChange()/80 - Navigation simulation state machine, time: 1756105855, id: 2, old state: 1, new state: 2
+2025-08-25 07:13:55,054 [INFO] GNSS/GeofenceMonitor.cpp/performGeofenceStatusCheck()/212 - New region crossed 2 times: cz
+2025-08-25 07:13:55,055 [INFO] GNSS/GeofenceMonitor.cpp/runTask()/268 - Region crossed, position: 49.8189, 16.1281 -> report it
+2025-08-25 07:45:25,319 [INFO] GNSS/GeofenceMonitor.cpp/performGeofenceStatusCheck()/212 - New region crossed 2 times: pl
+2025-08-25 07:45:25,319 [INFO] GNSS/GeofenceMonitor.cpp/runTask()/268 - Region crossed, position: 49.9491, 16.1586 -> report it
+2025-08-25 07:47:07,874 [INFO] GNSS/NmeaSimulator.cpp/runTask()/267 - End of NMEA simulation file
+2025-08-25 07:47:07,875 [INFO] GNSS/NmeaSimulator.cpp/runTask()/281 - NMEA File closed
+2025-08-25 07:47:07,875 [INFO] GNSS/NmeaSimulator.cpp/runTask()/289 - NMEA simulation finished
+2025-08-25 07:47:07,888 [INFO] GNSS/SimulationMonitor.cpp/handleNavigationSimulationStateChange()/80 - Navigation simulation state machine, time: 1756108027, id: 3, old state: 2, new state: 1
+2025-08-25 07:47:07,900 [INFO] GNSS/NavPowerState.cpp/handleNavigationPowerStateChange()/81 - NavPow state changed: oldstate = 0, newState = 2
+2025-08-25 07:49:55,352 [INFO] GNSS/GeofenceMonitor.cpp/performGeofenceStatusCheck()/212 - New region crossed 2 times: fall
+2025-08-25 07:49:55,352 [INFO] GNSS/GeofenceMonitor.cpp/runTask()/268 - Region crossed, position: 45.7754, 4.86007 -> report it
+2025-08-25 13:09:43,714 [INFO] GNSS/AntennaState.cpp/handleAntennaStateChange()/82 - Antenna: 2, status: 2
+2025-08-25 13:09:53,732 [INFO] GNSS/AntennaState.cpp/handleAntennaStateChange()/82 - Antenna: 2, status: 1
+2025-09-03 07:05:03,596 [INFO] GNSS/VehiclePositionTx.cpp/start()/82 - VehiclePosition Server open
+2025-09-03 07:05:03,599 [INFO] GNSS/VehiclePositionTx.cpp/start()/93 - VehiclePositionTxId set to: 419361564
+2025-09-03 07:05:03,620 [INFO] GNSS/GNSS.cpp/onEvent()/145 - GNSS source set to NMEA
+2025-09-03 07:05:03,621 [INFO] GNSS/GnssMonitor.cpp/GnssMonitor()/56 - Logging started. Log format:
+2025-09-03 07:05:03,621 [INFO] GNSS/GnssMonitor.cpp/GnssMonitor()/57 - timestamp;fixState;latitude;longitude;altitude;heading;speed;ehpe;gdop;hdop;pdop;vdop;satellitesVisible;satellitesTracked;satellitesInFix
+2025-09-03 07:05:03,786 [INFO] GNSS/GnssMonitor.cpp/init()/103 - GNSS Server open
+2025-09-03 07:05:03,801 [INFO] GNSS/GnssMonitor.cpp/init()/139 - Active constellations set properly.
+2025-09-03 07:05:03,838 [INFO] GNSS/AntennaState.cpp/handleAntennaStateChange()/82 - Antenna: 2, status: 1
+2025-09-03 07:05:03,849 [INFO] GNSS/AntennaState.cpp/handleAntennaStateChange()/82 - Antenna: 2, status: 1
+2025-09-03 07:05:03,876 [INFO] GNSS/NmeaSimulator.cpp/start()/114 - Path for .nmea file read from configuration: /opt/appl/data/apps/apps_data/eHorizonISA/resources/simulation.nmea
+2025-09-03 07:05:03,876 [INFO] GNSS/NmeaSimulator.cpp/start()/123 - NMEA File opened
+2025-09-03 07:05:04,022 [INFO] GNSS/NmeaSimulator.cpp/start()/188 - NMEA simulation started
+2025-09-03 07:05:04,022 [INFO] GNSS/GeofenceMonitor.cpp/start()/100 - GeofenceMonitor were started
+2025-09-03 07:05:04,051 [INFO] GNSS/GeofenceMonitor.cpp/start()/100 - GeofenceMonitor were started
+2025-09-03 07:05:04,070 [INFO] GNSS/SimulationMonitor.cpp/handleNavigationSimulationStateChange()/80 - Navigation simulation state machine, time: 1756883104, id: 2, old state: 1, new state: 2
+2025-09-03 07:05:04,070 [INFO] GNSS/GnssMonitor.cpp/handleNewPosition()/225 - GPS fix - Valid position: 1687779734;4;49.805981;16.116300;0.000000;2.400000;9.980223;1.000000;1.000000;1.000000;1.000000;1.000000;8;8;8
+2025-09-03 07:08:04,014 [INFO] GNSS/GeofenceMonitor.cpp/performGeofenceStatusCheck()/212 - New region crossed 2 times: cz
+2025-09-03 07:08:04,014 [INFO] GNSS/GeofenceMonitor.cpp/runTask()/268 - Region crossed, position: 49.8189, 16.1281 -> report it
+2025-09-03 07:39:34,310 [INFO] GNSS/GeofenceMonitor.cpp/performGeofenceStatusCheck()/212 - New region crossed 2 times: pl
+2025-09-03 07:39:34,310 [INFO] GNSS/GeofenceMonitor.cpp/runTask()/268 - Region crossed, position: 49.9489, 16.1587 -> report it
+2025-09-03 07:41:18,395 [INFO] GNSS/NmeaSimulator.cpp/runTask()/267 - End of NMEA simulation file
+2025-09-03 07:41:18,396 [INFO] GNSS/NmeaSimulator.cpp/runTask()/281 - NMEA File closed
+2025-09-03 07:41:18,396 [INFO] GNSS/NmeaSimulator.cpp/runTask()/289 - NMEA simulation finished
+2025-09-03 07:41:18,415 [INFO] GNSS/SimulationMonitor.cpp/handleNavigationSimulationStateChange()/80 - Navigation simulation state machine, time: 1756885278, id: 3, old state: 2, new state: 1
+2025-09-03 07:41:18,429 [INFO] GNSS/NavPowerState.cpp/handleNavigationPowerStateChange()/81 - NavPow state changed: oldstate = 0, newState = 2
+2025-09-03 07:44:04,353 [INFO] GNSS/GeofenceMonitor.cpp/performGeofenceStatusCheck()/212 - New region crossed 2 times: fall
+2025-09-03 07:44:04,354 [INFO] GNSS/GeofenceMonitor.cpp/runTask()/268 - Region crossed, position: 45.7753, 4.86 -> report it
+2025-09-04 19:03:14,346 [INFO] GNSS/VehiclePositionTx.cpp/start()/82 - VehiclePosition Server open
+2025-09-04 19:03:14,348 [INFO] GNSS/VehiclePositionTx.cpp/start()/93 - VehiclePositionTxId set to: 419361564
+2025-09-04 19:03:14,352 [INFO] GNSS/GNSS.cpp/onEvent()/145 - GNSS source set to NMEA
+2025-09-04 19:03:14,356 [INFO] GNSS/GnssMonitor.cpp/GnssMonitor()/56 - Logging started. Log format:
+2025-09-04 19:03:14,356 [INFO] GNSS/GnssMonitor.cpp/GnssMonitor()/57 - timestamp;fixState;latitude;longitude;altitude;heading;speed;ehpe;gdop;hdop;pdop;vdop;satellitesVisible;satellitesTracked;satellitesInFix
+2025-09-04 19:03:14,419 [INFO] GNSS/GnssMonitor.cpp/init()/103 - GNSS Server open
+2025-09-04 19:03:14,440 [INFO] GNSS/GnssMonitor.cpp/init()/139 - Active constellations set properly.
+2025-09-04 19:03:14,525 [INFO] GNSS/AntennaState.cpp/handleAntennaStateChange()/82 - Antenna: 2, status: 1
+2025-09-04 19:03:14,534 [INFO] GNSS/AntennaState.cpp/handleAntennaStateChange()/82 - Antenna: 2, status: 1
+2025-09-04 19:03:14,565 [INFO] GNSS/NmeaSimulator.cpp/start()/114 - Path for .nmea file read from configuration: /opt/appl/data/apps/apps_data/eHorizonISA/resources/simulation.nmea
+2025-09-04 19:03:14,566 [INFO] GNSS/NmeaSimulator.cpp/start()/123 - NMEA File opened
+2025-09-04 19:03:14,636 [INFO] GNSS/GeofenceMonitor.cpp/start()/100 - GeofenceMonitor were started
+2025-09-04 19:03:14,640 [INFO] GNSS/GeofenceMonitor.cpp/start()/100 - GeofenceMonitor were started
+2025-09-04 19:03:14,658 [INFO] GNSS/NmeaSimulator.cpp/start()/188 - NMEA simulation started
+2025-09-04 19:03:14,676 [INFO] GNSS/SimulationMonitor.cpp/handleNavigationSimulationStateChange()/80 - Navigation simulation state machine, time: 1757012594, id: 2, old state: 1, new state: 2
+2025-09-04 19:03:14,698 [INFO] GNSS/GnssMonitor.cpp/handleNewPosition()/225 - GPS fix - Valid position: 1687779734;4;49.805981;16.116300;0.000000;2.400000;9.980223;1.000000;1.000000;1.000000;1.000000;1.000000;8;8;8
+2025-09-04 19:06:14,634 [INFO] GNSS/GeofenceMonitor.cpp/performGeofenceStatusCheck()/212 - New region crossed 2 times: cz
+2025-09-04 19:06:14,635 [INFO] GNSS/GeofenceMonitor.cpp/runTask()/268 - Region crossed, position: 49.8189, 16.1281 -> report it
+2025-09-04 19:37:44,887 [INFO] GNSS/GeofenceMonitor.cpp/performGeofenceStatusCheck()/212 - New region crossed 2 times: pl
+2025-09-04 19:37:44,888 [INFO] GNSS/GeofenceMonitor.cpp/runTask()/268 - Region crossed, position: 49.9492, 16.1585 -> report it
+2025-09-04 19:39:26,545 [INFO] GNSS/NmeaSimulator.cpp/runTask()/267 - End of NMEA simulation file
+2025-09-04 19:39:26,546 [INFO] GNSS/NmeaSimulator.cpp/runTask()/281 - NMEA File closed
+2025-09-04 19:39:26,546 [INFO] GNSS/NmeaSimulator.cpp/runTask()/289 - NMEA simulation finished
+2025-09-04 19:39:26,552 [INFO] GNSS/SimulationMonitor.cpp/handleNavigationSimulationStateChange()/80 - Navigation simulation state machine, time: 1757014766, id: 3, old state: 2, new state: 1
+2025-09-04 19:39:26,561 [INFO] GNSS/NavPowerState.cpp/handleNavigationPowerStateChange()/81 - NavPow state changed: oldstate = 0, newState = 2
+2025-09-04 19:42:14,939 [INFO] GNSS/GeofenceMonitor.cpp/performGeofenceStatusCheck()/212 - New region crossed 2 times: fall
+2025-09-04 19:42:14,939 [INFO] GNSS/GeofenceMonitor.cpp/runTask()/268 - Region crossed, position: 45.7752, 4.86027 -> report it
+2025-09-05 09:38:53,169 [INFO] GNSS/VehiclePositionTx.cpp/start()/82 - VehiclePosition Server open
+2025-09-05 09:38:53,176 [INFO] GNSS/VehiclePositionTx.cpp/start()/93 - VehiclePositionTxId set to: 419361564
+2025-09-05 09:38:53,177 [INFO] GNSS/GNSS.cpp/onEvent()/145 - GNSS source set to NMEA
+2025-09-05 09:38:53,178 [INFO] GNSS/GnssMonitor.cpp/GnssMonitor()/56 - Logging started. Log format:
+2025-09-05 09:38:53,178 [INFO] GNSS/GnssMonitor.cpp/GnssMonitor()/57 - timestamp;fixState;latitude;longitude;altitude;heading;speed;ehpe;gdop;hdop;pdop;vdop;satellitesVisible;satellitesTracked;satellitesInFix
+2025-09-05 09:38:53,297 [INFO] GNSS/GnssMonitor.cpp/init()/103 - GNSS Server open
+2025-09-05 09:38:53,349 [INFO] GNSS/GnssMonitor.cpp/init()/139 - Active constellations set properly.
+2025-09-05 09:38:53,381 [INFO] GNSS/AntennaState.cpp/handleAntennaStateChange()/82 - Antenna: 2, status: 1
+2025-09-05 09:38:53,385 [INFO] GNSS/AntennaState.cpp/handleAntennaStateChange()/82 - Antenna: 2, status: 1
+2025-09-05 09:38:53,394 [INFO] GNSS/NmeaSimulator.cpp/start()/114 - Path for .nmea file read from configuration: /opt/appl/data/apps/apps_data/eHorizonISA/resources/simulation.nmea
+2025-09-05 09:38:53,396 [INFO] GNSS/NmeaSimulator.cpp/start()/123 - NMEA File opened
+2025-09-05 09:38:53,448 [INFO] GNSS/GeofenceMonitor.cpp/start()/100 - GeofenceMonitor were started
+2025-09-05 09:38:53,459 [INFO] GNSS/GeofenceMonitor.cpp/start()/100 - GeofenceMonitor were started
+2025-09-05 09:38:53,503 [INFO] GNSS/NmeaSimulator.cpp/start()/188 - NMEA simulation started
+2025-09-05 09:38:53,519 [INFO] GNSS/SimulationMonitor.cpp/handleNavigationSimulationStateChange()/80 - Navigation simulation state machine, time: 1757065133, id: 2, old state: 1, new state: 2
+2025-09-05 09:38:53,535 [INFO] GNSS/GnssMonitor.cpp/handleNewPosition()/225 - GPS fix - Valid position: 1687779734;4;49.805981;16.116300;0.000000;2.400000;9.980223;1.000000;1.000000;1.000000;1.000000;1.000000;8;8;8
+2025-09-05 09:41:53,467 [INFO] GNSS/GeofenceMonitor.cpp/performGeofenceStatusCheck()/212 - New region crossed 2 times: cz
+2025-09-05 09:41:53,468 [INFO] GNSS/GeofenceMonitor.cpp/runTask()/268 - Region crossed, position: 49.8189, 16.1281 -> report it
+2025-09-05 10:13:23,780 [INFO] GNSS/GeofenceMonitor.cpp/performGeofenceStatusCheck()/212 - New region crossed 2 times: pl
+2025-09-05 10:13:23,782 [INFO] GNSS/GeofenceMonitor.cpp/runTask()/268 - Region crossed, position: 49.9492, 16.1585 -> report it
+2025-09-05 10:15:05,530 [INFO] GNSS/NmeaSimulator.cpp/runTask()/267 - End of NMEA simulation file
+2025-09-05 10:15:05,530 [INFO] GNSS/NmeaSimulator.cpp/runTask()/281 - NMEA File closed
+2025-09-05 10:15:05,530 [INFO] GNSS/NmeaSimulator.cpp/runTask()/289 - NMEA simulation finished
+2025-09-05 10:15:05,541 [INFO] GNSS/SimulationMonitor.cpp/handleNavigationSimulationStateChange()/80 - Navigation simulation state machine, time: 1757067305, id: 3, old state: 2, new state: 1
+2025-09-05 10:15:05,545 [INFO] GNSS/NavPowerState.cpp/handleNavigationPowerStateChange()/81 - NavPow state changed: oldstate = 0, newState = 2
+2025-09-05 10:17:53,815 [INFO] GNSS/GeofenceMonitor.cpp/performGeofenceStatusCheck()/212 - New region crossed 2 times: fall
+2025-09-05 10:17:53,815 [INFO] GNSS/GeofenceMonitor.cpp/runTask()/268 - Region crossed, position: 45.7754, 4.86008 -> report it

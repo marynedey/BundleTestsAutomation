@@ -1,0 +1,382 @@
+24-07-25 15:34:54.052 WARN  dse [DseConfigurationManager.hpp:127]  - Configuration not found
+24-07-25 15:34:54.053 WARN  dse [DseConfigurationManager.cpp:669] Conf not found in app_data, the default one will be used
+24-07-25 15:34:54.053 WARN  dse [DseConfigurationManager.cpp:296]  - Stored configuration loaded
+24-07-25 15:34:54.055 WARN  dse [DseConfigurationManager.hpp:127]  - Configuration not found
+24-07-25 15:34:54.055 WARN  dse [DseConfigurationManager.cpp:679] Conf not found in app_data, the default one will be used
+24-07-25 15:34:54.055 WARN  dse [DseConfigurationManager.cpp:169]  - Stored configuration loaded
+24-07-25 15:34:54.056 WARN  dse [DseConfigurationManager.hpp:127]  - Configuration not found
+24-07-25 15:34:54.056 WARN  dse [DseConfigurationManager.cpp:688] Conf not found in app_data, the default one will be used
+24-07-25 15:34:54.065 WARN  dse [DseConfigurationManager.cpp:211]  - Stored configuration loaded
+24-07-25 15:34:54.067 WARN  dse [DseConfigurationManager.hpp:127]  - Configuration not found
+24-07-25 15:34:54.068 WARN  dse [DseConfigurationManager.cpp:698] Conf not found in app_data, the default one will be used
+24-07-25 15:34:54.068 WARN  dse [DseConfigurationManager.cpp:254]  - Stored configuration loaded
+24-07-25 15:34:54.070 WARN  dse [DseConfigurationManager.hpp:127]  - Configuration not found
+24-07-25 15:34:54.070 WARN  dse [DseConfigurationManager.cpp:707] Conf not found in app_data, the default one will be used
+24-07-25 15:34:54.071 WARN  dse [DseConfigurationManager.cpp:127]  - Stored configuration loaded
+24-07-25 15:34:54.093 WARN  dse [DseEngineOutputListener.cpp:58] [EcoA] - Last mission EcoA not found
+24-07-25 15:34:54.094 WARN  dse [DseEngineOutputListener.cpp:58] [EcoB] - Last mission EcoB not found
+24-07-25 15:34:54.190 INFO  dse [DseInterface.cpp:914] Key is ON and DSE is enabled
+24-07-25 15:34:54.191 ERROR dse [DseInterface.cpp:105] Failed to read DSE_CALIBRATION_CONFIGURATION configuration File not found
+24-07-25 15:34:54.202 INFO  dse [DseInterface.cpp:126] DSE calibration configuration PATH : /opt/appl/data/apps/apps_bin/dse/resources/default_configs/DseCalibration.json
+24-07-25 15:34:54.202 INFO  dse [DseInterface.cpp:127] DSE calibration configuration: {    "parameters":{    "PedalPctgBrkpts": [40,60,70,80,90,100],    "AccelBaseScore": [100,90,70,50,25,0],    "PedalPctgBrkpts_FE": [30,40,50,60,70,100],    "AccelBaseScore_FE": [100,70,40,20,5,0],    "SpeedZeroScore": [40,60,120],    "DurationZeroScore" : [0,2,8],    "SpeedTopScore": [40,60,120],    "DurationTopScore" : [10,14.6,38.8],        "SpeedZeroScore_FE": [20,30,50],    "DurationZeroScore_FE" : [0,0.1,0.2],    "SpeedTopScore_FE": [20,30,50],    "DurationTopScore_FE" : [8,10,12],    "NormalizedDuration" : [3,30],    "StopBaseScore" : [0,100],    "NormalizedDuration_FE" : [8,17],    "StopBaseScore_FE" : [0,100],    "NbEventsMax_LateralAcceleration" : [0,10],    "LatJerkTh" : 1.5,    "LatAccelTh" : 2.5,    "SteeringWheelAngleTh" : 2,    "NbEventsMax_LongitudinalAcceleration" : [0,20],    "LongiAccelTh" : 3,    "LongiJerkTh" : 3,    "NbEventsMax_VerticalAcceleration" : [0,5],    "DeflectionVelMassBrkpts_Vertical" : [5000, 10000, 15000],    "DefecltionVelTh_Vertical" : [6, 6.5, 7],    "PressureVelMassBrkpts_Vertical" : [8000, 9000, 10000],    "PressureVelTh_Vertical" : [150, 160, 170],    "Weights_Fuel_Automatic" : [1.3,1.8,2],    "Weights_Fuel_Automatic_FE" : [0.5, 1.5, 3],    "Weights_Fuel_Manual" : [0.3, 1, 1],    "Weights_Comfort" : [0.5, 0.5, 0]    }}
+24-07-25 15:34:54.223 INFO  kharon.SYSM [SystemManager.h:54] Start System manager
+24-07-25 15:34:54.224 INFO  kharon.SYSM [SystemManager.h:71] Get VIN
+24-07-25 15:34:54.246 INFO  kharon.GPSM [GpsManager.h:50] Start GpsManager
+24-07-25 15:34:54.246 INFO  kharon.GPSM [GpsManager.h:83] Calling GpsManager::AddGpsListener
+24-07-25 15:34:54.246 INFO  kharon.GPSM [GpsManager.h:70] Set GpsManager reactor
+24-07-25 15:34:54.267 INFO  kharon.CANM [CanManager.h:61] CAN manager started
+24-07-25 15:34:54.268 INFO  kharon.CANM [CanManager.h:114] Register 75 CAN signals
+24-07-25 15:34:54.292 INFO  dse [DseInterface.cpp:179] DSE configuration changed
+24-07-25 15:34:54.294 INFO  kharon.PWRM [PowerManager.h:60] Starting power manager
+24-07-25 15:34:54.341 INFO  kharon.PWRM [PowerManager.h:143] Add power listener
+24-07-25 15:34:54.389 INFO  dse [DseInterface.cpp:345] DSE Started
+24-07-25 15:34:54.390 INFO  dse [DseEngineOutputListener.cpp:207] [EcoA] - Trip end: update last output
+24-07-25 15:35:03.492 WARN  dse [DseConfigurationManager.hpp:127]  - Configuration not found
+24-07-25 15:35:03.493 WARN  dse [DseConfigurationManager.cpp:669] Conf not found in app_data, the default one will be used
+24-07-25 15:35:03.493 WARN  dse [DseConfigurationManager.cpp:296]  - Stored configuration loaded
+24-07-25 15:35:03.495 WARN  dse [DseConfigurationManager.hpp:127]  - Configuration not found
+24-07-25 15:35:03.495 WARN  dse [DseConfigurationManager.cpp:688] Conf not found in app_data, the default one will be used
+24-07-25 15:35:03.499 WARN  dse [DseConfigurationManager.cpp:211]  - Stored configuration loaded
+24-07-25 15:35:03.500 WARN  dse [DseConfigurationManager.hpp:127]  - Configuration not found
+24-07-25 15:35:03.500 WARN  dse [DseConfigurationManager.cpp:698] Conf not found in app_data, the default one will be used
+24-07-25 15:35:03.500 WARN  dse [DseConfigurationManager.cpp:254]  - Stored configuration loaded
+24-07-25 15:35:03.501 WARN  dse [DseConfigurationManager.hpp:127]  - Configuration not found
+24-07-25 15:35:03.501 WARN  dse [DseConfigurationManager.cpp:707] Conf not found in app_data, the default one will be used
+24-07-25 15:35:03.501 WARN  dse [DseConfigurationManager.cpp:127]  - Stored configuration loaded
+24-07-25 15:35:03.532 WARN  dse [DseEngineOutputListener.cpp:58] [EcoA] - Last mission EcoA not found
+24-07-25 15:35:03.533 WARN  dse [DseEngineOutputListener.cpp:58] [EcoB] - Last mission EcoB not found
+24-07-25 15:35:03.681 INFO  dse [DseInterface.cpp:179] DSE configuration changed
+24-07-25 15:35:03.686 INFO  dse [DseInterface.cpp:126] DSE calibration configuration PATH : /opt/appl/data/apps/apps_data/dse/DseCalibration.json
+24-07-25 15:35:03.686 INFO  dse [DseInterface.cpp:127] DSE calibration configuration: {    "configurationId": "IVGP_BUS_MY24_ALL_IC_DSE_CALIBRATION_V2",    "parameters":{    "PedalPctgBrkpts": [40,60,70,80,90,100],    "AccelBaseScore": [100,90,70,50,25,0],    "PedalPctgBrkpts_FE": [30,40,50,60,70,100],    "AccelBaseScore_FE": [100,70,40,20,5,0],    "SpeedZeroScore": [40,60,120],    "DurationZeroScore" : [0,2,8],    "SpeedTopScore": [40,60,120],    "DurationTopScore" : [10,14.6,38.8],    "SpeedZeroScore_FE": [20,30,50],    "DurationZeroScore_FE" : [0,0.1,0.2],    "SpeedTopScore_FE": [20,30,50],    "DurationTopScore_FE" : [8,10,12],    "NormalizedDuration" : [6,21],    "StopBaseScore" : [0,100],    "NormalizedDuration_FE" : [8,17],    "StopBaseScore_FE" : [0,100],    "NbEventsMax_LateralAcceleration" : [0,10],    "LatJerkTh" : 1.5,    "LatAccelTh" : 2.5,    "SteeringWheelAngleTh" : 2,    "NbEventsMax_LongitudinalAcceleration" : [0,20],    "LongiAccelTh" : 3,    "LongiJerkTh" : 3,    "NbEventsMax_VerticalAcceleration" : [0,5],    "DeflectionVelMassBrkpts_Vertical" : [5000, 10000, 15000],    "DefecltionVelTh_Vertical" : [6, 6.5, 7],    "PressureVelMassBrkpts_Vertical" : [8000, 9000, 10000],    "PressureVelTh_Vertical" : [150, 160, 170],    "Weights_Fuel_Automatic" : [1.3,1.8,2],    "Weights_Fuel_Automatic_FE" : [0.5, 1.5, 3],    "Weights_Fuel_Manual" : [0.3, 1, 1],        "Weights_Comfort" : [0.5, 0.5, 0]    }}
+24-07-25 15:35:03.711 INFO  kharon.SYSM [SystemManager.h:54] Start System manager
+24-07-25 15:35:03.712 INFO  kharon.SYSM [SystemManager.h:71] Get VIN
+24-07-25 15:35:03.738 INFO  dse [DseInterface.cpp:914] Key is ON and DSE is enabled
+24-07-25 15:35:03.746 INFO  kharon.GPSM [GpsManager.h:50] Start GpsManager
+24-07-25 15:35:03.746 INFO  kharon.GPSM [GpsManager.h:83] Calling GpsManager::AddGpsListener
+24-07-25 15:35:03.748 INFO  kharon.GPSM [GpsManager.h:70] Set GpsManager reactor
+24-07-25 15:35:03.761 INFO  kharon.CANM [CanManager.h:61] CAN manager started
+24-07-25 15:35:03.762 INFO  kharon.CANM [CanManager.h:114] Register 75 CAN signals
+24-07-25 15:35:03.803 INFO  kharon.PWRM [PowerManager.h:60] Starting power manager
+24-07-25 15:35:03.842 INFO  kharon.PWRM [PowerManager.h:143] Add power listener
+24-07-25 15:35:03.868 INFO  dse [DseInterface.cpp:345] DSE Started
+24-07-25 15:35:03.920 INFO  dse [DseInterface.cpp:179] DSE configuration changed
+24-07-25 15:35:03.924 INFO  dse [DseEngineOutputListener.cpp:207] [EcoA] - Trip end: update last output
+24-07-25 15:35:12.951 WARN  dse [DseConfigurationManager.hpp:127]  - Configuration not found
+24-07-25 15:35:12.959 WARN  dse [DseConfigurationManager.cpp:688] Conf not found in app_data, the default one will be used
+24-07-25 15:35:12.960 WARN  dse [DseConfigurationManager.cpp:211]  - Stored configuration loaded
+24-07-25 15:35:12.960 WARN  dse [DseConfigurationManager.hpp:127]  - Configuration not found
+24-07-25 15:35:12.960 WARN  dse [DseConfigurationManager.cpp:698] Conf not found in app_data, the default one will be used
+24-07-25 15:35:12.961 WARN  dse [DseConfigurationManager.cpp:254]  - Stored configuration loaded
+24-07-25 15:35:12.985 WARN  dse [DseEngineOutputListener.cpp:58] [EcoA] - Last mission EcoA not found
+24-07-25 15:35:12.985 WARN  dse [DseEngineOutputListener.cpp:58] [EcoB] - Last mission EcoB not found
+24-07-25 15:35:13.071 INFO  dse [DseInterface.cpp:914] Key is ON and DSE is enabled
+24-07-25 15:35:13.080 INFO  dse [DseInterface.cpp:126] DSE calibration configuration PATH : /opt/appl/data/apps/apps_data/dse/DseCalibration.json
+24-07-25 15:35:13.080 INFO  dse [DseInterface.cpp:127] DSE calibration configuration: {    "configurationId": "IVGP_BUS_MY24_ALL_IC_DSE_CALIBRATION_V2",    "parameters":{    "PedalPctgBrkpts": [40,60,70,80,90,100],    "AccelBaseScore": [100,90,70,50,25,0],    "PedalPctgBrkpts_FE": [30,40,50,60,70,100],    "AccelBaseScore_FE": [100,70,40,20,5,0],    "SpeedZeroScore": [40,60,120],    "DurationZeroScore" : [0,2,8],    "SpeedTopScore": [40,60,120],    "DurationTopScore" : [10,14.6,38.8],    "SpeedZeroScore_FE": [20,30,50],    "DurationZeroScore_FE" : [0,0.1,0.2],    "SpeedTopScore_FE": [20,30,50],    "DurationTopScore_FE" : [8,10,12],    "NormalizedDuration" : [6,21],    "StopBaseScore" : [0,100],    "NormalizedDuration_FE" : [8,17],    "StopBaseScore_FE" : [0,100],    "NbEventsMax_LateralAcceleration" : [0,10],    "LatJerkTh" : 1.5,    "LatAccelTh" : 2.5,    "SteeringWheelAngleTh" : 2,    "NbEventsMax_LongitudinalAcceleration" : [0,20],    "LongiAccelTh" : 3,    "LongiJerkTh" : 3,    "NbEventsMax_VerticalAcceleration" : [0,5],    "DeflectionVelMassBrkpts_Vertical" : [5000, 10000, 15000],    "DefecltionVelTh_Vertical" : [6, 6.5, 7],    "PressureVelMassBrkpts_Vertical" : [8000, 9000, 10000],    "PressureVelTh_Vertical" : [150, 160, 170],    "Weights_Fuel_Automatic" : [1.3,1.8,2],    "Weights_Fuel_Automatic_FE" : [0.5, 1.5, 3],    "Weights_Fuel_Manual" : [0.3, 1, 1],        "Weights_Comfort" : [0.5, 0.5, 0]    }}
+24-07-25 15:35:13.091 INFO  kharon.SYSM [SystemManager.h:54] Start System manager
+24-07-25 15:35:13.091 INFO  kharon.SYSM [SystemManager.h:71] Get VIN
+24-07-25 15:35:13.115 INFO  kharon.GPSM [GpsManager.h:50] Start GpsManager
+24-07-25 15:35:13.115 INFO  kharon.GPSM [GpsManager.h:83] Calling GpsManager::AddGpsListener
+24-07-25 15:35:13.115 INFO  kharon.GPSM [GpsManager.h:70] Set GpsManager reactor
+24-07-25 15:35:13.125 INFO  kharon.CANM [CanManager.h:61] CAN manager started
+24-07-25 15:35:13.126 INFO  kharon.CANM [CanManager.h:114] Register 75 CAN signals
+24-07-25 15:35:13.172 INFO  dse [DseInterface.cpp:179] DSE configuration changed
+24-07-25 15:35:13.183 INFO  kharon.PWRM [PowerManager.h:60] Starting power manager
+24-07-25 15:35:13.207 INFO  kharon.PWRM [PowerManager.h:143] Add power listener
+24-07-25 15:35:13.235 INFO  dse [DseInterface.cpp:345] DSE Started
+24-07-25 15:35:13.237 INFO  dse [DseEngineOutputListener.cpp:207] [EcoA] - Trip end: update last output
+24-07-25 15:35:22.210 WARN  dse [DseConfigurationManager.hpp:127]  - Configuration not found
+24-07-25 15:35:22.213 WARN  dse [DseConfigurationManager.cpp:688] Conf not found in app_data, the default one will be used
+24-07-25 15:35:22.213 WARN  dse [DseConfigurationManager.cpp:211]  - Stored configuration loaded
+24-07-25 15:35:22.266 WARN  dse [DseEngineOutputListener.cpp:58] [EcoA] - Last mission EcoA not found
+24-07-25 15:35:22.267 WARN  dse [DseEngineOutputListener.cpp:58] [EcoB] - Last mission EcoB not found
+24-07-25 15:35:22.346 INFO  dse [DseInterface.cpp:914] Key is ON and DSE is enabled
+24-07-25 15:35:22.350 INFO  dse [DseInterface.cpp:126] DSE calibration configuration PATH : /opt/appl/data/apps/apps_data/dse/DseCalibration.json
+24-07-25 15:35:22.351 INFO  dse [DseInterface.cpp:127] DSE calibration configuration: {    "configurationId": "IVGP_BUS_MY24_ALL_IC_DSE_CALIBRATION_V2",    "parameters":{    "PedalPctgBrkpts": [40,60,70,80,90,100],    "AccelBaseScore": [100,90,70,50,25,0],    "PedalPctgBrkpts_FE": [30,40,50,60,70,100],    "AccelBaseScore_FE": [100,70,40,20,5,0],    "SpeedZeroScore": [40,60,120],    "DurationZeroScore" : [0,2,8],    "SpeedTopScore": [40,60,120],    "DurationTopScore" : [10,14.6,38.8],    "SpeedZeroScore_FE": [20,30,50],    "DurationZeroScore_FE" : [0,0.1,0.2],    "SpeedTopScore_FE": [20,30,50],    "DurationTopScore_FE" : [8,10,12],    "NormalizedDuration" : [6,21],    "StopBaseScore" : [0,100],    "NormalizedDuration_FE" : [8,17],    "StopBaseScore_FE" : [0,100],    "NbEventsMax_LateralAcceleration" : [0,10],    "LatJerkTh" : 1.5,    "LatAccelTh" : 2.5,    "SteeringWheelAngleTh" : 2,    "NbEventsMax_LongitudinalAcceleration" : [0,20],    "LongiAccelTh" : 3,    "LongiJerkTh" : 3,    "NbEventsMax_VerticalAcceleration" : [0,5],    "DeflectionVelMassBrkpts_Vertical" : [5000, 10000, 15000],    "DefecltionVelTh_Vertical" : [6, 6.5, 7],    "PressureVelMassBrkpts_Vertical" : [8000, 9000, 10000],    "PressureVelTh_Vertical" : [150, 160, 170],    "Weights_Fuel_Automatic" : [1.3,1.8,2],    "Weights_Fuel_Automatic_FE" : [0.5, 1.5, 3],    "Weights_Fuel_Manual" : [0.3, 1, 1],        "Weights_Comfort" : [0.5, 0.5, 0]    }}
+24-07-25 15:35:22.363 INFO  kharon.SYSM [SystemManager.h:54] Start System manager
+24-07-25 15:35:22.363 INFO  kharon.SYSM [SystemManager.h:71] Get VIN
+24-07-25 15:35:22.427 INFO  kharon.GPSM [GpsManager.h:50] Start GpsManager
+24-07-25 15:35:22.427 INFO  kharon.GPSM [GpsManager.h:83] Calling GpsManager::AddGpsListener
+24-07-25 15:35:22.428 INFO  kharon.GPSM [GpsManager.h:70] Set GpsManager reactor
+24-07-25 15:35:22.447 INFO  kharon.CANM [CanManager.h:61] CAN manager started
+24-07-25 15:35:22.447 INFO  kharon.CANM [CanManager.h:114] Register 75 CAN signals
+24-07-25 15:35:22.460 INFO  dse [DseInterface.cpp:179] DSE configuration changed
+24-07-25 15:35:22.470 INFO  kharon.PWRM [PowerManager.h:60] Starting power manager
+24-07-25 15:35:22.477 INFO  kharon.PWRM [PowerManager.h:143] Add power listener
+24-07-25 15:35:22.490 INFO  dse [DseInterface.cpp:345] DSE Started
+24-07-25 15:35:22.495 INFO  dse [DseEngineOutputListener.cpp:207] [EcoA] - Trip end: update last output
+24-07-25 15:35:31.466 WARN  dse [DseEngineOutputListener.cpp:58] [EcoA] - Last mission EcoA not found
+24-07-25 15:35:31.467 WARN  dse [DseEngineOutputListener.cpp:58] [EcoB] - Last mission EcoB not found
+24-07-25 15:35:31.569 INFO  dse [DseInterface.cpp:914] Key is ON and DSE is enabled
+24-07-25 15:35:31.572 INFO  dse [DseInterface.cpp:126] DSE calibration configuration PATH : /opt/appl/data/apps/apps_data/dse/DseCalibration.json
+24-07-25 15:35:31.573 INFO  dse [DseInterface.cpp:127] DSE calibration configuration: {    "configurationId": "IVGP_BUS_MY24_ALL_IC_DSE_CALIBRATION_V2",    "parameters":{    "PedalPctgBrkpts": [40,60,70,80,90,100],    "AccelBaseScore": [100,90,70,50,25,0],    "PedalPctgBrkpts_FE": [30,40,50,60,70,100],    "AccelBaseScore_FE": [100,70,40,20,5,0],    "SpeedZeroScore": [40,60,120],    "DurationZeroScore" : [0,2,8],    "SpeedTopScore": [40,60,120],    "DurationTopScore" : [10,14.6,38.8],    "SpeedZeroScore_FE": [20,30,50],    "DurationZeroScore_FE" : [0,0.1,0.2],    "SpeedTopScore_FE": [20,30,50],    "DurationTopScore_FE" : [8,10,12],    "NormalizedDuration" : [6,21],    "StopBaseScore" : [0,100],    "NormalizedDuration_FE" : [8,17],    "StopBaseScore_FE" : [0,100],    "NbEventsMax_LateralAcceleration" : [0,10],    "LatJerkTh" : 1.5,    "LatAccelTh" : 2.5,    "SteeringWheelAngleTh" : 2,    "NbEventsMax_LongitudinalAcceleration" : [0,20],    "LongiAccelTh" : 3,    "LongiJerkTh" : 3,    "NbEventsMax_VerticalAcceleration" : [0,5],    "DeflectionVelMassBrkpts_Vertical" : [5000, 10000, 15000],    "DefecltionVelTh_Vertical" : [6, 6.5, 7],    "PressureVelMassBrkpts_Vertical" : [8000, 9000, 10000],    "PressureVelTh_Vertical" : [150, 160, 170],    "Weights_Fuel_Automatic" : [1.3,1.8,2],    "Weights_Fuel_Automatic_FE" : [0.5, 1.5, 3],    "Weights_Fuel_Manual" : [0.3, 1, 1],        "Weights_Comfort" : [0.5, 0.5, 0]    }}
+24-07-25 15:35:31.582 INFO  kharon.SYSM [SystemManager.h:54] Start System manager
+24-07-25 15:35:31.583 INFO  kharon.SYSM [SystemManager.h:71] Get VIN
+24-07-25 15:35:31.598 INFO  kharon.GPSM [GpsManager.h:50] Start GpsManager
+24-07-25 15:35:31.599 INFO  kharon.GPSM [GpsManager.h:83] Calling GpsManager::AddGpsListener
+24-07-25 15:35:31.599 INFO  kharon.GPSM [GpsManager.h:70] Set GpsManager reactor
+24-07-25 15:35:31.606 INFO  kharon.CANM [CanManager.h:61] CAN manager started
+24-07-25 15:35:31.607 INFO  kharon.CANM [CanManager.h:114] Register 75 CAN signals
+24-07-25 15:35:31.624 INFO  kharon.PWRM [PowerManager.h:60] Starting power manager
+24-07-25 15:35:31.628 INFO  kharon.PWRM [PowerManager.h:143] Add power listener
+24-07-25 15:35:31.653 INFO  dse [DseInterface.cpp:345] DSE Started
+24-07-25 15:35:31.655 INFO  kharon.PWRM [PowerManager.h:101] Get key status
+24-07-25 15:35:32.162 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_trip_start
+24-07-25 15:35:32.169 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_trip_start
+24-07-25 15:56:52.144 WARN  dse [DseEngineOutputListener.cpp:58] [EcoA] - Last mission EcoA not found
+24-07-25 15:56:52.152 WARN  dse [DseEngineOutputListener.cpp:58] [EcoB] - Last mission EcoB not found
+24-07-25 15:56:52.220 INFO  dse [DseInterface.cpp:914] Key is ON and DSE is enabled
+24-07-25 15:56:52.233 INFO  dse [DseInterface.cpp:126] DSE calibration configuration PATH : /opt/appl/data/apps/apps_data/dse/DseCalibration.json
+24-07-25 15:56:52.234 INFO  dse [DseInterface.cpp:127] DSE calibration configuration: {    "configurationId": "IVGP_BUS_MY24_ALL_IC_DSE_CALIBRATION_V2",    "parameters":{    "PedalPctgBrkpts": [40,60,70,80,90,100],    "AccelBaseScore": [100,90,70,50,25,0],    "PedalPctgBrkpts_FE": [30,40,50,60,70,100],    "AccelBaseScore_FE": [100,70,40,20,5,0],    "SpeedZeroScore": [40,60,120],    "DurationZeroScore" : [0,2,8],    "SpeedTopScore": [40,60,120],    "DurationTopScore" : [10,14.6,38.8],    "SpeedZeroScore_FE": [20,30,50],    "DurationZeroScore_FE" : [0,0.1,0.2],    "SpeedTopScore_FE": [20,30,50],    "DurationTopScore_FE" : [8,10,12],    "NormalizedDuration" : [6,21],    "StopBaseScore" : [0,100],    "NormalizedDuration_FE" : [8,17],    "StopBaseScore_FE" : [0,100],    "NbEventsMax_LateralAcceleration" : [0,10],    "LatJerkTh" : 1.5,    "LatAccelTh" : 2.5,    "SteeringWheelAngleTh" : 2,    "NbEventsMax_LongitudinalAcceleration" : [0,20],    "LongiAccelTh" : 3,    "LongiJerkTh" : 3,    "NbEventsMax_VerticalAcceleration" : [0,5],    "DeflectionVelMassBrkpts_Vertical" : [5000, 10000, 15000],    "DefecltionVelTh_Vertical" : [6, 6.5, 7],    "PressureVelMassBrkpts_Vertical" : [8000, 9000, 10000],    "PressureVelTh_Vertical" : [150, 160, 170],    "Weights_Fuel_Automatic" : [1.3,1.8,2],    "Weights_Fuel_Automatic_FE" : [0.5, 1.5, 3],    "Weights_Fuel_Manual" : [0.3, 1, 1],        "Weights_Comfort" : [0.5, 0.5, 0]    }}
+24-07-25 15:56:52.246 INFO  kharon.SYSM [SystemManager.h:54] Start System manager
+24-07-25 15:56:52.249 INFO  kharon.SYSM [SystemManager.h:71] Get VIN
+24-07-25 15:56:52.266 INFO  kharon.GPSM [GpsManager.h:50] Start GpsManager
+24-07-25 15:56:52.269 INFO  kharon.GPSM [GpsManager.h:83] Calling GpsManager::AddGpsListener
+24-07-25 15:56:52.274 INFO  kharon.GPSM [GpsManager.h:70] Set GpsManager reactor
+24-07-25 15:56:52.298 INFO  kharon.CANM [CanManager.h:61] CAN manager started
+24-07-25 15:56:52.303 INFO  kharon.CANM [CanManager.h:114] Register 75 CAN signals
+24-07-25 15:56:52.314 INFO  kharon.PWRM [PowerManager.h:60] Starting power manager
+24-07-25 15:56:52.328 INFO  kharon.PWRM [PowerManager.h:143] Add power listener
+24-07-25 15:56:52.352 INFO  dse [DseInterface.cpp:345] DSE Started
+24-07-25 15:56:52.855 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_trip_start
+24-07-25 15:56:52.862 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_trip_start
+21-08-25 07:48:08.590 WARN  dse [DseEngineOutputListener.cpp:58] [EcoA] - Last mission EcoA not found
+21-08-25 07:48:08.595 WARN  dse [DseEngineOutputListener.cpp:58] [EcoB] - Last mission EcoB not found
+21-08-25 07:48:08.718 INFO  dse [DseInterface.cpp:914] Key is ON and DSE is enabled
+21-08-25 07:48:08.722 INFO  dse [DseInterface.cpp:126] DSE calibration configuration PATH : /opt/appl/data/apps/apps_data/dse/DseCalibration.json
+21-08-25 07:48:08.723 INFO  dse [DseInterface.cpp:127] DSE calibration configuration: {    "configurationId": "IVGP_BUS_MY24_ALL_IC_DSE_CALIBRATION_V2",    "parameters":{    "PedalPctgBrkpts": [40,60,70,80,90,100],    "AccelBaseScore": [100,90,70,50,25,0],    "PedalPctgBrkpts_FE": [30,40,50,60,70,100],    "AccelBaseScore_FE": [100,70,40,20,5,0],    "SpeedZeroScore": [40,60,120],    "DurationZeroScore" : [0,2,8],    "SpeedTopScore": [40,60,120],    "DurationTopScore" : [10,14.6,38.8],    "SpeedZeroScore_FE": [20,30,50],    "DurationZeroScore_FE" : [0,0.1,0.2],    "SpeedTopScore_FE": [20,30,50],    "DurationTopScore_FE" : [8,10,12],    "NormalizedDuration" : [6,21],    "StopBaseScore" : [0,100],    "NormalizedDuration_FE" : [8,17],    "StopBaseScore_FE" : [0,100],    "NbEventsMax_LateralAcceleration" : [0,10],    "LatJerkTh" : 1.5,    "LatAccelTh" : 2.5,    "SteeringWheelAngleTh" : 2,    "NbEventsMax_LongitudinalAcceleration" : [0,20],    "LongiAccelTh" : 3,    "LongiJerkTh" : 3,    "NbEventsMax_VerticalAcceleration" : [0,5],    "DeflectionVelMassBrkpts_Vertical" : [5000, 10000, 15000],    "DefecltionVelTh_Vertical" : [6, 6.5, 7],    "PressureVelMassBrkpts_Vertical" : [8000, 9000, 10000],    "PressureVelTh_Vertical" : [150, 160, 170],    "Weights_Fuel_Automatic" : [1.3,1.8,2],    "Weights_Fuel_Automatic_FE" : [0.5, 1.5, 3],    "Weights_Fuel_Manual" : [0.3, 1, 1],        "Weights_Comfort" : [0.5, 0.5, 0]    }}
+21-08-25 07:48:08.732 INFO  kharon.SYSM [SystemManager.h:54] Start System manager
+21-08-25 07:48:08.734 INFO  kharon.SYSM [SystemManager.h:71] Get VIN
+21-08-25 07:48:08.752 INFO  kharon.GPSM [GpsManager.h:50] Start GpsManager
+21-08-25 07:48:08.752 INFO  kharon.GPSM [GpsManager.h:83] Calling GpsManager::AddGpsListener
+21-08-25 07:48:08.755 INFO  kharon.GPSM [GpsManager.h:70] Set GpsManager reactor
+21-08-25 07:48:08.770 INFO  kharon.CANM [CanManager.h:61] CAN manager started
+21-08-25 07:48:08.770 INFO  kharon.CANM [CanManager.h:114] Register 75 CAN signals
+21-08-25 07:48:08.785 INFO  kharon.PWRM [PowerManager.h:60] Starting power manager
+21-08-25 07:48:08.806 INFO  kharon.PWRM [PowerManager.h:143] Add power listener
+21-08-25 07:48:08.834 INFO  dse [DseInterface.cpp:345] DSE Started
+21-08-25 07:48:09.338 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_trip_start
+21-08-25 07:48:09.350 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_trip_start
+21-08-25 08:15:37.310 WARN  kharon.PWRR [PowerReactor.h:383] Received unhandled power event
+21-08-25 08:22:26.928 WARN  kharon.PWRR [PowerReactor.h:383] Received unhandled power event
+21-08-25 08:22:27.875 ERROR kharon.PWRR [PowerReactor.h:321] Unrecoverable stream error: "Could not write request to the stream, power reactor OnWriteDone() returned false". Notifying error listener and terminating
+21-08-25 08:22:27.876 ERROR kharon.GPSR [GpsReactor.h:173] Unrecoverable stream error: "Could not read response from the stream, GPS reactor OnReadDone() returned false". Notifying error listener and terminating
+21-08-25 08:22:27.991 ERROR dse [PowerManagement.cpp:194] OnReadDone event failed
+21-08-25 08:22:28.005 ERROR dse [PowerManagement.cpp:209] OnDone failed, error_code: 13, error_details: , error_message: Received RST_STREAM with error code 2
+21-08-25 08:27:51.349 WARN  dse [DseEngineOutputListener.cpp:58] [EcoA] - Last mission EcoA not found
+21-08-25 08:27:51.353 WARN  dse [DseEngineOutputListener.cpp:58] [EcoB] - Last mission EcoB not found
+21-08-25 08:27:51.443 INFO  dse [DseInterface.cpp:914] Key is ON and DSE is enabled
+21-08-25 08:27:51.445 INFO  dse [DseInterface.cpp:126] DSE calibration configuration PATH : /opt/appl/data/apps/apps_data/dse/DseCalibration.json
+21-08-25 08:27:51.445 INFO  dse [DseInterface.cpp:127] DSE calibration configuration: {    "configurationId": "IVGP_BUS_MY24_ALL_IC_DSE_CALIBRATION_V2",    "parameters":{    "PedalPctgBrkpts": [40,60,70,80,90,100],    "AccelBaseScore": [100,90,70,50,25,0],    "PedalPctgBrkpts_FE": [30,40,50,60,70,100],    "AccelBaseScore_FE": [100,70,40,20,5,0],    "SpeedZeroScore": [40,60,120],    "DurationZeroScore" : [0,2,8],    "SpeedTopScore": [40,60,120],    "DurationTopScore" : [10,14.6,38.8],    "SpeedZeroScore_FE": [20,30,50],    "DurationZeroScore_FE" : [0,0.1,0.2],    "SpeedTopScore_FE": [20,30,50],    "DurationTopScore_FE" : [8,10,12],    "NormalizedDuration" : [6,21],    "StopBaseScore" : [0,100],    "NormalizedDuration_FE" : [8,17],    "StopBaseScore_FE" : [0,100],    "NbEventsMax_LateralAcceleration" : [0,10],    "LatJerkTh" : 1.5,    "LatAccelTh" : 2.5,    "SteeringWheelAngleTh" : 2,    "NbEventsMax_LongitudinalAcceleration" : [0,20],    "LongiAccelTh" : 3,    "LongiJerkTh" : 3,    "NbEventsMax_VerticalAcceleration" : [0,5],    "DeflectionVelMassBrkpts_Vertical" : [5000, 10000, 15000],    "DefecltionVelTh_Vertical" : [6, 6.5, 7],    "PressureVelMassBrkpts_Vertical" : [8000, 9000, 10000],    "PressureVelTh_Vertical" : [150, 160, 170],    "Weights_Fuel_Automatic" : [1.3,1.8,2],    "Weights_Fuel_Automatic_FE" : [0.5, 1.5, 3],    "Weights_Fuel_Manual" : [0.3, 1, 1],        "Weights_Comfort" : [0.5, 0.5, 0]    }}
+21-08-25 08:27:51.457 INFO  kharon.SYSM [SystemManager.h:54] Start System manager
+21-08-25 08:27:51.458 INFO  kharon.SYSM [SystemManager.h:71] Get VIN
+21-08-25 08:27:51.475 INFO  kharon.GPSM [GpsManager.h:50] Start GpsManager
+21-08-25 08:27:51.475 INFO  kharon.GPSM [GpsManager.h:83] Calling GpsManager::AddGpsListener
+21-08-25 08:27:51.475 INFO  kharon.GPSM [GpsManager.h:70] Set GpsManager reactor
+21-08-25 08:27:51.486 INFO  kharon.CANM [CanManager.h:61] CAN manager started
+21-08-25 08:27:51.486 INFO  kharon.CANM [CanManager.h:114] Register 75 CAN signals
+21-08-25 08:27:51.496 INFO  kharon.PWRM [PowerManager.h:60] Starting power manager
+21-08-25 08:27:51.505 INFO  kharon.PWRM [PowerManager.h:143] Add power listener
+21-08-25 08:27:51.526 INFO  dse [DseInterface.cpp:345] DSE Started
+21-08-25 08:27:51.529 INFO  kharon.PWRM [PowerManager.h:101] Get key status
+21-08-25 08:27:52.035 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_trip_start
+21-08-25 08:27:52.052 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_trip_start
+21-08-25 15:01:28.533 WARN  dse [DseEngineOutputListener.cpp:58] [EcoA] - Last mission EcoA not found
+21-08-25 15:01:28.539 WARN  dse [DseEngineOutputListener.cpp:58] [EcoB] - Last mission EcoB not found
+21-08-25 15:01:28.625 INFO  dse [DseInterface.cpp:914] Key is ON and DSE is enabled
+21-08-25 15:01:28.627 INFO  dse [DseInterface.cpp:126] DSE calibration configuration PATH : /opt/appl/data/apps/apps_data/dse/DseCalibration.json
+21-08-25 15:01:28.627 INFO  dse [DseInterface.cpp:127] DSE calibration configuration: {    "configurationId": "IVGP_BUS_MY24_ALL_IC_DSE_CALIBRATION_V2",    "parameters":{    "PedalPctgBrkpts": [40,60,70,80,90,100],    "AccelBaseScore": [100,90,70,50,25,0],    "PedalPctgBrkpts_FE": [30,40,50,60,70,100],    "AccelBaseScore_FE": [100,70,40,20,5,0],    "SpeedZeroScore": [40,60,120],    "DurationZeroScore" : [0,2,8],    "SpeedTopScore": [40,60,120],    "DurationTopScore" : [10,14.6,38.8],    "SpeedZeroScore_FE": [20,30,50],    "DurationZeroScore_FE" : [0,0.1,0.2],    "SpeedTopScore_FE": [20,30,50],    "DurationTopScore_FE" : [8,10,12],    "NormalizedDuration" : [6,21],    "StopBaseScore" : [0,100],    "NormalizedDuration_FE" : [8,17],    "StopBaseScore_FE" : [0,100],    "NbEventsMax_LateralAcceleration" : [0,10],    "LatJerkTh" : 1.5,    "LatAccelTh" : 2.5,    "SteeringWheelAngleTh" : 2,    "NbEventsMax_LongitudinalAcceleration" : [0,20],    "LongiAccelTh" : 3,    "LongiJerkTh" : 3,    "NbEventsMax_VerticalAcceleration" : [0,5],    "DeflectionVelMassBrkpts_Vertical" : [5000, 10000, 15000],    "DefecltionVelTh_Vertical" : [6, 6.5, 7],    "PressureVelMassBrkpts_Vertical" : [8000, 9000, 10000],    "PressureVelTh_Vertical" : [150, 160, 170],    "Weights_Fuel_Automatic" : [1.3,1.8,2],    "Weights_Fuel_Automatic_FE" : [0.5, 1.5, 3],    "Weights_Fuel_Manual" : [0.3, 1, 1],        "Weights_Comfort" : [0.5, 0.5, 0]    }}
+21-08-25 15:01:28.640 INFO  kharon.SYSM [SystemManager.h:54] Start System manager
+21-08-25 15:01:28.643 INFO  kharon.SYSM [SystemManager.h:71] Get VIN
+21-08-25 15:01:28.661 INFO  kharon.GPSM [GpsManager.h:50] Start GpsManager
+21-08-25 15:01:28.661 INFO  kharon.GPSM [GpsManager.h:83] Calling GpsManager::AddGpsListener
+21-08-25 15:01:28.664 INFO  kharon.GPSM [GpsManager.h:70] Set GpsManager reactor
+21-08-25 15:01:28.681 INFO  kharon.CANM [CanManager.h:61] CAN manager started
+21-08-25 15:01:28.682 INFO  kharon.CANM [CanManager.h:114] Register 75 CAN signals
+21-08-25 15:01:28.706 INFO  kharon.PWRM [PowerManager.h:60] Starting power manager
+21-08-25 15:01:28.725 INFO  kharon.PWRM [PowerManager.h:143] Add power listener
+21-08-25 15:01:28.766 INFO  dse [DseInterface.cpp:345] DSE Started
+21-08-25 15:01:29.276 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_trip_start
+21-08-25 15:01:29.283 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_trip_start
+22-08-25 07:39:57.084 WARN  dse [DseEngineOutputListener.cpp:58] [EcoA] - Last mission EcoA not found
+22-08-25 07:39:57.088 WARN  dse [DseEngineOutputListener.cpp:58] [EcoB] - Last mission EcoB not found
+22-08-25 07:39:57.170 INFO  dse [DseInterface.cpp:914] Key is ON and DSE is enabled
+22-08-25 07:39:57.172 INFO  dse [DseInterface.cpp:126] DSE calibration configuration PATH : /opt/appl/data/apps/apps_data/dse/DseCalibration.json
+22-08-25 07:39:57.172 INFO  dse [DseInterface.cpp:127] DSE calibration configuration: {    "configurationId": "IVGP_BUS_MY24_ALL_IC_DSE_CALIBRATION_V2",    "parameters":{    "PedalPctgBrkpts": [40,60,70,80,90,100],    "AccelBaseScore": [100,90,70,50,25,0],    "PedalPctgBrkpts_FE": [30,40,50,60,70,100],    "AccelBaseScore_FE": [100,70,40,20,5,0],    "SpeedZeroScore": [40,60,120],    "DurationZeroScore" : [0,2,8],    "SpeedTopScore": [40,60,120],    "DurationTopScore" : [10,14.6,38.8],    "SpeedZeroScore_FE": [20,30,50],    "DurationZeroScore_FE" : [0,0.1,0.2],    "SpeedTopScore_FE": [20,30,50],    "DurationTopScore_FE" : [8,10,12],    "NormalizedDuration" : [6,21],    "StopBaseScore" : [0,100],    "NormalizedDuration_FE" : [8,17],    "StopBaseScore_FE" : [0,100],    "NbEventsMax_LateralAcceleration" : [0,10],    "LatJerkTh" : 1.5,    "LatAccelTh" : 2.5,    "SteeringWheelAngleTh" : 2,    "NbEventsMax_LongitudinalAcceleration" : [0,20],    "LongiAccelTh" : 3,    "LongiJerkTh" : 3,    "NbEventsMax_VerticalAcceleration" : [0,5],    "DeflectionVelMassBrkpts_Vertical" : [5000, 10000, 15000],    "DefecltionVelTh_Vertical" : [6, 6.5, 7],    "PressureVelMassBrkpts_Vertical" : [8000, 9000, 10000],    "PressureVelTh_Vertical" : [150, 160, 170],    "Weights_Fuel_Automatic" : [1.3,1.8,2],    "Weights_Fuel_Automatic_FE" : [0.5, 1.5, 3],    "Weights_Fuel_Manual" : [0.3, 1, 1],        "Weights_Comfort" : [0.5, 0.5, 0]    }}
+22-08-25 07:39:57.184 INFO  kharon.SYSM [SystemManager.h:54] Start System manager
+22-08-25 07:39:57.186 INFO  kharon.SYSM [SystemManager.h:71] Get VIN
+22-08-25 07:39:57.202 INFO  kharon.GPSM [GpsManager.h:50] Start GpsManager
+22-08-25 07:39:57.202 INFO  kharon.GPSM [GpsManager.h:83] Calling GpsManager::AddGpsListener
+22-08-25 07:39:57.205 INFO  kharon.GPSM [GpsManager.h:70] Set GpsManager reactor
+22-08-25 07:39:57.213 INFO  kharon.CANM [CanManager.h:61] CAN manager started
+22-08-25 07:39:57.213 INFO  kharon.CANM [CanManager.h:114] Register 75 CAN signals
+22-08-25 07:39:57.236 INFO  kharon.PWRM [PowerManager.h:60] Starting power manager
+22-08-25 07:39:57.241 INFO  kharon.PWRM [PowerManager.h:143] Add power listener
+22-08-25 07:39:57.268 INFO  dse [DseInterface.cpp:345] DSE Started
+22-08-25 07:39:57.780 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_trip_start
+22-08-25 07:39:57.787 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_trip_start
+22-08-25 08:37:11.788 WARN  dse [DseEngineOutputListener.cpp:58] [EcoA] - Last mission EcoA not found
+22-08-25 08:37:11.821 WARN  dse [DseEngineOutputListener.cpp:58] [EcoB] - Last mission EcoB not found
+22-08-25 08:37:11.920 INFO  dse [DseInterface.cpp:914] Key is ON and DSE is enabled
+22-08-25 08:37:11.922 INFO  dse [DseInterface.cpp:126] DSE calibration configuration PATH : /opt/appl/data/apps/apps_data/dse/DseCalibration.json
+22-08-25 08:37:11.922 INFO  dse [DseInterface.cpp:127] DSE calibration configuration: {    "configurationId": "IVGP_BUS_MY24_ALL_IC_DSE_CALIBRATION_V2",    "parameters":{    "PedalPctgBrkpts": [40,60,70,80,90,100],    "AccelBaseScore": [100,90,70,50,25,0],    "PedalPctgBrkpts_FE": [30,40,50,60,70,100],    "AccelBaseScore_FE": [100,70,40,20,5,0],    "SpeedZeroScore": [40,60,120],    "DurationZeroScore" : [0,2,8],    "SpeedTopScore": [40,60,120],    "DurationTopScore" : [10,14.6,38.8],    "SpeedZeroScore_FE": [20,30,50],    "DurationZeroScore_FE" : [0,0.1,0.2],    "SpeedTopScore_FE": [20,30,50],    "DurationTopScore_FE" : [8,10,12],    "NormalizedDuration" : [6,21],    "StopBaseScore" : [0,100],    "NormalizedDuration_FE" : [8,17],    "StopBaseScore_FE" : [0,100],    "NbEventsMax_LateralAcceleration" : [0,10],    "LatJerkTh" : 1.5,    "LatAccelTh" : 2.5,    "SteeringWheelAngleTh" : 2,    "NbEventsMax_LongitudinalAcceleration" : [0,20],    "LongiAccelTh" : 3,    "LongiJerkTh" : 3,    "NbEventsMax_VerticalAcceleration" : [0,5],    "DeflectionVelMassBrkpts_Vertical" : [5000, 10000, 15000],    "DefecltionVelTh_Vertical" : [6, 6.5, 7],    "PressureVelMassBrkpts_Vertical" : [8000, 9000, 10000],    "PressureVelTh_Vertical" : [150, 160, 170],    "Weights_Fuel_Automatic" : [1.3,1.8,2],    "Weights_Fuel_Automatic_FE" : [0.5, 1.5, 3],    "Weights_Fuel_Manual" : [0.3, 1, 1],        "Weights_Comfort" : [0.5, 0.5, 0]    }}
+22-08-25 08:37:11.938 INFO  kharon.SYSM [SystemManager.h:54] Start System manager
+22-08-25 08:37:11.941 INFO  kharon.SYSM [SystemManager.h:71] Get VIN
+22-08-25 08:37:11.960 INFO  kharon.GPSM [GpsManager.h:50] Start GpsManager
+22-08-25 08:37:11.960 INFO  kharon.GPSM [GpsManager.h:83] Calling GpsManager::AddGpsListener
+22-08-25 08:37:11.963 INFO  kharon.GPSM [GpsManager.h:70] Set GpsManager reactor
+22-08-25 08:37:11.973 INFO  kharon.CANM [CanManager.h:61] CAN manager started
+22-08-25 08:37:11.974 INFO  kharon.CANM [CanManager.h:114] Register 75 CAN signals
+22-08-25 08:37:11.982 INFO  kharon.PWRM [PowerManager.h:60] Starting power manager
+22-08-25 08:37:11.984 INFO  kharon.PWRM [PowerManager.h:143] Add power listener
+22-08-25 08:37:11.995 INFO  dse [DseInterface.cpp:345] DSE Started
+22-08-25 08:37:11.996 INFO  kharon.PWRM [PowerManager.h:101] Get key status
+22-08-25 08:37:12.503 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_trip_start
+22-08-25 08:37:12.509 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_trip_start
+22-08-25 08:40:24.760 ERROR kharon.PWRR [PowerReactor.h:321] Unrecoverable stream error: "Could not write request to the stream, power reactor OnWriteDone() returned false". Notifying error listener and terminating
+22-08-25 08:40:24.775 ERROR kharon.GPSR [GpsReactor.h:173] Unrecoverable stream error: "Could not read response from the stream, GPS reactor OnReadDone() returned false". Notifying error listener and terminating
+22-08-25 08:40:25.112 ERROR dse [PowerManagement.cpp:194] OnReadDone event failed
+22-08-25 08:40:25.112 ERROR dse [PowerManagement.cpp:209] OnDone failed, error_code: 13, error_details: , error_message: Received RST_STREAM with error code 2
+22-08-25 08:44:20.589 WARN  dse [DseEngineOutputListener.cpp:58] [EcoA] - Last mission EcoA not found
+22-08-25 08:44:20.600 WARN  dse [DseEngineOutputListener.cpp:58] [EcoB] - Last mission EcoB not found
+22-08-25 08:44:20.702 INFO  dse [DseInterface.cpp:914] Key is ON and DSE is enabled
+22-08-25 08:44:20.706 INFO  dse [DseInterface.cpp:126] DSE calibration configuration PATH : /opt/appl/data/apps/apps_data/dse/DseCalibration.json
+22-08-25 08:44:20.707 INFO  dse [DseInterface.cpp:127] DSE calibration configuration: {    "configurationId": "IVGP_BUS_MY24_ALL_IC_DSE_CALIBRATION_V2",    "parameters":{    "PedalPctgBrkpts": [40,60,70,80,90,100],    "AccelBaseScore": [100,90,70,50,25,0],    "PedalPctgBrkpts_FE": [30,40,50,60,70,100],    "AccelBaseScore_FE": [100,70,40,20,5,0],    "SpeedZeroScore": [40,60,120],    "DurationZeroScore" : [0,2,8],    "SpeedTopScore": [40,60,120],    "DurationTopScore" : [10,14.6,38.8],    "SpeedZeroScore_FE": [20,30,50],    "DurationZeroScore_FE" : [0,0.1,0.2],    "SpeedTopScore_FE": [20,30,50],    "DurationTopScore_FE" : [8,10,12],    "NormalizedDuration" : [6,21],    "StopBaseScore" : [0,100],    "NormalizedDuration_FE" : [8,17],    "StopBaseScore_FE" : [0,100],    "NbEventsMax_LateralAcceleration" : [0,10],    "LatJerkTh" : 1.5,    "LatAccelTh" : 2.5,    "SteeringWheelAngleTh" : 2,    "NbEventsMax_LongitudinalAcceleration" : [0,20],    "LongiAccelTh" : 3,    "LongiJerkTh" : 3,    "NbEventsMax_VerticalAcceleration" : [0,5],    "DeflectionVelMassBrkpts_Vertical" : [5000, 10000, 15000],    "DefecltionVelTh_Vertical" : [6, 6.5, 7],    "PressureVelMassBrkpts_Vertical" : [8000, 9000, 10000],    "PressureVelTh_Vertical" : [150, 160, 170],    "Weights_Fuel_Automatic" : [1.3,1.8,2],    "Weights_Fuel_Automatic_FE" : [0.5, 1.5, 3],    "Weights_Fuel_Manual" : [0.3, 1, 1],        "Weights_Comfort" : [0.5, 0.5, 0]    }}
+22-08-25 08:44:20.717 INFO  kharon.SYSM [SystemManager.h:54] Start System manager
+22-08-25 08:44:20.723 INFO  kharon.SYSM [SystemManager.h:71] Get VIN
+22-08-25 08:44:20.737 INFO  kharon.GPSM [GpsManager.h:50] Start GpsManager
+22-08-25 08:44:20.738 INFO  kharon.GPSM [GpsManager.h:83] Calling GpsManager::AddGpsListener
+22-08-25 08:44:20.740 INFO  kharon.GPSM [GpsManager.h:70] Set GpsManager reactor
+22-08-25 08:44:20.757 INFO  kharon.CANM [CanManager.h:61] CAN manager started
+22-08-25 08:44:20.757 INFO  kharon.CANM [CanManager.h:114] Register 75 CAN signals
+22-08-25 08:44:20.766 INFO  kharon.PWRM [PowerManager.h:60] Starting power manager
+22-08-25 08:44:20.769 INFO  kharon.PWRM [PowerManager.h:143] Add power listener
+22-08-25 08:44:20.779 INFO  dse [DseInterface.cpp:345] DSE Started
+22-08-25 08:44:20.782 INFO  kharon.PWRM [PowerManager.h:101] Get key status
+22-08-25 08:44:21.288 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_trip_start
+22-08-25 08:44:21.295 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_trip_start
+25-08-25 07:11:49.231 WARN  dse [DseEngineOutputListener.cpp:58] [EcoA] - Last mission EcoA not found
+25-08-25 07:11:49.247 WARN  dse [DseEngineOutputListener.cpp:58] [EcoB] - Last mission EcoB not found
+25-08-25 07:11:49.319 INFO  dse [DseInterface.cpp:914] Key is ON and DSE is enabled
+25-08-25 07:11:49.324 INFO  dse [DseInterface.cpp:126] DSE calibration configuration PATH : /opt/appl/data/apps/apps_data/dse/DseCalibration.json
+25-08-25 07:11:49.324 INFO  dse [DseInterface.cpp:127] DSE calibration configuration: {    "configurationId": "IVGP_BUS_MY24_ALL_IC_DSE_CALIBRATION_V2",    "parameters":{    "PedalPctgBrkpts": [40,60,70,80,90,100],    "AccelBaseScore": [100,90,70,50,25,0],    "PedalPctgBrkpts_FE": [30,40,50,60,70,100],    "AccelBaseScore_FE": [100,70,40,20,5,0],    "SpeedZeroScore": [40,60,120],    "DurationZeroScore" : [0,2,8],    "SpeedTopScore": [40,60,120],    "DurationTopScore" : [10,14.6,38.8],    "SpeedZeroScore_FE": [20,30,50],    "DurationZeroScore_FE" : [0,0.1,0.2],    "SpeedTopScore_FE": [20,30,50],    "DurationTopScore_FE" : [8,10,12],    "NormalizedDuration" : [6,21],    "StopBaseScore" : [0,100],    "NormalizedDuration_FE" : [8,17],    "StopBaseScore_FE" : [0,100],    "NbEventsMax_LateralAcceleration" : [0,10],    "LatJerkTh" : 1.5,    "LatAccelTh" : 2.5,    "SteeringWheelAngleTh" : 2,    "NbEventsMax_LongitudinalAcceleration" : [0,20],    "LongiAccelTh" : 3,    "LongiJerkTh" : 3,    "NbEventsMax_VerticalAcceleration" : [0,5],    "DeflectionVelMassBrkpts_Vertical" : [5000, 10000, 15000],    "DefecltionVelTh_Vertical" : [6, 6.5, 7],    "PressureVelMassBrkpts_Vertical" : [8000, 9000, 10000],    "PressureVelTh_Vertical" : [150, 160, 170],    "Weights_Fuel_Automatic" : [1.3,1.8,2],    "Weights_Fuel_Automatic_FE" : [0.5, 1.5, 3],    "Weights_Fuel_Manual" : [0.3, 1, 1],        "Weights_Comfort" : [0.5, 0.5, 0]    }}
+25-08-25 07:11:49.342 INFO  kharon.SYSM [SystemManager.h:54] Start System manager
+25-08-25 07:11:49.344 INFO  kharon.SYSM [SystemManager.h:71] Get VIN
+25-08-25 07:11:49.362 INFO  kharon.GPSM [GpsManager.h:50] Start GpsManager
+25-08-25 07:11:49.363 INFO  kharon.GPSM [GpsManager.h:83] Calling GpsManager::AddGpsListener
+25-08-25 07:11:49.365 INFO  kharon.GPSM [GpsManager.h:70] Set GpsManager reactor
+25-08-25 07:11:49.377 INFO  kharon.CANM [CanManager.h:61] CAN manager started
+25-08-25 07:11:49.377 INFO  kharon.CANM [CanManager.h:114] Register 75 CAN signals
+25-08-25 07:11:49.403 INFO  kharon.PWRM [PowerManager.h:60] Starting power manager
+25-08-25 07:11:49.405 INFO  kharon.PWRM [PowerManager.h:143] Add power listener
+25-08-25 07:11:49.435 INFO  dse [DseInterface.cpp:345] DSE Started
+25-08-25 07:11:49.946 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_trip_start
+25-08-25 07:11:49.953 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_trip_start
+25-08-25 09:29:54.452 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_stop_good
+25-08-25 09:29:54.462 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_stop_good
+25-08-25 09:30:22.997 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_stop_good
+25-08-25 09:30:23.009 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_stop_good
+25-08-25 10:01:11.974 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_stop_good
+25-08-25 10:01:11.981 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_stop_good
+03-09-25 07:05:58.133 WARN  dse [DseEngineOutputListener.cpp:58] [EcoA] - Last mission EcoA not found
+03-09-25 07:05:58.137 WARN  dse [DseEngineOutputListener.cpp:58] [EcoB] - Last mission EcoB not found
+03-09-25 07:05:58.218 INFO  dse [DseInterface.cpp:914] Key is ON and DSE is enabled
+03-09-25 07:05:58.220 INFO  dse [DseInterface.cpp:126] DSE calibration configuration PATH : /opt/appl/data/apps/apps_data/dse/DseCalibration.json
+03-09-25 07:05:58.220 INFO  dse [DseInterface.cpp:127] DSE calibration configuration: {    "configurationId": "IVGP_BUS_MY24_ALL_IC_DSE_CALIBRATION_V2",    "parameters":{    "PedalPctgBrkpts": [40,60,70,80,90,100],    "AccelBaseScore": [100,90,70,50,25,0],    "PedalPctgBrkpts_FE": [30,40,50,60,70,100],    "AccelBaseScore_FE": [100,70,40,20,5,0],    "SpeedZeroScore": [40,60,120],    "DurationZeroScore" : [0,2,8],    "SpeedTopScore": [40,60,120],    "DurationTopScore" : [10,14.6,38.8],    "SpeedZeroScore_FE": [20,30,50],    "DurationZeroScore_FE" : [0,0.1,0.2],    "SpeedTopScore_FE": [20,30,50],    "DurationTopScore_FE" : [8,10,12],    "NormalizedDuration" : [6,21],    "StopBaseScore" : [0,100],    "NormalizedDuration_FE" : [8,17],    "StopBaseScore_FE" : [0,100],    "NbEventsMax_LateralAcceleration" : [0,10],    "LatJerkTh" : 1.5,    "LatAccelTh" : 2.5,    "SteeringWheelAngleTh" : 2,    "NbEventsMax_LongitudinalAcceleration" : [0,20],    "LongiAccelTh" : 3,    "LongiJerkTh" : 3,    "NbEventsMax_VerticalAcceleration" : [0,5],    "DeflectionVelMassBrkpts_Vertical" : [5000, 10000, 15000],    "DefecltionVelTh_Vertical" : [6, 6.5, 7],    "PressureVelMassBrkpts_Vertical" : [8000, 9000, 10000],    "PressureVelTh_Vertical" : [150, 160, 170],    "Weights_Fuel_Automatic" : [1.3,1.8,2],    "Weights_Fuel_Automatic_FE" : [0.5, 1.5, 3],    "Weights_Fuel_Manual" : [0.3, 1, 1],        "Weights_Comfort" : [0.5, 0.5, 0]    }}
+03-09-25 07:05:58.231 INFO  kharon.SYSM [SystemManager.h:54] Start System manager
+03-09-25 07:05:58.234 INFO  kharon.SYSM [SystemManager.h:71] Get VIN
+03-09-25 07:05:58.259 INFO  kharon.GPSM [GpsManager.h:50] Start GpsManager
+03-09-25 07:05:58.260 INFO  kharon.GPSM [GpsManager.h:83] Calling GpsManager::AddGpsListener
+03-09-25 07:05:58.264 INFO  kharon.GPSM [GpsManager.h:70] Set GpsManager reactor
+03-09-25 07:05:58.280 INFO  kharon.CANM [CanManager.h:61] CAN manager started
+03-09-25 07:05:58.280 INFO  kharon.CANM [CanManager.h:114] Register 75 CAN signals
+03-09-25 07:05:58.292 INFO  kharon.PWRM [PowerManager.h:60] Starting power manager
+03-09-25 07:05:58.297 INFO  kharon.PWRM [PowerManager.h:143] Add power listener
+03-09-25 07:05:58.320 INFO  dse [DseInterface.cpp:345] DSE Started
+03-09-25 07:05:58.830 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_trip_start
+03-09-25 07:05:58.837 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_trip_start
+03-09-25 07:21:45.848 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_no_text
+03-09-25 07:21:45.850 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_no_text
+03-09-25 07:21:58.858 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_no_text
+03-09-25 07:21:58.860 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_no_text
+03-09-25 07:22:53.430 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_acceleration_bad
+03-09-25 07:22:53.437 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_acceleration_bad
+03-09-25 07:24:14.534 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 07:24:14.538 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 07:24:50.590 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 07:24:50.595 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 07:26:36.653 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 07:26:36.667 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 07:29:04.306 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 07:29:04.311 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 07:29:40.346 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 07:29:40.351 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 07:30:57.980 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 07:30:57.985 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 07:31:19.495 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 07:31:19.500 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 07:34:28.725 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 07:34:28.728 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 07:35:33.258 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 07:35:33.262 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 07:35:52.268 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 07:35:52.275 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 07:37:27.827 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 07:37:27.844 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 07:37:42.332 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 07:37:42.337 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 07:42:07.160 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 07:42:07.164 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 07:44:49.834 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 07:44:49.844 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 07:45:23.847 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 07:45:23.850 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 07:45:43.355 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 07:45:43.362 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 07:46:26.891 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_inertia_goodgasbrake
+03-09-25 07:46:26.909 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_inertia_goodgasbrake
+03-09-25 07:47:53.970 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_acceleration_good
+03-09-25 07:47:53.975 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_acceleration_good
+03-09-25 07:57:51.147 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 07:57:51.166 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 08:02:11.015 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 08:02:11.032 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 08:03:40.146 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 08:03:40.150 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 08:04:03.669 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 08:04:03.675 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 08:06:31.294 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+03-09-25 08:06:31.304 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_inertia_goodgasgas
+04-09-25 19:04:09.084 WARN  dse [DseEngineOutputListener.cpp:58] [EcoA] - Last mission EcoA not found
+04-09-25 19:04:09.089 WARN  dse [DseEngineOutputListener.cpp:58] [EcoB] - Last mission EcoB not found
+04-09-25 19:04:09.161 INFO  dse [DseInterface.cpp:914] Key is ON and DSE is enabled
+04-09-25 19:04:09.163 INFO  dse [DseInterface.cpp:126] DSE calibration configuration PATH : /opt/appl/data/apps/apps_data/dse/DseCalibration.json
+04-09-25 19:04:09.163 INFO  dse [DseInterface.cpp:127] DSE calibration configuration: {    "configurationId": "IVGP_BUS_MY24_ALL_IC_DSE_CALIBRATION_V2",    "parameters":{    "PedalPctgBrkpts": [40,60,70,80,90,100],    "AccelBaseScore": [100,90,70,50,25,0],    "PedalPctgBrkpts_FE": [30,40,50,60,70,100],    "AccelBaseScore_FE": [100,70,40,20,5,0],    "SpeedZeroScore": [40,60,120],    "DurationZeroScore" : [0,2,8],    "SpeedTopScore": [40,60,120],    "DurationTopScore" : [10,14.6,38.8],    "SpeedZeroScore_FE": [20,30,50],    "DurationZeroScore_FE" : [0,0.1,0.2],    "SpeedTopScore_FE": [20,30,50],    "DurationTopScore_FE" : [8,10,12],    "NormalizedDuration" : [6,21],    "StopBaseScore" : [0,100],    "NormalizedDuration_FE" : [8,17],    "StopBaseScore_FE" : [0,100],    "NbEventsMax_LateralAcceleration" : [0,10],    "LatJerkTh" : 1.5,    "LatAccelTh" : 2.5,    "SteeringWheelAngleTh" : 2,    "NbEventsMax_LongitudinalAcceleration" : [0,20],    "LongiAccelTh" : 3,    "LongiJerkTh" : 3,    "NbEventsMax_VerticalAcceleration" : [0,5],    "DeflectionVelMassBrkpts_Vertical" : [5000, 10000, 15000],    "DefecltionVelTh_Vertical" : [6, 6.5, 7],    "PressureVelMassBrkpts_Vertical" : [8000, 9000, 10000],    "PressureVelTh_Vertical" : [150, 160, 170],    "Weights_Fuel_Automatic" : [1.3,1.8,2],    "Weights_Fuel_Automatic_FE" : [0.5, 1.5, 3],    "Weights_Fuel_Manual" : [0.3, 1, 1],        "Weights_Comfort" : [0.5, 0.5, 0]    }}
+04-09-25 19:04:09.173 INFO  kharon.SYSM [SystemManager.h:54] Start System manager
+04-09-25 19:04:09.175 INFO  kharon.SYSM [SystemManager.h:71] Get VIN
+04-09-25 19:04:09.191 INFO  kharon.GPSM [GpsManager.h:50] Start GpsManager
+04-09-25 19:04:09.191 INFO  kharon.GPSM [GpsManager.h:83] Calling GpsManager::AddGpsListener
+04-09-25 19:04:09.195 INFO  kharon.GPSM [GpsManager.h:70] Set GpsManager reactor
+04-09-25 19:04:09.211 INFO  kharon.CANM [CanManager.h:61] CAN manager started
+04-09-25 19:04:09.212 INFO  kharon.CANM [CanManager.h:114] Register 75 CAN signals
+04-09-25 19:04:09.235 INFO  kharon.PWRM [PowerManager.h:60] Starting power manager
+04-09-25 19:04:09.247 INFO  kharon.PWRM [PowerManager.h:143] Add power listener
+04-09-25 19:04:09.274 INFO  dse [DseInterface.cpp:345] DSE Started
+04-09-25 19:04:09.783 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_trip_start
+04-09-25 19:04:09.790 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_trip_start
+05-09-25 09:39:47.946 WARN  dse [DseEngineOutputListener.cpp:58] [EcoA] - Last mission EcoA not found
+05-09-25 09:39:47.953 WARN  dse [DseEngineOutputListener.cpp:58] [EcoB] - Last mission EcoB not found
+05-09-25 09:39:48.068 INFO  dse [DseInterface.cpp:914] Key is ON and DSE is enabled
+05-09-25 09:39:48.070 INFO  dse [DseInterface.cpp:126] DSE calibration configuration PATH : /opt/appl/data/apps/apps_data/dse/DseCalibration.json
+05-09-25 09:39:48.071 INFO  dse [DseInterface.cpp:127] DSE calibration configuration: {    "configurationId": "IVGP_BUS_MY24_ALL_IC_DSE_CALIBRATION_V2",    "parameters":{    "PedalPctgBrkpts": [40,60,70,80,90,100],    "AccelBaseScore": [100,90,70,50,25,0],    "PedalPctgBrkpts_FE": [30,40,50,60,70,100],    "AccelBaseScore_FE": [100,70,40,20,5,0],    "SpeedZeroScore": [40,60,120],    "DurationZeroScore" : [0,2,8],    "SpeedTopScore": [40,60,120],    "DurationTopScore" : [10,14.6,38.8],    "SpeedZeroScore_FE": [20,30,50],    "DurationZeroScore_FE" : [0,0.1,0.2],    "SpeedTopScore_FE": [20,30,50],    "DurationTopScore_FE" : [8,10,12],    "NormalizedDuration" : [6,21],    "StopBaseScore" : [0,100],    "NormalizedDuration_FE" : [8,17],    "StopBaseScore_FE" : [0,100],    "NbEventsMax_LateralAcceleration" : [0,10],    "LatJerkTh" : 1.5,    "LatAccelTh" : 2.5,    "SteeringWheelAngleTh" : 2,    "NbEventsMax_LongitudinalAcceleration" : [0,20],    "LongiAccelTh" : 3,    "LongiJerkTh" : 3,    "NbEventsMax_VerticalAcceleration" : [0,5],    "DeflectionVelMassBrkpts_Vertical" : [5000, 10000, 15000],    "DefecltionVelTh_Vertical" : [6, 6.5, 7],    "PressureVelMassBrkpts_Vertical" : [8000, 9000, 10000],    "PressureVelTh_Vertical" : [150, 160, 170],    "Weights_Fuel_Automatic" : [1.3,1.8,2],    "Weights_Fuel_Automatic_FE" : [0.5, 1.5, 3],    "Weights_Fuel_Manual" : [0.3, 1, 1],        "Weights_Comfort" : [0.5, 0.5, 0]    }}
+05-09-25 09:39:48.084 INFO  kharon.SYSM [SystemManager.h:54] Start System manager
+05-09-25 09:39:48.086 INFO  kharon.SYSM [SystemManager.h:71] Get VIN
+05-09-25 09:39:48.133 INFO  kharon.GPSM [GpsManager.h:50] Start GpsManager
+05-09-25 09:39:48.134 INFO  kharon.GPSM [GpsManager.h:83] Calling GpsManager::AddGpsListener
+05-09-25 09:39:48.137 INFO  kharon.GPSM [GpsManager.h:70] Set GpsManager reactor
+05-09-25 09:39:48.144 INFO  kharon.CANM [CanManager.h:61] CAN manager started
+05-09-25 09:39:48.147 INFO  kharon.CANM [CanManager.h:114] Register 75 CAN signals
+05-09-25 09:39:48.165 INFO  kharon.PWRM [PowerManager.h:60] Starting power manager
+05-09-25 09:39:48.168 INFO  kharon.PWRM [PowerManager.h:143] Add power listener
+05-09-25 09:39:48.209 INFO  dse [DseInterface.cpp:345] DSE Started
+05-09-25 09:39:48.717 INFO  dse [DseEngineOutputListener.cpp:84] [EcoA] - Data updated - New Event-> dse_notification_trip_start
+05-09-25 09:39:48.727 INFO  dse [DseEngineOutputListener.cpp:84] [EcoB] - Data updated - New Event-> dse_notification_trip_start

@@ -1,0 +1,103 @@
+user=ca026 
+pwd=/ 
+Directory downloads/ was missing. Creating in /opt/appl/data/apps/apps_data/eHorizonISA
+Directory maps/navi/ was missing. Creating in /opt/appl/data/apps/apps_data/eHorizonISA
+Skip: configuration.conf
+Skip: faults.json
+Copying /opt/appl/data/apps/apps_bin/eHorizonISA/resources/navi.cfg to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/navi.cfg
+Copying /opt/appl/data/apps/apps_bin/eHorizonISA/resources/navitrace.ini to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/navitrace.ini
+Copying /opt/appl/data/apps/apps_bin/eHorizonISA/resources/log4cppeHorizon.properties to /opt/appl/data/apps/apps_data/eHorizonISA/resources/log4cppeHorizon.properties
+Thu Jul 24 15:33:59 UTC 2025 Start -> [eHorizonISA] 
+user=ca026 
+pwd=/ 
+Skip: configuration.conf
+Skip: faults.json
+Copying /opt/appl/data/apps/apps_bin/eHorizonISA/resources/navi.cfg to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/navi.cfg
+Copying /opt/appl/data/apps/apps_bin/eHorizonISA/resources/navitrace.ini to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/navitrace.ini
+Copying /opt/appl/data/apps/apps_bin/eHorizonISA/resources/log4cppeHorizon.properties to /opt/appl/data/apps/apps_data/eHorizonISA/resources/log4cppeHorizon.properties
+Thu Jul 24 15:55:57 UTC 2025 Start -> [eHorizonISA] 
+user=ca026 
+pwd=/ 
+Skip: configuration.conf
+Skip: faults.json
+Copying /opt/appl/data/apps/apps_bin/eHorizonISA/resources/navi.cfg to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/navi.cfg
+Copying /opt/appl/data/apps/apps_bin/eHorizonISA/resources/navitrace.ini to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/navitrace.ini
+Copying /opt/appl/data/apps/apps_bin/eHorizonISA/resources/log4cppeHorizon.properties to /opt/appl/data/apps/apps_data/eHorizonISA/resources/log4cppeHorizon.properties
+Thu Aug 21 07:47:13 UTC 2025 Start -> [eHorizonISA] 
+Thu Aug 21 08:22:36 UTC 2025 Start application termination... 
+Application process ended and returned: 0 
+AppExitCode=0 
+Thu Aug 21 08:22:37 UTC 2025 Stop  -> [eHorizonISA] 
+user=ca026 
+pwd=/ 
+Skip: configuration.conf
+Skip: faults.json
+Copying /opt/appl/data/apps/apps_bin/eHorizonISA/resources/navi.cfg to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/navi.cfg
+Copying /opt/appl/data/apps/apps_bin/eHorizonISA/resources/navitrace.ini to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/navitrace.ini
+Copying /opt/appl/data/apps/apps_bin/eHorizonISA/resources/log4cppeHorizon.properties to /opt/appl/data/apps/apps_data/eHorizonISA/resources/log4cppeHorizon.properties
+Thu Aug 21 08:26:56 UTC 2025 Start -> [eHorizonISA] 
+user=ca026 
+pwd=/ 
+Skip: configuration.conf
+Skip: faults.json
+Copying /opt/appl/data/apps/apps_bin/eHorizonISA/resources/navi.cfg to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/navi.cfg
+Copying /opt/appl/data/apps/apps_bin/eHorizonISA/resources/navitrace.ini to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/navitrace.ini
+Copying /opt/appl/data/apps/apps_bin/eHorizonISA/resources/log4cppeHorizon.properties to /opt/appl/data/apps/apps_data/eHorizonISA/resources/log4cppeHorizon.properties
+Thu Aug 21 15:00:33 UTC 2025 Start -> [eHorizonISA] 
+user=ca026 
+pwd=/ 
+Skip: configuration.conf
+Skip: faults.json
+Copying /opt/appl/data/apps/apps_bin/eHorizonISA/resources/navi.cfg to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/navi.cfg
+Copying /opt/appl/data/apps/apps_bin/eHorizonISA/resources/navitrace.ini to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/navitrace.ini
+Copying /opt/appl/data/apps/apps_bin/eHorizonISA/resources/log4cppeHorizon.properties to /opt/appl/data/apps/apps_data/eHorizonISA/resources/log4cppeHorizon.properties
+Fri Aug 22 07:39:01 UTC 2025 Start -> [eHorizonISA] 
+user=ca026 
+pwd=/ 
+Skip: configuration.conf
+Skip: faults.json
+Copying /opt/appl/data/apps/apps_bin/eHorizonISA/resources/navi.cfg to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/navi.cfg
+Copying /opt/appl/data/apps/apps_bin/eHorizonISA/resources/navitrace.ini to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/navitrace.ini
+Copying /opt/appl/data/apps/apps_bin/eHorizonISA/resources/log4cppeHorizon.properties to /opt/appl/data/apps/apps_data/eHorizonISA/resources/log4cppeHorizon.properties
+Fri Aug 22 08:36:16 UTC 2025 Start -> [eHorizonISA] 
+Fri Aug 22 08:40:32 UTC 2025 Start application termination... 
+user=ca026 
+pwd=/ 
+Skip: configuration.conf
+Skip: faults.json
+Copying /opt/appl/data/apps/apps_bin/eHorizonISA/resources/navi.cfg to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/navi.cfg
+Copying /opt/appl/data/apps/apps_bin/eHorizonISA/resources/navitrace.ini to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/navitrace.ini
+Copying /opt/appl/data/apps/apps_bin/eHorizonISA/resources/log4cppeHorizon.properties to /opt/appl/data/apps/apps_data/eHorizonISA/resources/log4cppeHorizon.properties
+Fri Aug 22 08:43:25 UTC 2025 Start -> [eHorizonISA] 
+user=ca026 
+pwd=/ 
+Skip: configuration.conf
+Skip: faults.json
+Copying /opt/appl/data/apps/apps_bin/eHorizonISA/resources/navi.cfg to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/navi.cfg
+Copying /opt/appl/data/apps/apps_bin/eHorizonISA/resources/navitrace.ini to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/navitrace.ini
+Copying /opt/appl/data/apps/apps_bin/eHorizonISA/resources/log4cppeHorizon.properties to /opt/appl/data/apps/apps_data/eHorizonISA/resources/log4cppeHorizon.properties
+Mon Aug 25 07:10:54 UTC 2025 Start -> [eHorizonISA] 
+user=ca026 
+pwd=/ 
+Skip: configuration.conf
+Skip: faults.json
+Copying /opt/appl/data/apps/apps_bin/eHorizonISA/resources/navi.cfg to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/navi.cfg
+Copying /opt/appl/data/apps/apps_bin/eHorizonISA/resources/navitrace.ini to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/navitrace.ini
+Copying /opt/appl/data/apps/apps_bin/eHorizonISA/resources/log4cppeHorizon.properties to /opt/appl/data/apps/apps_data/eHorizonISA/resources/log4cppeHorizon.properties
+Wed Sep  3 07:05:03 UTC 2025 Start -> [eHorizonISA] 
+user=ca026 
+pwd=/ 
+Skip: configuration.conf
+Skip: faults.json
+Copying /opt/appl/data/apps/apps_bin/eHorizonISA/resources/navi.cfg to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/navi.cfg
+Copying /opt/appl/data/apps/apps_bin/eHorizonISA/resources/navitrace.ini to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/navitrace.ini
+Copying /opt/appl/data/apps/apps_bin/eHorizonISA/resources/log4cppeHorizon.properties to /opt/appl/data/apps/apps_data/eHorizonISA/resources/log4cppeHorizon.properties
+Thu Sep  4 19:03:13 UTC 2025 Start -> [eHorizonISA] 
+user=ca026 
+pwd=/ 
+Skip: configuration.conf
+Skip: faults.json
+Copying /opt/appl/data/apps/apps_bin/eHorizonISA/resources/navi.cfg to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/navi.cfg
+Copying /opt/appl/data/apps/apps_bin/eHorizonISA/resources/navitrace.ini to /opt/appl/data/apps/apps_data/eHorizonISA/maps/navi/navitrace.ini
+Copying /opt/appl/data/apps/apps_bin/eHorizonISA/resources/log4cppeHorizon.properties to /opt/appl/data/apps/apps_data/eHorizonISA/resources/log4cppeHorizon.properties
+Fri Sep  5 09:38:52 UTC 2025 Start -> [eHorizonISA] 

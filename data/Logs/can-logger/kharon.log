@@ -1,0 +1,62 @@
+2025-07-24 15:34:23.877 INFO  [CFGM:121] Starting configuration manager
+2025-07-24 15:34:23.878 INFO  [CFGM:69] Register configuration for canlogger, name default, path /opt/appl/data/apps/apps_data/can-logger/data/configuration.json
+2025-07-24 15:34:23.879 INFO  [CFGM:75] Register 1 configurations
+2025-07-24 15:34:23.879 INFO  [CFGM:56] Set Configuration Reactor (configName: default)
+2025-07-24 15:34:23.895 INFO  [CFGM:99] Configuration succesfully registered
+2025-07-24 15:56:21.784 INFO  [CFGM:121] Starting configuration manager
+2025-07-24 15:56:21.785 INFO  [CFGM:69] Register configuration for canlogger, name default, path /opt/appl/data/apps/apps_data/can-logger/data/configuration.json
+2025-07-24 15:56:21.785 INFO  [CFGM:75] Register 1 configurations
+2025-07-24 15:56:21.785 INFO  [CFGM:56] Set Configuration Reactor (configName: default)
+2025-07-24 15:56:21.810 INFO  [CFGM:99] Configuration succesfully registered
+2025-08-21 07:47:38.231 INFO  [CFGM:121] Starting configuration manager
+2025-08-21 07:47:38.232 INFO  [CFGM:69] Register configuration for canlogger, name default, path /opt/appl/data/apps/apps_data/can-logger/data/configuration.json
+2025-08-21 07:47:38.232 INFO  [CFGM:75] Register 1 configurations
+2025-08-21 07:47:38.232 INFO  [CFGM:56] Set Configuration Reactor (configName: default)
+2025-08-21 07:47:38.256 INFO  [CFGM:99] Configuration succesfully registered
+2025-08-21 08:22:35.208 INFO  [CFGM:126] Stopping configuration manager
+2025-08-21 08:27:21.150 INFO  [CFGM:121] Starting configuration manager
+2025-08-21 08:27:21.151 INFO  [CFGM:69] Register configuration for canlogger, name default, path /opt/appl/data/apps/apps_data/can-logger/data/configuration.json
+2025-08-21 08:27:21.151 INFO  [CFGM:75] Register 1 configurations
+2025-08-21 08:27:21.151 INFO  [CFGM:56] Set Configuration Reactor (configName: default)
+2025-08-21 08:27:21.170 INFO  [CFGM:99] Configuration succesfully registered
+2025-08-21 15:00:58.310 INFO  [CFGM:121] Starting configuration manager
+2025-08-21 15:00:58.311 INFO  [CFGM:69] Register configuration for canlogger, name default, path /opt/appl/data/apps/apps_data/can-logger/data/configuration.json
+2025-08-21 15:00:58.312 INFO  [CFGM:75] Register 1 configurations
+2025-08-21 15:00:58.312 INFO  [CFGM:56] Set Configuration Reactor (configName: default)
+2025-08-21 15:00:58.341 INFO  [CFGM:99] Configuration succesfully registered
+2025-08-22 07:39:26.333 INFO  [CFGM:121] Starting configuration manager
+2025-08-22 07:39:26.335 INFO  [CFGM:69] Register configuration for canlogger, name default, path /opt/appl/data/apps/apps_data/can-logger/data/configuration.json
+2025-08-22 07:39:26.335 INFO  [CFGM:75] Register 1 configurations
+2025-08-22 07:39:26.335 INFO  [CFGM:56] Set Configuration Reactor (configName: default)
+2025-08-22 07:39:26.360 INFO  [CFGM:99] Configuration succesfully registered
+2025-08-22 08:36:41.548 INFO  [CFGM:121] Starting configuration manager
+2025-08-22 08:36:41.549 INFO  [CFGM:69] Register configuration for canlogger, name default, path /opt/appl/data/apps/apps_data/can-logger/data/configuration.json
+2025-08-22 08:36:41.550 INFO  [CFGM:75] Register 1 configurations
+2025-08-22 08:36:41.551 INFO  [CFGM:56] Set Configuration Reactor (configName: default)
+2025-08-22 08:36:41.573 INFO  [CFGM:99] Configuration succesfully registered
+2025-08-22 08:40:32.037 INFO  [CFGM:126] Stopping configuration manager
+2025-08-22 08:43:50.320 INFO  [CFGM:121] Starting configuration manager
+2025-08-22 08:43:50.321 INFO  [CFGM:69] Register configuration for canlogger, name default, path /opt/appl/data/apps/apps_data/can-logger/data/configuration.json
+2025-08-22 08:43:50.322 INFO  [CFGM:75] Register 1 configurations
+2025-08-22 08:43:50.322 INFO  [CFGM:56] Set Configuration Reactor (configName: default)
+2025-08-22 08:43:50.373 INFO  [CFGM:99] Configuration succesfully registered
+2025-08-25 07:11:18.891 INFO  [CFGM:121] Starting configuration manager
+2025-08-25 07:11:18.892 INFO  [CFGM:69] Register configuration for canlogger, name default, path /opt/appl/data/apps/apps_data/can-logger/data/configuration.json
+2025-08-25 07:11:18.892 INFO  [CFGM:75] Register 1 configurations
+2025-08-25 07:11:18.893 INFO  [CFGM:56] Set Configuration Reactor (configName: default)
+2025-08-25 07:11:18.917 INFO  [CFGM:99] Configuration succesfully registered
+2025-09-03 07:05:27.742 INFO  [CFGM:121] Starting configuration manager
+2025-09-03 07:05:27.743 INFO  [CFGM:69] Register configuration for canlogger, name default, path /opt/appl/data/apps/apps_data/can-logger/data/configuration.json
+2025-09-03 07:05:27.743 INFO  [CFGM:75] Register 1 configurations
+2025-09-03 07:05:27.744 INFO  [CFGM:56] Set Configuration Reactor (configName: default)
+2025-09-03 07:05:27.766 INFO  [CFGM:99] Configuration succesfully registered
+2025-09-04 19:03:38.735 INFO  [CFGM:121] Starting configuration manager
+2025-09-04 19:03:38.736 INFO  [CFGM:69] Register configuration for canlogger, name default, path /opt/appl/data/apps/apps_data/can-logger/data/configuration.json
+2025-09-04 19:03:38.737 INFO  [CFGM:75] Register 1 configurations
+2025-09-04 19:03:38.737 INFO  [CFGM:56] Set Configuration Reactor (configName: default)
+2025-09-04 19:03:38.758 INFO  [CFGM:99] Configuration succesfully registered
+2025-09-05 09:39:17.730 INFO  [CFGM:121] Starting configuration manager
+2025-09-05 09:39:17.731 INFO  [CFGM:69] Register configuration for canlogger, name default, path /opt/appl/data/apps/apps_data/can-logger/data/configuration.json
+2025-09-05 09:39:17.732 INFO  [CFGM:75] Register 1 configurations
+2025-09-05 09:39:17.732 INFO  [CFGM:56] Set Configuration Reactor (configName: default)
+2025-09-05 09:39:17.752 INFO  [CFGM:99] Configuration succesfully registered

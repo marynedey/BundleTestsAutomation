@@ -1,0 +1,234 @@
+2025-07-24 15:36:49.273 INFO  [LogConfigurationManager.cpp:170] LIBL configuration completed from file '/opt/appl/data/apps/apps_bin/rxswin/resources/log4cplus.properties'
+2025-07-24 15:36:49.275 INFO  [LogConfigurationManager.cpp:77] LIBL starting live configuration loop. Configuration: directory = '/opt/appl/data/apps/apps_bin/rxswin/resources/', file = 'log4cplus.properties'
+2025-07-24 15:36:49.275 INFO  [main.cpp:34] rxswin.main Application: rxswin
+2025-07-24 15:36:49.275 INFO  [main.cpp:35] rxswin.main Version: 0.1.4
+2025-07-24 15:36:49.275 INFO  [main.cpp:36] rxswin.main Build date: Feb 17 2025
+2025-07-24 15:36:49.275 INFO  [main.cpp:37] rxswin.main Build time: 20:17:20
+2025-07-24 15:36:49.275 INFO  [main.cpp:40] rxswin.main Build type: Release
+2025-07-24 15:36:49.276 INFO  [main.cpp:45] rxswin.main Checking application token under: /opt/appl/var/mist/tokens/rxswin/token
+2025-07-24 15:36:49.276 INFO  [main.cpp:51] rxswin.main Starting application...
+2025-07-24 15:36:49.277 INFO  [application.hpp:250] rxswin.main Initializing MiST Core channel...
+2025-07-24 15:36:49.287 INFO  [application.hpp:98] rxswin.main Core channel created
+2025-07-24 15:36:49.287 INFO  [application.hpp:133] rxswin.main Consistency checking for previously confirmed rxswin.json file, path:rxswin.json
+2025-07-24 15:36:49.288 WARN  [application.hpp:136] rxswin.main No previous confirmed configurations found
+2025-07-24 15:36:49.288 INFO  [application.hpp:259] rxswin.main Initializing MiST Core and Communication channels...
+2025-07-24 15:36:49.289 INFO  [application.hpp:94] rxswin.main Channel already exists, skipping
+2025-07-24 15:36:49.291 INFO  [application.hpp:125] rxswin.main Communication channel created
+2025-07-24 15:36:49.291 INFO  [application.hpp:266] rxswin.main Checking for previously saved UUID file, path:/opt/appl/data/apps/apps_data/rxswin/uuid
+2025-07-24 15:36:49.291 WARN  [application.hpp:268] rxswin.main No previous UUID found: falling back to: 00000000-0000-0000-0000-000000000000
+2025-07-24 15:36:49.309 INFO  [application.hpp:377] rxswin.main Waiting for configurations from Communication...
+2025-07-24 15:58:47.219 INFO  [LogConfigurationManager.cpp:170] LIBL configuration completed from file '/opt/appl/data/apps/apps_bin/rxswin/resources/log4cplus.properties'
+2025-07-24 15:58:47.221 INFO  [LogConfigurationManager.cpp:77] LIBL starting live configuration loop. Configuration: directory = '/opt/appl/data/apps/apps_bin/rxswin/resources/', file = 'log4cplus.properties'
+2025-07-24 15:58:47.222 INFO  [main.cpp:34] rxswin.main Application: rxswin
+2025-07-24 15:58:47.222 INFO  [main.cpp:35] rxswin.main Version: 0.1.4
+2025-07-24 15:58:47.222 INFO  [main.cpp:36] rxswin.main Build date: Feb 17 2025
+2025-07-24 15:58:47.222 INFO  [main.cpp:37] rxswin.main Build time: 20:17:20
+2025-07-24 15:58:47.222 INFO  [main.cpp:40] rxswin.main Build type: Release
+2025-07-24 15:58:47.222 INFO  [main.cpp:45] rxswin.main Checking application token under: /opt/appl/var/mist/tokens/rxswin/token
+2025-07-24 15:58:47.223 INFO  [main.cpp:51] rxswin.main Starting application...
+2025-07-24 15:58:47.224 INFO  [application.hpp:250] rxswin.main Initializing MiST Core channel...
+2025-07-24 15:58:47.253 INFO  [application.hpp:98] rxswin.main Core channel created
+2025-07-24 15:58:47.253 INFO  [application.hpp:133] rxswin.main Consistency checking for previously confirmed rxswin.json file, path:rxswin.json
+2025-07-24 15:58:47.253 WARN  [application.hpp:136] rxswin.main No previous confirmed configurations found
+2025-07-24 15:58:47.254 INFO  [application.hpp:259] rxswin.main Initializing MiST Core and Communication channels...
+2025-07-24 15:58:47.254 INFO  [application.hpp:94] rxswin.main Channel already exists, skipping
+2025-07-24 15:58:47.256 INFO  [application.hpp:125] rxswin.main Communication channel created
+2025-07-24 15:58:47.258 INFO  [application.hpp:266] rxswin.main Checking for previously saved UUID file, path:/opt/appl/data/apps/apps_data/rxswin/uuid
+2025-07-24 15:58:47.258 WARN  [application.hpp:268] rxswin.main No previous UUID found: falling back to: 00000000-0000-0000-0000-000000000000
+2025-07-24 15:58:47.275 INFO  [application.hpp:377] rxswin.main Waiting for configurations from Communication...
+2025-08-21 07:50:03.744 INFO  [LogConfigurationManager.cpp:170] LIBL configuration completed from file '/opt/appl/data/apps/apps_bin/rxswin/resources/log4cplus.properties'
+2025-08-21 07:50:03.748 INFO  [main.cpp:34] rxswin.main Application: rxswin
+2025-08-21 07:50:03.749 INFO  [main.cpp:35] rxswin.main Version: 0.1.4
+2025-08-21 07:50:03.749 INFO  [main.cpp:36] rxswin.main Build date: Feb 17 2025
+2025-08-21 07:50:03.749 INFO  [main.cpp:37] rxswin.main Build time: 20:17:20
+2025-08-21 07:50:03.749 INFO  [main.cpp:40] rxswin.main Build type: Release
+2025-08-21 07:50:03.749 INFO  [main.cpp:45] rxswin.main Checking application token under: /opt/appl/var/mist/tokens/rxswin/token
+2025-08-21 07:50:03.749 INFO  [main.cpp:51] rxswin.main Starting application...
+2025-08-21 07:50:03.750 INFO  [LogConfigurationManager.cpp:77] LIBL starting live configuration loop. Configuration: directory = '/opt/appl/data/apps/apps_bin/rxswin/resources/', file = 'log4cplus.properties'
+2025-08-21 07:50:03.751 INFO  [application.hpp:250] rxswin.main Initializing MiST Core channel...
+2025-08-21 07:50:03.776 INFO  [application.hpp:98] rxswin.main Core channel created
+2025-08-21 07:50:03.777 INFO  [application.hpp:133] rxswin.main Consistency checking for previously confirmed rxswin.json file, path:rxswin.json
+2025-08-21 07:50:03.778 WARN  [application.hpp:136] rxswin.main No previous confirmed configurations found
+2025-08-21 07:50:03.778 INFO  [application.hpp:259] rxswin.main Initializing MiST Core and Communication channels...
+2025-08-21 07:50:03.778 INFO  [application.hpp:94] rxswin.main Channel already exists, skipping
+2025-08-21 07:50:03.781 INFO  [application.hpp:125] rxswin.main Communication channel created
+2025-08-21 07:50:03.782 INFO  [application.hpp:266] rxswin.main Checking for previously saved UUID file, path:/opt/appl/data/apps/apps_data/rxswin/uuid
+2025-08-21 07:50:03.783 WARN  [application.hpp:268] rxswin.main No previous UUID found: falling back to: 00000000-0000-0000-0000-000000000000
+2025-08-21 07:50:03.808 INFO  [application.hpp:377] rxswin.main Waiting for configurations from Communication...
+2025-08-21 08:22:37.239 INFO  [main.cpp:57] rxswin.main Stopping application...
+2025-08-21 08:22:37.479 ERROR [application.hpp:382] rxswin.main Failed to read response, ec: failed to handle configuration
+2025-08-21 08:22:37.492 INFO  [main.cpp:60] rxswin.main Exiting...
+2025-08-21 08:29:46.558 INFO  [LogConfigurationManager.cpp:170] LIBL configuration completed from file '/opt/appl/data/apps/apps_bin/rxswin/resources/log4cplus.properties'
+2025-08-21 08:29:46.562 INFO  [LogConfigurationManager.cpp:77] LIBL starting live configuration loop. Configuration: directory = '/opt/appl/data/apps/apps_bin/rxswin/resources/', file = 'log4cplus.properties'
+2025-08-21 08:29:46.562 INFO  [main.cpp:34] rxswin.main Application: rxswin
+2025-08-21 08:29:46.563 INFO  [main.cpp:35] rxswin.main Version: 0.1.4
+2025-08-21 08:29:46.563 INFO  [main.cpp:36] rxswin.main Build date: Feb 17 2025
+2025-08-21 08:29:46.563 INFO  [main.cpp:37] rxswin.main Build time: 20:17:20
+2025-08-21 08:29:46.563 INFO  [main.cpp:40] rxswin.main Build type: Release
+2025-08-21 08:29:46.563 INFO  [main.cpp:45] rxswin.main Checking application token under: /opt/appl/var/mist/tokens/rxswin/token
+2025-08-21 08:29:46.563 INFO  [main.cpp:51] rxswin.main Starting application...
+2025-08-21 08:29:46.564 INFO  [application.hpp:250] rxswin.main Initializing MiST Core channel...
+2025-08-21 08:29:46.572 INFO  [application.hpp:98] rxswin.main Core channel created
+2025-08-21 08:29:46.573 INFO  [application.hpp:133] rxswin.main Consistency checking for previously confirmed rxswin.json file, path:rxswin.json
+2025-08-21 08:29:46.573 WARN  [application.hpp:136] rxswin.main No previous confirmed configurations found
+2025-08-21 08:29:46.573 INFO  [application.hpp:259] rxswin.main Initializing MiST Core and Communication channels...
+2025-08-21 08:29:46.573 INFO  [application.hpp:94] rxswin.main Channel already exists, skipping
+2025-08-21 08:29:46.575 INFO  [application.hpp:125] rxswin.main Communication channel created
+2025-08-21 08:29:46.576 INFO  [application.hpp:266] rxswin.main Checking for previously saved UUID file, path:/opt/appl/data/apps/apps_data/rxswin/uuid
+2025-08-21 08:29:46.576 WARN  [application.hpp:268] rxswin.main No previous UUID found: falling back to: 00000000-0000-0000-0000-000000000000
+2025-08-21 08:29:46.602 INFO  [application.hpp:377] rxswin.main Waiting for configurations from Communication...
+2025-08-21 15:03:23.692 INFO  [LogConfigurationManager.cpp:170] LIBL configuration completed from file '/opt/appl/data/apps/apps_bin/rxswin/resources/log4cplus.properties'
+2025-08-21 15:03:23.695 INFO  [LogConfigurationManager.cpp:77] LIBL starting live configuration loop. Configuration: directory = '/opt/appl/data/apps/apps_bin/rxswin/resources/', file = 'log4cplus.properties'
+2025-08-21 15:03:23.695 INFO  [main.cpp:34] rxswin.main Application: rxswin
+2025-08-21 15:03:23.695 INFO  [main.cpp:35] rxswin.main Version: 0.1.4
+2025-08-21 15:03:23.695 INFO  [main.cpp:36] rxswin.main Build date: Feb 17 2025
+2025-08-21 15:03:23.695 INFO  [main.cpp:37] rxswin.main Build time: 20:17:20
+2025-08-21 15:03:23.695 INFO  [main.cpp:40] rxswin.main Build type: Release
+2025-08-21 15:03:23.696 INFO  [main.cpp:45] rxswin.main Checking application token under: /opt/appl/var/mist/tokens/rxswin/token
+2025-08-21 15:03:23.696 INFO  [main.cpp:51] rxswin.main Starting application...
+2025-08-21 15:03:23.697 INFO  [application.hpp:250] rxswin.main Initializing MiST Core channel...
+2025-08-21 15:03:23.730 INFO  [application.hpp:98] rxswin.main Core channel created
+2025-08-21 15:03:23.730 INFO  [application.hpp:133] rxswin.main Consistency checking for previously confirmed rxswin.json file, path:rxswin.json
+2025-08-21 15:03:23.731 WARN  [application.hpp:136] rxswin.main No previous confirmed configurations found
+2025-08-21 15:03:23.732 INFO  [application.hpp:259] rxswin.main Initializing MiST Core and Communication channels...
+2025-08-21 15:03:23.732 INFO  [application.hpp:94] rxswin.main Channel already exists, skipping
+2025-08-21 15:03:23.734 INFO  [application.hpp:125] rxswin.main Communication channel created
+2025-08-21 15:03:23.734 INFO  [application.hpp:266] rxswin.main Checking for previously saved UUID file, path:/opt/appl/data/apps/apps_data/rxswin/uuid
+2025-08-21 15:03:23.734 WARN  [application.hpp:268] rxswin.main No previous UUID found: falling back to: 00000000-0000-0000-0000-000000000000
+2025-08-21 15:03:23.760 INFO  [application.hpp:377] rxswin.main Waiting for configurations from Communication...
+2025-08-22 07:41:51.767 INFO  [LogConfigurationManager.cpp:170] LIBL configuration completed from file '/opt/appl/data/apps/apps_bin/rxswin/resources/log4cplus.properties'
+2025-08-22 07:41:51.770 INFO  [main.cpp:34] rxswin.main Application: rxswin
+2025-08-22 07:41:51.771 INFO  [main.cpp:35] rxswin.main Version: 0.1.4
+2025-08-22 07:41:51.772 INFO  [main.cpp:36] rxswin.main Build date: Feb 17 2025
+2025-08-22 07:41:51.772 INFO  [main.cpp:37] rxswin.main Build time: 20:17:20
+2025-08-22 07:41:51.772 INFO  [main.cpp:40] rxswin.main Build type: Release
+2025-08-22 07:41:51.772 INFO  [main.cpp:45] rxswin.main Checking application token under: /opt/appl/var/mist/tokens/rxswin/token
+2025-08-22 07:41:51.772 INFO  [main.cpp:51] rxswin.main Starting application...
+2025-08-22 07:41:51.773 INFO  [LogConfigurationManager.cpp:77] LIBL starting live configuration loop. Configuration: directory = '/opt/appl/data/apps/apps_bin/rxswin/resources/', file = 'log4cplus.properties'
+2025-08-22 07:41:51.776 INFO  [application.hpp:250] rxswin.main Initializing MiST Core channel...
+2025-08-22 07:41:51.804 INFO  [application.hpp:98] rxswin.main Core channel created
+2025-08-22 07:41:51.804 INFO  [application.hpp:133] rxswin.main Consistency checking for previously confirmed rxswin.json file, path:rxswin.json
+2025-08-22 07:41:51.805 WARN  [application.hpp:136] rxswin.main No previous confirmed configurations found
+2025-08-22 07:41:51.805 INFO  [application.hpp:259] rxswin.main Initializing MiST Core and Communication channels...
+2025-08-22 07:41:51.805 INFO  [application.hpp:94] rxswin.main Channel already exists, skipping
+2025-08-22 07:41:51.807 INFO  [application.hpp:125] rxswin.main Communication channel created
+2025-08-22 07:41:51.808 INFO  [application.hpp:266] rxswin.main Checking for previously saved UUID file, path:/opt/appl/data/apps/apps_data/rxswin/uuid
+2025-08-22 07:41:51.808 WARN  [application.hpp:268] rxswin.main No previous UUID found: falling back to: 00000000-0000-0000-0000-000000000000
+2025-08-22 07:41:51.833 INFO  [application.hpp:377] rxswin.main Waiting for configurations from Communication...
+2025-08-22 08:39:07.111 INFO  [LogConfigurationManager.cpp:170] LIBL configuration completed from file '/opt/appl/data/apps/apps_bin/rxswin/resources/log4cplus.properties'
+2025-08-22 08:39:07.114 INFO  [LogConfigurationManager.cpp:77] LIBL starting live configuration loop. Configuration: directory = '/opt/appl/data/apps/apps_bin/rxswin/resources/', file = 'log4cplus.properties'
+2025-08-22 08:39:07.114 INFO  [main.cpp:34] rxswin.main Application: rxswin
+2025-08-22 08:39:07.114 INFO  [main.cpp:35] rxswin.main Version: 0.1.4
+2025-08-22 08:39:07.114 INFO  [main.cpp:36] rxswin.main Build date: Feb 17 2025
+2025-08-22 08:39:07.115 INFO  [main.cpp:37] rxswin.main Build time: 20:17:20
+2025-08-22 08:39:07.115 INFO  [main.cpp:40] rxswin.main Build type: Release
+2025-08-22 08:39:07.115 INFO  [main.cpp:45] rxswin.main Checking application token under: /opt/appl/var/mist/tokens/rxswin/token
+2025-08-22 08:39:07.115 INFO  [main.cpp:51] rxswin.main Starting application...
+2025-08-22 08:39:07.116 INFO  [application.hpp:250] rxswin.main Initializing MiST Core channel...
+2025-08-22 08:39:07.142 INFO  [application.hpp:98] rxswin.main Core channel created
+2025-08-22 08:39:07.143 INFO  [application.hpp:133] rxswin.main Consistency checking for previously confirmed rxswin.json file, path:rxswin.json
+2025-08-22 08:39:07.143 WARN  [application.hpp:136] rxswin.main No previous confirmed configurations found
+2025-08-22 08:39:07.143 INFO  [application.hpp:259] rxswin.main Initializing MiST Core and Communication channels...
+2025-08-22 08:39:07.143 INFO  [application.hpp:94] rxswin.main Channel already exists, skipping
+2025-08-22 08:39:07.145 INFO  [application.hpp:125] rxswin.main Communication channel created
+2025-08-22 08:39:07.145 INFO  [application.hpp:266] rxswin.main Checking for previously saved UUID file, path:/opt/appl/data/apps/apps_data/rxswin/uuid
+2025-08-22 08:39:07.146 WARN  [application.hpp:268] rxswin.main No previous UUID found: falling back to: 00000000-0000-0000-0000-000000000000
+2025-08-22 08:39:07.176 INFO  [application.hpp:377] rxswin.main Waiting for configurations from Communication...
+2025-08-22 08:40:30.032 INFO  [main.cpp:57] rxswin.main Stopping application...
+2025-08-22 08:40:30.043 ERROR [application.hpp:382] rxswin.main Failed to read response, ec: failed to handle configuration
+2025-08-22 08:40:30.054 INFO  [main.cpp:60] rxswin.main Exiting...
+2025-08-22 08:46:15.679 INFO  [LogConfigurationManager.cpp:170] LIBL configuration completed from file '/opt/appl/data/apps/apps_bin/rxswin/resources/log4cplus.properties'
+2025-08-22 08:46:15.684 INFO  [main.cpp:34] rxswin.main Application: rxswin
+2025-08-22 08:46:15.684 INFO  [LogConfigurationManager.cpp:77] LIBL starting live configuration loop. Configuration: directory = '/opt/appl/data/apps/apps_bin/rxswin/resources/', file = 'log4cplus.properties'
+2025-08-22 08:46:15.684 INFO  [main.cpp:35] rxswin.main Version: 0.1.4
+2025-08-22 08:46:15.685 INFO  [main.cpp:36] rxswin.main Build date: Feb 17 2025
+2025-08-22 08:46:15.685 INFO  [main.cpp:37] rxswin.main Build time: 20:17:20
+2025-08-22 08:46:15.685 INFO  [main.cpp:40] rxswin.main Build type: Release
+2025-08-22 08:46:15.685 INFO  [main.cpp:45] rxswin.main Checking application token under: /opt/appl/var/mist/tokens/rxswin/token
+2025-08-22 08:46:15.685 INFO  [main.cpp:51] rxswin.main Starting application...
+2025-08-22 08:46:15.686 INFO  [application.hpp:250] rxswin.main Initializing MiST Core channel...
+2025-08-22 08:46:15.714 INFO  [application.hpp:98] rxswin.main Core channel created
+2025-08-22 08:46:15.715 INFO  [application.hpp:133] rxswin.main Consistency checking for previously confirmed rxswin.json file, path:rxswin.json
+2025-08-22 08:46:15.715 WARN  [application.hpp:136] rxswin.main No previous confirmed configurations found
+2025-08-22 08:46:15.715 INFO  [application.hpp:259] rxswin.main Initializing MiST Core and Communication channels...
+2025-08-22 08:46:15.715 INFO  [application.hpp:94] rxswin.main Channel already exists, skipping
+2025-08-22 08:46:15.717 INFO  [application.hpp:125] rxswin.main Communication channel created
+2025-08-22 08:46:15.718 INFO  [application.hpp:266] rxswin.main Checking for previously saved UUID file, path:/opt/appl/data/apps/apps_data/rxswin/uuid
+2025-08-22 08:46:15.718 WARN  [application.hpp:268] rxswin.main No previous UUID found: falling back to: 00000000-0000-0000-0000-000000000000
+2025-08-22 08:46:15.742 INFO  [application.hpp:377] rxswin.main Waiting for configurations from Communication...
+2025-08-25 07:13:44.460 INFO  [LogConfigurationManager.cpp:170] LIBL configuration completed from file '/opt/appl/data/apps/apps_bin/rxswin/resources/log4cplus.properties'
+2025-08-25 07:13:44.463 INFO  [LogConfigurationManager.cpp:77] LIBL starting live configuration loop. Configuration: directory = '/opt/appl/data/apps/apps_bin/rxswin/resources/', file = 'log4cplus.properties'
+2025-08-25 07:13:44.463 INFO  [main.cpp:34] rxswin.main Application: rxswin
+2025-08-25 07:13:44.463 INFO  [main.cpp:35] rxswin.main Version: 0.1.4
+2025-08-25 07:13:44.463 INFO  [main.cpp:36] rxswin.main Build date: Feb 17 2025
+2025-08-25 07:13:44.464 INFO  [main.cpp:37] rxswin.main Build time: 20:17:20
+2025-08-25 07:13:44.464 INFO  [main.cpp:40] rxswin.main Build type: Release
+2025-08-25 07:13:44.464 INFO  [main.cpp:45] rxswin.main Checking application token under: /opt/appl/var/mist/tokens/rxswin/token
+2025-08-25 07:13:44.464 INFO  [main.cpp:51] rxswin.main Starting application...
+2025-08-25 07:13:44.472 INFO  [application.hpp:250] rxswin.main Initializing MiST Core channel...
+2025-08-25 07:13:44.501 INFO  [application.hpp:98] rxswin.main Core channel created
+2025-08-25 07:13:44.501 INFO  [application.hpp:133] rxswin.main Consistency checking for previously confirmed rxswin.json file, path:rxswin.json
+2025-08-25 07:13:44.502 WARN  [application.hpp:136] rxswin.main No previous confirmed configurations found
+2025-08-25 07:13:44.502 INFO  [application.hpp:259] rxswin.main Initializing MiST Core and Communication channels...
+2025-08-25 07:13:44.502 INFO  [application.hpp:94] rxswin.main Channel already exists, skipping
+2025-08-25 07:13:44.504 INFO  [application.hpp:125] rxswin.main Communication channel created
+2025-08-25 07:13:44.505 INFO  [application.hpp:266] rxswin.main Checking for previously saved UUID file, path:/opt/appl/data/apps/apps_data/rxswin/uuid
+2025-08-25 07:13:44.505 WARN  [application.hpp:268] rxswin.main No previous UUID found: falling back to: 00000000-0000-0000-0000-000000000000
+2025-08-25 07:13:44.542 INFO  [application.hpp:377] rxswin.main Waiting for configurations from Communication...
+2025-09-03 07:07:53.253 INFO  [LogConfigurationManager.cpp:170] LIBL configuration completed from file '/opt/appl/data/apps/apps_bin/rxswin/resources/log4cplus.properties'
+2025-09-03 07:07:53.257 INFO  [main.cpp:34] rxswin.main Application: rxswin
+2025-09-03 07:07:53.258 INFO  [LogConfigurationManager.cpp:77] LIBL starting live configuration loop. Configuration: directory = '/opt/appl/data/apps/apps_bin/rxswin/resources/', file = 'log4cplus.properties'
+2025-09-03 07:07:53.258 INFO  [main.cpp:35] rxswin.main Version: 0.1.4
+2025-09-03 07:07:53.258 INFO  [main.cpp:36] rxswin.main Build date: Feb 17 2025
+2025-09-03 07:07:53.258 INFO  [main.cpp:37] rxswin.main Build time: 20:17:20
+2025-09-03 07:07:53.258 INFO  [main.cpp:40] rxswin.main Build type: Release
+2025-09-03 07:07:53.258 INFO  [main.cpp:45] rxswin.main Checking application token under: /opt/appl/var/mist/tokens/rxswin/token
+2025-09-03 07:07:53.259 INFO  [main.cpp:51] rxswin.main Starting application...
+2025-09-03 07:07:53.260 INFO  [application.hpp:250] rxswin.main Initializing MiST Core channel...
+2025-09-03 07:07:53.285 INFO  [application.hpp:98] rxswin.main Core channel created
+2025-09-03 07:07:53.286 INFO  [application.hpp:133] rxswin.main Consistency checking for previously confirmed rxswin.json file, path:rxswin.json
+2025-09-03 07:07:53.286 WARN  [application.hpp:136] rxswin.main No previous confirmed configurations found
+2025-09-03 07:07:53.286 INFO  [application.hpp:259] rxswin.main Initializing MiST Core and Communication channels...
+2025-09-03 07:07:53.286 INFO  [application.hpp:94] rxswin.main Channel already exists, skipping
+2025-09-03 07:07:53.288 INFO  [application.hpp:125] rxswin.main Communication channel created
+2025-09-03 07:07:53.288 INFO  [application.hpp:266] rxswin.main Checking for previously saved UUID file, path:/opt/appl/data/apps/apps_data/rxswin/uuid
+2025-09-03 07:07:53.289 WARN  [application.hpp:268] rxswin.main No previous UUID found: falling back to: 00000000-0000-0000-0000-000000000000
+2025-09-03 07:07:53.311 INFO  [application.hpp:377] rxswin.main Waiting for configurations from Communication...
+2025-09-04 19:06:04.229 INFO  [LogConfigurationManager.cpp:170] LIBL configuration completed from file '/opt/appl/data/apps/apps_bin/rxswin/resources/log4cplus.properties'
+2025-09-04 19:06:04.233 INFO  [LogConfigurationManager.cpp:77] LIBL starting live configuration loop. Configuration: directory = '/opt/appl/data/apps/apps_bin/rxswin/resources/', file = 'log4cplus.properties'
+2025-09-04 19:06:04.233 INFO  [main.cpp:34] rxswin.main Application: rxswin
+2025-09-04 19:06:04.233 INFO  [main.cpp:35] rxswin.main Version: 0.1.4
+2025-09-04 19:06:04.234 INFO  [main.cpp:36] rxswin.main Build date: Feb 17 2025
+2025-09-04 19:06:04.234 INFO  [main.cpp:37] rxswin.main Build time: 20:17:20
+2025-09-04 19:06:04.234 INFO  [main.cpp:40] rxswin.main Build type: Release
+2025-09-04 19:06:04.234 INFO  [main.cpp:45] rxswin.main Checking application token under: /opt/appl/var/mist/tokens/rxswin/token
+2025-09-04 19:06:04.234 INFO  [main.cpp:51] rxswin.main Starting application...
+2025-09-04 19:06:04.235 INFO  [application.hpp:250] rxswin.main Initializing MiST Core channel...
+2025-09-04 19:06:04.260 INFO  [application.hpp:98] rxswin.main Core channel created
+2025-09-04 19:06:04.261 INFO  [application.hpp:133] rxswin.main Consistency checking for previously confirmed rxswin.json file, path:rxswin.json
+2025-09-04 19:06:04.261 WARN  [application.hpp:136] rxswin.main No previous confirmed configurations found
+2025-09-04 19:06:04.261 INFO  [application.hpp:259] rxswin.main Initializing MiST Core and Communication channels...
+2025-09-04 19:06:04.261 INFO  [application.hpp:94] rxswin.main Channel already exists, skipping
+2025-09-04 19:06:04.263 INFO  [application.hpp:125] rxswin.main Communication channel created
+2025-09-04 19:06:04.263 INFO  [application.hpp:266] rxswin.main Checking for previously saved UUID file, path:/opt/appl/data/apps/apps_data/rxswin/uuid
+2025-09-04 19:06:04.264 WARN  [application.hpp:268] rxswin.main No previous UUID found: falling back to: 00000000-0000-0000-0000-000000000000
+2025-09-04 19:06:04.283 INFO  [application.hpp:377] rxswin.main Waiting for configurations from Communication...
+2025-09-05 09:41:43.045 INFO  [LogConfigurationManager.cpp:170] LIBL configuration completed from file '/opt/appl/data/apps/apps_bin/rxswin/resources/log4cplus.properties'
+2025-09-05 09:41:43.047 INFO  [LogConfigurationManager.cpp:77] LIBL starting live configuration loop. Configuration: directory = '/opt/appl/data/apps/apps_bin/rxswin/resources/', file = 'log4cplus.properties'
+2025-09-05 09:41:43.048 INFO  [main.cpp:34] rxswin.main Application: rxswin
+2025-09-05 09:41:43.048 INFO  [main.cpp:35] rxswin.main Version: 0.1.4
+2025-09-05 09:41:43.048 INFO  [main.cpp:36] rxswin.main Build date: Feb 17 2025
+2025-09-05 09:41:43.048 INFO  [main.cpp:37] rxswin.main Build time: 20:17:20
+2025-09-05 09:41:43.048 INFO  [main.cpp:40] rxswin.main Build type: Release
+2025-09-05 09:41:43.048 INFO  [main.cpp:45] rxswin.main Checking application token under: /opt/appl/var/mist/tokens/rxswin/token
+2025-09-05 09:41:43.049 INFO  [main.cpp:51] rxswin.main Starting application...
+2025-09-05 09:41:43.051 INFO  [application.hpp:250] rxswin.main Initializing MiST Core channel...
+2025-09-05 09:41:43.083 INFO  [application.hpp:98] rxswin.main Core channel created
+2025-09-05 09:41:43.084 INFO  [application.hpp:133] rxswin.main Consistency checking for previously confirmed rxswin.json file, path:rxswin.json
+2025-09-05 09:41:43.084 WARN  [application.hpp:136] rxswin.main No previous confirmed configurations found
+2025-09-05 09:41:43.084 INFO  [application.hpp:259] rxswin.main Initializing MiST Core and Communication channels...
+2025-09-05 09:41:43.084 INFO  [application.hpp:94] rxswin.main Channel already exists, skipping
+2025-09-05 09:41:43.086 INFO  [application.hpp:125] rxswin.main Communication channel created
+2025-09-05 09:41:43.086 INFO  [application.hpp:266] rxswin.main Checking for previously saved UUID file, path:/opt/appl/data/apps/apps_data/rxswin/uuid
+2025-09-05 09:41:43.087 WARN  [application.hpp:268] rxswin.main No previous UUID found: falling back to: 00000000-0000-0000-0000-000000000000
+2025-09-05 09:41:43.107 INFO  [application.hpp:377] rxswin.main Waiting for configurations from Communication...

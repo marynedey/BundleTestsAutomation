@@ -1,0 +1,776 @@
+2025-07-24 15:33:43.481 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/RteServer.cpp:596] rte 20.0.0.0 Iveco
+2025-07-24 15:33:43.481 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/RteServer.cpp:597] [RTESERVER] starting - configuration:
+
+RTE configuration: 
+	home_bin_path -> /opt/appl/data/apps/apps_bin/ras
+	home_data_path -> /opt/appl/data/apps/apps_data/ras
+	home_logs_path -> 
+	rte_version_major -> 20
+	rte_version_minor -> 0
+	rte_version_build -> 0
+	rte_version_revision -> 0
+	rte_version_description -> rte 20.0.0.0 Iveco
+	log_file_name -> rtserver.log
+	log_max_size -> 5242880
+	log_max_files -> 5
+	log_pattern -> %Y-%m-%d %T.%e %z | %t | %l | %s | %!:%# | %v
+	log_level -> debug
+	log_windebug_enabled -> false
+	log_console_pattern -> %v
+	log_console_level -> trace
+	log_console_enabled -> false
+	recent_jobs_max_counter -> 10
+	job_folder_persistence_hours -> 240
+	job_bundle_persistence_hours -> 24
+	job_history_limit -> 10
+	job_progress_initial_value -> -1
+	app_name -> ras
+	mist_path -> /opt/appl/var/mist
+	mist_app_token_file_path -> /opt/appl/var/mist/tokens/ras/token
+	mist_app_token_file -> 2181cfe3-25a8-410e-870a-11cc28f52429
+	mist_unix_socks_path -> unix:///opt/appl/var/mist/socks
+	script_executor_thread_mode -> 1
+	vci_attaching_mode -> 1
+	host_type -> 1
+	host_description -> PCM3
+	enable_clear_working_folder_on_startup -> true
+	main port -> 5555
+	service port -> 9001
+
+2025-07-24 15:33:43.485 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/FileManager.cpp:13] [FILE MANAGER] initialized
+2025-07-24 15:33:43.493 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/rte_comm/mistcomm.cpp:582] Comm initialized
+2025-07-24 15:33:43.493 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1288] comm_object initialization result: 0
+2025-07-24 15:33:43.493 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1186] [VehicleCommManagerImpl] found vci: PCM3 [ currently closed]
+2025-07-24 15:33:43.493 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/rte_comm/mistcomm.cpp:968] setting up stream
+2025-07-24 15:33:43.508 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1232] [VehicleCommManagerImpl] opened current vci: PCM3
+2025-07-24 15:33:43.509 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1320] [VehicleCommService] initialization true
+2025-07-24 15:33:43.509 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/Dispatcher.cpp:39] [Dispatcher] initialized
+2025-07-24 15:33:43.510 INFO  281472560787632 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/rte_comm/mistcomm.cpp:980] receive stream started
+2025-07-24 15:33:43.557 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1514] start storage optimization
+2025-07-24 15:33:43.558 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1543] start
+2025-07-24 15:33:43.559 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1617] end - #updates 0
+2025-07-24 15:33:43.559 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1623] start
+2025-07-24 15:33:43.560 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1698] end - #updates 0
+2025-07-24 15:33:43.561 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1704] start
+2025-07-24 15:33:43.563 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1763] end - #updates 0
+2025-07-24 15:33:43.563 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1769] start
+2025-07-24 15:33:43.564 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1801] end - #updates 0
+2025-07-24 15:33:43.564 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1807] start
+2025-07-24 15:33:43.565 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1854] end - #updates 0
+2025-07-24 15:33:43.565 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1538] end storage optimization
+2025-07-24 15:33:43.565 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1237] [JOB MANAGER] initialized
+2025-07-24 15:33:43.566 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/TaskManager.cpp:93] [TASK MANAGER] initialized
+2025-07-24 15:33:43.566 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/RteServiceApi.cpp:825] [RTE SERVICE] initialized
+2025-07-24 15:55:41.594 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/RteServer.cpp:596] rte 20.0.0.0 Iveco
+2025-07-24 15:55:41.595 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/RteServer.cpp:597] [RTESERVER] starting - configuration:
+
+RTE configuration: 
+	home_bin_path -> /opt/appl/data/apps/apps_bin/ras
+	home_data_path -> /opt/appl/data/apps/apps_data/ras
+	home_logs_path -> 
+	rte_version_major -> 20
+	rte_version_minor -> 0
+	rte_version_build -> 0
+	rte_version_revision -> 0
+	rte_version_description -> rte 20.0.0.0 Iveco
+	log_file_name -> rtserver.log
+	log_max_size -> 5242880
+	log_max_files -> 5
+	log_pattern -> %Y-%m-%d %T.%e %z | %t | %l | %s | %!:%# | %v
+	log_level -> debug
+	log_windebug_enabled -> false
+	log_console_pattern -> %v
+	log_console_level -> trace
+	log_console_enabled -> false
+	recent_jobs_max_counter -> 10
+	job_folder_persistence_hours -> 240
+	job_bundle_persistence_hours -> 24
+	job_history_limit -> 10
+	job_progress_initial_value -> -1
+	app_name -> ras
+	mist_path -> /opt/appl/var/mist
+	mist_app_token_file_path -> /opt/appl/var/mist/tokens/ras/token
+	mist_app_token_file -> ee1d1293-8324-46bf-86e6-11daaaa17247
+	mist_unix_socks_path -> unix:///opt/appl/var/mist/socks
+	script_executor_thread_mode -> 1
+	vci_attaching_mode -> 1
+	host_type -> 1
+	host_description -> PCM3
+	enable_clear_working_folder_on_startup -> true
+	main port -> 5555
+	service port -> 9001
+
+2025-07-24 15:55:41.602 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/FileManager.cpp:13] [FILE MANAGER] initialized
+2025-07-24 15:55:41.625 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/rte_comm/mistcomm.cpp:582] Comm initialized
+2025-07-24 15:55:41.625 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1288] comm_object initialization result: 0
+2025-07-24 15:55:41.625 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1186] [VehicleCommManagerImpl] found vci: PCM3 [ currently closed]
+2025-07-24 15:55:41.625 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/rte_comm/mistcomm.cpp:968] setting up stream
+2025-07-24 15:55:41.644 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1232] [VehicleCommManagerImpl] opened current vci: PCM3
+2025-07-24 15:55:41.645 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1320] [VehicleCommService] initialization true
+2025-07-24 15:55:41.645 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/Dispatcher.cpp:39] [Dispatcher] initialized
+2025-07-24 15:55:41.645 INFO  281472686612656 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/rte_comm/mistcomm.cpp:980] receive stream started
+2025-07-24 15:55:41.669 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1514] start storage optimization
+2025-07-24 15:55:41.669 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1543] start
+2025-07-24 15:55:41.670 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1617] end - #updates 0
+2025-07-24 15:55:41.670 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1623] start
+2025-07-24 15:55:41.671 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1698] end - #updates 0
+2025-07-24 15:55:41.671 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1704] start
+2025-07-24 15:55:41.672 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1763] end - #updates 0
+2025-07-24 15:55:41.672 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1769] start
+2025-07-24 15:55:41.673 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1801] end - #updates 0
+2025-07-24 15:55:41.674 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1807] start
+2025-07-24 15:55:41.674 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1854] end - #updates 0
+2025-07-24 15:55:41.674 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1538] end storage optimization
+2025-07-24 15:55:41.675 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1237] [JOB MANAGER] initialized
+2025-07-24 15:55:41.678 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/TaskManager.cpp:93] [TASK MANAGER] initialized
+2025-07-24 15:55:41.678 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/RteServiceApi.cpp:825] [RTE SERVICE] initialized
+2025-08-21 07:46:57.822 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/RteServer.cpp:596] rte 20.0.0.0 Iveco
+2025-08-21 07:46:57.823 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/RteServer.cpp:597] [RTESERVER] starting - configuration:
+
+RTE configuration: 
+	home_bin_path -> /opt/appl/data/apps/apps_bin/ras
+	home_data_path -> /opt/appl/data/apps/apps_data/ras
+	home_logs_path -> 
+	rte_version_major -> 20
+	rte_version_minor -> 0
+	rte_version_build -> 0
+	rte_version_revision -> 0
+	rte_version_description -> rte 20.0.0.0 Iveco
+	log_file_name -> rtserver.log
+	log_max_size -> 5242880
+	log_max_files -> 5
+	log_pattern -> %Y-%m-%d %T.%e %z | %t | %l | %s | %!:%# | %v
+	log_level -> debug
+	log_windebug_enabled -> false
+	log_console_pattern -> %v
+	log_console_level -> trace
+	log_console_enabled -> false
+	recent_jobs_max_counter -> 10
+	job_folder_persistence_hours -> 240
+	job_bundle_persistence_hours -> 24
+	job_history_limit -> 10
+	job_progress_initial_value -> -1
+	app_name -> ras
+	mist_path -> /opt/appl/var/mist
+	mist_app_token_file_path -> /opt/appl/var/mist/tokens/ras/token
+	mist_app_token_file -> 3d293393-7621-414e-8d9b-cf63e1d92096
+	mist_unix_socks_path -> unix:///opt/appl/var/mist/socks
+	script_executor_thread_mode -> 1
+	vci_attaching_mode -> 1
+	host_type -> 1
+	host_description -> PCM3
+	enable_clear_working_folder_on_startup -> true
+	main port -> 5555
+	service port -> 9001
+
+2025-08-21 07:46:57.827 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/FileManager.cpp:13] [FILE MANAGER] initialized
+2025-08-21 07:46:57.853 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/rte_comm/mistcomm.cpp:582] Comm initialized
+2025-08-21 07:46:57.853 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1288] comm_object initialization result: 0
+2025-08-21 07:46:57.853 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1186] [VehicleCommManagerImpl] found vci: PCM3 [ currently closed]
+2025-08-21 07:46:57.853 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/rte_comm/mistcomm.cpp:968] setting up stream
+2025-08-21 07:46:57.873 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1232] [VehicleCommManagerImpl] opened current vci: PCM3
+2025-08-21 07:46:57.873 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1320] [VehicleCommService] initialization true
+2025-08-21 07:46:57.873 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/Dispatcher.cpp:39] [Dispatcher] initialized
+2025-08-21 07:46:57.874 INFO  281473659674800 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/rte_comm/mistcomm.cpp:980] receive stream started
+2025-08-21 07:46:57.898 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1514] start storage optimization
+2025-08-21 07:46:57.899 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1543] start
+2025-08-21 07:46:57.900 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1617] end - #updates 0
+2025-08-21 07:46:57.900 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1623] start
+2025-08-21 07:46:57.903 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1698] end - #updates 0
+2025-08-21 07:46:57.903 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1704] start
+2025-08-21 07:46:57.904 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1763] end - #updates 0
+2025-08-21 07:46:57.904 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1769] start
+2025-08-21 07:46:57.905 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1801] end - #updates 0
+2025-08-21 07:46:57.905 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1807] start
+2025-08-21 07:46:57.906 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1854] end - #updates 0
+2025-08-21 07:46:57.906 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1538] end storage optimization
+2025-08-21 07:46:57.906 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1237] [JOB MANAGER] initialized
+2025-08-21 07:46:57.908 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/TaskManager.cpp:93] [TASK MANAGER] initialized
+2025-08-21 07:46:57.909 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/RteServiceApi.cpp:825] [RTE SERVICE] initialized
+2025-08-21 08:22:28.129 INFO  281473659674800 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/rte_comm/mistcomm.cpp:1048] receive stream exit
+2025-08-21 08:22:36.791 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/Rte.cpp:473] RTE shutting down...
+2025-08-21 08:22:36.795 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/RteServiceApi.cpp:831] [RTE SERVICE] shutdown
+2025-08-21 08:22:36.798 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/TaskManager.cpp:101] [TASK MANAGER] shutdown
+2025-08-21 08:22:36.800 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1250] [JOB MANAGER] shutdown: true
+2025-08-21 08:22:36.824 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/Dispatcher.cpp:45] [Dispatcher] shutdown
+2025-08-21 08:22:36.828 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1326] [VehicleCommService] shutdown - enter
+2025-08-21 08:22:36.865 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1242] [VehicleCommManagerImpl] closing current vci: PCM3
+2025-08-21 08:22:37.208 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1330] [VehicleCommService] shutdown - exit
+2025-08-21 08:22:37.340 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/Rte.cpp:478] RTE shutting down... done
+2025-08-21 08:26:40.728 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/RteServer.cpp:596] rte 20.0.0.0 Iveco
+2025-08-21 08:26:40.729 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/RteServer.cpp:597] [RTESERVER] starting - configuration:
+
+RTE configuration: 
+	home_bin_path -> /opt/appl/data/apps/apps_bin/ras
+	home_data_path -> /opt/appl/data/apps/apps_data/ras
+	home_logs_path -> 
+	rte_version_major -> 20
+	rte_version_minor -> 0
+	rte_version_build -> 0
+	rte_version_revision -> 0
+	rte_version_description -> rte 20.0.0.0 Iveco
+	log_file_name -> rtserver.log
+	log_max_size -> 5242880
+	log_max_files -> 5
+	log_pattern -> %Y-%m-%d %T.%e %z | %t | %l | %s | %!:%# | %v
+	log_level -> debug
+	log_windebug_enabled -> false
+	log_console_pattern -> %v
+	log_console_level -> trace
+	log_console_enabled -> false
+	recent_jobs_max_counter -> 10
+	job_folder_persistence_hours -> 240
+	job_bundle_persistence_hours -> 24
+	job_history_limit -> 10
+	job_progress_initial_value -> -1
+	app_name -> ras
+	mist_path -> /opt/appl/var/mist
+	mist_app_token_file_path -> /opt/appl/var/mist/tokens/ras/token
+	mist_app_token_file -> 01b87f81-fbab-48b8-97f0-c600d5652feb
+	mist_unix_socks_path -> unix:///opt/appl/var/mist/socks
+	script_executor_thread_mode -> 1
+	vci_attaching_mode -> 1
+	host_type -> 1
+	host_description -> PCM3
+	enable_clear_working_folder_on_startup -> true
+	main port -> 5555
+	service port -> 9001
+
+2025-08-21 08:26:40.731 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/FileManager.cpp:13] [FILE MANAGER] initialized
+2025-08-21 08:26:40.741 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/rte_comm/mistcomm.cpp:582] Comm initialized
+2025-08-21 08:26:40.741 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1288] comm_object initialization result: 0
+2025-08-21 08:26:40.741 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1186] [VehicleCommManagerImpl] found vci: PCM3 [ currently closed]
+2025-08-21 08:26:40.741 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/rte_comm/mistcomm.cpp:968] setting up stream
+2025-08-21 08:26:40.755 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1232] [VehicleCommManagerImpl] opened current vci: PCM3
+2025-08-21 08:26:40.760 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1320] [VehicleCommService] initialization true
+2025-08-21 08:26:40.760 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/Dispatcher.cpp:39] [Dispatcher] initialized
+2025-08-21 08:26:40.756 INFO  281472929870000 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/rte_comm/mistcomm.cpp:980] receive stream started
+2025-08-21 08:26:40.766 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1514] start storage optimization
+2025-08-21 08:26:40.767 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1543] start
+2025-08-21 08:26:40.768 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1617] end - #updates 0
+2025-08-21 08:26:40.768 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1623] start
+2025-08-21 08:26:40.769 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1698] end - #updates 0
+2025-08-21 08:26:40.770 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1704] start
+2025-08-21 08:26:40.771 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1763] end - #updates 0
+2025-08-21 08:26:40.771 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1769] start
+2025-08-21 08:26:40.772 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1801] end - #updates 0
+2025-08-21 08:26:40.773 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1807] start
+2025-08-21 08:26:40.774 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1854] end - #updates 0
+2025-08-21 08:26:40.774 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1538] end storage optimization
+2025-08-21 08:26:40.774 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1237] [JOB MANAGER] initialized
+2025-08-21 08:26:40.774 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/TaskManager.cpp:93] [TASK MANAGER] initialized
+2025-08-21 08:26:40.775 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/RteServiceApi.cpp:825] [RTE SERVICE] initialized
+2025-08-21 15:00:17.923 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/RteServer.cpp:596] rte 20.0.0.0 Iveco
+2025-08-21 15:00:17.924 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/RteServer.cpp:597] [RTESERVER] starting - configuration:
+
+RTE configuration: 
+	home_bin_path -> /opt/appl/data/apps/apps_bin/ras
+	home_data_path -> /opt/appl/data/apps/apps_data/ras
+	home_logs_path -> 
+	rte_version_major -> 20
+	rte_version_minor -> 0
+	rte_version_build -> 0
+	rte_version_revision -> 0
+	rte_version_description -> rte 20.0.0.0 Iveco
+	log_file_name -> rtserver.log
+	log_max_size -> 5242880
+	log_max_files -> 5
+	log_pattern -> %Y-%m-%d %T.%e %z | %t | %l | %s | %!:%# | %v
+	log_level -> debug
+	log_windebug_enabled -> false
+	log_console_pattern -> %v
+	log_console_level -> trace
+	log_console_enabled -> false
+	recent_jobs_max_counter -> 10
+	job_folder_persistence_hours -> 240
+	job_bundle_persistence_hours -> 24
+	job_history_limit -> 10
+	job_progress_initial_value -> -1
+	app_name -> ras
+	mist_path -> /opt/appl/var/mist
+	mist_app_token_file_path -> /opt/appl/var/mist/tokens/ras/token
+	mist_app_token_file -> 775e0c80-eb10-424e-919e-0209a5ae0452
+	mist_unix_socks_path -> unix:///opt/appl/var/mist/socks
+	script_executor_thread_mode -> 1
+	vci_attaching_mode -> 1
+	host_type -> 1
+	host_description -> PCM3
+	enable_clear_working_folder_on_startup -> true
+	main port -> 5555
+	service port -> 9001
+
+2025-08-21 15:00:17.929 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/FileManager.cpp:13] [FILE MANAGER] initialized
+2025-08-21 15:00:17.955 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/rte_comm/mistcomm.cpp:582] Comm initialized
+2025-08-21 15:00:17.955 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1288] comm_object initialization result: 0
+2025-08-21 15:00:17.955 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1186] [VehicleCommManagerImpl] found vci: PCM3 [ currently closed]
+2025-08-21 15:00:17.956 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/rte_comm/mistcomm.cpp:968] setting up stream
+2025-08-21 15:00:17.974 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1232] [VehicleCommManagerImpl] opened current vci: PCM3
+2025-08-21 15:00:17.975 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1320] [VehicleCommService] initialization true
+2025-08-21 15:00:17.975 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/Dispatcher.cpp:39] [Dispatcher] initialized
+2025-08-21 15:00:17.975 INFO  281472812437680 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/rte_comm/mistcomm.cpp:980] receive stream started
+2025-08-21 15:00:18.004 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1514] start storage optimization
+2025-08-21 15:00:18.004 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1543] start
+2025-08-21 15:00:18.006 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1617] end - #updates 0
+2025-08-21 15:00:18.006 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1623] start
+2025-08-21 15:00:18.007 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1698] end - #updates 0
+2025-08-21 15:00:18.007 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1704] start
+2025-08-21 15:00:18.008 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1763] end - #updates 0
+2025-08-21 15:00:18.008 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1769] start
+2025-08-21 15:00:18.010 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1801] end - #updates 0
+2025-08-21 15:00:18.011 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1807] start
+2025-08-21 15:00:18.011 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1854] end - #updates 0
+2025-08-21 15:00:18.011 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1538] end storage optimization
+2025-08-21 15:00:18.012 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1237] [JOB MANAGER] initialized
+2025-08-21 15:00:18.014 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/TaskManager.cpp:93] [TASK MANAGER] initialized
+2025-08-21 15:00:18.014 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/RteServiceApi.cpp:825] [RTE SERVICE] initialized
+2025-08-22 07:38:46.092 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/RteServer.cpp:596] rte 20.0.0.0 Iveco
+2025-08-22 07:38:46.093 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/RteServer.cpp:597] [RTESERVER] starting - configuration:
+
+RTE configuration: 
+	home_bin_path -> /opt/appl/data/apps/apps_bin/ras
+	home_data_path -> /opt/appl/data/apps/apps_data/ras
+	home_logs_path -> 
+	rte_version_major -> 20
+	rte_version_minor -> 0
+	rte_version_build -> 0
+	rte_version_revision -> 0
+	rte_version_description -> rte 20.0.0.0 Iveco
+	log_file_name -> rtserver.log
+	log_max_size -> 5242880
+	log_max_files -> 5
+	log_pattern -> %Y-%m-%d %T.%e %z | %t | %l | %s | %!:%# | %v
+	log_level -> debug
+	log_windebug_enabled -> false
+	log_console_pattern -> %v
+	log_console_level -> trace
+	log_console_enabled -> false
+	recent_jobs_max_counter -> 10
+	job_folder_persistence_hours -> 240
+	job_bundle_persistence_hours -> 24
+	job_history_limit -> 10
+	job_progress_initial_value -> -1
+	app_name -> ras
+	mist_path -> /opt/appl/var/mist
+	mist_app_token_file_path -> /opt/appl/var/mist/tokens/ras/token
+	mist_app_token_file -> ddbfd422-2c99-4631-9b3c-9586799d83c9
+	mist_unix_socks_path -> unix:///opt/appl/var/mist/socks
+	script_executor_thread_mode -> 1
+	vci_attaching_mode -> 1
+	host_type -> 1
+	host_description -> PCM3
+	enable_clear_working_folder_on_startup -> true
+	main port -> 5555
+	service port -> 9001
+
+2025-08-22 07:38:46.100 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/FileManager.cpp:13] [FILE MANAGER] initialized
+2025-08-22 07:38:46.124 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/rte_comm/mistcomm.cpp:582] Comm initialized
+2025-08-22 07:38:46.124 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1288] comm_object initialization result: 0
+2025-08-22 07:38:46.124 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1186] [VehicleCommManagerImpl] found vci: PCM3 [ currently closed]
+2025-08-22 07:38:46.124 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/rte_comm/mistcomm.cpp:968] setting up stream
+2025-08-22 07:38:46.142 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1232] [VehicleCommManagerImpl] opened current vci: PCM3
+2025-08-22 07:38:46.142 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1320] [VehicleCommService] initialization true
+2025-08-22 07:38:46.142 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/Dispatcher.cpp:39] [Dispatcher] initialized
+2025-08-22 07:38:46.143 INFO  281473057788080 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/rte_comm/mistcomm.cpp:980] receive stream started
+2025-08-22 07:38:46.171 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1514] start storage optimization
+2025-08-22 07:38:46.174 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1543] start
+2025-08-22 07:38:46.175 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1617] end - #updates 0
+2025-08-22 07:38:46.175 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1623] start
+2025-08-22 07:38:46.177 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1698] end - #updates 0
+2025-08-22 07:38:46.177 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1704] start
+2025-08-22 07:38:46.178 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1763] end - #updates 0
+2025-08-22 07:38:46.180 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1769] start
+2025-08-22 07:38:46.181 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1801] end - #updates 0
+2025-08-22 07:38:46.181 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1807] start
+2025-08-22 07:38:46.182 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1854] end - #updates 0
+2025-08-22 07:38:46.183 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1538] end storage optimization
+2025-08-22 07:38:46.183 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1237] [JOB MANAGER] initialized
+2025-08-22 07:38:46.184 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/TaskManager.cpp:93] [TASK MANAGER] initialized
+2025-08-22 07:38:46.185 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/RteServiceApi.cpp:825] [RTE SERVICE] initialized
+2025-08-22 08:36:01.293 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/RteServer.cpp:596] rte 20.0.0.0 Iveco
+2025-08-22 08:36:01.295 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/RteServer.cpp:597] [RTESERVER] starting - configuration:
+
+RTE configuration: 
+	home_bin_path -> /opt/appl/data/apps/apps_bin/ras
+	home_data_path -> /opt/appl/data/apps/apps_data/ras
+	home_logs_path -> 
+	rte_version_major -> 20
+	rte_version_minor -> 0
+	rte_version_build -> 0
+	rte_version_revision -> 0
+	rte_version_description -> rte 20.0.0.0 Iveco
+	log_file_name -> rtserver.log
+	log_max_size -> 5242880
+	log_max_files -> 5
+	log_pattern -> %Y-%m-%d %T.%e %z | %t | %l | %s | %!:%# | %v
+	log_level -> debug
+	log_windebug_enabled -> false
+	log_console_pattern -> %v
+	log_console_level -> trace
+	log_console_enabled -> false
+	recent_jobs_max_counter -> 10
+	job_folder_persistence_hours -> 240
+	job_bundle_persistence_hours -> 24
+	job_history_limit -> 10
+	job_progress_initial_value -> -1
+	app_name -> ras
+	mist_path -> /opt/appl/var/mist
+	mist_app_token_file_path -> /opt/appl/var/mist/tokens/ras/token
+	mist_app_token_file -> 8bafc56b-4e80-46da-8ab1-6677b06f0318
+	mist_unix_socks_path -> unix:///opt/appl/var/mist/socks
+	script_executor_thread_mode -> 1
+	vci_attaching_mode -> 1
+	host_type -> 1
+	host_description -> PCM3
+	enable_clear_working_folder_on_startup -> true
+	main port -> 5555
+	service port -> 9001
+
+2025-08-22 08:36:01.300 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/FileManager.cpp:13] [FILE MANAGER] initialized
+2025-08-22 08:36:01.324 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/rte_comm/mistcomm.cpp:582] Comm initialized
+2025-08-22 08:36:01.324 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1288] comm_object initialization result: 0
+2025-08-22 08:36:01.324 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1186] [VehicleCommManagerImpl] found vci: PCM3 [ currently closed]
+2025-08-22 08:36:01.324 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/rte_comm/mistcomm.cpp:968] setting up stream
+2025-08-22 08:36:01.349 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1232] [VehicleCommManagerImpl] opened current vci: PCM3
+2025-08-22 08:36:01.349 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1320] [VehicleCommService] initialization true
+2025-08-22 08:36:01.350 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/Dispatcher.cpp:39] [Dispatcher] initialized
+2025-08-22 08:36:01.351 INFO  281472787259568 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/rte_comm/mistcomm.cpp:980] receive stream started
+2025-08-22 08:36:01.387 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1514] start storage optimization
+2025-08-22 08:36:01.387 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1543] start
+2025-08-22 08:36:01.388 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1617] end - #updates 0
+2025-08-22 08:36:01.388 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1623] start
+2025-08-22 08:36:01.391 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1698] end - #updates 0
+2025-08-22 08:36:01.391 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1704] start
+2025-08-22 08:36:01.393 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1763] end - #updates 0
+2025-08-22 08:36:01.394 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1769] start
+2025-08-22 08:36:01.394 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1801] end - #updates 0
+2025-08-22 08:36:01.395 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1807] start
+2025-08-22 08:36:01.395 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1854] end - #updates 0
+2025-08-22 08:36:01.395 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1538] end storage optimization
+2025-08-22 08:36:01.395 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1237] [JOB MANAGER] initialized
+2025-08-22 08:36:01.397 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/TaskManager.cpp:93] [TASK MANAGER] initialized
+2025-08-22 08:36:01.397 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/RteServiceApi.cpp:825] [RTE SERVICE] initialized
+2025-08-22 08:40:24.984 INFO  281472787259568 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/rte_comm/mistcomm.cpp:1048] receive stream exit
+2025-08-22 08:40:31.737 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/Rte.cpp:473] RTE shutting down...
+2025-08-22 08:40:31.741 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/RteServiceApi.cpp:831] [RTE SERVICE] shutdown
+2025-08-22 08:40:31.756 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/TaskManager.cpp:101] [TASK MANAGER] shutdown
+2025-08-22 08:40:31.757 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1250] [JOB MANAGER] shutdown: true
+2025-08-22 08:40:31.802 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/Dispatcher.cpp:45] [Dispatcher] shutdown
+2025-08-22 08:40:31.805 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1326] [VehicleCommService] shutdown - enter
+2025-08-22 08:40:31.806 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1242] [VehicleCommManagerImpl] closing current vci: PCM3
+2025-08-22 08:40:31.972 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1330] [VehicleCommService] shutdown - exit
+2025-08-22 08:40:31.982 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/Rte.cpp:478] RTE shutting down... done
+2025-08-22 08:43:09.008 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/RteServer.cpp:596] rte 20.0.0.0 Iveco
+2025-08-22 08:43:09.009 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/RteServer.cpp:597] [RTESERVER] starting - configuration:
+
+RTE configuration: 
+	home_bin_path -> /opt/appl/data/apps/apps_bin/ras
+	home_data_path -> /opt/appl/data/apps/apps_data/ras
+	home_logs_path -> 
+	rte_version_major -> 20
+	rte_version_minor -> 0
+	rte_version_build -> 0
+	rte_version_revision -> 0
+	rte_version_description -> rte 20.0.0.0 Iveco
+	log_file_name -> rtserver.log
+	log_max_size -> 5242880
+	log_max_files -> 5
+	log_pattern -> %Y-%m-%d %T.%e %z | %t | %l | %s | %!:%# | %v
+	log_level -> debug
+	log_windebug_enabled -> false
+	log_console_pattern -> %v
+	log_console_level -> trace
+	log_console_enabled -> false
+	recent_jobs_max_counter -> 10
+	job_folder_persistence_hours -> 240
+	job_bundle_persistence_hours -> 24
+	job_history_limit -> 10
+	job_progress_initial_value -> -1
+	app_name -> ras
+	mist_path -> /opt/appl/var/mist
+	mist_app_token_file_path -> /opt/appl/var/mist/tokens/ras/token
+	mist_app_token_file -> 7d55ebdb-2038-4ea0-883e-508c93b4bb52
+	mist_unix_socks_path -> unix:///opt/appl/var/mist/socks
+	script_executor_thread_mode -> 1
+	vci_attaching_mode -> 1
+	host_type -> 1
+	host_description -> PCM3
+	enable_clear_working_folder_on_startup -> true
+	main port -> 5555
+	service port -> 9001
+
+2025-08-22 08:43:09.014 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/FileManager.cpp:13] [FILE MANAGER] initialized
+2025-08-22 08:43:09.039 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/rte_comm/mistcomm.cpp:582] Comm initialized
+2025-08-22 08:43:09.039 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1288] comm_object initialization result: 0
+2025-08-22 08:43:09.039 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1186] [VehicleCommManagerImpl] found vci: PCM3 [ currently closed]
+2025-08-22 08:43:09.039 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/rte_comm/mistcomm.cpp:968] setting up stream
+2025-08-22 08:43:09.059 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1232] [VehicleCommManagerImpl] opened current vci: PCM3
+2025-08-22 08:43:09.059 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1320] [VehicleCommService] initialization true
+2025-08-22 08:43:09.059 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/Dispatcher.cpp:39] [Dispatcher] initialized
+2025-08-22 08:43:09.060 INFO  281473644568752 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/rte_comm/mistcomm.cpp:980] receive stream started
+2025-08-22 08:43:09.090 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1514] start storage optimization
+2025-08-22 08:43:09.090 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1543] start
+2025-08-22 08:43:09.092 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1617] end - #updates 0
+2025-08-22 08:43:09.093 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1623] start
+2025-08-22 08:43:09.094 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1698] end - #updates 0
+2025-08-22 08:43:09.094 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1704] start
+2025-08-22 08:43:09.096 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1763] end - #updates 0
+2025-08-22 08:43:09.099 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1769] start
+2025-08-22 08:43:09.100 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1801] end - #updates 0
+2025-08-22 08:43:09.101 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1807] start
+2025-08-22 08:43:09.102 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1854] end - #updates 0
+2025-08-22 08:43:09.102 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1538] end storage optimization
+2025-08-22 08:43:09.102 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1237] [JOB MANAGER] initialized
+2025-08-22 08:43:09.104 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/TaskManager.cpp:93] [TASK MANAGER] initialized
+2025-08-22 08:43:09.106 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/RteServiceApi.cpp:825] [RTE SERVICE] initialized
+2025-08-25 07:10:38.612 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/RteServer.cpp:596] rte 20.0.0.0 Iveco
+2025-08-25 07:10:38.613 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/RteServer.cpp:597] [RTESERVER] starting - configuration:
+
+RTE configuration: 
+	home_bin_path -> /opt/appl/data/apps/apps_bin/ras
+	home_data_path -> /opt/appl/data/apps/apps_data/ras
+	home_logs_path -> 
+	rte_version_major -> 20
+	rte_version_minor -> 0
+	rte_version_build -> 0
+	rte_version_revision -> 0
+	rte_version_description -> rte 20.0.0.0 Iveco
+	log_file_name -> rtserver.log
+	log_max_size -> 5242880
+	log_max_files -> 5
+	log_pattern -> %Y-%m-%d %T.%e %z | %t | %l | %s | %!:%# | %v
+	log_level -> debug
+	log_windebug_enabled -> false
+	log_console_pattern -> %v
+	log_console_level -> trace
+	log_console_enabled -> false
+	recent_jobs_max_counter -> 10
+	job_folder_persistence_hours -> 240
+	job_bundle_persistence_hours -> 24
+	job_history_limit -> 10
+	job_progress_initial_value -> -1
+	app_name -> ras
+	mist_path -> /opt/appl/var/mist
+	mist_app_token_file_path -> /opt/appl/var/mist/tokens/ras/token
+	mist_app_token_file -> 40a53fae-e0a9-49c1-952a-3e525fd128a9
+	mist_unix_socks_path -> unix:///opt/appl/var/mist/socks
+	script_executor_thread_mode -> 1
+	vci_attaching_mode -> 1
+	host_type -> 1
+	host_description -> PCM3
+	enable_clear_working_folder_on_startup -> true
+	main port -> 5555
+	service port -> 9001
+
+2025-08-25 07:10:38.618 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/FileManager.cpp:13] [FILE MANAGER] initialized
+2025-08-25 07:10:38.642 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/rte_comm/mistcomm.cpp:582] Comm initialized
+2025-08-25 07:10:38.642 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1288] comm_object initialization result: 0
+2025-08-25 07:10:38.642 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1186] [VehicleCommManagerImpl] found vci: PCM3 [ currently closed]
+2025-08-25 07:10:38.643 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/rte_comm/mistcomm.cpp:968] setting up stream
+2025-08-25 07:10:38.662 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1232] [VehicleCommManagerImpl] opened current vci: PCM3
+2025-08-25 07:10:38.663 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1320] [VehicleCommService] initialization true
+2025-08-25 07:10:38.663 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/Dispatcher.cpp:39] [Dispatcher] initialized
+2025-08-25 07:10:38.663 INFO  281473542242480 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/rte_comm/mistcomm.cpp:980] receive stream started
+2025-08-25 07:10:38.689 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1514] start storage optimization
+2025-08-25 07:10:38.690 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1543] start
+2025-08-25 07:10:38.692 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1617] end - #updates 0
+2025-08-25 07:10:38.693 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1623] start
+2025-08-25 07:10:38.694 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1698] end - #updates 0
+2025-08-25 07:10:38.694 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1704] start
+2025-08-25 07:10:38.695 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1763] end - #updates 0
+2025-08-25 07:10:38.695 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1769] start
+2025-08-25 07:10:38.698 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1801] end - #updates 0
+2025-08-25 07:10:38.698 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1807] start
+2025-08-25 07:10:38.699 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1854] end - #updates 0
+2025-08-25 07:10:38.699 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1538] end storage optimization
+2025-08-25 07:10:38.699 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1237] [JOB MANAGER] initialized
+2025-08-25 07:10:38.701 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/TaskManager.cpp:93] [TASK MANAGER] initialized
+2025-08-25 07:10:38.701 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/RteServiceApi.cpp:825] [RTE SERVICE] initialized
+2025-09-03 07:04:47.826 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/RteServer.cpp:596] rte 20.0.0.0 Iveco
+2025-09-03 07:04:47.827 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/RteServer.cpp:597] [RTESERVER] starting - configuration:
+
+RTE configuration: 
+	home_bin_path -> /opt/appl/data/apps/apps_bin/ras
+	home_data_path -> /opt/appl/data/apps/apps_data/ras
+	home_logs_path -> 
+	rte_version_major -> 20
+	rte_version_minor -> 0
+	rte_version_build -> 0
+	rte_version_revision -> 0
+	rte_version_description -> rte 20.0.0.0 Iveco
+	log_file_name -> rtserver.log
+	log_max_size -> 5242880
+	log_max_files -> 5
+	log_pattern -> %Y-%m-%d %T.%e %z | %t | %l | %s | %!:%# | %v
+	log_level -> debug
+	log_windebug_enabled -> false
+	log_console_pattern -> %v
+	log_console_level -> trace
+	log_console_enabled -> false
+	recent_jobs_max_counter -> 10
+	job_folder_persistence_hours -> 240
+	job_bundle_persistence_hours -> 24
+	job_history_limit -> 10
+	job_progress_initial_value -> -1
+	app_name -> ras
+	mist_path -> /opt/appl/var/mist
+	mist_app_token_file_path -> /opt/appl/var/mist/tokens/ras/token
+	mist_app_token_file -> f2d173ff-9dd7-46b6-ae20-992570691943
+	mist_unix_socks_path -> unix:///opt/appl/var/mist/socks
+	script_executor_thread_mode -> 1
+	vci_attaching_mode -> 1
+	host_type -> 1
+	host_description -> PCM3
+	enable_clear_working_folder_on_startup -> true
+	main port -> 5555
+	service port -> 9001
+
+2025-09-03 07:04:47.835 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/FileManager.cpp:13] [FILE MANAGER] initialized
+2025-09-03 07:04:47.864 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/rte_comm/mistcomm.cpp:582] Comm initialized
+2025-09-03 07:04:47.865 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1288] comm_object initialization result: 0
+2025-09-03 07:04:47.865 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1186] [VehicleCommManagerImpl] found vci: PCM3 [ currently closed]
+2025-09-03 07:04:47.865 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/rte_comm/mistcomm.cpp:968] setting up stream
+2025-09-03 07:04:47.885 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1232] [VehicleCommManagerImpl] opened current vci: PCM3
+2025-09-03 07:04:47.886 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1320] [VehicleCommService] initialization true
+2025-09-03 07:04:47.886 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/Dispatcher.cpp:39] [Dispatcher] initialized
+2025-09-03 07:04:47.886 INFO  281473600958640 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/rte_comm/mistcomm.cpp:980] receive stream started
+2025-09-03 07:04:47.914 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1514] start storage optimization
+2025-09-03 07:04:47.915 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1543] start
+2025-09-03 07:04:47.916 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1617] end - #updates 0
+2025-09-03 07:04:47.916 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1623] start
+2025-09-03 07:04:47.917 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1698] end - #updates 0
+2025-09-03 07:04:47.917 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1704] start
+2025-09-03 07:04:47.918 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1763] end - #updates 0
+2025-09-03 07:04:47.918 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1769] start
+2025-09-03 07:04:47.919 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1801] end - #updates 0
+2025-09-03 07:04:47.920 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1807] start
+2025-09-03 07:04:47.922 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1854] end - #updates 0
+2025-09-03 07:04:47.922 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1538] end storage optimization
+2025-09-03 07:04:47.922 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1237] [JOB MANAGER] initialized
+2025-09-03 07:04:47.925 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/TaskManager.cpp:93] [TASK MANAGER] initialized
+2025-09-03 07:04:47.925 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/RteServiceApi.cpp:825] [RTE SERVICE] initialized
+2025-09-04 19:02:58.482 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/RteServer.cpp:596] rte 20.0.0.0 Iveco
+2025-09-04 19:02:58.483 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/RteServer.cpp:597] [RTESERVER] starting - configuration:
+
+RTE configuration: 
+	home_bin_path -> /opt/appl/data/apps/apps_bin/ras
+	home_data_path -> /opt/appl/data/apps/apps_data/ras
+	home_logs_path -> 
+	rte_version_major -> 20
+	rte_version_minor -> 0
+	rte_version_build -> 0
+	rte_version_revision -> 0
+	rte_version_description -> rte 20.0.0.0 Iveco
+	log_file_name -> rtserver.log
+	log_max_size -> 5242880
+	log_max_files -> 5
+	log_pattern -> %Y-%m-%d %T.%e %z | %t | %l | %s | %!:%# | %v
+	log_level -> debug
+	log_windebug_enabled -> false
+	log_console_pattern -> %v
+	log_console_level -> trace
+	log_console_enabled -> false
+	recent_jobs_max_counter -> 10
+	job_folder_persistence_hours -> 240
+	job_bundle_persistence_hours -> 24
+	job_history_limit -> 10
+	job_progress_initial_value -> -1
+	app_name -> ras
+	mist_path -> /opt/appl/var/mist
+	mist_app_token_file_path -> /opt/appl/var/mist/tokens/ras/token
+	mist_app_token_file -> 59a5c043-2319-40b2-9efc-4046bd224401
+	mist_unix_socks_path -> unix:///opt/appl/var/mist/socks
+	script_executor_thread_mode -> 1
+	vci_attaching_mode -> 1
+	host_type -> 1
+	host_description -> PCM3
+	enable_clear_working_folder_on_startup -> true
+	main port -> 5555
+	service port -> 9001
+
+2025-09-04 19:02:58.488 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/FileManager.cpp:13] [FILE MANAGER] initialized
+2025-09-04 19:02:58.517 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/rte_comm/mistcomm.cpp:582] Comm initialized
+2025-09-04 19:02:58.517 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1288] comm_object initialization result: 0
+2025-09-04 19:02:58.518 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1186] [VehicleCommManagerImpl] found vci: PCM3 [ currently closed]
+2025-09-04 19:02:58.518 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/rte_comm/mistcomm.cpp:968] setting up stream
+2025-09-04 19:02:58.538 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1232] [VehicleCommManagerImpl] opened current vci: PCM3
+2025-09-04 19:02:58.538 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1320] [VehicleCommService] initialization true
+2025-09-04 19:02:58.538 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/Dispatcher.cpp:39] [Dispatcher] initialized
+2025-09-04 19:02:58.539 INFO  281472905257136 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/rte_comm/mistcomm.cpp:980] receive stream started
+2025-09-04 19:02:58.565 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1514] start storage optimization
+2025-09-04 19:02:58.566 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1543] start
+2025-09-04 19:02:58.567 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1617] end - #updates 0
+2025-09-04 19:02:58.567 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1623] start
+2025-09-04 19:02:58.568 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1698] end - #updates 0
+2025-09-04 19:02:58.568 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1704] start
+2025-09-04 19:02:58.571 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1763] end - #updates 0
+2025-09-04 19:02:58.571 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1769] start
+2025-09-04 19:02:58.572 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1801] end - #updates 0
+2025-09-04 19:02:58.572 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1807] start
+2025-09-04 19:02:58.574 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1854] end - #updates 0
+2025-09-04 19:02:58.574 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1538] end storage optimization
+2025-09-04 19:02:58.574 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1237] [JOB MANAGER] initialized
+2025-09-04 19:02:58.576 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/TaskManager.cpp:93] [TASK MANAGER] initialized
+2025-09-04 19:02:58.577 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/RteServiceApi.cpp:825] [RTE SERVICE] initialized
+2025-09-05 09:38:37.336 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/RteServer.cpp:596] rte 20.0.0.0 Iveco
+2025-09-05 09:38:37.337 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/RteServer.cpp:597] [RTESERVER] starting - configuration:
+
+RTE configuration: 
+	home_bin_path -> /opt/appl/data/apps/apps_bin/ras
+	home_data_path -> /opt/appl/data/apps/apps_data/ras
+	home_logs_path -> 
+	rte_version_major -> 20
+	rte_version_minor -> 0
+	rte_version_build -> 0
+	rte_version_revision -> 0
+	rte_version_description -> rte 20.0.0.0 Iveco
+	log_file_name -> rtserver.log
+	log_max_size -> 5242880
+	log_max_files -> 5
+	log_pattern -> %Y-%m-%d %T.%e %z | %t | %l | %s | %!:%# | %v
+	log_level -> debug
+	log_windebug_enabled -> false
+	log_console_pattern -> %v
+	log_console_level -> trace
+	log_console_enabled -> false
+	recent_jobs_max_counter -> 10
+	job_folder_persistence_hours -> 240
+	job_bundle_persistence_hours -> 24
+	job_history_limit -> 10
+	job_progress_initial_value -> -1
+	app_name -> ras
+	mist_path -> /opt/appl/var/mist
+	mist_app_token_file_path -> /opt/appl/var/mist/tokens/ras/token
+	mist_app_token_file -> 0bc000de-66b2-4214-b75e-8e77df50c4ad
+	mist_unix_socks_path -> unix:///opt/appl/var/mist/socks
+	script_executor_thread_mode -> 1
+	vci_attaching_mode -> 1
+	host_type -> 1
+	host_description -> PCM3
+	enable_clear_working_folder_on_startup -> true
+	main port -> 5555
+	service port -> 9001
+
+2025-09-05 09:38:37.342 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/FileManager.cpp:13] [FILE MANAGER] initialized
+2025-09-05 09:38:37.367 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/rte_comm/mistcomm.cpp:582] Comm initialized
+2025-09-05 09:38:37.367 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1288] comm_object initialization result: 0
+2025-09-05 09:38:37.367 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1186] [VehicleCommManagerImpl] found vci: PCM3 [ currently closed]
+2025-09-05 09:38:37.367 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/rte_comm/mistcomm.cpp:968] setting up stream
+2025-09-05 09:38:37.386 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1232] [VehicleCommManagerImpl] opened current vci: PCM3
+2025-09-05 09:38:37.386 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/VehicleCommService.cpp:1320] [VehicleCommService] initialization true
+2025-09-05 09:38:37.386 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/Dispatcher.cpp:39] [Dispatcher] initialized
+2025-09-05 09:38:37.387 INFO  281473332523184 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/rte_comm/mistcomm.cpp:980] receive stream started
+2025-09-05 09:38:37.408 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1514] start storage optimization
+2025-09-05 09:38:37.408 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1543] start
+2025-09-05 09:38:37.409 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1617] end - #updates 0
+2025-09-05 09:38:37.409 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1623] start
+2025-09-05 09:38:37.410 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1698] end - #updates 0
+2025-09-05 09:38:37.411 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1704] start
+2025-09-05 09:38:37.411 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1763] end - #updates 0
+2025-09-05 09:38:37.412 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1769] start
+2025-09-05 09:38:37.412 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1801] end - #updates 0
+2025-09-05 09:38:37.412 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1807] start
+2025-09-05 09:38:37.413 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1854] end - #updates 0
+2025-09-05 09:38:37.413 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1538] end storage optimization
+2025-09-05 09:38:37.413 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/JobManager.cpp:1237] [JOB MANAGER] initialized
+2025-09-05 09:38:37.415 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/TaskManager.cpp:93] [TASK MANAGER] initialized
+2025-09-05 09:38:37.415 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/rtelib/rte/RteServiceApi.cpp:825] [RTE SERVICE] initialized

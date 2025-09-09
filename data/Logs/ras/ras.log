@@ -1,0 +1,893 @@
+2025-07-24 15:33:43.478 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:49] *** start app: 20.9.39
+2025-07-24 15:33:43.566 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:58] RteServer init success
+2025-07-24 15:33:43.567 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.communication.ConfigurationManagement
+2025-07-24 15:33:43.581 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.communication.ConfigurationManagement
+2025-07-24 15:33:43.581 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/AdaLuaLib.cpp:295] Registering module: RasAdaLib
+2025-07-24 15:33:43.581 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/AdaLuaLib.cpp:297] luaRTE_register_rtelib_ext_functions returns 0
+2025-07-24 15:33:43.582 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/AdaLuaLib.cpp:299] luaRTE_register_ext_module returns 0
+2025-07-24 15:33:43.582 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmRteModule.cpp:2109] register_lua_adalib(): success
+2025-07-24 15:33:43.582 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmRteModule.cpp:1565] FSM enter in RteDisconnected
+2025-07-24 15:33:43.582 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.core.PowerService
+2025-07-24 15:33:43.582 INFO  281472544002224 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmSubscriptionService.cpp:135] start Subscription handler
+2025-07-24 15:33:43.590 INFO  281472544002224 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] application_name: "ras" module_name: "default" save_directory: "/opt/appl/data/apps/apps_data/ras/subtmp" save_file: "subscription.tmp" uuid_in_use: "00000000-0000-0000-0000-000000000000"
+2025-07-24 15:33:43.591 INFO  281472544002224 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:415] start subscription api result: 0
+2025-07-24 15:33:43.592 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.core.PowerService
+2025-07-24 15:33:43.592 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasAttendedModule.cpp:1610] FSM enter in RasAttendedReady
+2025-07-24 15:33:43.605 WARN  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedState.cpp:372] state file path is empty
+2025-07-24 15:33:43.605 WARN  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedState.cpp:396] state file does not exist or path is empty
+2025-07-24 15:33:43.606 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedModule.cpp:1490] curstate.json: {"end_date":"","exit_code":0,"exit_code_display":"","opxml_reports":[],"region":"NOT_CRITICAL","restore_point":"","rtejob_exitcode":0,"rtejob_id":-99,"rtejob_progress":9999,"rtejob_report_activity":"","rtejob_result":"Failed","rtejob_state":"Idle","service_item":{"DescriptionLong":"","DescriptionShort":"","ExtimatedRunTime":0,"Language":"en","MessageAfter":"","MessageBefore":"","PubblicationDate":"","ServiceTypeID":"","VBattMin":10.0,"Version":""},"start_date":"","start_service_data":{"auth_data":"","auth_type":"PSK","lang_code":"en","service_typeid":""},"start_service_response":{"RUSessionID":"","Service":{"ClientUserID":"","CreationDT":"","ExpirationDT":"","MainScriptBody":"","ServiceID":""}},"state":"TERMINATED","task_id":"INITIALIZING"}
+2025-07-24 15:33:43.606 WARN  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedState.cpp:372] state file path is empty
+2025-07-24 15:33:43.606 WARN  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedState.cpp:396] state file does not exist or path is empty
+2025-07-24 15:33:43.607 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedModule.cpp:1498] eosstate.json: {"end_date":"","exit_code":0,"exit_code_display":"","opxml_reports":[],"region":"NOT_CRITICAL","restore_point":"","rtejob_exitcode":0,"rtejob_id":-99,"rtejob_progress":9999,"rtejob_report_activity":"","rtejob_result":"Failed","rtejob_state":"Idle","service_item":{"DescriptionLong":"","DescriptionShort":"","ExtimatedRunTime":0,"Language":"en","MessageAfter":"","MessageBefore":"","PubblicationDate":"","ServiceTypeID":"","VBattMin":10.0,"Version":""},"start_date":"","start_service_data":{"auth_data":"","auth_type":"PSK","lang_code":"en","service_typeid":""},"start_service_response":{"RUSessionID":"","Service":{"ClientUserID":"","CreationDT":"","ExpirationDT":"","MainScriptBody":"","ServiceID":""}},"state":"TERMINATED","task_id":"INITIALIZING"}
+2025-07-24 15:33:43.608 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedModule.cpp:2960] FSM enter in RasUnattendedReady
+2025-07-24 15:33:43.608 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.web.WebService
+2025-07-24 15:33:43.593 INFO  281472535609520 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1123] start Power handler
+2025-07-24 15:33:43.662 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.web.WebService
+2025-07-24 15:33:43.694 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.web.WebService
+2025-07-24 15:33:43.694 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.web.WebService
+2025-07-24 15:33:43.695 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:80] Modules initialization completed
+2025-07-24 15:33:43.695 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:85] env: {
+application_name: ras
+application_version: 20.9.39
+application_path: /opt/appl/data/apps/apps_bin/ras
+application_data_path: /opt/appl/data/apps/apps_data/ras
+rte_module_name: rte
+log_configuration_file_path: /opt/appl/data/apps/apps_bin/ras/resources/log4cplus.properties
+token: 2181cfe3-25a8-410e-870a-11cc28f52429
+server_certificate_base_path: /opt/appl/code/cacerts
+server_certificate_file_path: /opt/appl/code/cacerts/IVECO-ROOT_CA-Telematics.pem
+certificate_base_path: /opt/appl/code/cacerts
+certificate_file_path: /opt/appl/code/cacerts/Secure_Communication_Web_Server_MY24_IVECO_CA.pem
+application_resource_path: /opt/appl/data/apps/apps_bin/ras/resources
+target_start_runlevel: 12
+target_stop_runlevel: 2
+command line pars: 
+2
+12
+}
+
+2025-07-24 15:33:43.696 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:86] config: {"AdaSetting":{"delay_after_proof_of_ownership_s":4,"skip_read_active_roles":false},"BwsdSetting":{"bwsd_key15_cycle_time_s":4294967295,"bwsd_num_key15_cycle":0,"bwsd_start_deferred_time_s":4294967295},"ClusterSetting":{"buzzer_volume":9,"duration":0,"icon":228,"max_rows":3,"max_text_length":12,"refresh_time_s":5,"severity":2},"RasSetting":{"application_data_path":"","call_connection_timeout_sec":30,"leaf_certificate_file_path":"/opt/appl/code/cacerts/Secure_Communication_Web_Server_MY24_IVECO_CA.pem","max_connection_attempts":3,"open_connection_timeout_sec":30,"root_certificate_file_path":"/opt/appl/code/cacerts/IVECO-ROOT_CA-Telematics.pem","server_certificate_base_path":"/opt/appl/code/cacerts","sgw_unlock_required":true,"tls_proxy_delay_ms":1500},"RasUnattendedSetting":{"macro_execute_timeout_s":180,"max_chunk_size":5000000,"max_download_delay_ms":5000,"min_chunk_size":100000,"soc_battery_check_uid":""},"RteSetting":{"copy_files_timeout_s":10,"get_jobs_timeout_s":5,"max_ping_failed_to_raise_exception":3,"query_rte_activities_ms":700,"sleep_time_sec":2,"start_job_timeout_s":10,"submit_job_timeout_s":10,"timeout_rte_message_s":15},"WakeupBoardSetting":{"postpone_extension_time_s":40,"postpone_extension_timeout_ms":30000}}
+2025-07-24 15:33:43.696 INFO  281473025495056 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:87] subscription: {"apps_to_keep_running":[],"bwsd_num_key15_cycle":1,"bwsd_start_deferred_time_s":20,"configurationId":"","ras_allowed":false,"ras_mode":"CUSTOMER","ras_unattended_allowed":false,"servers":[],"signal_ids":[],"soc_battery_check_uid":"","vehicle_range":"BASE"}
+2025-07-24 15:33:43.707 INFO  281472518824112 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmDeviceModule.cpp:765] start Http handler
+2025-07-24 15:33:43.709 INFO  281472527216816 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmDeviceModule.cpp:687] start Wss handler
+2025-07-24 15:33:43.741 INFO  281472544002224 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmSubscriptionService.cpp:198] uuid: "7780123188372996685"
+2025-07-24 15:33:43.741 INFO  281472544002224 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:585] Load subscription file: "/opt/appl/data/apps/apps_data/ras/subtmp/subscription.tmp"
+2025-07-24 15:33:43.742 INFO  281472544002224 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:591] deserialize subscription file
+2025-07-24 15:33:43.745 INFO  281472544002224 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:505] new subscription: {"apps_to_keep_running":[],"bwsd_num_key15_cycle":1,"bwsd_start_deferred_time_s":20,"configurationId":"IVGP_BUS_MY24_ICE_CUSTOMER_RAS_ON_RASU_ON_V01","ras_allowed":true,"ras_mode":"CUSTOMER","ras_unattended_allowed":true,"servers":[{"host":"https://pcmapi-my24.ras.iveco.com/rasapipcm/apipcm.asmx","name":"RAS_API_SERVER","port":443},{"host":"wss://pcmbridge-my24.ras.iveco.com/rasbridge/bridge.ashx","name":"RAS_BRIDGE_SERVER","port":443},{"host":"https://v-ada-bridge-dc-my24.vehicle.iveco.com/","name":"ADA_BRIDGE_SERVER","port":443}],"signal_ids":[{"EngSpeed":841},{"TotVehDistHr":674},{"BatPot_PwrIn1":2209}],"soc_battery_check_uid":"","vehicle_range":"BASE"}
+2025-07-24 15:33:43.746 INFO  281472544002224 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] application_name: "ras" module_name: "default" save_directory: "/opt/appl/data/apps/apps_data/ras/subtmp" save_file: "subscription.tmp" uuid_in_use: "7780123188372996685"
+2025-07-24 15:33:43.752 INFO  281472527216816 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] application { application_name: "ras/ws" }
+2025-07-24 15:33:43.752 INFO  281472535609520 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] state: POWER_STATE_RUN
+2025-07-24 15:33:43.752 INFO  281472518824112 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] application { application_name: "ras" }
+2025-07-24 15:33:43.753 INFO  281472991735984 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1227] Stop postpone timer
+2025-07-24 15:33:43.754 INFO  281472535609520 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] event: POWER_EVENT_KEY15_ON
+2025-07-24 15:33:43.755 INFO  281472991735984 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1293] on key15 on event
+2025-07-24 15:33:43.755 INFO  281472991735984 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1227] Stop postpone timer
+2025-07-24 15:33:43.755 INFO  281472991735984 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] command: POWER_TRANSCEIVE_COMMAND_CLEAR_POSTPONE_CONFIGURATION
+2025-07-24 15:33:43.757 INFO  281472991735984 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] command: POWER_TRANSCEIVE_COMMAND_SET_POSTPONE_CONFIGURATION request_id: 1 postpone_conf { postone_interval_sec: 40 }
+2025-07-24 15:33:43.760 INFO  281472535609520 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] command_response { command: POWER_TRANSCEIVE_COMMAND_CLEAR_POSTPONE_CONFIGURATION response_code: SUCCESS }
+2025-07-24 15:33:43.761 INFO  281472991735984 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1316] Ras BWSD disabled
+2025-07-24 15:33:43.761 INFO  281472991735984 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1537] raise K15 event: Key15On
+2025-07-24 15:33:43.763 INFO  281472535609520 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] command_response { request_id: 1 command: POWER_TRANSCEIVE_COMMAND_SET_POSTPONE_CONFIGURATION response_code: SUCCESS }
+2025-07-24 15:55:41.591 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:49] *** start app: 20.9.39
+2025-07-24 15:55:41.678 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:58] RteServer init success
+2025-07-24 15:55:41.681 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:585] Load subscription file: "/opt/appl/data/apps/apps_data/ras/subscription/subscription.json"
+2025-07-24 15:55:41.682 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:591] deserialize subscription file
+2025-07-24 15:55:41.685 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:610] Load subscription uuid file: "/opt/appl/data/apps/apps_data/ras/subscription/subscription_lastUUID.info"
+2025-07-24 15:55:41.686 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:616] deserialize subscription uuid file
+2025-07-24 15:55:41.687 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.communication.ConfigurationManagement
+2025-07-24 15:55:41.712 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.communication.ConfigurationManagement
+2025-07-24 15:55:41.713 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/AdaLuaLib.cpp:295] Registering module: RasAdaLib
+2025-07-24 15:55:41.713 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/AdaLuaLib.cpp:297] luaRTE_register_rtelib_ext_functions returns 0
+2025-07-24 15:55:41.713 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/AdaLuaLib.cpp:299] luaRTE_register_ext_module returns 0
+2025-07-24 15:55:41.713 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmRteModule.cpp:2109] register_lua_adalib(): success
+2025-07-24 15:55:41.713 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmRteModule.cpp:1565] FSM enter in RteDisconnected
+2025-07-24 15:55:41.713 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.core.PowerService
+2025-07-24 15:55:41.720 INFO  281472669827248 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmSubscriptionService.cpp:135] start Subscription handler
+2025-07-24 15:55:41.737 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.core.PowerService
+2025-07-24 15:55:41.739 INFO  281472661434544 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1123] start Power handler
+2025-07-24 15:55:41.739 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasAttendedModule.cpp:1610] FSM enter in RasAttendedReady
+2025-07-24 15:55:41.741 WARN  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedState.cpp:372] state file path is empty
+2025-07-24 15:55:41.743 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedModule.cpp:1490] curstate.json: {"end_date":"","exit_code":0,"exit_code_display":"","opxml_reports":[],"region":"NOT_CRITICAL","restore_point":"","rtejob_exitcode":0,"rtejob_id":-99,"rtejob_progress":9999,"rtejob_report_activity":"","rtejob_result":"Failed","rtejob_state":"Idle","service_item":{"DescriptionLong":"","DescriptionShort":"","ExtimatedRunTime":0,"Language":"en","MessageAfter":"","MessageBefore":"","PubblicationDate":"","ServiceTypeID":"","VBattMin":10.0,"Version":""},"start_date":"","start_service_data":{"auth_data":"","auth_type":"PSK","lang_code":"en","service_typeid":""},"start_service_response":{"RUSessionID":"","Service":{"ClientUserID":"","CreationDT":"","ExpirationDT":"","MainScriptBody":"","ServiceID":""}},"state":"TERMINATED","task_id":"INITIALIZING"}
+2025-07-24 15:55:41.744 WARN  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedState.cpp:372] state file path is empty
+2025-07-24 15:55:41.747 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedModule.cpp:1498] eosstate.json: {"end_date":"","exit_code":0,"exit_code_display":"","opxml_reports":[],"region":"NOT_CRITICAL","restore_point":"","rtejob_exitcode":0,"rtejob_id":-99,"rtejob_progress":9999,"rtejob_report_activity":"","rtejob_result":"Failed","rtejob_state":"Idle","service_item":{"DescriptionLong":"","DescriptionShort":"","ExtimatedRunTime":0,"Language":"en","MessageAfter":"","MessageBefore":"","PubblicationDate":"","ServiceTypeID":"","VBattMin":10.0,"Version":""},"start_date":"","start_service_data":{"auth_data":"","auth_type":"PSK","lang_code":"en","service_typeid":""},"start_service_response":{"RUSessionID":"","Service":{"ClientUserID":"","CreationDT":"","ExpirationDT":"","MainScriptBody":"","ServiceID":""}},"state":"TERMINATED","task_id":"INITIALIZING"}
+2025-07-24 15:55:41.749 INFO  281472669827248 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] application_name: "ras" module_name: "default" save_directory: "/opt/appl/data/apps/apps_data/ras/subtmp" save_file: "subscription.tmp" uuid_in_use: "7780123188372996685"
+2025-07-24 15:55:41.750 INFO  281472669827248 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:415] start subscription api result: 0
+2025-07-24 15:55:41.751 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedModule.cpp:2960] FSM enter in RasUnattendedReady
+2025-07-24 15:55:41.751 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.web.WebService
+2025-07-24 15:55:41.775 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.web.WebService
+2025-07-24 15:55:41.784 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.web.WebService
+2025-07-24 15:55:41.785 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.web.WebService
+2025-07-24 15:55:41.786 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:80] Modules initialization completed
+2025-07-24 15:55:41.786 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:85] env: {
+application_name: ras
+application_version: 20.9.39
+application_path: /opt/appl/data/apps/apps_bin/ras
+application_data_path: /opt/appl/data/apps/apps_data/ras
+rte_module_name: rte
+log_configuration_file_path: /opt/appl/data/apps/apps_bin/ras/resources/log4cplus.properties
+token: ee1d1293-8324-46bf-86e6-11daaaa17247
+server_certificate_base_path: /opt/appl/code/cacerts
+server_certificate_file_path: /opt/appl/code/cacerts/IVECO-ROOT_CA-Telematics.pem
+certificate_base_path: /opt/appl/code/cacerts
+certificate_file_path: /opt/appl/code/cacerts/Secure_Communication_Web_Server_MY24_IVECO_CA.pem
+application_resource_path: /opt/appl/data/apps/apps_bin/ras/resources
+target_start_runlevel: 12
+target_stop_runlevel: 2
+command line pars: 
+2
+12
+}
+
+2025-07-24 15:55:41.788 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:86] config: {"AdaSetting":{"delay_after_proof_of_ownership_s":4,"skip_read_active_roles":false},"BwsdSetting":{"bwsd_key15_cycle_time_s":4294967295,"bwsd_num_key15_cycle":0,"bwsd_start_deferred_time_s":4294967295},"ClusterSetting":{"buzzer_volume":9,"duration":0,"icon":228,"max_rows":3,"max_text_length":12,"refresh_time_s":5,"severity":2},"RasSetting":{"application_data_path":"","call_connection_timeout_sec":30,"leaf_certificate_file_path":"/opt/appl/code/cacerts/Secure_Communication_Web_Server_MY24_IVECO_CA.pem","max_connection_attempts":3,"open_connection_timeout_sec":30,"root_certificate_file_path":"/opt/appl/code/cacerts/IVECO-ROOT_CA-Telematics.pem","server_certificate_base_path":"/opt/appl/code/cacerts","sgw_unlock_required":true,"tls_proxy_delay_ms":1500},"RasUnattendedSetting":{"macro_execute_timeout_s":180,"max_chunk_size":5000000,"max_download_delay_ms":5000,"min_chunk_size":100000,"soc_battery_check_uid":""},"RteSetting":{"copy_files_timeout_s":10,"get_jobs_timeout_s":5,"max_ping_failed_to_raise_exception":3,"query_rte_activities_ms":700,"sleep_time_sec":2,"start_job_timeout_s":10,"submit_job_timeout_s":10,"timeout_rte_message_s":15},"WakeupBoardSetting":{"postpone_extension_time_s":40,"postpone_extension_timeout_ms":30000}}
+2025-07-24 15:55:41.789 INFO  281473152016400 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:87] subscription: {"apps_to_keep_running":[],"bwsd_num_key15_cycle":1,"bwsd_start_deferred_time_s":20,"configurationId":"IVGP_BUS_MY24_ICE_CUSTOMER_RAS_ON_RASU_ON_V01","ras_allowed":true,"ras_mode":"CUSTOMER","ras_unattended_allowed":true,"servers":[{"host":"https://pcmapi-my24.ras.iveco.com/rasapipcm/apipcm.asmx","name":"RAS_API_SERVER","port":443},{"host":"wss://pcmbridge-my24.ras.iveco.com/rasbridge/bridge.ashx","name":"RAS_BRIDGE_SERVER","port":443},{"host":"https://v-ada-bridge-dc-my24.vehicle.iveco.com/","name":"ADA_BRIDGE_SERVER","port":443}],"signal_ids":[{"EngSpeed":841},{"TotVehDistHr":674},{"BatPot_PwrIn1":2209}],"soc_battery_check_uid":"","vehicle_range":"BASE"}
+2025-07-24 15:55:41.790 INFO  281472644649136 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmDeviceModule.cpp:765] start Http handler
+2025-07-24 15:55:41.795 INFO  281472653041840 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmDeviceModule.cpp:687] start Wss handler
+2025-07-24 15:55:41.819 INFO  281472661434544 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] state: POWER_STATE_RUN
+2025-07-24 15:55:41.820 INFO  281473118257328 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1227] Stop postpone timer
+2025-07-24 15:55:41.821 INFO  281472661434544 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] event: POWER_EVENT_KEY15_ON
+2025-07-24 15:55:41.821 INFO  281473118257328 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1293] on key15 on event
+2025-07-24 15:55:41.821 INFO  281473118257328 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1227] Stop postpone timer
+2025-07-24 15:55:41.821 INFO  281473118257328 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] command: POWER_TRANSCEIVE_COMMAND_CLEAR_POSTPONE_CONFIGURATION
+2025-07-24 15:55:41.822 INFO  281473118257328 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] command: POWER_TRANSCEIVE_COMMAND_SET_POSTPONE_CONFIGURATION request_id: 1 postpone_conf { postone_interval_sec: 40 }
+2025-07-24 15:55:41.823 INFO  281473118257328 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1316] Ras BWSD disabled
+2025-07-24 15:55:41.823 INFO  281473118257328 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1537] raise K15 event: Key15On
+2025-07-24 15:55:41.824 INFO  281472644649136 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] application { application_name: "ras" }
+2025-07-24 15:55:41.827 INFO  281472661434544 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] command_response { command: POWER_TRANSCEIVE_COMMAND_CLEAR_POSTPONE_CONFIGURATION response_code: SUCCESS }
+2025-07-24 15:55:41.829 INFO  281472653041840 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] application { application_name: "ras/ws" }
+2025-07-24 15:55:41.829 INFO  281472661434544 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] command_response { request_id: 1 command: POWER_TRANSCEIVE_COMMAND_SET_POSTPONE_CONFIGURATION response_code: SUCCESS }
+2025-08-21 07:46:57.817 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:49] *** start app: 20.9.39
+2025-08-21 07:46:57.913 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:58] RteServer init success
+2025-08-21 07:46:57.917 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:585] Load subscription file: "/opt/appl/data/apps/apps_data/ras/subscription/subscription.json"
+2025-08-21 07:46:57.918 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:591] deserialize subscription file
+2025-08-21 07:46:57.923 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:610] Load subscription uuid file: "/opt/appl/data/apps/apps_data/ras/subscription/subscription_lastUUID.info"
+2025-08-21 07:46:57.925 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:616] deserialize subscription uuid file
+2025-08-21 07:46:57.925 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.communication.ConfigurationManagement
+2025-08-21 07:46:57.948 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.communication.ConfigurationManagement
+2025-08-21 07:46:57.949 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/AdaLuaLib.cpp:295] Registering module: RasAdaLib
+2025-08-21 07:46:57.950 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/AdaLuaLib.cpp:297] luaRTE_register_rtelib_ext_functions returns 0
+2025-08-21 07:46:57.950 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/AdaLuaLib.cpp:299] luaRTE_register_ext_module returns 0
+2025-08-21 07:46:57.950 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmRteModule.cpp:2109] register_lua_adalib(): success
+2025-08-21 07:46:57.952 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmRteModule.cpp:1565] FSM enter in RteDisconnected
+2025-08-21 07:46:57.950 INFO  281473298985136 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmSubscriptionService.cpp:135] start Subscription handler
+2025-08-21 07:46:57.953 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.core.PowerService
+2025-08-21 07:46:57.970 INFO  281473298985136 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] application_name: "ras" module_name: "default" save_directory: "/opt/appl/data/apps/apps_data/ras/subtmp" save_file: "subscription.tmp" uuid_in_use: "7780123188372996685"
+2025-08-21 07:46:57.974 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.core.PowerService
+2025-08-21 07:46:57.976 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasAttendedModule.cpp:1610] FSM enter in RasAttendedReady
+2025-08-21 07:46:57.976 INFO  281473290592432 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1123] start Power handler
+2025-08-21 07:46:57.978 WARN  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedState.cpp:372] state file path is empty
+2025-08-21 07:46:57.980 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedModule.cpp:1490] curstate.json: {"end_date":"","exit_code":0,"exit_code_display":"","opxml_reports":[],"region":"NOT_CRITICAL","restore_point":"","rtejob_exitcode":0,"rtejob_id":-99,"rtejob_progress":9999,"rtejob_report_activity":"","rtejob_result":"Failed","rtejob_state":"Idle","service_item":{"DescriptionLong":"","DescriptionShort":"","ExtimatedRunTime":0,"Language":"en","MessageAfter":"","MessageBefore":"","PubblicationDate":"","ServiceTypeID":"","VBattMin":10.0,"Version":""},"start_date":"","start_service_data":{"auth_data":"","auth_type":"PSK","lang_code":"en","service_typeid":""},"start_service_response":{"RUSessionID":"","Service":{"ClientUserID":"","CreationDT":"","ExpirationDT":"","MainScriptBody":"","ServiceID":""}},"state":"TERMINATED","task_id":"INITIALIZING"}
+2025-08-21 07:46:57.980 WARN  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedState.cpp:372] state file path is empty
+2025-08-21 07:46:57.982 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedModule.cpp:1498] eosstate.json: {"end_date":"","exit_code":0,"exit_code_display":"","opxml_reports":[],"region":"NOT_CRITICAL","restore_point":"","rtejob_exitcode":0,"rtejob_id":-99,"rtejob_progress":9999,"rtejob_report_activity":"","rtejob_result":"Failed","rtejob_state":"Idle","service_item":{"DescriptionLong":"","DescriptionShort":"","ExtimatedRunTime":0,"Language":"en","MessageAfter":"","MessageBefore":"","PubblicationDate":"","ServiceTypeID":"","VBattMin":10.0,"Version":""},"start_date":"","start_service_data":{"auth_data":"","auth_type":"PSK","lang_code":"en","service_typeid":""},"start_service_response":{"RUSessionID":"","Service":{"ClientUserID":"","CreationDT":"","ExpirationDT":"","MainScriptBody":"","ServiceID":""}},"state":"TERMINATED","task_id":"INITIALIZING"}
+2025-08-21 07:46:57.985 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedModule.cpp:2960] FSM enter in RasUnattendedReady
+2025-08-21 07:46:57.985 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.web.WebService
+2025-08-21 07:46:57.985 INFO  281473298985136 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:415] start subscription api result: 0
+2025-08-21 07:46:58.011 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.web.WebService
+2025-08-21 07:46:58.018 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.web.WebService
+2025-08-21 07:46:58.018 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.web.WebService
+2025-08-21 07:46:58.019 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:80] Modules initialization completed
+2025-08-21 07:46:58.020 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:85] env: {
+application_name: ras
+application_version: 20.9.39
+application_path: /opt/appl/data/apps/apps_bin/ras
+application_data_path: /opt/appl/data/apps/apps_data/ras
+rte_module_name: rte
+log_configuration_file_path: /opt/appl/data/apps/apps_bin/ras/resources/log4cplus.properties
+token: 3d293393-7621-414e-8d9b-cf63e1d92096
+server_certificate_base_path: /opt/appl/code/cacerts
+server_certificate_file_path: /opt/appl/code/cacerts/IVECO-ROOT_CA-Telematics.pem
+certificate_base_path: /opt/appl/code/cacerts
+certificate_file_path: /opt/appl/code/cacerts/Secure_Communication_Web_Server_MY24_IVECO_CA.pem
+application_resource_path: /opt/appl/data/apps/apps_bin/ras/resources
+target_start_runlevel: 12
+target_stop_runlevel: 2
+command line pars: 
+2
+12
+}
+
+2025-08-21 07:46:58.021 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:86] config: {"AdaSetting":{"delay_after_proof_of_ownership_s":4,"skip_read_active_roles":false},"BwsdSetting":{"bwsd_key15_cycle_time_s":4294967295,"bwsd_num_key15_cycle":0,"bwsd_start_deferred_time_s":4294967295},"ClusterSetting":{"buzzer_volume":9,"duration":0,"icon":228,"max_rows":3,"max_text_length":12,"refresh_time_s":5,"severity":2},"RasSetting":{"application_data_path":"","call_connection_timeout_sec":30,"leaf_certificate_file_path":"/opt/appl/code/cacerts/Secure_Communication_Web_Server_MY24_IVECO_CA.pem","max_connection_attempts":3,"open_connection_timeout_sec":30,"root_certificate_file_path":"/opt/appl/code/cacerts/IVECO-ROOT_CA-Telematics.pem","server_certificate_base_path":"/opt/appl/code/cacerts","sgw_unlock_required":true,"tls_proxy_delay_ms":1500},"RasUnattendedSetting":{"macro_execute_timeout_s":180,"max_chunk_size":5000000,"max_download_delay_ms":5000,"min_chunk_size":100000,"soc_battery_check_uid":""},"RteSetting":{"copy_files_timeout_s":10,"get_jobs_timeout_s":5,"max_ping_failed_to_raise_exception":3,"query_rte_activities_ms":700,"sleep_time_sec":2,"start_job_timeout_s":10,"submit_job_timeout_s":10,"timeout_rte_message_s":15},"WakeupBoardSetting":{"postpone_extension_time_s":40,"postpone_extension_timeout_ms":30000}}
+2025-08-21 07:46:58.022 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:87] subscription: {"apps_to_keep_running":[],"bwsd_num_key15_cycle":1,"bwsd_start_deferred_time_s":20,"configurationId":"IVGP_BUS_MY24_ICE_CUSTOMER_RAS_ON_RASU_ON_V01","ras_allowed":true,"ras_mode":"CUSTOMER","ras_unattended_allowed":true,"servers":[{"host":"https://pcmapi-my24.ras.iveco.com/rasapipcm/apipcm.asmx","name":"RAS_API_SERVER","port":443},{"host":"wss://pcmbridge-my24.ras.iveco.com/rasbridge/bridge.ashx","name":"RAS_BRIDGE_SERVER","port":443},{"host":"https://v-ada-bridge-dc-my24.vehicle.iveco.com/","name":"ADA_BRIDGE_SERVER","port":443}],"signal_ids":[{"EngSpeed":841},{"TotVehDistHr":674},{"BatPot_PwrIn1":2209}],"soc_battery_check_uid":"","vehicle_range":"BASE"}
+2025-08-21 07:46:58.024 INFO  281473282199728 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmDeviceModule.cpp:687] start Wss handler
+2025-08-21 07:46:58.025 INFO  281473273807024 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmDeviceModule.cpp:765] start Http handler
+2025-08-21 07:46:58.062 INFO  281473290592432 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] state: POWER_STATE_RUN
+2025-08-21 07:46:58.063 INFO  281473822175408 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1227] Stop postpone timer
+2025-08-21 07:46:58.064 INFO  281473290592432 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] event: POWER_EVENT_KEY15_ON
+2025-08-21 07:46:58.065 INFO  281473822175408 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1293] on key15 on event
+2025-08-21 07:46:58.065 INFO  281473822175408 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1227] Stop postpone timer
+2025-08-21 07:46:58.065 INFO  281473822175408 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] command: POWER_TRANSCEIVE_COMMAND_CLEAR_POSTPONE_CONFIGURATION
+2025-08-21 07:46:58.066 INFO  281473822175408 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] command: POWER_TRANSCEIVE_COMMAND_SET_POSTPONE_CONFIGURATION request_id: 1 postpone_conf { postone_interval_sec: 40 }
+2025-08-21 07:46:58.067 INFO  281473822175408 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1316] Ras BWSD disabled
+2025-08-21 07:46:58.067 INFO  281473822175408 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1537] raise K15 event: Key15On
+2025-08-21 07:46:58.069 INFO  281473273807024 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] application { application_name: "ras" }
+2025-08-21 07:46:58.072 INFO  281473282199728 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] application { application_name: "ras/ws" }
+2025-08-21 07:46:58.072 INFO  281473290592432 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] command_response { command: POWER_TRANSCEIVE_COMMAND_CLEAR_POSTPONE_CONFIGURATION response_code: SUCCESS }
+2025-08-21 07:46:58.073 INFO  281473290592432 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] command_response { request_id: 1 command: POWER_TRANSCEIVE_COMMAND_SET_POSTPONE_CONFIGURATION response_code: SUCCESS }
+2025-08-21 08:15:37.481 INFO  281473290592432 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] event: POWER_EVENT_UPDATE_ONGOING
+2025-08-21 08:22:26.903 INFO  281473290592432 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] event: POWER_EVENT_UPDATE_COMPLETED
+2025-08-21 08:22:27.041 INFO  281473290592432 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] state: POWER_STATE_REBOOT
+2025-08-21 08:22:27.053 INFO  281473822175408 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1227] Stop postpone timer
+2025-08-21 08:22:27.937 ERROR 281473290592432 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:205] error reading stream mist.core.PowerService
+2025-08-21 08:22:27.965 INFO  281473290592432 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:324] restart service enter mist.core.PowerService
+2025-08-21 08:22:29.279 INFO  281473290592432 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:332] restart service exit mist.core.PowerService
+2025-08-21 08:22:29.355 ERROR 281473290592432 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:205] error reading stream mist.core.PowerService
+2025-08-21 08:22:29.366 INFO  281473290592432 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:324] restart service enter mist.core.PowerService
+2025-08-21 08:22:30.369 INFO  281473290592432 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:332] restart service exit mist.core.PowerService
+2025-08-21 08:22:30.444 ERROR 281473290592432 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:205] error reading stream mist.core.PowerService
+2025-08-21 08:22:30.445 INFO  281473290592432 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:324] restart service enter mist.core.PowerService
+2025-08-21 08:22:31.466 INFO  281473290592432 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:332] restart service exit mist.core.PowerService
+2025-08-21 08:22:31.505 ERROR 281473290592432 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:205] error reading stream mist.core.PowerService
+2025-08-21 08:22:31.505 INFO  281473290592432 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:324] restart service enter mist.core.PowerService
+2025-08-21 08:22:32.644 INFO  281473290592432 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:332] restart service exit mist.core.PowerService
+2025-08-21 08:22:33.191 ERROR 281473290592432 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:205] error reading stream mist.core.PowerService
+2025-08-21 08:22:33.191 INFO  281473290592432 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:324] restart service enter mist.core.PowerService
+2025-08-21 08:22:34.500 INFO  281473290592432 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:332] restart service exit mist.core.PowerService
+2025-08-21 08:22:34.530 ERROR 281473290592432 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:205] error reading stream mist.core.PowerService
+2025-08-21 08:22:34.531 INFO  281473290592432 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:324] restart service enter mist.core.PowerService
+2025-08-21 08:22:35.557 INFO  281473290592432 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:332] restart service exit mist.core.PowerService
+2025-08-21 08:22:35.667 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:153] Shutdown init.
+2025-08-21 08:22:35.669 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:96] Modules shutdown started
+2025-08-21 08:22:35.669 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:56] close mist service: mist.web.WebService
+2025-08-21 08:22:35.677 ERROR 281473282199728 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:205] error reading stream mist.web.WebService
+2025-08-21 08:22:35.677 INFO  281473282199728 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmDeviceModule.cpp:685] Wss handler completed
+2025-08-21 08:22:35.681 ERROR 281473290592432 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:205] error reading stream mist.core.PowerService
+2025-08-21 08:22:35.682 INFO  281473290592432 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:324] restart service enter mist.core.PowerService
+2025-08-21 08:22:35.723 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:56] close mist service: mist.web.WebService
+2025-08-21 08:22:35.732 ERROR 281473273807024 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:205] error reading stream mist.web.WebService
+2025-08-21 08:22:35.733 INFO  281473273807024 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmDeviceModule.cpp:763] Http handler completed
+2025-08-21 08:22:35.841 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:56] close mist service: mist.core.PowerService
+2025-08-21 08:22:36.686 INFO  281473290592432 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:332] restart service exit mist.core.PowerService
+2025-08-21 08:22:36.686 WARN  281473290592432 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:198] stream not initialized: mist.core.PowerService
+2025-08-21 08:22:36.686 INFO  281473290592432 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1121] Power handler completed
+2025-08-21 08:22:36.705 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:56] close mist service: mist.communication.ConfigurationManagement
+2025-08-21 08:22:36.715 ERROR 281473298985136 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:205] error reading stream mist.communication.ConfigurationManagement
+2025-08-21 08:22:36.717 INFO  281473298985136 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmSubscriptionService.cpp:133] Subscription handler completed
+2025-08-21 08:22:36.784 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:109] Modules shutdown completed
+2025-08-21 08:22:36.785 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:111] Services shutdown started
+2025-08-21 08:22:36.788 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:121] *** Services shutdown completed
+2025-08-21 08:22:37.347 INFO  281473855934480 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:125] *** RteServer Shutdown done.
+2025-08-21 08:26:40.724 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:49] *** start app: 20.9.39
+2025-08-21 08:26:40.775 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:58] RteServer init success
+2025-08-21 08:26:40.775 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:585] Load subscription file: "/opt/appl/data/apps/apps_data/ras/subscription/subscription.json"
+2025-08-21 08:26:40.776 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:591] deserialize subscription file
+2025-08-21 08:26:40.777 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:610] Load subscription uuid file: "/opt/appl/data/apps/apps_data/ras/subscription/subscription_lastUUID.info"
+2025-08-21 08:26:40.779 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:616] deserialize subscription uuid file
+2025-08-21 08:26:40.779 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.communication.ConfigurationManagement
+2025-08-21 08:26:40.805 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.communication.ConfigurationManagement
+2025-08-21 08:26:40.806 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/AdaLuaLib.cpp:295] Registering module: RasAdaLib
+2025-08-21 08:26:40.806 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/AdaLuaLib.cpp:297] luaRTE_register_rtelib_ext_functions returns 0
+2025-08-21 08:26:40.807 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/AdaLuaLib.cpp:299] luaRTE_register_ext_module returns 0
+2025-08-21 08:26:40.807 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmRteModule.cpp:2109] register_lua_adalib(): success
+2025-08-21 08:26:40.807 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmRteModule.cpp:1565] FSM enter in RteDisconnected
+2025-08-21 08:26:40.807 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.core.PowerService
+2025-08-21 08:26:40.815 INFO  281472913084592 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmSubscriptionService.cpp:135] start Subscription handler
+2025-08-21 08:26:40.822 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.core.PowerService
+2025-08-21 08:26:40.825 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasAttendedModule.cpp:1610] FSM enter in RasAttendedReady
+2025-08-21 08:26:40.826 WARN  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedState.cpp:372] state file path is empty
+2025-08-21 08:26:40.832 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedModule.cpp:1490] curstate.json: {"end_date":"","exit_code":0,"exit_code_display":"","opxml_reports":[],"region":"NOT_CRITICAL","restore_point":"","rtejob_exitcode":0,"rtejob_id":-99,"rtejob_progress":9999,"rtejob_report_activity":"","rtejob_result":"Failed","rtejob_state":"Idle","service_item":{"DescriptionLong":"","DescriptionShort":"","ExtimatedRunTime":0,"Language":"en","MessageAfter":"","MessageBefore":"","PubblicationDate":"","ServiceTypeID":"","VBattMin":10.0,"Version":""},"start_date":"","start_service_data":{"auth_data":"","auth_type":"PSK","lang_code":"en","service_typeid":""},"start_service_response":{"RUSessionID":"","Service":{"ClientUserID":"","CreationDT":"","ExpirationDT":"","MainScriptBody":"","ServiceID":""}},"state":"TERMINATED","task_id":"INITIALIZING"}
+2025-08-21 08:26:40.832 WARN  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedState.cpp:372] state file path is empty
+2025-08-21 08:26:40.836 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedModule.cpp:1498] eosstate.json: {"end_date":"","exit_code":0,"exit_code_display":"","opxml_reports":[],"region":"NOT_CRITICAL","restore_point":"","rtejob_exitcode":0,"rtejob_id":-99,"rtejob_progress":9999,"rtejob_report_activity":"","rtejob_result":"Failed","rtejob_state":"Idle","service_item":{"DescriptionLong":"","DescriptionShort":"","ExtimatedRunTime":0,"Language":"en","MessageAfter":"","MessageBefore":"","PubblicationDate":"","ServiceTypeID":"","VBattMin":10.0,"Version":""},"start_date":"","start_service_data":{"auth_data":"","auth_type":"PSK","lang_code":"en","service_typeid":""},"start_service_response":{"RUSessionID":"","Service":{"ClientUserID":"","CreationDT":"","ExpirationDT":"","MainScriptBody":"","ServiceID":""}},"state":"TERMINATED","task_id":"INITIALIZING"}
+2025-08-21 08:26:40.837 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedModule.cpp:2960] FSM enter in RasUnattendedReady
+2025-08-21 08:26:40.837 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.web.WebService
+2025-08-21 08:26:40.836 INFO  281472493678768 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1123] start Power handler
+2025-08-21 08:26:40.839 INFO  281472913084592 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] application_name: "ras" module_name: "default" save_directory: "/opt/appl/data/apps/apps_data/ras/subtmp" save_file: "subscription.tmp" uuid_in_use: "7780123188372996685"
+2025-08-21 08:26:40.842 INFO  281472913084592 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:415] start subscription api result: 0
+2025-08-21 08:26:40.858 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.web.WebService
+2025-08-21 08:26:40.867 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.web.WebService
+2025-08-21 08:26:40.871 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.web.WebService
+2025-08-21 08:26:40.872 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:80] Modules initialization completed
+2025-08-21 08:26:40.872 INFO  281472485286064 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmDeviceModule.cpp:687] start Wss handler
+2025-08-21 08:26:40.872 INFO  281472476893360 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmDeviceModule.cpp:765] start Http handler
+2025-08-21 08:26:40.873 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:85] env: {
+application_name: ras
+application_version: 20.9.39
+application_path: /opt/appl/data/apps/apps_bin/ras
+application_data_path: /opt/appl/data/apps/apps_data/ras
+rte_module_name: rte
+log_configuration_file_path: /opt/appl/data/apps/apps_bin/ras/resources/log4cplus.properties
+token: 01b87f81-fbab-48b8-97f0-c600d5652feb
+server_certificate_base_path: /opt/appl/code/cacerts
+server_certificate_file_path: /opt/appl/code/cacerts/IVECO-ROOT_CA-Telematics.pem
+certificate_base_path: /opt/appl/code/cacerts
+certificate_file_path: /opt/appl/code/cacerts/Secure_Communication_Web_Server_MY24_IVECO_CA.pem
+application_resource_path: /opt/appl/data/apps/apps_bin/ras/resources
+target_start_runlevel: 12
+target_stop_runlevel: 2
+command line pars: 
+2
+12
+}
+
+2025-08-21 08:26:40.873 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:86] config: {"AdaSetting":{"delay_after_proof_of_ownership_s":4,"skip_read_active_roles":false},"BwsdSetting":{"bwsd_key15_cycle_time_s":4294967295,"bwsd_num_key15_cycle":0,"bwsd_start_deferred_time_s":4294967295},"ClusterSetting":{"buzzer_volume":9,"duration":0,"icon":228,"max_rows":3,"max_text_length":12,"refresh_time_s":5,"severity":2},"RasSetting":{"application_data_path":"","call_connection_timeout_sec":30,"leaf_certificate_file_path":"/opt/appl/code/cacerts/Secure_Communication_Web_Server_MY24_IVECO_CA.pem","max_connection_attempts":3,"open_connection_timeout_sec":30,"root_certificate_file_path":"/opt/appl/code/cacerts/IVECO-ROOT_CA-Telematics.pem","server_certificate_base_path":"/opt/appl/code/cacerts","sgw_unlock_required":true,"tls_proxy_delay_ms":1500},"RasUnattendedSetting":{"macro_execute_timeout_s":180,"max_chunk_size":5000000,"max_download_delay_ms":5000,"min_chunk_size":100000,"soc_battery_check_uid":""},"RteSetting":{"copy_files_timeout_s":10,"get_jobs_timeout_s":5,"max_ping_failed_to_raise_exception":3,"query_rte_activities_ms":700,"sleep_time_sec":2,"start_job_timeout_s":10,"submit_job_timeout_s":10,"timeout_rte_message_s":15},"WakeupBoardSetting":{"postpone_extension_time_s":40,"postpone_extension_timeout_ms":30000}}
+2025-08-21 08:26:40.874 INFO  281473124511760 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:87] subscription: {"apps_to_keep_running":[],"bwsd_num_key15_cycle":1,"bwsd_start_deferred_time_s":20,"configurationId":"IVGP_BUS_MY24_ICE_CUSTOMER_RAS_ON_RASU_ON_V01","ras_allowed":true,"ras_mode":"CUSTOMER","ras_unattended_allowed":true,"servers":[{"host":"https://pcmapi-my24.ras.iveco.com/rasapipcm/apipcm.asmx","name":"RAS_API_SERVER","port":443},{"host":"wss://pcmbridge-my24.ras.iveco.com/rasbridge/bridge.ashx","name":"RAS_BRIDGE_SERVER","port":443},{"host":"https://v-ada-bridge-dc-my24.vehicle.iveco.com/","name":"ADA_BRIDGE_SERVER","port":443}],"signal_ids":[{"EngSpeed":841},{"TotVehDistHr":674},{"BatPot_PwrIn1":2209}],"soc_battery_check_uid":"","vehicle_range":"BASE"}
+2025-08-21 08:26:40.907 INFO  281472493678768 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] state: POWER_STATE_RUN
+2025-08-21 08:26:40.909 INFO  281472493678768 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] event: POWER_EVENT_KEY15_ON
+2025-08-21 08:26:40.909 INFO  281473090752688 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1227] Stop postpone timer
+2025-08-21 08:26:40.910 INFO  281473090752688 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1293] on key15 on event
+2025-08-21 08:26:40.910 INFO  281473090752688 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1227] Stop postpone timer
+2025-08-21 08:26:40.910 INFO  281473090752688 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] command: POWER_TRANSCEIVE_COMMAND_CLEAR_POSTPONE_CONFIGURATION
+2025-08-21 08:26:40.911 INFO  281472476893360 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] application { application_name: "ras" }
+2025-08-21 08:26:40.912 INFO  281473090752688 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] command: POWER_TRANSCEIVE_COMMAND_SET_POSTPONE_CONFIGURATION request_id: 1 postpone_conf { postone_interval_sec: 40 }
+2025-08-21 08:26:40.915 INFO  281473090752688 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1316] Ras BWSD disabled
+2025-08-21 08:26:40.916 INFO  281473090752688 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1537] raise K15 event: Key15On
+2025-08-21 08:26:40.913 INFO  281472485286064 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] application { application_name: "ras/ws" }
+2025-08-21 08:26:40.920 INFO  281472493678768 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] command_response { command: POWER_TRANSCEIVE_COMMAND_CLEAR_POSTPONE_CONFIGURATION response_code: SUCCESS }
+2025-08-21 08:26:40.921 INFO  281472493678768 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] command_response { request_id: 1 command: POWER_TRANSCEIVE_COMMAND_SET_POSTPONE_CONFIGURATION response_code: SUCCESS }
+2025-08-21 15:00:17.917 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:49] *** start app: 20.9.39
+2025-08-21 15:00:18.014 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:58] RteServer init success
+2025-08-21 15:00:18.017 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:585] Load subscription file: "/opt/appl/data/apps/apps_data/ras/subscription/subscription.json"
+2025-08-21 15:00:18.023 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:591] deserialize subscription file
+2025-08-21 15:00:18.027 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:610] Load subscription uuid file: "/opt/appl/data/apps/apps_data/ras/subscription/subscription_lastUUID.info"
+2025-08-21 15:00:18.028 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:616] deserialize subscription uuid file
+2025-08-21 15:00:18.028 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.communication.ConfigurationManagement
+2025-08-21 15:00:18.045 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.communication.ConfigurationManagement
+2025-08-21 15:00:18.045 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/AdaLuaLib.cpp:295] Registering module: RasAdaLib
+2025-08-21 15:00:18.046 INFO  281472795652272 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmSubscriptionService.cpp:135] start Subscription handler
+2025-08-21 15:00:18.046 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/AdaLuaLib.cpp:297] luaRTE_register_rtelib_ext_functions returns 0
+2025-08-21 15:00:18.046 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/AdaLuaLib.cpp:299] luaRTE_register_ext_module returns 0
+2025-08-21 15:00:18.046 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmRteModule.cpp:2109] register_lua_adalib(): success
+2025-08-21 15:00:18.046 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmRteModule.cpp:1565] FSM enter in RteDisconnected
+2025-08-21 15:00:18.046 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.core.PowerService
+2025-08-21 15:00:18.057 INFO  281472795652272 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] application_name: "ras" module_name: "default" save_directory: "/opt/appl/data/apps/apps_data/ras/subtmp" save_file: "subscription.tmp" uuid_in_use: "7780123188372996685"
+2025-08-21 15:00:18.058 INFO  281472795652272 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:415] start subscription api result: 0
+2025-08-21 15:00:18.060 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.core.PowerService
+2025-08-21 15:00:18.061 INFO  281472787259568 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1123] start Power handler
+2025-08-21 15:00:18.066 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasAttendedModule.cpp:1610] FSM enter in RasAttendedReady
+2025-08-21 15:00:18.068 WARN  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedState.cpp:372] state file path is empty
+2025-08-21 15:00:18.072 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedModule.cpp:1490] curstate.json: {"end_date":"","exit_code":0,"exit_code_display":"","opxml_reports":[],"region":"NOT_CRITICAL","restore_point":"","rtejob_exitcode":0,"rtejob_id":-99,"rtejob_progress":9999,"rtejob_report_activity":"","rtejob_result":"Failed","rtejob_state":"Idle","service_item":{"DescriptionLong":"","DescriptionShort":"","ExtimatedRunTime":0,"Language":"en","MessageAfter":"","MessageBefore":"","PubblicationDate":"","ServiceTypeID":"","VBattMin":10.0,"Version":""},"start_date":"","start_service_data":{"auth_data":"","auth_type":"PSK","lang_code":"en","service_typeid":""},"start_service_response":{"RUSessionID":"","Service":{"ClientUserID":"","CreationDT":"","ExpirationDT":"","MainScriptBody":"","ServiceID":""}},"state":"TERMINATED","task_id":"INITIALIZING"}
+2025-08-21 15:00:18.072 WARN  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedState.cpp:372] state file path is empty
+2025-08-21 15:00:18.074 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedModule.cpp:1498] eosstate.json: {"end_date":"","exit_code":0,"exit_code_display":"","opxml_reports":[],"region":"NOT_CRITICAL","restore_point":"","rtejob_exitcode":0,"rtejob_id":-99,"rtejob_progress":9999,"rtejob_report_activity":"","rtejob_result":"Failed","rtejob_state":"Idle","service_item":{"DescriptionLong":"","DescriptionShort":"","ExtimatedRunTime":0,"Language":"en","MessageAfter":"","MessageBefore":"","PubblicationDate":"","ServiceTypeID":"","VBattMin":10.0,"Version":""},"start_date":"","start_service_data":{"auth_data":"","auth_type":"PSK","lang_code":"en","service_typeid":""},"start_service_response":{"RUSessionID":"","Service":{"ClientUserID":"","CreationDT":"","ExpirationDT":"","MainScriptBody":"","ServiceID":""}},"state":"TERMINATED","task_id":"INITIALIZING"}
+2025-08-21 15:00:18.076 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedModule.cpp:2960] FSM enter in RasUnattendedReady
+2025-08-21 15:00:18.076 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.web.WebService
+2025-08-21 15:00:18.102 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.web.WebService
+2025-08-21 15:00:18.108 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.web.WebService
+2025-08-21 15:00:18.109 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.web.WebService
+2025-08-21 15:00:18.110 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:80] Modules initialization completed
+2025-08-21 15:00:18.110 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:85] env: {
+application_name: ras
+application_version: 20.9.39
+application_path: /opt/appl/data/apps/apps_bin/ras
+application_data_path: /opt/appl/data/apps/apps_data/ras
+rte_module_name: rte
+log_configuration_file_path: /opt/appl/data/apps/apps_bin/ras/resources/log4cplus.properties
+token: 775e0c80-eb10-424e-919e-0209a5ae0452
+server_certificate_base_path: /opt/appl/code/cacerts
+server_certificate_file_path: /opt/appl/code/cacerts/IVECO-ROOT_CA-Telematics.pem
+certificate_base_path: /opt/appl/code/cacerts
+certificate_file_path: /opt/appl/code/cacerts/Secure_Communication_Web_Server_MY24_IVECO_CA.pem
+application_resource_path: /opt/appl/data/apps/apps_bin/ras/resources
+target_start_runlevel: 12
+target_stop_runlevel: 2
+command line pars: 
+2
+12
+}
+
+2025-08-21 15:00:18.111 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:86] config: {"AdaSetting":{"delay_after_proof_of_ownership_s":4,"skip_read_active_roles":false},"BwsdSetting":{"bwsd_key15_cycle_time_s":4294967295,"bwsd_num_key15_cycle":0,"bwsd_start_deferred_time_s":4294967295},"ClusterSetting":{"buzzer_volume":9,"duration":0,"icon":228,"max_rows":3,"max_text_length":12,"refresh_time_s":5,"severity":2},"RasSetting":{"application_data_path":"","call_connection_timeout_sec":30,"leaf_certificate_file_path":"/opt/appl/code/cacerts/Secure_Communication_Web_Server_MY24_IVECO_CA.pem","max_connection_attempts":3,"open_connection_timeout_sec":30,"root_certificate_file_path":"/opt/appl/code/cacerts/IVECO-ROOT_CA-Telematics.pem","server_certificate_base_path":"/opt/appl/code/cacerts","sgw_unlock_required":true,"tls_proxy_delay_ms":1500},"RasUnattendedSetting":{"macro_execute_timeout_s":180,"max_chunk_size":5000000,"max_download_delay_ms":5000,"min_chunk_size":100000,"soc_battery_check_uid":""},"RteSetting":{"copy_files_timeout_s":10,"get_jobs_timeout_s":5,"max_ping_failed_to_raise_exception":3,"query_rte_activities_ms":700,"sleep_time_sec":2,"start_job_timeout_s":10,"submit_job_timeout_s":10,"timeout_rte_message_s":15},"WakeupBoardSetting":{"postpone_extension_time_s":40,"postpone_extension_timeout_ms":30000}}
+2025-08-21 15:00:18.112 INFO  281473144762384 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:87] subscription: {"apps_to_keep_running":[],"bwsd_num_key15_cycle":1,"bwsd_start_deferred_time_s":20,"configurationId":"IVGP_BUS_MY24_ICE_CUSTOMER_RAS_ON_RASU_ON_V01","ras_allowed":true,"ras_mode":"CUSTOMER","ras_unattended_allowed":true,"servers":[{"host":"https://pcmapi-my24.ras.iveco.com/rasapipcm/apipcm.asmx","name":"RAS_API_SERVER","port":443},{"host":"wss://pcmbridge-my24.ras.iveco.com/rasbridge/bridge.ashx","name":"RAS_BRIDGE_SERVER","port":443},{"host":"https://v-ada-bridge-dc-my24.vehicle.iveco.com/","name":"ADA_BRIDGE_SERVER","port":443}],"signal_ids":[{"EngSpeed":841},{"TotVehDistHr":674},{"BatPot_PwrIn1":2209}],"soc_battery_check_uid":"","vehicle_range":"BASE"}
+2025-08-21 15:00:18.113 INFO  281472695005360 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmDeviceModule.cpp:765] start Http handler
+2025-08-21 15:00:18.114 INFO  281472778866864 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmDeviceModule.cpp:687] start Wss handler
+2025-08-21 15:00:18.135 INFO  281472787259568 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] state: POWER_STATE_RUN
+2025-08-21 15:00:18.135 INFO  281473111003312 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1227] Stop postpone timer
+2025-08-21 15:00:18.135 INFO  281472787259568 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] event: POWER_EVENT_KEY15_ON
+2025-08-21 15:00:18.136 INFO  281473111003312 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1293] on key15 on event
+2025-08-21 15:00:18.136 INFO  281473111003312 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1227] Stop postpone timer
+2025-08-21 15:00:18.136 INFO  281473111003312 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] command: POWER_TRANSCEIVE_COMMAND_CLEAR_POSTPONE_CONFIGURATION
+2025-08-21 15:00:18.137 INFO  281473111003312 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] command: POWER_TRANSCEIVE_COMMAND_SET_POSTPONE_CONFIGURATION request_id: 1 postpone_conf { postone_interval_sec: 40 }
+2025-08-21 15:00:18.137 INFO  281473111003312 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1316] Ras BWSD disabled
+2025-08-21 15:00:18.137 INFO  281473111003312 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1537] raise K15 event: Key15On
+2025-08-21 15:00:18.143 INFO  281472787259568 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] command_response { command: POWER_TRANSCEIVE_COMMAND_CLEAR_POSTPONE_CONFIGURATION response_code: SUCCESS }
+2025-08-21 15:00:18.144 INFO  281472787259568 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] command_response { request_id: 1 command: POWER_TRANSCEIVE_COMMAND_SET_POSTPONE_CONFIGURATION response_code: SUCCESS }
+2025-08-21 15:00:18.149 INFO  281472778866864 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] application { application_name: "ras/ws" }
+2025-08-21 15:00:18.154 INFO  281472695005360 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] application { application_name: "ras" }
+2025-08-22 07:38:46.089 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:49] *** start app: 20.9.39
+2025-08-22 07:38:46.185 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:58] RteServer init success
+2025-08-22 07:38:46.189 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:585] Load subscription file: "/opt/appl/data/apps/apps_data/ras/subscription/subscription.json"
+2025-08-22 07:38:46.190 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:591] deserialize subscription file
+2025-08-22 07:38:46.192 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:610] Load subscription uuid file: "/opt/appl/data/apps/apps_data/ras/subscription/subscription_lastUUID.info"
+2025-08-22 07:38:46.193 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:616] deserialize subscription uuid file
+2025-08-22 07:38:46.194 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.communication.ConfigurationManagement
+2025-08-22 07:38:46.211 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.communication.ConfigurationManagement
+2025-08-22 07:38:46.213 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/AdaLuaLib.cpp:295] Registering module: RasAdaLib
+2025-08-22 07:38:46.213 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/AdaLuaLib.cpp:297] luaRTE_register_rtelib_ext_functions returns 0
+2025-08-22 07:38:46.213 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/AdaLuaLib.cpp:299] luaRTE_register_ext_module returns 0
+2025-08-22 07:38:46.213 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmRteModule.cpp:2109] register_lua_adalib(): success
+2025-08-22 07:38:46.213 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmRteModule.cpp:1565] FSM enter in RteDisconnected
+2025-08-22 07:38:46.213 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.core.PowerService
+2025-08-22 07:38:46.217 INFO  281473040937136 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmSubscriptionService.cpp:135] start Subscription handler
+2025-08-22 07:38:46.236 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.core.PowerService
+2025-08-22 07:38:46.237 INFO  281473040937136 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] application_name: "ras" module_name: "default" save_directory: "/opt/appl/data/apps/apps_data/ras/subtmp" save_file: "subscription.tmp" uuid_in_use: "7780123188372996685"
+2025-08-22 07:38:46.238 INFO  281472955048112 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1123] start Power handler
+2025-08-22 07:38:46.238 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasAttendedModule.cpp:1610] FSM enter in RasAttendedReady
+2025-08-22 07:38:46.241 INFO  281473040937136 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:415] start subscription api result: 0
+2025-08-22 07:38:46.242 WARN  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedState.cpp:372] state file path is empty
+2025-08-22 07:38:46.247 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedModule.cpp:1490] curstate.json: {"end_date":"","exit_code":0,"exit_code_display":"","opxml_reports":[],"region":"NOT_CRITICAL","restore_point":"","rtejob_exitcode":0,"rtejob_id":-99,"rtejob_progress":9999,"rtejob_report_activity":"","rtejob_result":"Failed","rtejob_state":"Idle","service_item":{"DescriptionLong":"","DescriptionShort":"","ExtimatedRunTime":0,"Language":"en","MessageAfter":"","MessageBefore":"","PubblicationDate":"","ServiceTypeID":"","VBattMin":10.0,"Version":""},"start_date":"","start_service_data":{"auth_data":"","auth_type":"PSK","lang_code":"en","service_typeid":""},"start_service_response":{"RUSessionID":"","Service":{"ClientUserID":"","CreationDT":"","ExpirationDT":"","MainScriptBody":"","ServiceID":""}},"state":"TERMINATED","task_id":"INITIALIZING"}
+2025-08-22 07:38:46.248 WARN  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedState.cpp:372] state file path is empty
+2025-08-22 07:38:46.250 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedModule.cpp:1498] eosstate.json: {"end_date":"","exit_code":0,"exit_code_display":"","opxml_reports":[],"region":"NOT_CRITICAL","restore_point":"","rtejob_exitcode":0,"rtejob_id":-99,"rtejob_progress":9999,"rtejob_report_activity":"","rtejob_result":"Failed","rtejob_state":"Idle","service_item":{"DescriptionLong":"","DescriptionShort":"","ExtimatedRunTime":0,"Language":"en","MessageAfter":"","MessageBefore":"","PubblicationDate":"","ServiceTypeID":"","VBattMin":10.0,"Version":""},"start_date":"","start_service_data":{"auth_data":"","auth_type":"PSK","lang_code":"en","service_typeid":""},"start_service_response":{"RUSessionID":"","Service":{"ClientUserID":"","CreationDT":"","ExpirationDT":"","MainScriptBody":"","ServiceID":""}},"state":"TERMINATED","task_id":"INITIALIZING"}
+2025-08-22 07:38:46.254 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedModule.cpp:2960] FSM enter in RasUnattendedReady
+2025-08-22 07:38:46.255 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.web.WebService
+2025-08-22 07:38:46.282 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.web.WebService
+2025-08-22 07:38:46.290 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.web.WebService
+2025-08-22 07:38:46.290 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.web.WebService
+2025-08-22 07:38:46.291 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:80] Modules initialization completed
+2025-08-22 07:38:46.291 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:85] env: {
+application_name: ras
+application_version: 20.9.39
+application_path: /opt/appl/data/apps/apps_bin/ras
+application_data_path: /opt/appl/data/apps/apps_data/ras
+rte_module_name: rte
+log_configuration_file_path: /opt/appl/data/apps/apps_bin/ras/resources/log4cplus.properties
+token: ddbfd422-2c99-4631-9b3c-9586799d83c9
+server_certificate_base_path: /opt/appl/code/cacerts
+server_certificate_file_path: /opt/appl/code/cacerts/IVECO-ROOT_CA-Telematics.pem
+certificate_base_path: /opt/appl/code/cacerts
+certificate_file_path: /opt/appl/code/cacerts/Secure_Communication_Web_Server_MY24_IVECO_CA.pem
+application_resource_path: /opt/appl/data/apps/apps_bin/ras/resources
+target_start_runlevel: 12
+target_stop_runlevel: 2
+command line pars: 
+2
+12
+}
+
+2025-08-22 07:38:46.292 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:86] config: {"AdaSetting":{"delay_after_proof_of_ownership_s":4,"skip_read_active_roles":false},"BwsdSetting":{"bwsd_key15_cycle_time_s":4294967295,"bwsd_num_key15_cycle":0,"bwsd_start_deferred_time_s":4294967295},"ClusterSetting":{"buzzer_volume":9,"duration":0,"icon":228,"max_rows":3,"max_text_length":12,"refresh_time_s":5,"severity":2},"RasSetting":{"application_data_path":"","call_connection_timeout_sec":30,"leaf_certificate_file_path":"/opt/appl/code/cacerts/Secure_Communication_Web_Server_MY24_IVECO_CA.pem","max_connection_attempts":3,"open_connection_timeout_sec":30,"root_certificate_file_path":"/opt/appl/code/cacerts/IVECO-ROOT_CA-Telematics.pem","server_certificate_base_path":"/opt/appl/code/cacerts","sgw_unlock_required":true,"tls_proxy_delay_ms":1500},"RasUnattendedSetting":{"macro_execute_timeout_s":180,"max_chunk_size":5000000,"max_download_delay_ms":5000,"min_chunk_size":100000,"soc_battery_check_uid":""},"RteSetting":{"copy_files_timeout_s":10,"get_jobs_timeout_s":5,"max_ping_failed_to_raise_exception":3,"query_rte_activities_ms":700,"sleep_time_sec":2,"start_job_timeout_s":10,"submit_job_timeout_s":10,"timeout_rte_message_s":15},"WakeupBoardSetting":{"postpone_extension_time_s":40,"postpone_extension_timeout_ms":30000}}
+2025-08-22 07:38:46.293 INFO  281473175670800 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:87] subscription: {"apps_to_keep_running":[],"bwsd_num_key15_cycle":1,"bwsd_start_deferred_time_s":20,"configurationId":"IVGP_BUS_MY24_ICE_CUSTOMER_RAS_ON_RASU_ON_V01","ras_allowed":true,"ras_mode":"CUSTOMER","ras_unattended_allowed":true,"servers":[{"host":"https://pcmapi-my24.ras.iveco.com/rasapipcm/apipcm.asmx","name":"RAS_API_SERVER","port":443},{"host":"wss://pcmbridge-my24.ras.iveco.com/rasbridge/bridge.ashx","name":"RAS_BRIDGE_SERVER","port":443},{"host":"https://v-ada-bridge-dc-my24.vehicle.iveco.com/","name":"ADA_BRIDGE_SERVER","port":443}],"signal_ids":[{"EngSpeed":841},{"TotVehDistHr":674},{"BatPot_PwrIn1":2209}],"soc_battery_check_uid":"","vehicle_range":"BASE"}
+2025-08-22 07:38:46.294 INFO  281472938262704 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmDeviceModule.cpp:765] start Http handler
+2025-08-22 07:38:46.295 INFO  281472946655408 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmDeviceModule.cpp:687] start Wss handler
+2025-08-22 07:38:46.320 INFO  281472955048112 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] state: POWER_STATE_RUN
+2025-08-22 07:38:46.320 INFO  281472946655408 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] application { application_name: "ras/ws" }
+2025-08-22 07:38:46.321 INFO  281472955048112 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] event: POWER_EVENT_KEY15_ON
+2025-08-22 07:38:46.322 INFO  281473141911728 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1227] Stop postpone timer
+2025-08-22 07:38:46.322 INFO  281473141911728 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1293] on key15 on event
+2025-08-22 07:38:46.322 INFO  281473141911728 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1227] Stop postpone timer
+2025-08-22 07:38:46.322 INFO  281473141911728 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] command: POWER_TRANSCEIVE_COMMAND_CLEAR_POSTPONE_CONFIGURATION
+2025-08-22 07:38:46.320 INFO  281472938262704 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] application { application_name: "ras" }
+2025-08-22 07:38:46.328 INFO  281473141911728 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] command: POWER_TRANSCEIVE_COMMAND_SET_POSTPONE_CONFIGURATION request_id: 1 postpone_conf { postone_interval_sec: 40 }
+2025-08-22 07:38:46.329 INFO  281472955048112 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] command_response { command: POWER_TRANSCEIVE_COMMAND_CLEAR_POSTPONE_CONFIGURATION response_code: SUCCESS }
+2025-08-22 07:38:46.330 INFO  281473141911728 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1316] Ras BWSD disabled
+2025-08-22 07:38:46.330 INFO  281473141911728 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1537] raise K15 event: Key15On
+2025-08-22 07:38:46.331 INFO  281472955048112 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] command_response { request_id: 1 command: POWER_TRANSCEIVE_COMMAND_SET_POSTPONE_CONFIGURATION response_code: SUCCESS }
+2025-08-22 08:36:01.289 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:49] *** start app: 20.9.39
+2025-08-22 08:36:01.398 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:58] RteServer init success
+2025-08-22 08:36:01.402 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:585] Load subscription file: "/opt/appl/data/apps/apps_data/ras/subscription/subscription.json"
+2025-08-22 08:36:01.402 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:591] deserialize subscription file
+2025-08-22 08:36:01.405 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:610] Load subscription uuid file: "/opt/appl/data/apps/apps_data/ras/subscription/subscription_lastUUID.info"
+2025-08-22 08:36:01.406 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:616] deserialize subscription uuid file
+2025-08-22 08:36:01.407 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.communication.ConfigurationManagement
+2025-08-22 08:36:01.424 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.communication.ConfigurationManagement
+2025-08-22 08:36:01.428 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/AdaLuaLib.cpp:295] Registering module: RasAdaLib
+2025-08-22 08:36:01.428 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/AdaLuaLib.cpp:297] luaRTE_register_rtelib_ext_functions returns 0
+2025-08-22 08:36:01.429 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/AdaLuaLib.cpp:299] luaRTE_register_ext_module returns 0
+2025-08-22 08:36:01.429 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmRteModule.cpp:2109] register_lua_adalib(): success
+2025-08-22 08:36:01.429 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmRteModule.cpp:1565] FSM enter in RteDisconnected
+2025-08-22 08:36:01.429 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.core.PowerService
+2025-08-22 08:36:01.431 INFO  281472426569904 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmSubscriptionService.cpp:135] start Subscription handler
+2025-08-22 08:36:01.453 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.core.PowerService
+2025-08-22 08:36:01.455 INFO  281472418177200 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1123] start Power handler
+2025-08-22 08:36:01.455 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasAttendedModule.cpp:1610] FSM enter in RasAttendedReady
+2025-08-22 08:36:01.458 WARN  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedState.cpp:372] state file path is empty
+2025-08-22 08:36:01.459 INFO  281472426569904 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] application_name: "ras" module_name: "default" save_directory: "/opt/appl/data/apps/apps_data/ras/subtmp" save_file: "subscription.tmp" uuid_in_use: "7780123188372996685"
+2025-08-22 08:36:01.460 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedModule.cpp:1490] curstate.json: {"end_date":"","exit_code":0,"exit_code_display":"","opxml_reports":[],"region":"NOT_CRITICAL","restore_point":"","rtejob_exitcode":0,"rtejob_id":-99,"rtejob_progress":9999,"rtejob_report_activity":"","rtejob_result":"Failed","rtejob_state":"Idle","service_item":{"DescriptionLong":"","DescriptionShort":"","ExtimatedRunTime":0,"Language":"en","MessageAfter":"","MessageBefore":"","PubblicationDate":"","ServiceTypeID":"","VBattMin":10.0,"Version":""},"start_date":"","start_service_data":{"auth_data":"","auth_type":"PSK","lang_code":"en","service_typeid":""},"start_service_response":{"RUSessionID":"","Service":{"ClientUserID":"","CreationDT":"","ExpirationDT":"","MainScriptBody":"","ServiceID":""}},"state":"TERMINATED","task_id":"INITIALIZING"}
+2025-08-22 08:36:01.461 WARN  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedState.cpp:372] state file path is empty
+2025-08-22 08:36:01.464 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedModule.cpp:1498] eosstate.json: {"end_date":"","exit_code":0,"exit_code_display":"","opxml_reports":[],"region":"NOT_CRITICAL","restore_point":"","rtejob_exitcode":0,"rtejob_id":-99,"rtejob_progress":9999,"rtejob_report_activity":"","rtejob_result":"Failed","rtejob_state":"Idle","service_item":{"DescriptionLong":"","DescriptionShort":"","ExtimatedRunTime":0,"Language":"en","MessageAfter":"","MessageBefore":"","PubblicationDate":"","ServiceTypeID":"","VBattMin":10.0,"Version":""},"start_date":"","start_service_data":{"auth_data":"","auth_type":"PSK","lang_code":"en","service_typeid":""},"start_service_response":{"RUSessionID":"","Service":{"ClientUserID":"","CreationDT":"","ExpirationDT":"","MainScriptBody":"","ServiceID":""}},"state":"TERMINATED","task_id":"INITIALIZING"}
+2025-08-22 08:36:01.465 INFO  281472426569904 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:415] start subscription api result: 0
+2025-08-22 08:36:01.466 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedModule.cpp:2960] FSM enter in RasUnattendedReady
+2025-08-22 08:36:01.466 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.web.WebService
+2025-08-22 08:36:01.502 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.web.WebService
+2025-08-22 08:36:01.512 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.web.WebService
+2025-08-22 08:36:01.513 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.web.WebService
+2025-08-22 08:36:01.513 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:80] Modules initialization completed
+2025-08-22 08:36:01.513 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:85] env: {
+application_name: ras
+application_version: 20.9.39
+application_path: /opt/appl/data/apps/apps_bin/ras
+application_data_path: /opt/appl/data/apps/apps_data/ras
+rte_module_name: rte
+log_configuration_file_path: /opt/appl/data/apps/apps_bin/ras/resources/log4cplus.properties
+token: 8bafc56b-4e80-46da-8ab1-6677b06f0318
+server_certificate_base_path: /opt/appl/code/cacerts
+server_certificate_file_path: /opt/appl/code/cacerts/IVECO-ROOT_CA-Telematics.pem
+certificate_base_path: /opt/appl/code/cacerts
+certificate_file_path: /opt/appl/code/cacerts/Secure_Communication_Web_Server_MY24_IVECO_CA.pem
+application_resource_path: /opt/appl/data/apps/apps_bin/ras/resources
+target_start_runlevel: 12
+target_stop_runlevel: 2
+command line pars: 
+2
+12
+}
+
+2025-08-22 08:36:01.514 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:86] config: {"AdaSetting":{"delay_after_proof_of_ownership_s":4,"skip_read_active_roles":false},"BwsdSetting":{"bwsd_key15_cycle_time_s":4294967295,"bwsd_num_key15_cycle":0,"bwsd_start_deferred_time_s":4294967295},"ClusterSetting":{"buzzer_volume":9,"duration":0,"icon":228,"max_rows":3,"max_text_length":12,"refresh_time_s":5,"severity":2},"RasSetting":{"application_data_path":"","call_connection_timeout_sec":30,"leaf_certificate_file_path":"/opt/appl/code/cacerts/Secure_Communication_Web_Server_MY24_IVECO_CA.pem","max_connection_attempts":3,"open_connection_timeout_sec":30,"root_certificate_file_path":"/opt/appl/code/cacerts/IVECO-ROOT_CA-Telematics.pem","server_certificate_base_path":"/opt/appl/code/cacerts","sgw_unlock_required":true,"tls_proxy_delay_ms":1500},"RasUnattendedSetting":{"macro_execute_timeout_s":180,"max_chunk_size":5000000,"max_download_delay_ms":5000,"min_chunk_size":100000,"soc_battery_check_uid":""},"RteSetting":{"copy_files_timeout_s":10,"get_jobs_timeout_s":5,"max_ping_failed_to_raise_exception":3,"query_rte_activities_ms":700,"sleep_time_sec":2,"start_job_timeout_s":10,"submit_job_timeout_s":10,"timeout_rte_message_s":15},"WakeupBoardSetting":{"postpone_extension_time_s":40,"postpone_extension_timeout_ms":30000}}
+2025-08-22 08:36:01.515 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:87] subscription: {"apps_to_keep_running":[],"bwsd_num_key15_cycle":1,"bwsd_start_deferred_time_s":20,"configurationId":"IVGP_BUS_MY24_ICE_CUSTOMER_RAS_ON_RASU_ON_V01","ras_allowed":true,"ras_mode":"CUSTOMER","ras_unattended_allowed":true,"servers":[{"host":"https://pcmapi-my24.ras.iveco.com/rasapipcm/apipcm.asmx","name":"RAS_API_SERVER","port":443},{"host":"wss://pcmbridge-my24.ras.iveco.com/rasbridge/bridge.ashx","name":"RAS_BRIDGE_SERVER","port":443},{"host":"https://v-ada-bridge-dc-my24.vehicle.iveco.com/","name":"ADA_BRIDGE_SERVER","port":443}],"signal_ids":[{"EngSpeed":841},{"TotVehDistHr":674},{"BatPot_PwrIn1":2209}],"soc_battery_check_uid":"","vehicle_range":"BASE"}
+2025-08-22 08:36:01.516 INFO  281472409784496 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmDeviceModule.cpp:687] start Wss handler
+2025-08-22 08:36:01.517 INFO  281472401391792 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmDeviceModule.cpp:765] start Http handler
+2025-08-22 08:36:01.528 INFO  281472418177200 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] state: POWER_STATE_RUN
+2025-08-22 08:36:01.529 INFO  281472948637872 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1227] Stop postpone timer
+2025-08-22 08:36:01.529 INFO  281472418177200 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] event: POWER_EVENT_KEY15_ON
+2025-08-22 08:36:01.531 INFO  281472948637872 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1293] on key15 on event
+2025-08-22 08:36:01.531 INFO  281472948637872 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1227] Stop postpone timer
+2025-08-22 08:36:01.531 INFO  281472948637872 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] command: POWER_TRANSCEIVE_COMMAND_CLEAR_POSTPONE_CONFIGURATION
+2025-08-22 08:36:01.531 INFO  281472948637872 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] command: POWER_TRANSCEIVE_COMMAND_SET_POSTPONE_CONFIGURATION request_id: 1 postpone_conf { postone_interval_sec: 40 }
+2025-08-22 08:36:01.533 INFO  281472948637872 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1316] Ras BWSD disabled
+2025-08-22 08:36:01.533 INFO  281472948637872 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1537] raise K15 event: Key15On
+2025-08-22 08:36:01.537 INFO  281472409784496 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] application { application_name: "ras/ws" }
+2025-08-22 08:36:01.537 INFO  281472401391792 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] application { application_name: "ras" }
+2025-08-22 08:36:01.538 INFO  281472418177200 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] command_response { command: POWER_TRANSCEIVE_COMMAND_CLEAR_POSTPONE_CONFIGURATION response_code: SUCCESS }
+2025-08-22 08:36:01.539 INFO  281472418177200 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] command_response { request_id: 1 command: POWER_TRANSCEIVE_COMMAND_SET_POSTPONE_CONFIGURATION response_code: SUCCESS }
+2025-08-22 08:40:24.607 INFO  281472418177200 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] state: POWER_STATE_REBOOT
+2025-08-22 08:40:24.608 INFO  281472948637872 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1227] Stop postpone timer
+2025-08-22 08:40:24.982 ERROR 281472418177200 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:205] error reading stream mist.core.PowerService
+2025-08-22 08:40:24.982 INFO  281472418177200 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:324] restart service enter mist.core.PowerService
+2025-08-22 08:40:26.025 INFO  281472418177200 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:332] restart service exit mist.core.PowerService
+2025-08-22 08:40:26.059 ERROR 281472418177200 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:205] error reading stream mist.core.PowerService
+2025-08-22 08:40:26.063 INFO  281472418177200 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:324] restart service enter mist.core.PowerService
+2025-08-22 08:40:27.201 INFO  281472418177200 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:332] restart service exit mist.core.PowerService
+2025-08-22 08:40:27.305 ERROR 281472418177200 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:205] error reading stream mist.core.PowerService
+2025-08-22 08:40:27.324 INFO  281472418177200 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:324] restart service enter mist.core.PowerService
+2025-08-22 08:40:28.372 INFO  281472418177200 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:332] restart service exit mist.core.PowerService
+2025-08-22 08:40:28.391 ERROR 281472418177200 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:205] error reading stream mist.core.PowerService
+2025-08-22 08:40:28.450 INFO  281472418177200 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:324] restart service enter mist.core.PowerService
+2025-08-22 08:40:29.500 INFO  281472418177200 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:332] restart service exit mist.core.PowerService
+2025-08-22 08:40:29.511 ERROR 281472418177200 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:205] error reading stream mist.core.PowerService
+2025-08-22 08:40:29.512 INFO  281472418177200 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:324] restart service enter mist.core.PowerService
+2025-08-22 08:40:30.543 INFO  281472418177200 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:332] restart service exit mist.core.PowerService
+2025-08-22 08:40:30.560 ERROR 281472418177200 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:205] error reading stream mist.core.PowerService
+2025-08-22 08:40:30.560 INFO  281472418177200 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:324] restart service enter mist.core.PowerService
+2025-08-22 08:40:30.621 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:153] Shutdown init.
+2025-08-22 08:40:30.622 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:96] Modules shutdown started
+2025-08-22 08:40:30.622 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:56] close mist service: mist.web.WebService
+2025-08-22 08:40:30.689 ERROR 281472409784496 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:205] error reading stream mist.web.WebService
+2025-08-22 08:40:30.689 INFO  281472409784496 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmDeviceModule.cpp:685] Wss handler completed
+2025-08-22 08:40:30.715 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:56] close mist service: mist.web.WebService
+2025-08-22 08:40:30.866 ERROR 281472401391792 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:205] error reading stream mist.web.WebService
+2025-08-22 08:40:30.878 INFO  281472401391792 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmDeviceModule.cpp:763] Http handler completed
+2025-08-22 08:40:30.935 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:56] close mist service: mist.core.PowerService
+2025-08-22 08:40:31.564 INFO  281472418177200 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:332] restart service exit mist.core.PowerService
+2025-08-22 08:40:31.565 WARN  281472418177200 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:198] stream not initialized: mist.core.PowerService
+2025-08-22 08:40:31.565 INFO  281472418177200 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1121] Power handler completed
+2025-08-22 08:40:31.571 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:56] close mist service: mist.communication.ConfigurationManagement
+2025-08-22 08:40:31.576 ERROR 281472426569904 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:205] error reading stream mist.communication.ConfigurationManagement
+2025-08-22 08:40:31.577 INFO  281472426569904 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmSubscriptionService.cpp:133] Subscription handler completed
+2025-08-22 08:40:31.724 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:109] Modules shutdown completed
+2025-08-22 08:40:31.724 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:111] Services shutdown started
+2025-08-22 08:40:31.724 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:121] *** Services shutdown completed
+2025-08-22 08:40:31.982 INFO  281472982396944 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:125] *** RteServer Shutdown done.
+2025-08-22 08:43:09.004 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:49] *** start app: 20.9.39
+2025-08-22 08:43:09.106 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:58] RteServer init success
+2025-08-22 08:43:09.109 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:585] Load subscription file: "/opt/appl/data/apps/apps_data/ras/subscription/subscription.json"
+2025-08-22 08:43:09.110 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:591] deserialize subscription file
+2025-08-22 08:43:09.116 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:610] Load subscription uuid file: "/opt/appl/data/apps/apps_data/ras/subscription/subscription_lastUUID.info"
+2025-08-22 08:43:09.117 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:616] deserialize subscription uuid file
+2025-08-22 08:43:09.118 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.communication.ConfigurationManagement
+2025-08-22 08:43:09.134 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.communication.ConfigurationManagement
+2025-08-22 08:43:09.135 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/AdaLuaLib.cpp:295] Registering module: RasAdaLib
+2025-08-22 08:43:09.135 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/AdaLuaLib.cpp:297] luaRTE_register_rtelib_ext_functions returns 0
+2025-08-22 08:43:09.136 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/AdaLuaLib.cpp:299] luaRTE_register_ext_module returns 0
+2025-08-22 08:43:09.136 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmRteModule.cpp:2109] register_lua_adalib(): success
+2025-08-22 08:43:09.136 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmRteModule.cpp:1565] FSM enter in RteDisconnected
+2025-08-22 08:43:09.136 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.core.PowerService
+2025-08-22 08:43:09.143 INFO  281473156374704 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmSubscriptionService.cpp:135] start Subscription handler
+2025-08-22 08:43:09.155 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.core.PowerService
+2025-08-22 08:43:09.159 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasAttendedModule.cpp:1610] FSM enter in RasAttendedReady
+2025-08-22 08:43:09.164 WARN  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedState.cpp:372] state file path is empty
+2025-08-22 08:43:09.169 INFO  281473147982000 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1123] start Power handler
+2025-08-22 08:43:09.171 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedModule.cpp:1490] curstate.json: {"end_date":"","exit_code":0,"exit_code_display":"","opxml_reports":[],"region":"NOT_CRITICAL","restore_point":"","rtejob_exitcode":0,"rtejob_id":-99,"rtejob_progress":9999,"rtejob_report_activity":"","rtejob_result":"Failed","rtejob_state":"Idle","service_item":{"DescriptionLong":"","DescriptionShort":"","ExtimatedRunTime":0,"Language":"en","MessageAfter":"","MessageBefore":"","PubblicationDate":"","ServiceTypeID":"","VBattMin":10.0,"Version":""},"start_date":"","start_service_data":{"auth_data":"","auth_type":"PSK","lang_code":"en","service_typeid":""},"start_service_response":{"RUSessionID":"","Service":{"ClientUserID":"","CreationDT":"","ExpirationDT":"","MainScriptBody":"","ServiceID":""}},"state":"TERMINATED","task_id":"INITIALIZING"}
+2025-08-22 08:43:09.171 WARN  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedState.cpp:372] state file path is empty
+2025-08-22 08:43:09.174 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedModule.cpp:1498] eosstate.json: {"end_date":"","exit_code":0,"exit_code_display":"","opxml_reports":[],"region":"NOT_CRITICAL","restore_point":"","rtejob_exitcode":0,"rtejob_id":-99,"rtejob_progress":9999,"rtejob_report_activity":"","rtejob_result":"Failed","rtejob_state":"Idle","service_item":{"DescriptionLong":"","DescriptionShort":"","ExtimatedRunTime":0,"Language":"en","MessageAfter":"","MessageBefore":"","PubblicationDate":"","ServiceTypeID":"","VBattMin":10.0,"Version":""},"start_date":"","start_service_data":{"auth_data":"","auth_type":"PSK","lang_code":"en","service_typeid":""},"start_service_response":{"RUSessionID":"","Service":{"ClientUserID":"","CreationDT":"","ExpirationDT":"","MainScriptBody":"","ServiceID":""}},"state":"TERMINATED","task_id":"INITIALIZING"}
+2025-08-22 08:43:09.177 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedModule.cpp:2960] FSM enter in RasUnattendedReady
+2025-08-22 08:43:09.184 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.web.WebService
+2025-08-22 08:43:09.210 INFO  281473156374704 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] application_name: "ras" module_name: "default" save_directory: "/opt/appl/data/apps/apps_data/ras/subtmp" save_file: "subscription.tmp" uuid_in_use: "7780123188372996685"
+2025-08-22 08:43:09.220 INFO  281473156374704 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:415] start subscription api result: 0
+2025-08-22 08:43:09.229 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.web.WebService
+2025-08-22 08:43:09.237 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.web.WebService
+2025-08-22 08:43:09.238 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.web.WebService
+2025-08-22 08:43:09.239 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:80] Modules initialization completed
+2025-08-22 08:43:09.239 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:85] env: {
+application_name: ras
+application_version: 20.9.39
+application_path: /opt/appl/data/apps/apps_bin/ras
+application_data_path: /opt/appl/data/apps/apps_data/ras
+rte_module_name: rte
+log_configuration_file_path: /opt/appl/data/apps/apps_bin/ras/resources/log4cplus.properties
+token: 7d55ebdb-2038-4ea0-883e-508c93b4bb52
+server_certificate_base_path: /opt/appl/code/cacerts
+server_certificate_file_path: /opt/appl/code/cacerts/IVECO-ROOT_CA-Telematics.pem
+certificate_base_path: /opt/appl/code/cacerts
+certificate_file_path: /opt/appl/code/cacerts/Secure_Communication_Web_Server_MY24_IVECO_CA.pem
+application_resource_path: /opt/appl/data/apps/apps_bin/ras/resources
+target_start_runlevel: 12
+target_stop_runlevel: 2
+command line pars: 
+2
+12
+}
+
+2025-08-22 08:43:09.240 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:86] config: {"AdaSetting":{"delay_after_proof_of_ownership_s":4,"skip_read_active_roles":false},"BwsdSetting":{"bwsd_key15_cycle_time_s":4294967295,"bwsd_num_key15_cycle":0,"bwsd_start_deferred_time_s":4294967295},"ClusterSetting":{"buzzer_volume":9,"duration":0,"icon":228,"max_rows":3,"max_text_length":12,"refresh_time_s":5,"severity":2},"RasSetting":{"application_data_path":"","call_connection_timeout_sec":30,"leaf_certificate_file_path":"/opt/appl/code/cacerts/Secure_Communication_Web_Server_MY24_IVECO_CA.pem","max_connection_attempts":3,"open_connection_timeout_sec":30,"root_certificate_file_path":"/opt/appl/code/cacerts/IVECO-ROOT_CA-Telematics.pem","server_certificate_base_path":"/opt/appl/code/cacerts","sgw_unlock_required":true,"tls_proxy_delay_ms":1500},"RasUnattendedSetting":{"macro_execute_timeout_s":180,"max_chunk_size":5000000,"max_download_delay_ms":5000,"min_chunk_size":100000,"soc_battery_check_uid":""},"RteSetting":{"copy_files_timeout_s":10,"get_jobs_timeout_s":5,"max_ping_failed_to_raise_exception":3,"query_rte_activities_ms":700,"sleep_time_sec":2,"start_job_timeout_s":10,"submit_job_timeout_s":10,"timeout_rte_message_s":15},"WakeupBoardSetting":{"postpone_extension_time_s":40,"postpone_extension_timeout_ms":30000}}
+2025-08-22 08:43:09.242 INFO  281473770844176 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:87] subscription: {"apps_to_keep_running":[],"bwsd_num_key15_cycle":1,"bwsd_start_deferred_time_s":20,"configurationId":"IVGP_BUS_MY24_ICE_CUSTOMER_RAS_ON_RASU_ON_V01","ras_allowed":true,"ras_mode":"CUSTOMER","ras_unattended_allowed":true,"servers":[{"host":"https://pcmapi-my24.ras.iveco.com/rasapipcm/apipcm.asmx","name":"RAS_API_SERVER","port":443},{"host":"wss://pcmbridge-my24.ras.iveco.com/rasbridge/bridge.ashx","name":"RAS_BRIDGE_SERVER","port":443},{"host":"https://v-ada-bridge-dc-my24.vehicle.iveco.com/","name":"ADA_BRIDGE_SERVER","port":443}],"signal_ids":[{"EngSpeed":841},{"TotVehDistHr":674},{"BatPot_PwrIn1":2209}],"soc_battery_check_uid":"","vehicle_range":"BASE"}
+2025-08-22 08:43:09.243 INFO  281473131196592 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmDeviceModule.cpp:765] start Http handler
+2025-08-22 08:43:09.244 INFO  281473139589296 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmDeviceModule.cpp:687] start Wss handler
+2025-08-22 08:43:09.273 INFO  281473147982000 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] state: POWER_STATE_RUN
+2025-08-22 08:43:09.276 INFO  281473139589296 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] application { application_name: "ras/ws" }
+2025-08-22 08:43:09.276 INFO  281473131196592 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] application { application_name: "ras" }
+2025-08-22 08:43:09.279 INFO  281473737085104 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1227] Stop postpone timer
+2025-08-22 08:43:09.279 INFO  281473147982000 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] event: POWER_EVENT_KEY15_ON
+2025-08-22 08:43:09.280 INFO  281473737085104 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1293] on key15 on event
+2025-08-22 08:43:09.280 INFO  281473737085104 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1227] Stop postpone timer
+2025-08-22 08:43:09.280 INFO  281473737085104 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] command: POWER_TRANSCEIVE_COMMAND_CLEAR_POSTPONE_CONFIGURATION
+2025-08-22 08:43:09.281 INFO  281473737085104 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] command: POWER_TRANSCEIVE_COMMAND_SET_POSTPONE_CONFIGURATION request_id: 1 postpone_conf { postone_interval_sec: 40 }
+2025-08-22 08:43:09.286 INFO  281473737085104 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1316] Ras BWSD disabled
+2025-08-22 08:43:09.286 INFO  281473737085104 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1537] raise K15 event: Key15On
+2025-08-22 08:43:09.287 INFO  281473147982000 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] command_response { command: POWER_TRANSCEIVE_COMMAND_CLEAR_POSTPONE_CONFIGURATION response_code: SUCCESS }
+2025-08-22 08:43:09.287 INFO  281473147982000 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] command_response { request_id: 1 command: POWER_TRANSCEIVE_COMMAND_SET_POSTPONE_CONFIGURATION response_code: SUCCESS }
+2025-08-22 08:43:18.919 INFO  281473156374704 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmSubscriptionService.cpp:198] uuid: "7780123188372996685"
+2025-08-22 08:43:18.920 INFO  281473156374704 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:585] Load subscription file: "/opt/appl/data/apps/apps_data/ras/subtmp/subscription.tmp"
+2025-08-22 08:43:18.921 INFO  281473156374704 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:591] deserialize subscription file
+2025-08-22 08:43:18.925 INFO  281473156374704 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:505] new subscription: {"apps_to_keep_running":[],"bwsd_num_key15_cycle":1,"bwsd_start_deferred_time_s":20,"configurationId":"IVGP_BUS_MY24_ICE_CUSTOMER_RAS_ON_RASU_ON_V01","ras_allowed":true,"ras_mode":"CUSTOMER","ras_unattended_allowed":true,"servers":[{"host":"https://pcmapi-my24.ras.iveco.com/rasapipcm/apipcm.asmx","name":"RAS_API_SERVER","port":443},{"host":"wss://pcmbridge-my24.ras.iveco.com/rasbridge/bridge.ashx","name":"RAS_BRIDGE_SERVER","port":443},{"host":"https://v-ada-bridge-dc-my24.vehicle.iveco.com/","name":"ADA_BRIDGE_SERVER","port":443}],"signal_ids":[{"EngSpeed":841},{"TotVehDistHr":674},{"BatPot_PwrIn1":2209}],"soc_battery_check_uid":"","vehicle_range":"BASE"}
+2025-08-22 08:43:18.929 INFO  281473156374704 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] application_name: "ras" module_name: "default" save_directory: "/opt/appl/data/apps/apps_data/ras/subtmp" save_file: "subscription.tmp" uuid_in_use: "7780123188372996685"
+2025-08-25 07:10:38.608 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:49] *** start app: 20.9.39
+2025-08-25 07:10:38.701 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:58] RteServer init success
+2025-08-25 07:10:38.704 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:585] Load subscription file: "/opt/appl/data/apps/apps_data/ras/subscription/subscription.json"
+2025-08-25 07:10:38.705 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:591] deserialize subscription file
+2025-08-25 07:10:38.711 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:610] Load subscription uuid file: "/opt/appl/data/apps/apps_data/ras/subscription/subscription_lastUUID.info"
+2025-08-25 07:10:38.712 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:616] deserialize subscription uuid file
+2025-08-25 07:10:38.712 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.communication.ConfigurationManagement
+2025-08-25 07:10:38.729 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.communication.ConfigurationManagement
+2025-08-25 07:10:38.730 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/AdaLuaLib.cpp:295] Registering module: RasAdaLib
+2025-08-25 07:10:38.730 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/AdaLuaLib.cpp:297] luaRTE_register_rtelib_ext_functions returns 0
+2025-08-25 07:10:38.731 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/AdaLuaLib.cpp:299] luaRTE_register_ext_module returns 0
+2025-08-25 07:10:38.731 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmRteModule.cpp:2109] register_lua_adalib(): success
+2025-08-25 07:10:38.731 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmRteModule.cpp:1565] FSM enter in RteDisconnected
+2025-08-25 07:10:38.731 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.core.PowerService
+2025-08-25 07:10:38.739 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.core.PowerService
+2025-08-25 07:10:38.747 INFO  281473525457072 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmSubscriptionService.cpp:135] start Subscription handler
+2025-08-25 07:10:38.760 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasAttendedModule.cpp:1610] FSM enter in RasAttendedReady
+2025-08-25 07:10:38.761 INFO  281473517064368 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1123] start Power handler
+2025-08-25 07:10:38.762 WARN  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedState.cpp:372] state file path is empty
+2025-08-25 07:10:38.765 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedModule.cpp:1490] curstate.json: {"end_date":"","exit_code":0,"exit_code_display":"","opxml_reports":[],"region":"NOT_CRITICAL","restore_point":"","rtejob_exitcode":0,"rtejob_id":-99,"rtejob_progress":9999,"rtejob_report_activity":"","rtejob_result":"Failed","rtejob_state":"Idle","service_item":{"DescriptionLong":"","DescriptionShort":"","ExtimatedRunTime":0,"Language":"en","MessageAfter":"","MessageBefore":"","PubblicationDate":"","ServiceTypeID":"","VBattMin":10.0,"Version":""},"start_date":"","start_service_data":{"auth_data":"","auth_type":"PSK","lang_code":"en","service_typeid":""},"start_service_response":{"RUSessionID":"","Service":{"ClientUserID":"","CreationDT":"","ExpirationDT":"","MainScriptBody":"","ServiceID":""}},"state":"TERMINATED","task_id":"INITIALIZING"}
+2025-08-25 07:10:38.765 WARN  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedState.cpp:372] state file path is empty
+2025-08-25 07:10:38.767 INFO  281473525457072 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] application_name: "ras" module_name: "default" save_directory: "/opt/appl/data/apps/apps_data/ras/subtmp" save_file: "subscription.tmp" uuid_in_use: "7780123188372996685"
+2025-08-25 07:10:38.769 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedModule.cpp:1498] eosstate.json: {"end_date":"","exit_code":0,"exit_code_display":"","opxml_reports":[],"region":"NOT_CRITICAL","restore_point":"","rtejob_exitcode":0,"rtejob_id":-99,"rtejob_progress":9999,"rtejob_report_activity":"","rtejob_result":"Failed","rtejob_state":"Idle","service_item":{"DescriptionLong":"","DescriptionShort":"","ExtimatedRunTime":0,"Language":"en","MessageAfter":"","MessageBefore":"","PubblicationDate":"","ServiceTypeID":"","VBattMin":10.0,"Version":""},"start_date":"","start_service_data":{"auth_data":"","auth_type":"PSK","lang_code":"en","service_typeid":""},"start_service_response":{"RUSessionID":"","Service":{"ClientUserID":"","CreationDT":"","ExpirationDT":"","MainScriptBody":"","ServiceID":""}},"state":"TERMINATED","task_id":"INITIALIZING"}
+2025-08-25 07:10:38.769 INFO  281473525457072 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:415] start subscription api result: 0
+2025-08-25 07:10:38.773 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedModule.cpp:2960] FSM enter in RasUnattendedReady
+2025-08-25 07:10:38.773 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.web.WebService
+2025-08-25 07:10:38.793 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.web.WebService
+2025-08-25 07:10:38.802 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.web.WebService
+2025-08-25 07:10:38.802 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.web.WebService
+2025-08-25 07:10:38.803 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:80] Modules initialization completed
+2025-08-25 07:10:38.803 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:85] env: {
+application_name: ras
+application_version: 20.9.39
+application_path: /opt/appl/data/apps/apps_bin/ras
+application_data_path: /opt/appl/data/apps/apps_data/ras
+rte_module_name: rte
+log_configuration_file_path: /opt/appl/data/apps/apps_bin/ras/resources/log4cplus.properties
+token: 40a53fae-e0a9-49c1-952a-3e525fd128a9
+server_certificate_base_path: /opt/appl/code/cacerts
+server_certificate_file_path: /opt/appl/code/cacerts/IVECO-ROOT_CA-Telematics.pem
+certificate_base_path: /opt/appl/code/cacerts
+certificate_file_path: /opt/appl/code/cacerts/Secure_Communication_Web_Server_MY24_IVECO_CA.pem
+application_resource_path: /opt/appl/data/apps/apps_bin/ras/resources
+target_start_runlevel: 12
+target_stop_runlevel: 2
+command line pars: 
+2
+12
+}
+
+2025-08-25 07:10:38.805 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:86] config: {"AdaSetting":{"delay_after_proof_of_ownership_s":4,"skip_read_active_roles":false},"BwsdSetting":{"bwsd_key15_cycle_time_s":4294967295,"bwsd_num_key15_cycle":0,"bwsd_start_deferred_time_s":4294967295},"ClusterSetting":{"buzzer_volume":9,"duration":0,"icon":228,"max_rows":3,"max_text_length":12,"refresh_time_s":5,"severity":2},"RasSetting":{"application_data_path":"","call_connection_timeout_sec":30,"leaf_certificate_file_path":"/opt/appl/code/cacerts/Secure_Communication_Web_Server_MY24_IVECO_CA.pem","max_connection_attempts":3,"open_connection_timeout_sec":30,"root_certificate_file_path":"/opt/appl/code/cacerts/IVECO-ROOT_CA-Telematics.pem","server_certificate_base_path":"/opt/appl/code/cacerts","sgw_unlock_required":true,"tls_proxy_delay_ms":1500},"RasUnattendedSetting":{"macro_execute_timeout_s":180,"max_chunk_size":5000000,"max_download_delay_ms":5000,"min_chunk_size":100000,"soc_battery_check_uid":""},"RteSetting":{"copy_files_timeout_s":10,"get_jobs_timeout_s":5,"max_ping_failed_to_raise_exception":3,"query_rte_activities_ms":700,"sleep_time_sec":2,"start_job_timeout_s":10,"submit_job_timeout_s":10,"timeout_rte_message_s":15},"WakeupBoardSetting":{"postpone_extension_time_s":40,"postpone_extension_timeout_ms":30000}}
+2025-08-25 07:10:38.807 INFO  281473022156976 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmDeviceModule.cpp:765] start Http handler
+2025-08-25 07:10:38.809 INFO  281473742008336 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:87] subscription: {"apps_to_keep_running":[],"bwsd_num_key15_cycle":1,"bwsd_start_deferred_time_s":20,"configurationId":"IVGP_BUS_MY24_ICE_CUSTOMER_RAS_ON_RASU_ON_V01","ras_allowed":true,"ras_mode":"CUSTOMER","ras_unattended_allowed":true,"servers":[{"host":"https://pcmapi-my24.ras.iveco.com/rasapipcm/apipcm.asmx","name":"RAS_API_SERVER","port":443},{"host":"wss://pcmbridge-my24.ras.iveco.com/rasbridge/bridge.ashx","name":"RAS_BRIDGE_SERVER","port":443},{"host":"https://v-ada-bridge-dc-my24.vehicle.iveco.com/","name":"ADA_BRIDGE_SERVER","port":443}],"signal_ids":[{"EngSpeed":841},{"TotVehDistHr":674},{"BatPot_PwrIn1":2209}],"soc_battery_check_uid":"","vehicle_range":"BASE"}
+2025-08-25 07:10:38.811 INFO  281473030549680 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmDeviceModule.cpp:687] start Wss handler
+2025-08-25 07:10:38.844 INFO  281473517064368 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] state: POWER_STATE_RUN
+2025-08-25 07:10:38.845 INFO  281473708249264 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1227] Stop postpone timer
+2025-08-25 07:10:38.846 INFO  281473517064368 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] event: POWER_EVENT_KEY15_ON
+2025-08-25 07:10:38.846 INFO  281473708249264 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1293] on key15 on event
+2025-08-25 07:10:38.847 INFO  281473708249264 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1227] Stop postpone timer
+2025-08-25 07:10:38.847 INFO  281473708249264 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] command: POWER_TRANSCEIVE_COMMAND_CLEAR_POSTPONE_CONFIGURATION
+2025-08-25 07:10:38.850 INFO  281473030549680 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] application { application_name: "ras/ws" }
+2025-08-25 07:10:38.852 INFO  281473708249264 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] command: POWER_TRANSCEIVE_COMMAND_SET_POSTPONE_CONFIGURATION request_id: 1 postpone_conf { postone_interval_sec: 40 }
+2025-08-25 07:10:38.853 INFO  281473517064368 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] command_response { command: POWER_TRANSCEIVE_COMMAND_CLEAR_POSTPONE_CONFIGURATION response_code: SUCCESS }
+2025-08-25 07:10:38.854 INFO  281473022156976 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] application { application_name: "ras" }
+2025-08-25 07:10:38.856 INFO  281473708249264 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1316] Ras BWSD disabled
+2025-08-25 07:10:38.856 INFO  281473708249264 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1537] raise K15 event: Key15On
+2025-08-25 07:10:38.857 INFO  281473517064368 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] command_response { request_id: 1 command: POWER_TRANSCEIVE_COMMAND_SET_POSTPONE_CONFIGURATION response_code: SUCCESS }
+2025-09-03 07:04:47.820 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:49] *** start app: 20.9.39
+2025-09-03 07:04:47.925 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:58] RteServer init success
+2025-09-03 07:04:47.927 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:585] Load subscription file: "/opt/appl/data/apps/apps_data/ras/subscription/subscription.json"
+2025-09-03 07:04:47.929 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:591] deserialize subscription file
+2025-09-03 07:04:47.933 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:610] Load subscription uuid file: "/opt/appl/data/apps/apps_data/ras/subscription/subscription_lastUUID.info"
+2025-09-03 07:04:47.935 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:616] deserialize subscription uuid file
+2025-09-03 07:04:47.935 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.communication.ConfigurationManagement
+2025-09-03 07:04:47.953 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.communication.ConfigurationManagement
+2025-09-03 07:04:47.955 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/AdaLuaLib.cpp:295] Registering module: RasAdaLib
+2025-09-03 07:04:47.956 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/AdaLuaLib.cpp:297] luaRTE_register_rtelib_ext_functions returns 0
+2025-09-03 07:04:47.956 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/AdaLuaLib.cpp:299] luaRTE_register_ext_module returns 0
+2025-09-03 07:04:47.956 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmRteModule.cpp:2109] register_lua_adalib(): success
+2025-09-03 07:04:47.956 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmRteModule.cpp:1565] FSM enter in RteDisconnected
+2025-09-03 07:04:47.956 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.core.PowerService
+2025-09-03 07:04:47.961 INFO  281473584173232 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmSubscriptionService.cpp:135] start Subscription handler
+2025-09-03 07:04:47.975 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.core.PowerService
+2025-09-03 07:04:47.985 INFO  281473164767408 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1123] start Power handler
+2025-09-03 07:04:47.985 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasAttendedModule.cpp:1610] FSM enter in RasAttendedReady
+2025-09-03 07:04:47.987 WARN  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedState.cpp:372] state file path is empty
+2025-09-03 07:04:47.989 INFO  281473584173232 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] application_name: "ras" module_name: "default" save_directory: "/opt/appl/data/apps/apps_data/ras/subtmp" save_file: "subscription.tmp" uuid_in_use: "7780123188372996685"
+2025-09-03 07:04:47.990 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedModule.cpp:1490] curstate.json: {"end_date":"","exit_code":0,"exit_code_display":"","opxml_reports":[],"region":"NOT_CRITICAL","restore_point":"","rtejob_exitcode":0,"rtejob_id":-99,"rtejob_progress":9999,"rtejob_report_activity":"","rtejob_result":"Failed","rtejob_state":"Idle","service_item":{"DescriptionLong":"","DescriptionShort":"","ExtimatedRunTime":0,"Language":"en","MessageAfter":"","MessageBefore":"","PubblicationDate":"","ServiceTypeID":"","VBattMin":10.0,"Version":""},"start_date":"","start_service_data":{"auth_data":"","auth_type":"PSK","lang_code":"en","service_typeid":""},"start_service_response":{"RUSessionID":"","Service":{"ClientUserID":"","CreationDT":"","ExpirationDT":"","MainScriptBody":"","ServiceID":""}},"state":"TERMINATED","task_id":"INITIALIZING"}
+2025-09-03 07:04:47.990 WARN  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedState.cpp:372] state file path is empty
+2025-09-03 07:04:47.991 INFO  281473584173232 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:415] start subscription api result: 0
+2025-09-03 07:04:47.996 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedModule.cpp:1498] eosstate.json: {"end_date":"","exit_code":0,"exit_code_display":"","opxml_reports":[],"region":"NOT_CRITICAL","restore_point":"","rtejob_exitcode":0,"rtejob_id":-99,"rtejob_progress":9999,"rtejob_report_activity":"","rtejob_result":"Failed","rtejob_state":"Idle","service_item":{"DescriptionLong":"","DescriptionShort":"","ExtimatedRunTime":0,"Language":"en","MessageAfter":"","MessageBefore":"","PubblicationDate":"","ServiceTypeID":"","VBattMin":10.0,"Version":""},"start_date":"","start_service_data":{"auth_data":"","auth_type":"PSK","lang_code":"en","service_typeid":""},"start_service_response":{"RUSessionID":"","Service":{"ClientUserID":"","CreationDT":"","ExpirationDT":"","MainScriptBody":"","ServiceID":""}},"state":"TERMINATED","task_id":"INITIALIZING"}
+2025-09-03 07:04:48.001 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedModule.cpp:2960] FSM enter in RasUnattendedReady
+2025-09-03 07:04:48.001 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.web.WebService
+2025-09-03 07:04:48.026 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.web.WebService
+2025-09-03 07:04:48.034 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.web.WebService
+2025-09-03 07:04:48.035 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.web.WebService
+2025-09-03 07:04:48.036 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:80] Modules initialization completed
+2025-09-03 07:04:48.036 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:85] env: {
+application_name: ras
+application_version: 20.9.39
+application_path: /opt/appl/data/apps/apps_bin/ras
+application_data_path: /opt/appl/data/apps/apps_data/ras
+rte_module_name: rte
+log_configuration_file_path: /opt/appl/data/apps/apps_bin/ras/resources/log4cplus.properties
+token: f2d173ff-9dd7-46b6-ae20-992570691943
+server_certificate_base_path: /opt/appl/code/cacerts
+server_certificate_file_path: /opt/appl/code/cacerts/IVECO-ROOT_CA-Telematics.pem
+certificate_base_path: /opt/appl/code/cacerts
+certificate_file_path: /opt/appl/code/cacerts/Secure_Communication_Web_Server_MY24_IVECO_CA.pem
+application_resource_path: /opt/appl/data/apps/apps_bin/ras/resources
+target_start_runlevel: 12
+target_stop_runlevel: 2
+command line pars: 
+2
+12
+}
+
+2025-09-03 07:04:48.037 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:86] config: {"AdaSetting":{"delay_after_proof_of_ownership_s":4,"skip_read_active_roles":false},"BwsdSetting":{"bwsd_key15_cycle_time_s":4294967295,"bwsd_num_key15_cycle":0,"bwsd_start_deferred_time_s":4294967295},"ClusterSetting":{"buzzer_volume":9,"duration":0,"icon":228,"max_rows":3,"max_text_length":12,"refresh_time_s":5,"severity":2},"RasSetting":{"application_data_path":"","call_connection_timeout_sec":30,"leaf_certificate_file_path":"/opt/appl/code/cacerts/Secure_Communication_Web_Server_MY24_IVECO_CA.pem","max_connection_attempts":3,"open_connection_timeout_sec":30,"root_certificate_file_path":"/opt/appl/code/cacerts/IVECO-ROOT_CA-Telematics.pem","server_certificate_base_path":"/opt/appl/code/cacerts","sgw_unlock_required":true,"tls_proxy_delay_ms":1500},"RasUnattendedSetting":{"macro_execute_timeout_s":180,"max_chunk_size":5000000,"max_download_delay_ms":5000,"min_chunk_size":100000,"soc_battery_check_uid":""},"RteSetting":{"copy_files_timeout_s":10,"get_jobs_timeout_s":5,"max_ping_failed_to_raise_exception":3,"query_rte_activities_ms":700,"sleep_time_sec":2,"start_job_timeout_s":10,"submit_job_timeout_s":10,"timeout_rte_message_s":15},"WakeupBoardSetting":{"postpone_extension_time_s":40,"postpone_extension_timeout_ms":30000}}
+2025-09-03 07:04:48.038 INFO  281473795829776 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:87] subscription: {"apps_to_keep_running":[],"bwsd_num_key15_cycle":1,"bwsd_start_deferred_time_s":20,"configurationId":"IVGP_BUS_MY24_ICE_CUSTOMER_RAS_ON_RASU_ON_V01","ras_allowed":true,"ras_mode":"CUSTOMER","ras_unattended_allowed":true,"servers":[{"host":"https://pcmapi-my24.ras.iveco.com/rasapipcm/apipcm.asmx","name":"RAS_API_SERVER","port":443},{"host":"wss://pcmbridge-my24.ras.iveco.com/rasbridge/bridge.ashx","name":"RAS_BRIDGE_SERVER","port":443},{"host":"https://v-ada-bridge-dc-my24.vehicle.iveco.com/","name":"ADA_BRIDGE_SERVER","port":443}],"signal_ids":[{"EngSpeed":841},{"TotVehDistHr":674},{"BatPot_PwrIn1":2209}],"soc_battery_check_uid":"","vehicle_range":"BASE"}
+2025-09-03 07:04:48.040 INFO  281473156374704 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmDeviceModule.cpp:687] start Wss handler
+2025-09-03 07:04:48.044 INFO  281473147982000 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmDeviceModule.cpp:765] start Http handler
+2025-09-03 07:04:48.063 INFO  281473164767408 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] state: POWER_STATE_RUN
+2025-09-03 07:04:48.064 INFO  281473762070704 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1227] Stop postpone timer
+2025-09-03 07:04:48.064 INFO  281473164767408 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] event: POWER_EVENT_KEY15_ON
+2025-09-03 07:04:48.064 INFO  281473762070704 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1293] on key15 on event
+2025-09-03 07:04:48.065 INFO  281473762070704 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1227] Stop postpone timer
+2025-09-03 07:04:48.065 INFO  281473762070704 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] command: POWER_TRANSCEIVE_COMMAND_CLEAR_POSTPONE_CONFIGURATION
+2025-09-03 07:04:48.066 INFO  281473762070704 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] command: POWER_TRANSCEIVE_COMMAND_SET_POSTPONE_CONFIGURATION request_id: 1 postpone_conf { postone_interval_sec: 40 }
+2025-09-03 07:04:48.068 INFO  281473164767408 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] command_response { command: POWER_TRANSCEIVE_COMMAND_CLEAR_POSTPONE_CONFIGURATION response_code: SUCCESS }
+2025-09-03 07:04:48.069 INFO  281473762070704 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1316] Ras BWSD disabled
+2025-09-03 07:04:48.070 INFO  281473762070704 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1537] raise K15 event: Key15On
+2025-09-03 07:04:48.073 INFO  281473164767408 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] command_response { request_id: 1 command: POWER_TRANSCEIVE_COMMAND_SET_POSTPONE_CONFIGURATION response_code: SUCCESS }
+2025-09-03 07:04:48.076 INFO  281473156374704 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] application { application_name: "ras/ws" }
+2025-09-03 07:04:48.076 INFO  281473147982000 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] application { application_name: "ras" }
+2025-09-04 19:02:58.478 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:49] *** start app: 20.9.39
+2025-09-04 19:02:58.577 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:58] RteServer init success
+2025-09-04 19:02:58.581 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:585] Load subscription file: "/opt/appl/data/apps/apps_data/ras/subscription/subscription.json"
+2025-09-04 19:02:58.583 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:591] deserialize subscription file
+2025-09-04 19:02:58.586 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:610] Load subscription uuid file: "/opt/appl/data/apps/apps_data/ras/subscription/subscription_lastUUID.info"
+2025-09-04 19:02:58.587 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:616] deserialize subscription uuid file
+2025-09-04 19:02:58.587 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.communication.ConfigurationManagement
+2025-09-04 19:02:58.605 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.communication.ConfigurationManagement
+2025-09-04 19:02:58.606 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/AdaLuaLib.cpp:295] Registering module: RasAdaLib
+2025-09-04 19:02:58.606 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/AdaLuaLib.cpp:297] luaRTE_register_rtelib_ext_functions returns 0
+2025-09-04 19:02:58.606 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/AdaLuaLib.cpp:299] luaRTE_register_ext_module returns 0
+2025-09-04 19:02:58.606 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmRteModule.cpp:2109] register_lua_adalib(): success
+2025-09-04 19:02:58.606 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmRteModule.cpp:1565] FSM enter in RteDisconnected
+2025-09-04 19:02:58.607 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.core.PowerService
+2025-09-04 19:02:58.616 INFO  281472418177200 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmSubscriptionService.cpp:135] start Subscription handler
+2025-09-04 19:02:58.616 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.core.PowerService
+2025-09-04 19:02:58.618 INFO  281472409784496 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1123] start Power handler
+2025-09-04 19:02:58.620 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasAttendedModule.cpp:1610] FSM enter in RasAttendedReady
+2025-09-04 19:02:58.624 WARN  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedState.cpp:372] state file path is empty
+2025-09-04 19:02:58.630 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedModule.cpp:1490] curstate.json: {"end_date":"","exit_code":0,"exit_code_display":"","opxml_reports":[],"region":"NOT_CRITICAL","restore_point":"","rtejob_exitcode":0,"rtejob_id":-99,"rtejob_progress":9999,"rtejob_report_activity":"","rtejob_result":"Failed","rtejob_state":"Idle","service_item":{"DescriptionLong":"","DescriptionShort":"","ExtimatedRunTime":0,"Language":"en","MessageAfter":"","MessageBefore":"","PubblicationDate":"","ServiceTypeID":"","VBattMin":10.0,"Version":""},"start_date":"","start_service_data":{"auth_data":"","auth_type":"PSK","lang_code":"en","service_typeid":""},"start_service_response":{"RUSessionID":"","Service":{"ClientUserID":"","CreationDT":"","ExpirationDT":"","MainScriptBody":"","ServiceID":""}},"state":"TERMINATED","task_id":"INITIALIZING"}
+2025-09-04 19:02:58.630 WARN  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedState.cpp:372] state file path is empty
+2025-09-04 19:02:58.639 INFO  281472418177200 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] application_name: "ras" module_name: "default" save_directory: "/opt/appl/data/apps/apps_data/ras/subtmp" save_file: "subscription.tmp" uuid_in_use: "7780123188372996685"
+2025-09-04 19:02:58.643 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedModule.cpp:1498] eosstate.json: {"end_date":"","exit_code":0,"exit_code_display":"","opxml_reports":[],"region":"NOT_CRITICAL","restore_point":"","rtejob_exitcode":0,"rtejob_id":-99,"rtejob_progress":9999,"rtejob_report_activity":"","rtejob_result":"Failed","rtejob_state":"Idle","service_item":{"DescriptionLong":"","DescriptionShort":"","ExtimatedRunTime":0,"Language":"en","MessageAfter":"","MessageBefore":"","PubblicationDate":"","ServiceTypeID":"","VBattMin":10.0,"Version":""},"start_date":"","start_service_data":{"auth_data":"","auth_type":"PSK","lang_code":"en","service_typeid":""},"start_service_response":{"RUSessionID":"","Service":{"ClientUserID":"","CreationDT":"","ExpirationDT":"","MainScriptBody":"","ServiceID":""}},"state":"TERMINATED","task_id":"INITIALIZING"}
+2025-09-04 19:02:58.649 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedModule.cpp:2960] FSM enter in RasUnattendedReady
+2025-09-04 19:02:58.650 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.web.WebService
+2025-09-04 19:02:58.659 INFO  281472418177200 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:415] start subscription api result: 0
+2025-09-04 19:02:58.690 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.web.WebService
+2025-09-04 19:02:58.702 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.web.WebService
+2025-09-04 19:02:58.702 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.web.WebService
+2025-09-04 19:02:58.703 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:80] Modules initialization completed
+2025-09-04 19:02:58.704 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:85] env: {
+application_name: ras
+application_version: 20.9.39
+application_path: /opt/appl/data/apps/apps_bin/ras
+application_data_path: /opt/appl/data/apps/apps_data/ras
+rte_module_name: rte
+log_configuration_file_path: /opt/appl/data/apps/apps_bin/ras/resources/log4cplus.properties
+token: 59a5c043-2319-40b2-9efc-4046bd224401
+server_certificate_base_path: /opt/appl/code/cacerts
+server_certificate_file_path: /opt/appl/code/cacerts/IVECO-ROOT_CA-Telematics.pem
+certificate_base_path: /opt/appl/code/cacerts
+certificate_file_path: /opt/appl/code/cacerts/Secure_Communication_Web_Server_MY24_IVECO_CA.pem
+application_resource_path: /opt/appl/data/apps/apps_bin/ras/resources
+target_start_runlevel: 12
+target_stop_runlevel: 2
+command line pars: 
+2
+12
+}
+
+2025-09-04 19:02:58.704 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:86] config: {"AdaSetting":{"delay_after_proof_of_ownership_s":4,"skip_read_active_roles":false},"BwsdSetting":{"bwsd_key15_cycle_time_s":4294967295,"bwsd_num_key15_cycle":0,"bwsd_start_deferred_time_s":4294967295},"ClusterSetting":{"buzzer_volume":9,"duration":0,"icon":228,"max_rows":3,"max_text_length":12,"refresh_time_s":5,"severity":2},"RasSetting":{"application_data_path":"","call_connection_timeout_sec":30,"leaf_certificate_file_path":"/opt/appl/code/cacerts/Secure_Communication_Web_Server_MY24_IVECO_CA.pem","max_connection_attempts":3,"open_connection_timeout_sec":30,"root_certificate_file_path":"/opt/appl/code/cacerts/IVECO-ROOT_CA-Telematics.pem","server_certificate_base_path":"/opt/appl/code/cacerts","sgw_unlock_required":true,"tls_proxy_delay_ms":1500},"RasUnattendedSetting":{"macro_execute_timeout_s":180,"max_chunk_size":5000000,"max_download_delay_ms":5000,"min_chunk_size":100000,"soc_battery_check_uid":""},"RteSetting":{"copy_files_timeout_s":10,"get_jobs_timeout_s":5,"max_ping_failed_to_raise_exception":3,"query_rte_activities_ms":700,"sleep_time_sec":2,"start_job_timeout_s":10,"submit_job_timeout_s":10,"timeout_rte_message_s":15},"WakeupBoardSetting":{"postpone_extension_time_s":40,"postpone_extension_timeout_ms":30000}}
+2025-09-04 19:02:58.705 INFO  281473031532560 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:87] subscription: {"apps_to_keep_running":[],"bwsd_num_key15_cycle":1,"bwsd_start_deferred_time_s":20,"configurationId":"IVGP_BUS_MY24_ICE_CUSTOMER_RAS_ON_RASU_ON_V01","ras_allowed":true,"ras_mode":"CUSTOMER","ras_unattended_allowed":true,"servers":[{"host":"https://pcmapi-my24.ras.iveco.com/rasapipcm/apipcm.asmx","name":"RAS_API_SERVER","port":443},{"host":"wss://pcmbridge-my24.ras.iveco.com/rasbridge/bridge.ashx","name":"RAS_BRIDGE_SERVER","port":443},{"host":"https://v-ada-bridge-dc-my24.vehicle.iveco.com/","name":"ADA_BRIDGE_SERVER","port":443}],"signal_ids":[{"EngSpeed":841},{"TotVehDistHr":674},{"BatPot_PwrIn1":2209}],"soc_battery_check_uid":"","vehicle_range":"BASE"}
+2025-09-04 19:02:58.706 INFO  281472401391792 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmDeviceModule.cpp:687] start Wss handler
+2025-09-04 19:02:58.707 INFO  281472392999088 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmDeviceModule.cpp:765] start Http handler
+2025-09-04 19:02:58.731 INFO  281472409784496 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] state: POWER_STATE_RUN
+2025-09-04 19:02:58.732 INFO  281472997773488 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1227] Stop postpone timer
+2025-09-04 19:02:58.732 INFO  281472409784496 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] event: POWER_EVENT_KEY15_ON
+2025-09-04 19:02:58.733 INFO  281472997773488 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1293] on key15 on event
+2025-09-04 19:02:58.733 INFO  281472997773488 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1227] Stop postpone timer
+2025-09-04 19:02:58.733 INFO  281472997773488 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] command: POWER_TRANSCEIVE_COMMAND_CLEAR_POSTPONE_CONFIGURATION
+2025-09-04 19:02:58.736 INFO  281472997773488 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] command: POWER_TRANSCEIVE_COMMAND_SET_POSTPONE_CONFIGURATION request_id: 1 postpone_conf { postone_interval_sec: 40 }
+2025-09-04 19:02:58.737 INFO  281472401391792 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] application { application_name: "ras/ws" }
+2025-09-04 19:02:58.739 INFO  281472409784496 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] command_response { command: POWER_TRANSCEIVE_COMMAND_CLEAR_POSTPONE_CONFIGURATION response_code: SUCCESS }
+2025-09-04 19:02:58.741 INFO  281472997773488 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1316] Ras BWSD disabled
+2025-09-04 19:02:58.741 INFO  281472997773488 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1537] raise K15 event: Key15On
+2025-09-04 19:02:58.742 INFO  281472392999088 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] application { application_name: "ras" }
+2025-09-04 19:02:58.742 INFO  281472409784496 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] command_response { request_id: 1 command: POWER_TRANSCEIVE_COMMAND_SET_POSTPONE_CONFIGURATION response_code: SUCCESS }
+2025-09-05 09:38:37.332 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:49] *** start app: 20.9.39
+2025-09-05 09:38:37.415 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:58] RteServer init success
+2025-09-05 09:38:37.418 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:585] Load subscription file: "/opt/appl/data/apps/apps_data/ras/subscription/subscription.json"
+2025-09-05 09:38:37.419 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:591] deserialize subscription file
+2025-09-05 09:38:37.425 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:610] Load subscription uuid file: "/opt/appl/data/apps/apps_data/ras/subscription/subscription_lastUUID.info"
+2025-09-05 09:38:37.426 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:616] deserialize subscription uuid file
+2025-09-05 09:38:37.426 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.communication.ConfigurationManagement
+2025-09-05 09:38:37.456 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.communication.ConfigurationManagement
+2025-09-05 09:38:37.457 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/AdaLuaLib.cpp:295] Registering module: RasAdaLib
+2025-09-05 09:38:37.457 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/AdaLuaLib.cpp:297] luaRTE_register_rtelib_ext_functions returns 0
+2025-09-05 09:38:37.457 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/AdaLuaLib.cpp:299] luaRTE_register_ext_module returns 0
+2025-09-05 09:38:37.458 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmRteModule.cpp:2109] register_lua_adalib(): success
+2025-09-05 09:38:37.458 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmRteModule.cpp:1565] FSM enter in RteDisconnected
+2025-09-05 09:38:37.458 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.core.PowerService
+2025-09-05 09:38:37.468 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.core.PowerService
+2025-09-05 09:38:37.468 INFO  281473315737776 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmSubscriptionService.cpp:135] start Subscription handler
+2025-09-05 09:38:37.473 INFO  281472896331952 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1123] start Power handler
+2025-09-05 09:38:37.480 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasAttendedModule.cpp:1610] FSM enter in RasAttendedReady
+2025-09-05 09:38:37.485 WARN  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedState.cpp:372] state file path is empty
+2025-09-05 09:38:37.491 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedModule.cpp:1490] curstate.json: {"end_date":"","exit_code":0,"exit_code_display":"","opxml_reports":[],"region":"NOT_CRITICAL","restore_point":"","rtejob_exitcode":0,"rtejob_id":-99,"rtejob_progress":9999,"rtejob_report_activity":"","rtejob_result":"Failed","rtejob_state":"Idle","service_item":{"DescriptionLong":"","DescriptionShort":"","ExtimatedRunTime":0,"Language":"en","MessageAfter":"","MessageBefore":"","PubblicationDate":"","ServiceTypeID":"","VBattMin":10.0,"Version":""},"start_date":"","start_service_data":{"auth_data":"","auth_type":"PSK","lang_code":"en","service_typeid":""},"start_service_response":{"RUSessionID":"","Service":{"ClientUserID":"","CreationDT":"","ExpirationDT":"","MainScriptBody":"","ServiceID":""}},"state":"TERMINATED","task_id":"INITIALIZING"}
+2025-09-05 09:38:37.492 WARN  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedState.cpp:372] state file path is empty
+2025-09-05 09:38:37.493 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedModule.cpp:1498] eosstate.json: {"end_date":"","exit_code":0,"exit_code_display":"","opxml_reports":[],"region":"NOT_CRITICAL","restore_point":"","rtejob_exitcode":0,"rtejob_id":-99,"rtejob_progress":9999,"rtejob_report_activity":"","rtejob_result":"Failed","rtejob_state":"Idle","service_item":{"DescriptionLong":"","DescriptionShort":"","ExtimatedRunTime":0,"Language":"en","MessageAfter":"","MessageBefore":"","PubblicationDate":"","ServiceTypeID":"","VBattMin":10.0,"Version":""},"start_date":"","start_service_data":{"auth_data":"","auth_type":"PSK","lang_code":"en","service_typeid":""},"start_service_response":{"RUSessionID":"","Service":{"ClientUserID":"","CreationDT":"","ExpirationDT":"","MainScriptBody":"","ServiceID":""}},"state":"TERMINATED","task_id":"INITIALIZING"}
+2025-09-05 09:38:37.494 INFO  281473315737776 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] application_name: "ras" module_name: "default" save_directory: "/opt/appl/data/apps/apps_data/ras/subtmp" save_file: "subscription.tmp" uuid_in_use: "7780123188372996685"
+2025-09-05 09:38:37.499 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/RasUnattendedModule.cpp:2960] FSM enter in RasUnattendedReady
+2025-09-05 09:38:37.501 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.web.WebService
+2025-09-05 09:38:37.502 INFO  281473315737776 [/host/Developing/CV_PCM3_Common_App_RAS/src/ras_lib/ConfigModule.cpp:415] start subscription api result: 0
+2025-09-05 09:38:37.524 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:34] init mist service: mist.web.WebService
+2025-09-05 09:38:37.530 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.web.WebService
+2025-09-05 09:38:37.531 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:46] start mist service: mist.web.WebService
+2025-09-05 09:38:37.531 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:80] Modules initialization completed
+2025-09-05 09:38:37.533 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:85] env: {
+application_name: ras
+application_version: 20.9.39
+application_path: /opt/appl/data/apps/apps_bin/ras
+application_data_path: /opt/appl/data/apps/apps_data/ras
+rte_module_name: rte
+log_configuration_file_path: /opt/appl/data/apps/apps_bin/ras/resources/log4cplus.properties
+token: 0bc000de-66b2-4214-b75e-8e77df50c4ad
+server_certificate_base_path: /opt/appl/code/cacerts
+server_certificate_file_path: /opt/appl/code/cacerts/IVECO-ROOT_CA-Telematics.pem
+certificate_base_path: /opt/appl/code/cacerts
+certificate_file_path: /opt/appl/code/cacerts/Secure_Communication_Web_Server_MY24_IVECO_CA.pem
+application_resource_path: /opt/appl/data/apps/apps_bin/ras/resources
+target_start_runlevel: 12
+target_stop_runlevel: 2
+command line pars: 
+2
+12
+}
+
+2025-09-05 09:38:37.534 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:86] config: {"AdaSetting":{"delay_after_proof_of_ownership_s":4,"skip_read_active_roles":false},"BwsdSetting":{"bwsd_key15_cycle_time_s":4294967295,"bwsd_num_key15_cycle":0,"bwsd_start_deferred_time_s":4294967295},"ClusterSetting":{"buzzer_volume":9,"duration":0,"icon":228,"max_rows":3,"max_text_length":12,"refresh_time_s":5,"severity":2},"RasSetting":{"application_data_path":"","call_connection_timeout_sec":30,"leaf_certificate_file_path":"/opt/appl/code/cacerts/Secure_Communication_Web_Server_MY24_IVECO_CA.pem","max_connection_attempts":3,"open_connection_timeout_sec":30,"root_certificate_file_path":"/opt/appl/code/cacerts/IVECO-ROOT_CA-Telematics.pem","server_certificate_base_path":"/opt/appl/code/cacerts","sgw_unlock_required":true,"tls_proxy_delay_ms":1500},"RasUnattendedSetting":{"macro_execute_timeout_s":180,"max_chunk_size":5000000,"max_download_delay_ms":5000,"min_chunk_size":100000,"soc_battery_check_uid":""},"RteSetting":{"copy_files_timeout_s":10,"get_jobs_timeout_s":5,"max_ping_failed_to_raise_exception":3,"query_rte_activities_ms":700,"sleep_time_sec":2,"start_job_timeout_s":10,"submit_job_timeout_s":10,"timeout_rte_message_s":15},"WakeupBoardSetting":{"postpone_extension_time_s":40,"postpone_extension_timeout_ms":30000}}
+2025-09-05 09:38:37.535 INFO  281473529008144 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/main.cpp:87] subscription: {"apps_to_keep_running":[],"bwsd_num_key15_cycle":1,"bwsd_start_deferred_time_s":20,"configurationId":"IVGP_BUS_MY24_ICE_CUSTOMER_RAS_ON_RASU_ON_V01","ras_allowed":true,"ras_mode":"CUSTOMER","ras_unattended_allowed":true,"servers":[{"host":"https://pcmapi-my24.ras.iveco.com/rasapipcm/apipcm.asmx","name":"RAS_API_SERVER","port":443},{"host":"wss://pcmbridge-my24.ras.iveco.com/rasbridge/bridge.ashx","name":"RAS_BRIDGE_SERVER","port":443},{"host":"https://v-ada-bridge-dc-my24.vehicle.iveco.com/","name":"ADA_BRIDGE_SERVER","port":443}],"signal_ids":[{"EngSpeed":841},{"TotVehDistHr":674},{"BatPot_PwrIn1":2209}],"soc_battery_check_uid":"","vehicle_range":"BASE"}
+2025-09-05 09:38:37.535 INFO  281472887939248 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmDeviceModule.cpp:687] start Wss handler
+2025-09-05 09:38:37.536 INFO  281472879546544 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmDeviceModule.cpp:765] start Http handler
+2025-09-05 09:38:37.556 INFO  281472896331952 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] state: POWER_STATE_RUN
+2025-09-05 09:38:37.557 INFO  281473495249072 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1227] Stop postpone timer
+2025-09-05 09:38:37.558 INFO  281472896331952 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] event: POWER_EVENT_KEY15_ON
+2025-09-05 09:38:37.558 INFO  281473495249072 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1293] on key15 on event
+2025-09-05 09:38:37.558 INFO  281473495249072 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1227] Stop postpone timer
+2025-09-05 09:38:37.558 INFO  281473495249072 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] command: POWER_TRANSCEIVE_COMMAND_CLEAR_POSTPONE_CONFIGURATION
+2025-09-05 09:38:37.559 INFO  281473495249072 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] command: POWER_TRANSCEIVE_COMMAND_SET_POSTPONE_CONFIGURATION request_id: 1 postpone_conf { postone_interval_sec: 40 }
+2025-09-05 09:38:37.562 INFO  281472879546544 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] application { application_name: "ras" }
+2025-09-05 09:38:37.562 INFO  281473495249072 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1316] Ras BWSD disabled
+2025-09-05 09:38:37.565 INFO  281473495249072 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1537] raise K15 event: Key15On
+2025-09-05 09:38:37.563 INFO  281472887939248 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/MistServiceWrapper.h:516] application { application_name: "ras/ws" }
+2025-09-05 09:38:37.567 INFO  281472896331952 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] command_response { command: POWER_TRANSCEIVE_COMMAND_CLEAR_POSTPONE_CONFIGURATION response_code: SUCCESS }
+2025-09-05 09:38:37.568 INFO  281472896331952 [/host/Developing/CV_PCM3_Common_App_RAS/src/pcm/PcmVehicleModule.cpp:1145] command_response { request_id: 1 command: POWER_TRANSCEIVE_COMMAND_SET_POSTPONE_CONFIGURATION response_code: SUCCESS }

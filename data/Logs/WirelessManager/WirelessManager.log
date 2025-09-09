@@ -1,0 +1,256 @@
+2025-07-24 15:34:08.698 INFO  [LogConfigurationManager.cpp:170] LIBL configuration completed from file '/opt/appl/data/apps/apps_bin/WirelessManager/resources/log4cplus.properties'
+2025-07-24 15:34:08.701 INFO  [main.cpp:35] wirelessmanager.main Application: WirelessManager
+2025-07-24 15:34:08.702 INFO  [LogConfigurationManager.cpp:77] LIBL starting live configuration loop. Configuration: directory = '/opt/appl/data/apps/apps_bin/WirelessManager/resources', file = 'log4cplus.properties'
+2025-07-24 15:34:08.702 INFO  [main.cpp:36] wirelessmanager.main Version: 0.9.1
+2025-07-24 15:34:08.702 INFO  [main.cpp:37] wirelessmanager.main Build date: Feb 21 2025
+2025-07-24 15:34:08.702 INFO  [main.cpp:38] wirelessmanager.main Build time: 15:31:54
+2025-07-24 15:34:08.702 INFO  [main.cpp:41] wirelessmanager.main Build type: Release
+2025-07-24 15:34:08.702 INFO  [main.cpp:46] wirelessmanager.main Checking application token under: /opt/appl/var/mist/tokens/WirelessManager/token
+2025-07-24 15:34:08.702 INFO  [main.cpp:52] wirelessmanager.main Starting application...
+2025-07-24 15:34:08.705 INFO  [DbInterface.cpp:20] wirelessmanager.database SQLite database file '/opt/appl/data/apps/apps_data/WirelessManager/WirelessManager.db' opened successfully
+2025-07-24 15:34:08.705 INFO  [DbInterface.cpp:109] wirelessmanager.database Database version: 0
+2025-07-24 15:34:08.705 INFO  [DbInterface.cpp:197] wirelessmanager.database Try to create table
+2025-07-24 15:34:08.721 INFO  [DbInterface.cpp:37] wirelessmanager.database Database is up-to-date
+2025-07-24 15:34:08.722 INFO  [DbInterface.cpp:183] wirelessmanager.database Foreign key value: 1
+2025-07-24 15:34:08.722 INFO  [DbInterface.cpp:64] wirelessmanager.database Database foreign key enabled
+2025-07-24 15:34:08.780 INFO  [CoreClientNetworkObserver.hpp:20] root CoreClientNetworkObserver from WirelessManager
+2025-07-24 15:34:08.791 INFO  [WirelessManager.cpp:243] wirelessmanager.main Check presents of the network
+2025-07-24 15:34:09.431 INFO  [WirelessManager.cpp:400] wirelessmanager.main WirelessManager started
+2025-07-24 15:56:06.743 INFO  [LogConfigurationManager.cpp:170] LIBL configuration completed from file '/opt/appl/data/apps/apps_bin/WirelessManager/resources/log4cplus.properties'
+2025-07-24 15:56:06.745 INFO  [LogConfigurationManager.cpp:77] LIBL starting live configuration loop. Configuration: directory = '/opt/appl/data/apps/apps_bin/WirelessManager/resources', file = 'log4cplus.properties'
+2025-07-24 15:56:06.746 INFO  [main.cpp:35] wirelessmanager.main Application: WirelessManager
+2025-07-24 15:56:06.746 INFO  [main.cpp:36] wirelessmanager.main Version: 0.9.1
+2025-07-24 15:56:06.746 INFO  [main.cpp:37] wirelessmanager.main Build date: Feb 21 2025
+2025-07-24 15:56:06.746 INFO  [main.cpp:38] wirelessmanager.main Build time: 15:31:54
+2025-07-24 15:56:06.746 INFO  [main.cpp:41] wirelessmanager.main Build type: Release
+2025-07-24 15:56:06.747 INFO  [main.cpp:46] wirelessmanager.main Checking application token under: /opt/appl/var/mist/tokens/WirelessManager/token
+2025-07-24 15:56:06.747 INFO  [main.cpp:52] wirelessmanager.main Starting application...
+2025-07-24 15:56:06.757 INFO  [DbInterface.cpp:20] wirelessmanager.database SQLite database file '/opt/appl/data/apps/apps_data/WirelessManager/WirelessManager.db' opened successfully
+2025-07-24 15:56:06.760 INFO  [DbInterface.cpp:109] wirelessmanager.database Database version: 0
+2025-07-24 15:56:06.760 INFO  [DbInterface.cpp:197] wirelessmanager.database Try to create table
+2025-07-24 15:56:06.761 WARN  [DbInterface.cpp:212] wirelessmanager.database WIFI table already exists, not created
+2025-07-24 15:56:06.762 INFO  [DbInterface.cpp:37] wirelessmanager.database Database is up-to-date
+2025-07-24 15:56:06.762 INFO  [DbInterface.cpp:183] wirelessmanager.database Foreign key value: 1
+2025-07-24 15:56:06.762 INFO  [DbInterface.cpp:64] wirelessmanager.database Database foreign key enabled
+2025-07-24 15:56:06.850 INFO  [CoreClientNetworkObserver.hpp:20] root CoreClientNetworkObserver from WirelessManager
+2025-07-24 15:56:06.862 INFO  [WirelessManager.cpp:243] wirelessmanager.main Check presents of the network
+2025-07-24 15:56:06.938 INFO  [WirelessManager.cpp:400] wirelessmanager.main WirelessManager started
+2025-08-21 07:47:23.156 INFO  [LogConfigurationManager.cpp:170] LIBL configuration completed from file '/opt/appl/data/apps/apps_bin/WirelessManager/resources/log4cplus.properties'
+2025-08-21 07:47:23.159 INFO  [LogConfigurationManager.cpp:77] LIBL starting live configuration loop. Configuration: directory = '/opt/appl/data/apps/apps_bin/WirelessManager/resources', file = 'log4cplus.properties'
+2025-08-21 07:47:23.160 INFO  [main.cpp:35] wirelessmanager.main Application: WirelessManager
+2025-08-21 07:47:23.160 INFO  [main.cpp:36] wirelessmanager.main Version: 0.9.1
+2025-08-21 07:47:23.160 INFO  [main.cpp:37] wirelessmanager.main Build date: Feb 21 2025
+2025-08-21 07:47:23.160 INFO  [main.cpp:38] wirelessmanager.main Build time: 15:31:54
+2025-08-21 07:47:23.160 INFO  [main.cpp:41] wirelessmanager.main Build type: Release
+2025-08-21 07:47:23.160 INFO  [main.cpp:46] wirelessmanager.main Checking application token under: /opt/appl/var/mist/tokens/WirelessManager/token
+2025-08-21 07:47:23.160 INFO  [main.cpp:52] wirelessmanager.main Starting application...
+2025-08-21 07:47:23.173 INFO  [DbInterface.cpp:20] wirelessmanager.database SQLite database file '/opt/appl/data/apps/apps_data/WirelessManager/WirelessManager.db' opened successfully
+2025-08-21 07:47:23.175 INFO  [DbInterface.cpp:109] wirelessmanager.database Database version: 0
+2025-08-21 07:47:23.175 INFO  [DbInterface.cpp:197] wirelessmanager.database Try to create table
+2025-08-21 07:47:23.177 WARN  [DbInterface.cpp:212] wirelessmanager.database WIFI table already exists, not created
+2025-08-21 07:47:23.177 INFO  [DbInterface.cpp:37] wirelessmanager.database Database is up-to-date
+2025-08-21 07:47:23.177 INFO  [DbInterface.cpp:183] wirelessmanager.database Foreign key value: 1
+2025-08-21 07:47:23.177 INFO  [DbInterface.cpp:64] wirelessmanager.database Database foreign key enabled
+2025-08-21 07:47:23.275 INFO  [CoreClientNetworkObserver.hpp:20] root CoreClientNetworkObserver from WirelessManager
+2025-08-21 07:47:23.285 INFO  [WirelessManager.cpp:243] wirelessmanager.main Check presents of the network
+2025-08-21 07:47:23.358 INFO  [WirelessManager.cpp:400] wirelessmanager.main WirelessManager started
+2025-08-21 08:22:28.069 ERROR [IpcClientMessage.cpp:128] root OnReadDone FAILED!
+2025-08-21 08:22:28.081 ERROR [IpcClientProperty.cpp:112] root OnReadDone FAILED!
+2025-08-21 08:22:28.083 ERROR [PowerManagement.cpp:209] root OnReadDone event failed
+2025-08-21 08:22:28.378 ERROR [ClientBidiReactorChecker.hpp:64] root [IpcClientMessage] OnDone KO!
+2025-08-21 08:22:28.402 ERROR [ClientBidiReactorChecker.hpp:64] root [PowerManagement] OnDone KO!
+2025-08-21 08:22:28.403 INFO  [ClientBidiReactorChecker.hpp:88] root [PowerManagement] Channel state: 0
+2025-08-21 08:22:28.404 ERROR [PowerManagement.cpp:301] root OnDoneDone KO!
+2025-08-21 08:22:28.535 INFO  [ClientBidiReactorChecker.hpp:88] root [IpcClientMessage] Channel state: 0
+2025-08-21 08:22:33.412 INFO  [ClientBidiReactorChecker.hpp:88] root [PowerManagement] Channel state: 3
+2025-08-21 08:22:33.553 INFO  [ClientBidiReactorChecker.hpp:88] root [IpcClientMessage] Channel state: 3
+2025-08-21 08:22:37.122 INFO  [main.cpp:84] wirelessmanager.main Stopping application...
+2025-08-21 08:22:37.142 INFO  [WirelessManager.cpp:407] wirelessmanager.main Stop WirelessManager
+2025-08-21 08:22:37.143 INFO  [WirelessManager.cpp:412] wirelessmanager.main WirelessManager stopped
+2025-08-21 08:22:37.167 INFO  [main.cpp:88] wirelessmanager.main Exiting...
+2025-08-21 08:27:06.035 INFO  [LogConfigurationManager.cpp:170] LIBL configuration completed from file '/opt/appl/data/apps/apps_bin/WirelessManager/resources/log4cplus.properties'
+2025-08-21 08:27:06.039 INFO  [LogConfigurationManager.cpp:77] LIBL starting live configuration loop. Configuration: directory = '/opt/appl/data/apps/apps_bin/WirelessManager/resources', file = 'log4cplus.properties'
+2025-08-21 08:27:06.040 INFO  [main.cpp:35] wirelessmanager.main Application: WirelessManager
+2025-08-21 08:27:06.040 INFO  [main.cpp:36] wirelessmanager.main Version: 0.9.1
+2025-08-21 08:27:06.040 INFO  [main.cpp:37] wirelessmanager.main Build date: Feb 21 2025
+2025-08-21 08:27:06.040 INFO  [main.cpp:38] wirelessmanager.main Build time: 15:31:54
+2025-08-21 08:27:06.040 INFO  [main.cpp:41] wirelessmanager.main Build type: Release
+2025-08-21 08:27:06.040 INFO  [main.cpp:46] wirelessmanager.main Checking application token under: /opt/appl/var/mist/tokens/WirelessManager/token
+2025-08-21 08:27:06.041 INFO  [main.cpp:52] wirelessmanager.main Starting application...
+2025-08-21 08:27:06.043 INFO  [DbInterface.cpp:20] wirelessmanager.database SQLite database file '/opt/appl/data/apps/apps_data/WirelessManager/WirelessManager.db' opened successfully
+2025-08-21 08:27:06.044 INFO  [DbInterface.cpp:109] wirelessmanager.database Database version: 0
+2025-08-21 08:27:06.044 INFO  [DbInterface.cpp:197] wirelessmanager.database Try to create table
+2025-08-21 08:27:06.045 WARN  [DbInterface.cpp:212] wirelessmanager.database WIFI table already exists, not created
+2025-08-21 08:27:06.045 INFO  [DbInterface.cpp:37] wirelessmanager.database Database is up-to-date
+2025-08-21 08:27:06.045 INFO  [DbInterface.cpp:183] wirelessmanager.database Foreign key value: 1
+2025-08-21 08:27:06.046 INFO  [DbInterface.cpp:64] wirelessmanager.database Database foreign key enabled
+2025-08-21 08:27:06.158 INFO  [CoreClientNetworkObserver.hpp:20] root CoreClientNetworkObserver from WirelessManager
+2025-08-21 08:27:06.191 INFO  [WirelessManager.cpp:243] wirelessmanager.main Check presents of the network
+2025-08-21 08:27:06.273 INFO  [WirelessManager.cpp:400] wirelessmanager.main WirelessManager started
+2025-08-21 15:00:43.164 INFO  [LogConfigurationManager.cpp:170] LIBL configuration completed from file '/opt/appl/data/apps/apps_bin/WirelessManager/resources/log4cplus.properties'
+2025-08-21 15:00:43.167 INFO  [LogConfigurationManager.cpp:77] LIBL starting live configuration loop. Configuration: directory = '/opt/appl/data/apps/apps_bin/WirelessManager/resources', file = 'log4cplus.properties'
+2025-08-21 15:00:43.167 INFO  [main.cpp:35] wirelessmanager.main Application: WirelessManager
+2025-08-21 15:00:43.169 INFO  [main.cpp:36] wirelessmanager.main Version: 0.9.1
+2025-08-21 15:00:43.169 INFO  [main.cpp:37] wirelessmanager.main Build date: Feb 21 2025
+2025-08-21 15:00:43.169 INFO  [main.cpp:38] wirelessmanager.main Build time: 15:31:54
+2025-08-21 15:00:43.169 INFO  [main.cpp:41] wirelessmanager.main Build type: Release
+2025-08-21 15:00:43.170 INFO  [main.cpp:46] wirelessmanager.main Checking application token under: /opt/appl/var/mist/tokens/WirelessManager/token
+2025-08-21 15:00:43.170 INFO  [main.cpp:52] wirelessmanager.main Starting application...
+2025-08-21 15:00:43.179 INFO  [DbInterface.cpp:20] wirelessmanager.database SQLite database file '/opt/appl/data/apps/apps_data/WirelessManager/WirelessManager.db' opened successfully
+2025-08-21 15:00:43.182 INFO  [DbInterface.cpp:109] wirelessmanager.database Database version: 0
+2025-08-21 15:00:43.182 INFO  [DbInterface.cpp:197] wirelessmanager.database Try to create table
+2025-08-21 15:00:43.183 WARN  [DbInterface.cpp:212] wirelessmanager.database WIFI table already exists, not created
+2025-08-21 15:00:43.184 INFO  [DbInterface.cpp:37] wirelessmanager.database Database is up-to-date
+2025-08-21 15:00:43.184 INFO  [DbInterface.cpp:183] wirelessmanager.database Foreign key value: 1
+2025-08-21 15:00:43.184 INFO  [DbInterface.cpp:64] wirelessmanager.database Database foreign key enabled
+2025-08-21 15:00:43.277 INFO  [CoreClientNetworkObserver.hpp:20] root CoreClientNetworkObserver from WirelessManager
+2025-08-21 15:00:43.288 INFO  [WirelessManager.cpp:243] wirelessmanager.main Check presents of the network
+2025-08-21 15:00:43.394 INFO  [WirelessManager.cpp:400] wirelessmanager.main WirelessManager started
+2025-08-22 07:39:11.293 INFO  [LogConfigurationManager.cpp:170] LIBL configuration completed from file '/opt/appl/data/apps/apps_bin/WirelessManager/resources/log4cplus.properties'
+2025-08-22 07:39:11.301 INFO  [LogConfigurationManager.cpp:77] LIBL starting live configuration loop. Configuration: directory = '/opt/appl/data/apps/apps_bin/WirelessManager/resources', file = 'log4cplus.properties'
+2025-08-22 07:39:11.301 INFO  [main.cpp:35] wirelessmanager.main Application: WirelessManager
+2025-08-22 07:39:11.302 INFO  [main.cpp:36] wirelessmanager.main Version: 0.9.1
+2025-08-22 07:39:11.302 INFO  [main.cpp:37] wirelessmanager.main Build date: Feb 21 2025
+2025-08-22 07:39:11.302 INFO  [main.cpp:38] wirelessmanager.main Build time: 15:31:54
+2025-08-22 07:39:11.302 INFO  [main.cpp:41] wirelessmanager.main Build type: Release
+2025-08-22 07:39:11.302 INFO  [main.cpp:46] wirelessmanager.main Checking application token under: /opt/appl/var/mist/tokens/WirelessManager/token
+2025-08-22 07:39:11.302 INFO  [main.cpp:52] wirelessmanager.main Starting application...
+2025-08-22 07:39:11.311 INFO  [DbInterface.cpp:20] wirelessmanager.database SQLite database file '/opt/appl/data/apps/apps_data/WirelessManager/WirelessManager.db' opened successfully
+2025-08-22 07:39:11.313 INFO  [DbInterface.cpp:109] wirelessmanager.database Database version: 0
+2025-08-22 07:39:11.313 INFO  [DbInterface.cpp:197] wirelessmanager.database Try to create table
+2025-08-22 07:39:11.315 WARN  [DbInterface.cpp:212] wirelessmanager.database WIFI table already exists, not created
+2025-08-22 07:39:11.315 INFO  [DbInterface.cpp:37] wirelessmanager.database Database is up-to-date
+2025-08-22 07:39:11.315 INFO  [DbInterface.cpp:183] wirelessmanager.database Foreign key value: 1
+2025-08-22 07:39:11.315 INFO  [DbInterface.cpp:64] wirelessmanager.database Database foreign key enabled
+2025-08-22 07:39:11.410 INFO  [CoreClientNetworkObserver.hpp:20] root CoreClientNetworkObserver from WirelessManager
+2025-08-22 07:39:11.421 INFO  [WirelessManager.cpp:243] wirelessmanager.main Check presents of the network
+2025-08-22 07:39:11.510 INFO  [WirelessManager.cpp:400] wirelessmanager.main WirelessManager started
+2025-08-22 08:36:26.509 INFO  [LogConfigurationManager.cpp:170] LIBL configuration completed from file '/opt/appl/data/apps/apps_bin/WirelessManager/resources/log4cplus.properties'
+2025-08-22 08:36:26.512 INFO  [LogConfigurationManager.cpp:77] LIBL starting live configuration loop. Configuration: directory = '/opt/appl/data/apps/apps_bin/WirelessManager/resources', file = 'log4cplus.properties'
+2025-08-22 08:36:26.512 INFO  [main.cpp:35] wirelessmanager.main Application: WirelessManager
+2025-08-22 08:36:26.512 INFO  [main.cpp:36] wirelessmanager.main Version: 0.9.1
+2025-08-22 08:36:26.513 INFO  [main.cpp:37] wirelessmanager.main Build date: Feb 21 2025
+2025-08-22 08:36:26.513 INFO  [main.cpp:38] wirelessmanager.main Build time: 15:31:54
+2025-08-22 08:36:26.513 INFO  [main.cpp:41] wirelessmanager.main Build type: Release
+2025-08-22 08:36:26.513 INFO  [main.cpp:46] wirelessmanager.main Checking application token under: /opt/appl/var/mist/tokens/WirelessManager/token
+2025-08-22 08:36:26.513 INFO  [main.cpp:52] wirelessmanager.main Starting application...
+2025-08-22 08:36:26.523 INFO  [DbInterface.cpp:20] wirelessmanager.database SQLite database file '/opt/appl/data/apps/apps_data/WirelessManager/WirelessManager.db' opened successfully
+2025-08-22 08:36:26.525 INFO  [DbInterface.cpp:109] wirelessmanager.database Database version: 0
+2025-08-22 08:36:26.526 INFO  [DbInterface.cpp:197] wirelessmanager.database Try to create table
+2025-08-22 08:36:26.527 WARN  [DbInterface.cpp:212] wirelessmanager.database WIFI table already exists, not created
+2025-08-22 08:36:26.527 INFO  [DbInterface.cpp:37] wirelessmanager.database Database is up-to-date
+2025-08-22 08:36:26.527 INFO  [DbInterface.cpp:183] wirelessmanager.database Foreign key value: 1
+2025-08-22 08:36:26.527 INFO  [DbInterface.cpp:64] wirelessmanager.database Database foreign key enabled
+2025-08-22 08:36:26.613 INFO  [CoreClientNetworkObserver.hpp:20] root CoreClientNetworkObserver from WirelessManager
+2025-08-22 08:36:26.627 INFO  [WirelessManager.cpp:243] wirelessmanager.main Check presents of the network
+2025-08-22 08:36:26.725 INFO  [WirelessManager.cpp:400] wirelessmanager.main WirelessManager started
+2025-08-22 08:40:24.964 ERROR [IpcClientProperty.cpp:112] root OnReadDone FAILED!
+2025-08-22 08:40:24.966 ERROR [PowerManagement.cpp:209] root OnReadDone event failed
+2025-08-22 08:40:24.966 ERROR [IpcClientMessage.cpp:128] root OnReadDone FAILED!
+2025-08-22 08:40:24.977 ERROR [ClientBidiReactorChecker.hpp:64] root [PowerManagement] OnDone KO!
+2025-08-22 08:40:24.996 ERROR [ClientBidiReactorChecker.hpp:64] root [IpcClientMessage] OnDone KO!
+2025-08-22 08:40:25.001 INFO  [ClientBidiReactorChecker.hpp:88] root [IpcClientMessage] Channel state: 1
+2025-08-22 08:40:25.007 INFO  [ClientBidiReactorChecker.hpp:88] root [PowerManagement] Channel state: 0
+2025-08-22 08:40:25.007 ERROR [PowerManagement.cpp:301] root OnDoneDone KO!
+2025-08-22 08:40:30.002 INFO  [ClientBidiReactorChecker.hpp:88] root [IpcClientMessage] Channel state: 3
+2025-08-22 08:40:30.007 INFO  [ClientBidiReactorChecker.hpp:88] root [PowerManagement] Channel state: 3
+2025-08-22 08:40:30.661 INFO  [main.cpp:84] wirelessmanager.main Stopping application...
+2025-08-22 08:40:30.662 INFO  [WirelessManager.cpp:407] wirelessmanager.main Stop WirelessManager
+2025-08-22 08:40:30.662 INFO  [WirelessManager.cpp:412] wirelessmanager.main WirelessManager stopped
+2025-08-22 08:40:30.662 INFO  [main.cpp:88] wirelessmanager.main Exiting...
+2025-08-22 08:43:35.216 INFO  [LogConfigurationManager.cpp:170] LIBL configuration completed from file '/opt/appl/data/apps/apps_bin/WirelessManager/resources/log4cplus.properties'
+2025-08-22 08:43:35.219 INFO  [LogConfigurationManager.cpp:77] LIBL starting live configuration loop. Configuration: directory = '/opt/appl/data/apps/apps_bin/WirelessManager/resources', file = 'log4cplus.properties'
+2025-08-22 08:43:35.219 INFO  [main.cpp:35] wirelessmanager.main Application: WirelessManager
+2025-08-22 08:43:35.219 INFO  [main.cpp:36] wirelessmanager.main Version: 0.9.1
+2025-08-22 08:43:35.219 INFO  [main.cpp:37] wirelessmanager.main Build date: Feb 21 2025
+2025-08-22 08:43:35.220 INFO  [main.cpp:38] wirelessmanager.main Build time: 15:31:54
+2025-08-22 08:43:35.220 INFO  [main.cpp:41] wirelessmanager.main Build type: Release
+2025-08-22 08:43:35.220 INFO  [main.cpp:46] wirelessmanager.main Checking application token under: /opt/appl/var/mist/tokens/WirelessManager/token
+2025-08-22 08:43:35.220 INFO  [main.cpp:52] wirelessmanager.main Starting application...
+2025-08-22 08:43:35.230 INFO  [DbInterface.cpp:20] wirelessmanager.database SQLite database file '/opt/appl/data/apps/apps_data/WirelessManager/WirelessManager.db' opened successfully
+2025-08-22 08:43:35.232 INFO  [DbInterface.cpp:109] wirelessmanager.database Database version: 0
+2025-08-22 08:43:35.233 INFO  [DbInterface.cpp:197] wirelessmanager.database Try to create table
+2025-08-22 08:43:35.234 WARN  [DbInterface.cpp:212] wirelessmanager.database WIFI table already exists, not created
+2025-08-22 08:43:35.234 INFO  [DbInterface.cpp:37] wirelessmanager.database Database is up-to-date
+2025-08-22 08:43:35.234 INFO  [DbInterface.cpp:183] wirelessmanager.database Foreign key value: 1
+2025-08-22 08:43:35.235 INFO  [DbInterface.cpp:64] wirelessmanager.database Database foreign key enabled
+2025-08-22 08:43:35.327 INFO  [CoreClientNetworkObserver.hpp:20] root CoreClientNetworkObserver from WirelessManager
+2025-08-22 08:43:35.338 INFO  [WirelessManager.cpp:243] wirelessmanager.main Check presents of the network
+2025-08-22 08:43:35.426 INFO  [WirelessManager.cpp:400] wirelessmanager.main WirelessManager started
+2025-08-25 07:11:03.898 INFO  [LogConfigurationManager.cpp:170] LIBL configuration completed from file '/opt/appl/data/apps/apps_bin/WirelessManager/resources/log4cplus.properties'
+2025-08-25 07:11:03.903 INFO  [LogConfigurationManager.cpp:77] LIBL starting live configuration loop. Configuration: directory = '/opt/appl/data/apps/apps_bin/WirelessManager/resources', file = 'log4cplus.properties'
+2025-08-25 07:11:03.903 INFO  [main.cpp:35] wirelessmanager.main Application: WirelessManager
+2025-08-25 07:11:03.903 INFO  [main.cpp:36] wirelessmanager.main Version: 0.9.1
+2025-08-25 07:11:03.904 INFO  [main.cpp:37] wirelessmanager.main Build date: Feb 21 2025
+2025-08-25 07:11:03.904 INFO  [main.cpp:38] wirelessmanager.main Build time: 15:31:54
+2025-08-25 07:11:03.904 INFO  [main.cpp:41] wirelessmanager.main Build type: Release
+2025-08-25 07:11:03.904 INFO  [main.cpp:46] wirelessmanager.main Checking application token under: /opt/appl/var/mist/tokens/WirelessManager/token
+2025-08-25 07:11:03.904 INFO  [main.cpp:52] wirelessmanager.main Starting application...
+2025-08-25 07:11:03.916 INFO  [DbInterface.cpp:20] wirelessmanager.database SQLite database file '/opt/appl/data/apps/apps_data/WirelessManager/WirelessManager.db' opened successfully
+2025-08-25 07:11:03.919 INFO  [DbInterface.cpp:109] wirelessmanager.database Database version: 0
+2025-08-25 07:11:03.920 INFO  [DbInterface.cpp:197] wirelessmanager.database Try to create table
+2025-08-25 07:11:03.921 WARN  [DbInterface.cpp:212] wirelessmanager.database WIFI table already exists, not created
+2025-08-25 07:11:03.922 INFO  [DbInterface.cpp:37] wirelessmanager.database Database is up-to-date
+2025-08-25 07:11:03.922 INFO  [DbInterface.cpp:183] wirelessmanager.database Foreign key value: 1
+2025-08-25 07:11:03.922 INFO  [DbInterface.cpp:64] wirelessmanager.database Database foreign key enabled
+2025-08-25 07:11:04.021 INFO  [CoreClientNetworkObserver.hpp:20] root CoreClientNetworkObserver from WirelessManager
+2025-08-25 07:11:04.031 INFO  [WirelessManager.cpp:243] wirelessmanager.main Check presents of the network
+2025-08-25 07:11:04.130 INFO  [WirelessManager.cpp:400] wirelessmanager.main WirelessManager started
+2025-09-03 07:05:12.773 INFO  [LogConfigurationManager.cpp:170] LIBL configuration completed from file '/opt/appl/data/apps/apps_bin/WirelessManager/resources/log4cplus.properties'
+2025-09-03 07:05:12.777 INFO  [LogConfigurationManager.cpp:77] LIBL starting live configuration loop. Configuration: directory = '/opt/appl/data/apps/apps_bin/WirelessManager/resources', file = 'log4cplus.properties'
+2025-09-03 07:05:12.777 INFO  [main.cpp:35] wirelessmanager.main Application: WirelessManager
+2025-09-03 07:05:12.778 INFO  [main.cpp:36] wirelessmanager.main Version: 0.9.1
+2025-09-03 07:05:12.778 INFO  [main.cpp:37] wirelessmanager.main Build date: Feb 21 2025
+2025-09-03 07:05:12.778 INFO  [main.cpp:38] wirelessmanager.main Build time: 15:31:54
+2025-09-03 07:05:12.778 INFO  [main.cpp:41] wirelessmanager.main Build type: Release
+2025-09-03 07:05:12.778 INFO  [main.cpp:46] wirelessmanager.main Checking application token under: /opt/appl/var/mist/tokens/WirelessManager/token
+2025-09-03 07:05:12.778 INFO  [main.cpp:52] wirelessmanager.main Starting application...
+2025-09-03 07:05:12.788 INFO  [DbInterface.cpp:20] wirelessmanager.database SQLite database file '/opt/appl/data/apps/apps_data/WirelessManager/WirelessManager.db' opened successfully
+2025-09-03 07:05:12.789 INFO  [DbInterface.cpp:109] wirelessmanager.database Database version: 0
+2025-09-03 07:05:12.790 INFO  [DbInterface.cpp:197] wirelessmanager.database Try to create table
+2025-09-03 07:05:12.791 WARN  [DbInterface.cpp:212] wirelessmanager.database WIFI table already exists, not created
+2025-09-03 07:05:12.791 INFO  [DbInterface.cpp:37] wirelessmanager.database Database is up-to-date
+2025-09-03 07:05:12.792 INFO  [DbInterface.cpp:183] wirelessmanager.database Foreign key value: 1
+2025-09-03 07:05:12.792 INFO  [DbInterface.cpp:64] wirelessmanager.database Database foreign key enabled
+2025-09-03 07:05:12.888 INFO  [CoreClientNetworkObserver.hpp:20] root CoreClientNetworkObserver from WirelessManager
+2025-09-03 07:05:12.901 INFO  [WirelessManager.cpp:243] wirelessmanager.main Check presents of the network
+2025-09-03 07:05:13.059 INFO  [WirelessManager.cpp:400] wirelessmanager.main WirelessManager started
+2025-09-03 07:20:53.596 INFO  [WirelessManager.cpp:535] wirelessmanager.main EngSpeed is under threshold! Pairing procedure is enabled.
+2025-09-04 19:03:23.654 INFO  [LogConfigurationManager.cpp:170] LIBL configuration completed from file '/opt/appl/data/apps/apps_bin/WirelessManager/resources/log4cplus.properties'
+2025-09-04 19:03:23.658 INFO  [LogConfigurationManager.cpp:77] LIBL starting live configuration loop. Configuration: directory = '/opt/appl/data/apps/apps_bin/WirelessManager/resources', file = 'log4cplus.properties'
+2025-09-04 19:03:23.658 INFO  [main.cpp:35] wirelessmanager.main Application: WirelessManager
+2025-09-04 19:03:23.658 INFO  [main.cpp:36] wirelessmanager.main Version: 0.9.1
+2025-09-04 19:03:23.658 INFO  [main.cpp:37] wirelessmanager.main Build date: Feb 21 2025
+2025-09-04 19:03:23.658 INFO  [main.cpp:38] wirelessmanager.main Build time: 15:31:54
+2025-09-04 19:03:23.658 INFO  [main.cpp:41] wirelessmanager.main Build type: Release
+2025-09-04 19:03:23.658 INFO  [main.cpp:46] wirelessmanager.main Checking application token under: /opt/appl/var/mist/tokens/WirelessManager/token
+2025-09-04 19:03:23.659 INFO  [main.cpp:52] wirelessmanager.main Starting application...
+2025-09-04 19:03:23.669 INFO  [DbInterface.cpp:20] wirelessmanager.database SQLite database file '/opt/appl/data/apps/apps_data/WirelessManager/WirelessManager.db' opened successfully
+2025-09-04 19:03:23.672 INFO  [DbInterface.cpp:109] wirelessmanager.database Database version: 0
+2025-09-04 19:03:23.673 INFO  [DbInterface.cpp:197] wirelessmanager.database Try to create table
+2025-09-04 19:03:23.674 WARN  [DbInterface.cpp:212] wirelessmanager.database WIFI table already exists, not created
+2025-09-04 19:03:23.674 INFO  [DbInterface.cpp:37] wirelessmanager.database Database is up-to-date
+2025-09-04 19:03:23.674 INFO  [DbInterface.cpp:183] wirelessmanager.database Foreign key value: 1
+2025-09-04 19:03:23.675 INFO  [DbInterface.cpp:64] wirelessmanager.database Database foreign key enabled
+2025-09-04 19:03:23.763 INFO  [CoreClientNetworkObserver.hpp:20] root CoreClientNetworkObserver from WirelessManager
+2025-09-04 19:03:23.808 INFO  [WirelessManager.cpp:243] wirelessmanager.main Check presents of the network
+2025-09-04 19:03:23.896 INFO  [WirelessManager.cpp:400] wirelessmanager.main WirelessManager started
+2025-09-05 09:39:02.562 INFO  [LogConfigurationManager.cpp:170] LIBL configuration completed from file '/opt/appl/data/apps/apps_bin/WirelessManager/resources/log4cplus.properties'
+2025-09-05 09:39:02.565 INFO  [LogConfigurationManager.cpp:77] LIBL starting live configuration loop. Configuration: directory = '/opt/appl/data/apps/apps_bin/WirelessManager/resources', file = 'log4cplus.properties'
+2025-09-05 09:39:02.566 INFO  [main.cpp:35] wirelessmanager.main Application: WirelessManager
+2025-09-05 09:39:02.566 INFO  [main.cpp:36] wirelessmanager.main Version: 0.9.1
+2025-09-05 09:39:02.566 INFO  [main.cpp:37] wirelessmanager.main Build date: Feb 21 2025
+2025-09-05 09:39:02.566 INFO  [main.cpp:38] wirelessmanager.main Build time: 15:31:54
+2025-09-05 09:39:02.566 INFO  [main.cpp:41] wirelessmanager.main Build type: Release
+2025-09-05 09:39:02.566 INFO  [main.cpp:46] wirelessmanager.main Checking application token under: /opt/appl/var/mist/tokens/WirelessManager/token
+2025-09-05 09:39:02.566 INFO  [main.cpp:52] wirelessmanager.main Starting application...
+2025-09-05 09:39:02.581 INFO  [DbInterface.cpp:20] wirelessmanager.database SQLite database file '/opt/appl/data/apps/apps_data/WirelessManager/WirelessManager.db' opened successfully
+2025-09-05 09:39:02.583 INFO  [DbInterface.cpp:109] wirelessmanager.database Database version: 0
+2025-09-05 09:39:02.583 INFO  [DbInterface.cpp:197] wirelessmanager.database Try to create table
+2025-09-05 09:39:02.585 WARN  [DbInterface.cpp:212] wirelessmanager.database WIFI table already exists, not created
+2025-09-05 09:39:02.585 INFO  [DbInterface.cpp:37] wirelessmanager.database Database is up-to-date
+2025-09-05 09:39:02.585 INFO  [DbInterface.cpp:183] wirelessmanager.database Foreign key value: 1
+2025-09-05 09:39:02.585 INFO  [DbInterface.cpp:64] wirelessmanager.database Database foreign key enabled
+2025-09-05 09:39:02.664 INFO  [CoreClientNetworkObserver.hpp:20] root CoreClientNetworkObserver from WirelessManager
+2025-09-05 09:39:02.675 INFO  [WirelessManager.cpp:243] wirelessmanager.main Check presents of the network
+2025-09-05 09:39:02.780 INFO  [WirelessManager.cpp:400] wirelessmanager.main WirelessManager started
