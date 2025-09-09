@@ -7,6 +7,26 @@ using System.Text.RegularExpressions;
 
 namespace BundleTestsAutomation.Services
 {
+    public enum LogLevel
+    {
+        Unknown,
+        Debug,
+        Info,
+        Error
+    }
+
+    public class LogMessage
+    {
+        public DateTime? Timestamp { get; set; }
+        public LogLevel Level { get; set; } = LogLevel.Unknown;
+        public string Message { get; set; } = "";
+
+        public override string ToString()
+        {
+            return $"[{Timestamp:yyyy-MM-dd HH:mm:ss}] {Level}: {Message}";
+        }
+    }
+
     public static class LogService
     {
         // Regex pour détecter une ligne contenant un JSON avec "Header"
@@ -53,11 +73,40 @@ namespace BundleTestsAutomation.Services
             return string.Join(Environment.NewLine, filtered);
         }
 
-        // --- Combine et filtre directement un fichier de logs complet ---
-        public static string ProcessLogs(string logFilePath)
+        private static readonly Regex LogLineRegex = new(
+    @"^(?<ts>\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\.\d+)\s+(?<level>[A-Z]+)\s+(?<msg>.*)$",
+    RegexOptions.Compiled);
+
+        private static LogLevel MapLogLevel(string level)
         {
-            var combined = CombineLogs(logFilePath);
-            return FilterJsonLogs(combined);
+            return level.ToUpperInvariant() switch
+            {
+                "DEBUG" => LogLevel.Debug,
+                "INFO" => LogLevel.Info,
+                "ERROR" => LogLevel.Error,
+                _ => LogLevel.Unknown
+            };
+        }
+
+        public static LogMessage ParseLogLine(string line)
+        {
+            if (string.IsNullOrWhiteSpace(line))
+                return new LogMessage { Level = LogLevel.Unknown, Message = "" };
+
+            var match = LogLineRegex.Match(line);
+            if (!match.Success)
+                return new LogMessage { Level = LogLevel.Unknown, Message = line };
+
+            DateTime? ts = DateTime.TryParse(match.Groups["ts"].Value, out var parsedTs) ? parsedTs : null;
+            string levelStr = match.Groups["level"].Value;
+            string msg = match.Groups["msg"].Value.Trim();
+
+            return new LogMessage
+            {
+                Timestamp = ts,
+                Level = MapLogLevel(levelStr),
+                Message = msg
+            };
         }
     }
 }

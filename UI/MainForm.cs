@@ -332,8 +332,8 @@ namespace BundleTestsAutomation.UI
         private void ProcessLogs(string filePath)
         {
             // Afficher les logs filtrés (filtrage simple)
-            string filteredLogs = LogService.ProcessLogs(filePath);
-            txtLogDisplay.Text = filteredLogs;
+            string allLogs = File.ReadAllText(filePath);
+            txtLogDisplay.Text = allLogs;
 
             ILogTester? tester = null;
             string fileName = Path.GetFileName(filePath).ToLower();

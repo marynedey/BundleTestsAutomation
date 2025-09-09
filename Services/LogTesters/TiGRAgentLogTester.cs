@@ -25,7 +25,22 @@ public class TigrAgentLogTester : ILogTester
 
         // --- Préparation des données ---
         List<string> rawLogs = File.ReadAllLines(filePath).ToList();
-        string filteredLogs = LogService.ProcessLogs(filePath);
+        string allLogs = File.ReadAllText(filePath);
+
+        // --- Vérification globale des logs ERROR ---
+        var errorLines = allLogs
+            .Split(new[] { "\r\n", "\n" }, StringSplitOptions.None)
+            .Select(LogService.ParseLogLine)
+            .Where(l => l.Level == LogLevel.Error)
+            .Select(l => $"[{l.Timestamp:yyyy-MM-dd HH:mm:ss}] {l.Message}")
+            .ToList();
+
+        results.Add(new TestResult
+        {
+            TestName = "Logs contenant ERROR",
+            Errors = errorLines,
+            HasErrorLevel = errorLines.Any()
+        });
 
         // --- Tests ---
         results.Add(new TestResult
@@ -37,56 +52,56 @@ public class TigrAgentLogTester : ILogTester
         results.Add(new TestResult
         {
             TestName = "Vérification du niveau de batterie",
-            Errors = TestBatteryLvl(filteredLogs)
+            Errors = TestBatteryLvl(allLogs)
         });
 
         results.Add(new TestResult
         {
             TestName = "Vérification de la vitesse du moteur",
-            Errors = TestMotorSpeed(filteredLogs)
+            Errors = TestMotorSpeed(allLogs)
         });
 
         results.Add(new TestResult
         {
             TestName = "Vérification de la distance parcourue",
-            Errors = TestDistanceTravelled(filteredLogs)
+            Errors = TestDistanceTravelled(allLogs)
         });
 
         results.Add(new TestResult
         {
             TestName = "Vérification des coordonnées GPS",
-            Errors = TestGpsCoordinates(filteredLogs)
+            Errors = TestGpsCoordinates(allLogs)
         });
 
         results.Add(new TestResult
         {
             TestName = "Vérification du nombre d'integer max",
-            Errors = TestEvtTrkFields(filteredLogs)
+            Errors = TestEvtTrkFields(allLogs)
         });
 
         results.Add(new TestResult
         {
             TestName = "Vérification du freinage",
-            Errors = TestBrakeStatus(filteredLogs)
+            Errors = TestBrakeStatus(allLogs)
         });
 
         return results;
     }
 
     // --- Extraction JSON + timestamp ---
-    private IEnumerable<LogEntry> ExtractJsonBlocks(string filteredLogs)
+    private IEnumerable<LogEntry> ExtractJsonBlocks(string allLogs)
     {
         var dateRegex = new Regex(@"^(?<ts>\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})", RegexOptions.Multiline);
-        var matches = dateRegex.Matches(filteredLogs);
+        var matches = dateRegex.Matches(allLogs);
 
         for (int i = 0; i < matches.Count; i++)
         {
             int startIndex = matches[i].Index;
             int length = (i < matches.Count - 1)
                 ? matches[i + 1].Index - startIndex
-                : filteredLogs.Length - startIndex;
+                : allLogs.Length - startIndex;
 
-            string block = filteredLogs.Substring(startIndex, length).Trim();
+            string block = allLogs.Substring(startIndex, length).Trim();
             int braceIndex = block.IndexOf("{");
             if (braceIndex < 0) continue;
 
@@ -158,12 +173,12 @@ public class TigrAgentLogTester : ILogTester
     }
 
     // --- Test niveau de batterie ---
-    private List<string> TestBatteryLvl(string filteredLogs)
+    private List<string> TestBatteryLvl(string allLogs)
     {
         var issues = new List<string>();
         int prevSoc = -1;
 
-        foreach (var entry in ExtractJsonBlocks(filteredLogs))
+        foreach (var entry in ExtractJsonBlocks(allLogs))
         {
             var json = entry.Json;
 
@@ -186,13 +201,13 @@ public class TigrAgentLogTester : ILogTester
     }
 
     // --- Test vitesse moteur ---
-    private List<string> TestMotorSpeed(string filteredLogs)
+    private List<string> TestMotorSpeed(string allLogs)
     {
         var issues = new List<string>();
         int total = 0;
         int nbErrors = 0;
 
-        foreach (var entry in ExtractJsonBlocks(filteredLogs))
+        foreach (var entry in ExtractJsonBlocks(allLogs))
         {
             var json = entry.Json;
 
@@ -238,12 +253,12 @@ public class TigrAgentLogTester : ILogTester
     }
 
     // --- Test distance parcourue ---
-    private List<string> TestDistanceTravelled(string filteredLogs)
+    private List<string> TestDistanceTravelled(string allLogs)
     {
         var issues = new List<string>();
         int prevDist = -1;
 
-        foreach (var entry in ExtractJsonBlocks(filteredLogs))
+        foreach (var entry in ExtractJsonBlocks(allLogs))
         {
             var json = entry.Json;
 
@@ -263,12 +278,12 @@ public class TigrAgentLogTester : ILogTester
     }
 
     // --- Test coordonnées GPS ---
-    private List<string> TestGpsCoordinates(string filteredLogs)
+    private List<string> TestGpsCoordinates(string allLogs)
     {
         var issues = new List<string>();
         int total = 0, nbErrors = 0;
 
-        foreach (var entry in ExtractJsonBlocks(filteredLogs))
+        foreach (var entry in ExtractJsonBlocks(allLogs))
         {
             var json = entry.Json;
 
@@ -325,12 +340,12 @@ public class TigrAgentLogTester : ILogTester
     }
 
     // --- Test champs intergers max dans EvtTRK ---
-    private List<string> TestEvtTrkFields(string filteredLogs)
+    private List<string> TestEvtTrkFields(string allLogs)
     {
         var issues = new List<string>();
         int nbErrors = 0, totalValues = 0;
 
-        foreach (var entry in ExtractJsonBlocks(filteredLogs))
+        foreach (var entry in ExtractJsonBlocks(allLogs))
         {
             var json = entry.Json;
 
@@ -363,7 +378,7 @@ public class TigrAgentLogTester : ILogTester
     }
 
     // --- Test freinage ---
-    private List<string> TestBrakeStatus(string filteredLogs)
+    private List<string> TestBrakeStatus(string allLogs)
     {
         var issues = new List<string>();
         int total = 0, nbErrors = 0;
@@ -374,7 +389,7 @@ public class TigrAgentLogTester : ILogTester
             return issues;
         }
 
-        foreach (var entry in ExtractJsonBlocks(filteredLogs))
+        foreach (var entry in ExtractJsonBlocks(allLogs))
         {
             var json = entry.Json;
 
