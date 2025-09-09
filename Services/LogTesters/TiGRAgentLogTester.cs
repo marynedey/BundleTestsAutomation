@@ -43,47 +43,13 @@ public class TigrAgentLogTester : ILogTester
         });
 
         // --- Tests ---
-        results.Add(new TestResult
-        {
-            TestName = "Vérification de l'état de l'antenne",
-            Errors = TestAntennaState(rawLogs)
-        });
-
-        results.Add(new TestResult
-        {
-            TestName = "Vérification du niveau de batterie",
-            Errors = TestBatteryLvl(allLogs)
-        });
-
-        results.Add(new TestResult
-        {
-            TestName = "Vérification de la vitesse du moteur",
-            Errors = TestMotorSpeed(allLogs)
-        });
-
-        results.Add(new TestResult
-        {
-            TestName = "Vérification de la distance parcourue",
-            Errors = TestDistanceTravelled(allLogs)
-        });
-
-        results.Add(new TestResult
-        {
-            TestName = "Vérification des coordonnées GPS",
-            Errors = TestGpsCoordinates(allLogs)
-        });
-
-        results.Add(new TestResult
-        {
-            TestName = "Vérification du nombre d'integer max",
-            Errors = TestEvtTrkFields(allLogs)
-        });
-
-        results.Add(new TestResult
-        {
-            TestName = "Vérification du freinage",
-            Errors = TestBrakeStatus(allLogs)
-        });
+        results.Add(TestAntennaState(rawLogs));
+        results.Add(TestBatteryLvl(allLogs));
+        results.Add(TestMotorSpeed(allLogs));
+        results.Add(TestDistanceTravelled(allLogs));
+        results.Add(TestGpsCoordinates(allLogs));
+        results.Add(TestEvtTrkFields(allLogs));
+        results.Add(TestBrakeStatus(allLogs));
 
         return results;
     }
@@ -134,8 +100,9 @@ public class TigrAgentLogTester : ILogTester
     }
 
     // --- Test antenne (pas de timestamp disponible) ---
-    private List<string> TestAntennaState(List<string> logLines)
+    private TestResult TestAntennaState(List<string> logLines)
     {
+        string testName = "Vérification de l'état de l'antenne";
         var issues = new List<string>();
         string[] expectedSequence = new[]
         {
@@ -150,7 +117,11 @@ public class TigrAgentLogTester : ILogTester
         if (startIndex == -1)
         {
             issues.Add("Aucune ligne contenant 'antenna' trouvée.");
-            return issues;
+            return new TestResult
+            {
+                TestName = testName,
+                Errors = issues
+            };
         }
 
         for (int i = 0; i < expectedSequence.Length; i++)
@@ -169,12 +140,17 @@ public class TigrAgentLogTester : ILogTester
             }
         }
 
-        return issues;
+        return new TestResult
+        {
+            TestName = testName,
+            Errors = issues
+        };
     }
 
     // --- Test niveau de batterie ---
-    private List<string> TestBatteryLvl(string allLogs)
+    private TestResult TestBatteryLvl(string allLogs)
     {
+        string testName = "Vérification du niveau de batterie";
         var issues = new List<string>();
         int prevSoc = -1;
 
@@ -197,12 +173,17 @@ public class TigrAgentLogTester : ILogTester
             }
         }
 
-        return issues;
+        return new TestResult
+        {
+            TestName = testName,
+            Errors = issues
+        };
     }
 
     // --- Test vitesse moteur ---
-    private List<string> TestMotorSpeed(string allLogs)
+    private TestResult TestMotorSpeed(string allLogs)
     {
+        string testName = "Vérification de la vitesse du moteur";
         var issues = new List<string>();
         int total = 0;
         int nbErrors = 0;
@@ -249,12 +230,17 @@ public class TigrAgentLogTester : ILogTester
                 issues.Add($"{errorRate}% d'erreurs de vitesse moteur");
         }
 
-        return issues;
+        return new TestResult
+        {
+            TestName = testName,
+            Errors = issues
+        };
     }
 
     // --- Test distance parcourue ---
-    private List<string> TestDistanceTravelled(string allLogs)
+    private TestResult TestDistanceTravelled(string allLogs)
     {
+        string testName = "Vérification de la distance parcourue";
         var issues = new List<string>();
         int prevDist = -1;
 
@@ -274,12 +260,17 @@ public class TigrAgentLogTester : ILogTester
             }
         }
 
-        return issues;
+        return new TestResult
+        {
+            TestName = testName,
+            Errors = issues
+        };
     }
 
     // --- Test coordonnées GPS ---
-    private List<string> TestGpsCoordinates(string allLogs)
+    private TestResult TestGpsCoordinates(string allLogs)
     {
+        string testName = "Vérification des coordonnées GPS";
         var issues = new List<string>();
         int total = 0, nbErrors = 0;
 
@@ -336,12 +327,17 @@ public class TigrAgentLogTester : ILogTester
                 issues.Add($"{errorRate}% d'erreurs GPS");
         }
 
-        return issues;
+        return new TestResult
+        {
+            TestName = testName,
+            Errors = issues
+        };
     }
 
     // --- Test champs intergers max dans EvtTRK ---
-    private List<string> TestEvtTrkFields(string allLogs)
+    private TestResult TestEvtTrkFields(string allLogs)
     {
+        string testName = "Vérification du nombre d'integer max";
         var issues = new List<string>();
         int nbErrors = 0, totalValues = 0;
 
@@ -374,19 +370,28 @@ public class TigrAgentLogTester : ILogTester
             issues.Add("Aucune valeur trouvée dans EvtTRK.");
         }
 
-        return issues;
+        return new TestResult
+        {
+            TestName = testName,
+            Errors = issues
+        };
     }
 
     // --- Test freinage ---
-    private List<string> TestBrakeStatus(string allLogs)
+    private TestResult TestBrakeStatus(string allLogs)
     {
+        string testName = "Vérification du freinage";
         var issues = new List<string>();
         int total = 0, nbErrors = 0;
 
         if (currentType != VehicleType.EV)
         {
             issues.Add("Test BRKSTS ignoré (applicable uniquement aux véhicules EV)");
-            return issues;
+            return new TestResult
+            {
+                TestName = testName,
+                Errors = issues
+            };
         }
 
         foreach (var entry in ExtractJsonBlocks(allLogs))
@@ -421,6 +426,10 @@ public class TigrAgentLogTester : ILogTester
                 issues.Add($"{errorRate:F2}% d'erreurs BRKSTS détectées");
         }
 
-        return issues;
+        return new TestResult
+        {
+            TestName = testName,
+            Errors = issues
+        };
     }
 }
