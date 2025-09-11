@@ -327,6 +327,7 @@ namespace BundleTestsAutomation.UI
 
             ITester? tester = null;
             string? directory = Path.GetDirectoryName(filePath);
+            string fileName = Path.GetFileName(filePath).ToLower();
             string folderName = directory != null ? new DirectoryInfo(directory).Name.ToLower() : "";
 
             if (folderName.Contains("tigr"))
@@ -340,6 +341,10 @@ namespace BundleTestsAutomation.UI
             else if (folderName.Contains("isa"))
             {
                 tester = new ISAConfigTester();
+            }
+            else if (fileName.Contains("dm"))
+            {
+                tester = new DTCLogTester();
             }
 
             if (tester != null)

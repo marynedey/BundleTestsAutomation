@@ -1,0 +1,84 @@
+DTC name;DTC Extract;DTC code [hex];SPN DL [hex];status;critical (0 or 1);Justification
+ ECU Hw memory Programming Procedure - NOT Completed; DTC id = F0ED, status = 0; F0ED;7F000; 0;0;-
+ GPS antenna Error; DTC id = FEEB, status = 0; FEEB;7FE00; 0;0;-
+ ECU Hw - broken (at least one internal power supply not work or any internal module); DTC id = 1F0EC, status = 0; 1F0EC;7F001; 0;0;-
+ Gyro Interface Error; DTC id = 1FEEB, status = 0; 1FEEB;7FE01; 0;0;-
+ Calibration error - Out Of Calibration; DTC id = 2FEED, status = 0; 2FEED;7FE02; 0;0;-
+ Parameter loading error; DTC id = 2FEEE, status = 0; 2FEEE;7FE02; 0;0;-
+ Map Loading error; DTC id = 4FEE4, status = 0; 4FEE4;7FE04; 0;0;-
+ GNSS Antenna Open Circuit; DTC id = AF0E5, status = 0; AF0E5;7F00A; 0;0;-
+ GNSS Antenna short circuit to ground; DTC id = AF0E6, status = 0; AF0E6;7F00A; 0;0;-
+ PCM cannot receive messages from CAN to store diagnostics data snapshot; DTC id = DF0E2, status = 15; DF0E2;7F00D; 15;0;-
+ ECU - internal check procedures (console-switch); DTC id = 14E2FF, status = 0; 14E2FF;7E214; 0;0;-
+ CAN-2 Data Erratic, Intermittent Or Incorrect; DTC id = 16F0E2, status = 0; 16F0E2;7F016; 0;0;-
+ Actual Bundle - Consistency/Validity; DTC id = 2EF3ED, status = 0; 2EF3ED;7F32E; 0;1;"If during a bundle install procedure somethings goes wrong the device trigger the default. After
+the reboot, consistency check verifies if manifest points to the BSW and MIST installed on the
+device.
+To fix it, proceed to download the bundle again. On After Sales, request for FOTA Campaign"
+ TD message from Tacho timeout on CAN; DTC id = 3AFEE9, status = 0; 3AFEE9;7FE3A; 0;0;"DTC to be ignored. Not displayed on Instrument Cluster
+Timeout can be wrongly triggered on vehicles with tacho device because the tacho CAN
+messages are sent with a little delay at K15 On.
+HICV team has request do not consider this fault and to filter on MIND. Same request has been
+to Diagnostic Electronic team to mask this faults on reading fault/delivery operation on MIND
+(but still not implemented).
+Errors are not masked on UDT."
+ TCO1 message timeout on CAN; DTC id = 47FAE2, status = 0; 47FAE2;7FA47; 0;0;"DTC to be ignored. Not displayed on Instrument Cluster
+Timeout can be wrongly triggered on vehicles with tacho device because the tacho CAN
+messages are sent with a little delay at K15 On.
+HICV team has request do not consider this fault and to filter on MIND. Same request has been
+to Diagnostic Electronic team to mask this faults on reading fault/delivery operation on MIND
+(but still not implemented).
+Errors are not masked on UDT."
+ WiFi/BT Antenna Open Circuit; DTC id = 4AFAE5, status = 0; 4AFAE5;7FA4A; 0;0;"DTC to be ignored. Not displayed on Instrument Cluster
+Fault concerns external wifi antenna only (not internal) and should not be considered."
+ WiFi/BT Antenna short circuit to ground; DTC id = 4AFAE6, status = 0; 4AFAE6;7FA4A; 0;0;"DTC to be ignored. Not displayed on Instrument Cluster
+Fault concerns external wifi antenna only (not internal) and should not be considered."
+ Undervoltage error; DTC id = 51E0FF, status = 0; 51E0FF;7E051; 0;0;-
+ Overtemperature error; DTC id = 52E0FF, status = 0; 52E0FF;7E052; 0;0;-
+ GPS applications error; DTC id = 53E0FF, status = 0; 53E0FF;7E053; 0;0;-
+ Cellular Antenna Open Circuit; DTC id = 58FAE5, status = 0; 58FAE5;7FA58; 0;0;-
+ Cellular Antenna short circuit to ground; DTC id = 58FAE6, status = 0; 58FAE6;7FA58; 0;1;"This DTC is raised in case of wiring issue when the GSM antenna is not properly connected or if
+antenna is not detected (diagnostic resistance missing)
+If this fault appears it means that GSM antenna or harness is short circuited and it is to be
+checked in a workshop."
+ RxSWIN absent; DTC id = 64E0FF, status = 0; 64E0FF;; 0;0;-
+ ECU VIN mismatch with vehicle VIN; DTC id = 6AFAFF, status = 0; 6AFAFF;7FA6A; 0;1;"The application TUU receives the CAN message VI from source address EE (Tacho) and 00 (Engine). Inside
+that message there is the vehicle VIN.
+If VIN received from CAN doesn?t match with VIN writed inside PCM the TUU set that fault as active. If VIN
+match again the fault is set as not active.
+If on your vehicle the fault is active this means that TUU is receiving a different VIN, or can means that TUU
+received a different VIN in past and never received the right one after that"
+ ECU not configured since last VIN write or VIN missing; DTC id = 6BFAFF, status = 0; 6BFAFF;0x4A; 0;1;"The error is triggered if PCM does not receive default configuration
+(""Boostrap"") after PCM activation.
+The check is designed in this way:
+? After VIN update (first VIN write in plant or any others
+occurrence of VIN modified) the DTC is activated.
+? After the board receive the new configurations (Bootstrap)
+the DTC is deactivated.
+Operator must wait until next PCM tracking ECUMSI data sending
+to verify if the fault is no longer present.
+Several sendings are done per day each 15 min between 7:00 and 20:00"
+ Software Integrity Check Error; DTC id = 74020E, status = 0; 74020E;00274; 0;0;-
+ ASK absent; DTC id = 7FF3FF, status = 0; 7FF3FF;7F37F; 0;1;-
+ Cyber Security Anomaly - Condition Exist; DTC id = 84F3FF, status = 0; 84F3FF;7F384; 0;0;"DTC to be ignored. Not displayed on Instrument Cluster
+Reason: The Cyber Security anomaly can be wrongly triggered on old mist (like in Bundle 1.0.0)
+by a failed bundle update or a failed bundle download during FOTA. HICV team has request do
+not consider this fault and to filter on MIND. Same request has been to Diagnostic Electronic
+team to mask this faults on reading fault/delivery operation on MIND (but still not implemented).
+Errors are not masked on UDT."
+ DSE - comfort feature not available (sensor failure); DTC id = 99FAE2, status = 0; 99FAE2;7FA99; 0;1;"DSE application of PCM implements a sensor-based passenger comfort feature. When one of those sensors is in failure
+mode (when PCM detects its DTC in the DM1 of sensor?s ECU), the comfort feature is disabled, and the driver is warned of
+the situation via the PCM DM1 containing 0x99FAE2 DTC. Sensors used by DSE are YRS, AYS, SAS, suspensions
+pressure and deflection sensors.
+Resolution steps: depends on the fault detected in DM1 as PCM input.
+MOST OF THE TIME, the PCM DM1 is thrown due to EBS sensors that are not calibrated.
+1. Proceed to a default extraction using MIND/UDT. Look for any EBS or ELC5 DTC.
+2. Verify that EBS sensors have been calibrated using MIND/UDT
+a) If not, proceed to sensors calibration using MIND/UDT
+(this must be done after every new software loaded in EBS via MIND/UDT)
+b) If after last steps the problem is still up, contact engineering team.
+Engineering: send READ_DTC_SQL and READ_DM1_SQL command to check if
+1. PCM DM1 is still active
+2. One of the DSE ?forbidden DTCs? is active"
+ eMMC/Filesystem error; DTC id = 9CFAFF, status = 0; 9CFAFF;7FA9C; 0;0;-
+ CAN-1 Data Erratic, Intermittent Or Incorrect; DTC id = B0F0E2, status = 0; B0F0E2;7F0B0; 0;0;-

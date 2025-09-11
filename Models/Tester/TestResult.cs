@@ -15,7 +15,7 @@ namespace BundleTestsAutomation.Models.Tester
         public bool HasErrorLevel { get; set; } = false;
 
         // Considérer comme KO toutes les lignes contenant certains mots-clés ou un ERROR
-        private static readonly string[] ErrorKeywords = { "Erreur", "KO", "critical", "invalid" };
+        private static readonly string[] ErrorKeywords = { "Erreur", "KO", "critical", "invalid", "DTC trouvé" };
 
         public bool IsOk => !Errors.Any(e => ErrorKeywords.Any(k => e.Contains(k, StringComparison.OrdinalIgnoreCase)))
                             && !HasErrorLevel;
