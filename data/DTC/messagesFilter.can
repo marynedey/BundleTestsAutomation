@@ -1,0 +1,51 @@
+/*@!Encoding:1252*/
+
+on start {
+  write("CAPL Node actif !");
+}
+
+// ---------------------------
+// DM1 messages (Active DTCs)
+// ---------------------------
+on message 0x18FECA00x { output(this); write("DM1 reçu"); }
+on message 0x18FECA03x { output(this); write("DM1 reçu"); }
+on message 0x18FECA0Bx { output(this); write("DM1 reçu"); }
+on message 0x18FECA10x { output(this); write("DM1 reçu"); }
+on message 0x18FECA17x { output(this); write("DM1 reçu"); }
+on message 0x18FECA1Cx { output(this); write("DM1 reçu"); }
+on message 0x18FECA1Dx { output(this); write("DM1 reçu"); }
+on message 0x18FECA21x { output(this); write("DM1 reçu"); }
+on message 0x18FECA27x { output(this); write("DM1 reçu"); }
+on message 0x18FECA2Ex { output(this); write("DM1 reçu"); }
+on message 0x18FECA2Fx { output(this); write("DM1 reçu"); }
+on message 0x18FECA33x { output(this); write("DM1 reçu"); }
+on message 0x18FECA38x { output(this); write("DM1 reçu"); }
+on message 0x18FECA40x { output(this); write("DM1 reçu"); }
+on message 0x18FECA49x { output(this); write("DM1 reçu"); }
+on message 0x18FECA4Ax { output(this); write("DM1 reçu"); }
+on message 0x18FECA5Ax { output(this); write("DM1 reçu"); }
+on message 0x18FECA5Ex { output(this); write("DM1 reçu"); }
+on message 0x18FECA7Ex { output(this); write("DM1 reçu"); }
+on message 0x18FECA90x { output(this); write("DM1 reçu"); }
+on message 0x18FECA91x { output(this); write("DM1 reçu"); }
+on message 0x18FECA92x { output(this); write("DM1 reçu"); }
+on message 0x18FECA9Cx { output(this); write("DM1 reçu"); }
+on message 0x18FECA9Ex { output(this); write("DM1 reçu"); }
+on message 0x18FECAA0x { output(this); write("DM1 reçu"); }
+on message 0x18FECAC2x { output(this); write("DM1 reçu"); }
+on message 0x18FECAE8x { output(this); write("DM1 reçu"); }
+on message 0x18FECAEEx { output(this); write("DM1 reçu"); }
+on message 0x18FECAF3x { output(this); write("DM1 reçu"); }
+
+// ---------------------------
+// DM2 messages (Previously Active DTCs)
+// ---------------------------
+on message 0x18FECB1Cx { output(this); write("DM2 reçu"); }
+on message 0x18FECB1Dx { output(this); write("DM2 reçu"); }
+on message 0x18FECB9Ex { output(this); write("DM2 reçu"); }
+
+// ---------------------------
+// DM4 messages (Freeze Frame)
+// ---------------------------
+on message 0x18FECD1Dx { output(this); write("DM4 reçu"); }
+on message 0x18FECD9Ex { output(this); write("DM4 reçu"); }
