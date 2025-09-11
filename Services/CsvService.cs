@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using BundleTestsAutomation.Models;
+using BundleTestsAutomation.Models.CSV;
 
 namespace BundleTestsAutomation.Services
 {

@@ -1,4 +1,4 @@
-﻿namespace BundleTestsAutomation.Models
+﻿namespace BundleTestsAutomation.Models.Bundle
 {
     public class BundleInfo
     {

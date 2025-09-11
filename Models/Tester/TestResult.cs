@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BundleTestsAutomation.Services.TesterService
+namespace BundleTestsAutomation.Models.Tester
 {
     public class TestResult
     {

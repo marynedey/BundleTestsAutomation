@@ -1,4 +1,4 @@
-﻿using BundleTestsAutomation.Models;
+﻿using BundleTestsAutomation.Models.Bundle;
 using System;
 using System.IO;
 using System.Text.RegularExpressions;

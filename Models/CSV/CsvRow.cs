@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace BundleTestsAutomation.Models
+namespace BundleTestsAutomation.Models.CSV
 {
     public class CsvRow : List<string>
     {

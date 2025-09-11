@@ -1,6 +1,6 @@
-﻿using BundleTestsAutomation.Models;
+﻿using BundleTestsAutomation.Models.Bundle;
+using BundleTestsAutomation.Models.Tester;
 using BundleTestsAutomation.Services;
-using BundleTestsAutomation.Services.TesterService;
 
 namespace BundleTestsAutomation.UI
 {

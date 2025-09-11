@@ -1,4 +1,4 @@
-﻿using BundleTestsAutomation.Services.TesterService;
+﻿using BundleTestsAutomation.Models.Tester;
 
 public interface ITester
 {

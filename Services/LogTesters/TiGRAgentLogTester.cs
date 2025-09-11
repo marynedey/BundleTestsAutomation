@@ -5,8 +5,8 @@ using System.IO;
 using System.Linq;
 using System.Text.Json;
 using System.Text.RegularExpressions;
-using BundleTestsAutomation.Models;
-using BundleTestsAutomation.Services.TesterService;
+using BundleTestsAutomation.Models.Bundle;
+using BundleTestsAutomation.Models.Tester;
 
 public class TigrAgentLogTester : ITester
 {
