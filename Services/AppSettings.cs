@@ -9,7 +9,6 @@ namespace BundleTestsAutomation.Services
     {
         public static string? BundleDirectory { get; set; }
 
-        // Type de véhicule (par défaut ICE)
         public static VehicleType VehicleTypeSelected { get; set; } = VehicleType.ICE;
 
         public static string DataFullCsvPath =>

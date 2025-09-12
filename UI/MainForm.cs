@@ -342,7 +342,7 @@ namespace BundleTestsAutomation.UI
             {
                 tester = new ISAConfigTester();
             }
-            else if (fileName.Contains("dm"))
+            else if (fileName.Contains("logs_complet"))
             {
                 tester = new DTCLogTester();
             }
