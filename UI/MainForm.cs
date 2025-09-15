@@ -16,7 +16,6 @@ namespace BundleTestsAutomation.UI
 
         // --- CSV controls ---
         private Button btnLoad;
-        private Button btnLoadCANdata;
         private Button btnCompare;
         private DataGridView gridLeft;
         private DataGridView gridRight;
@@ -72,9 +71,6 @@ namespace BundleTestsAutomation.UI
             btnLoad = new Button { Text = "Charger un CSV", Height = 40, Dock = DockStyle.Top };
             btnLoad.Click += BtnLoad_Click;
 
-            btnLoadCANdata = new Button { Text = "Charger data CANalyzer", Height = 40, Dock = DockStyle.Top };
-            btnLoadCANdata.Click += BtnLoadCANdata_Click;
-
             btnCompare = new Button { Text = "Comparer 2 CSV", Height = 40, Dock = DockStyle.Top };
             btnCompare.Click += BtnCompare_Click;
 
@@ -121,7 +117,6 @@ namespace BundleTestsAutomation.UI
             // --- Boutons CSV ---
             var panelButtons = new Panel { Dock = DockStyle.Top, Height = 150 };
             panelButtons.Controls.Add(btnCompare);
-            panelButtons.Controls.Add(btnLoadCANdata);
             panelButtons.Controls.Add(btnLoad);
 
             panelContent.Controls.Add(panelButtons);
@@ -265,26 +260,6 @@ namespace BundleTestsAutomation.UI
             Text = $"CSV Management - {Path.GetFileName(ofd.FileName)}";
         }
 
-        private void BtnLoadCANdata_Click(object? sender, EventArgs e)
-        {
-            if (!File.Exists(AppSettings.DataFullCsvPath))
-            {
-                MessageBox.Show(this, "Le fichier data_full.csv est introuvable.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            gridLeft.Rows.Clear();
-            gridLeft.Columns.Clear();
-            gridRight.Rows.Clear();
-            gridRight.Columns.Clear();
-
-            var rows = CsvService.ReadCsv(AppSettings.DataFullCsvPath)
-                .Where(r => !string.Join(",", r).Contains("System", StringComparison.OrdinalIgnoreCase))
-                .ToList();
-            CsvService.DisplayCsv(rows, gridLeft);
-            Text = $"CSV Management - {Path.GetFileName(AppSettings.DataFullCsvPath)}";
-        }
-
         private void BtnCompare_Click(object? sender, EventArgs e)
         {
             if (ofd.ShowDialog(this) != DialogResult.OK) return;
@@ -342,7 +317,7 @@ namespace BundleTestsAutomation.UI
             {
                 tester = new ISAConfigTester();
             }
-            else if (fileName.Contains("logs_complet"))
+            else if (fileName.Contains("output_messages_can"))
             {
                 tester = new DTCLogTester();
             }

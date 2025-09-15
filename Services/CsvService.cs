@@ -128,7 +128,15 @@ namespace BundleTestsAutomation.Services
 
         public static void SyncGridScroll(DataGridView sourceGrid, DataGridView targetGrid)
         {
-            targetGrid.FirstDisplayedScrollingRowIndex = sourceGrid.FirstDisplayedScrollingRowIndex;
+            try
+            {
+                if (sourceGrid.Rows.Count > 0 && targetGrid.Rows.Count > 0)
+                    targetGrid.FirstDisplayedScrollingRowIndex = sourceGrid.FirstDisplayedScrollingRowIndex;
+            }
+            catch (InvalidOperationException)
+            {
+                // ignoré car la grille cible est vide ou non scrollable
+            }
         }
 
         private static char DetectSeparator(string headerLine)

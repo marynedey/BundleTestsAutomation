@@ -62,7 +62,7 @@ public class DTCLogTester : ITester
                 string spnHex = $"0x{dtc.SPN:X}";
                 if (validSpns.Contains(spnHex) || validSpns.Contains(dtc.SPN.ToString()))
                 {
-                    issues.Add($"DTC trouvé : Time={dtc.Timestamp}, SPN ={spnHex}, FMI={dtc.FMI}, Occurrence={dtc.Occurrence}, Hex={dtc.RawHex}, SA={dtc.SourceAddress}");
+                    issues.Add($"DTC trouvé : Time={dtc.Timestamp}, SPN={spnHex}, FMI={dtc.FMI}, Occurrence={dtc.Occurrence}, Hex={dtc.RawHex}, SA={dtc.SourceAddress}");
                 }
             }
 
