@@ -42,14 +42,12 @@ public class DTCLogTester : ITester
             Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\..")
         );
         string dtcRefPath = Path.Combine(projectRoot, "data", "DTC", "DTC.csv");
-        var rows = CsvService.ReadCsv(dtcRefPath);
+        var rows = CsvService.ReadDtcCsv(dtcRefPath);
 
-        // --- On prend la colonne 4 (index 3 car 0-based) ---
-        var validSpns = rows.Skip(1) // sauter l’entête
-                            .Where(r => r.Count > 3)
-                            .Select(r => r[3].Trim())
-                            .Where(v => !string.IsNullOrEmpty(v))
-                            .ToHashSet();
+        var validSpns = rows
+            .Select(r => r.SPNDLHex?.Trim())
+            .Where(v => !string.IsNullOrEmpty(v))
+            .ToHashSet();
 
         if (dtcs.Count == 0)
         {

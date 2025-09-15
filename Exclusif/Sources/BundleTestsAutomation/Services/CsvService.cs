@@ -1,23 +1,59 @@
-﻿using System;
+﻿using BundleTestsAutomation.Models.CSV;
+using CsvHelper;
+using CsvHelper.Configuration;
+using System;
 using System.Collections.Generic;
+using System.Formats.Asn1;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using BundleTestsAutomation.Models.CSV;
 
 namespace BundleTestsAutomation.Services
 {
     public static class CsvService
     {
-        public static List<CsvRow> ReadCsv(string filePath)
+        // --- Lecture générique et tolérante pour n'importe quel CSV ---
+        public static List<CsvRow> ReadCsv(string filePath, string delimiter = ";")
         {
-            if (!File.Exists(filePath))
-                throw new FileNotFoundException($"Le fichier {filePath} n'existe pas.");
-            var lines = File.ReadAllLines(filePath).ToList();
-            if (lines.Count <= 0)
-                throw new Exception("Le fichier CSV ne comporte pas de données.");
-            char sep = DetectSeparator(lines[0]);
-            return lines.Select(l => new CsvRow(ParseCsvLine(l, sep))).ToList();
+            using var reader = new StreamReader(filePath);
+            using var csv = new CsvReader(reader, new CsvHelper.Configuration.CsvConfiguration(CultureInfo.InvariantCulture)
+            {
+                Delimiter = delimiter,
+                HasHeaderRecord = false,
+                BadDataFound = null,
+                MissingFieldFound = null,
+                TrimOptions = CsvHelper.Configuration.TrimOptions.Trim,
+                DetectDelimiter = true
+            });
+
+            var rows = new List<CsvRow>();
+            while (csv.Read())
+            {
+                var row = new List<string>();
+                for (int i = 0; csv.TryGetField<string>(i, out var field); i++)
+                    row.Add(field ?? "");
+                rows.Add(new CsvRow(row));
+            }
+            return rows;
+        }
+
+        // --- Lecture typée pour les DTC ---
+        public static List<DtcRow> ReadDtcCsv(string filePath, string delimiter = ";")
+        {
+            using var reader = new StreamReader(filePath);
+            using var csv = new CsvReader(reader, new CsvHelper.Configuration.CsvConfiguration(CultureInfo.InvariantCulture)
+            {
+                Delimiter = delimiter,
+                HasHeaderRecord = true,
+                BadDataFound = null,
+                MissingFieldFound = null,
+                TrimOptions = CsvHelper.Configuration.TrimOptions.Trim,
+                DetectDelimiter = true
+            });
+
+            csv.Context.RegisterClassMap<DtcRowMap>();
+            return csv.GetRecords<DtcRow>().ToList();
         }
 
         public static void DisplayCsv(List<CsvRow> rows, DataGridView targetGrid)
@@ -137,62 +173,6 @@ namespace BundleTestsAutomation.Services
             {
                 // ignoré car la grille cible est vide ou non scrollable
             }
-        }
-
-        private static char DetectSeparator(string headerLine)
-        {
-            int commas = headerLine.Count(c => c == ',');
-            int semis = headerLine.Count(c => c == ';');
-            return semis > commas ? ';' : ',';
-        }
-
-        private static List<string> ParseCsvLine(string line, char sep)
-        {
-            var result = new List<string>();
-            if (line == null) return result;
-            bool inQuotes = false;
-            var cur = new System.Text.StringBuilder();
-            for (int i = 0; i < line.Length; i++)
-            {
-                char c = line[i];
-                if (inQuotes)
-                {
-                    if (c == '"')
-                    {
-                        if (i + 1 < line.Length && line[i + 1] == '"')
-                        {
-                            cur.Append('"');
-                            i++;
-                        }
-                        else
-                        {
-                            inQuotes = false;
-                        }
-                    }
-                    else
-                    {
-                        cur.Append(c);
-                    }
-                }
-                else
-                {
-                    if (c == '"')
-                    {
-                        inQuotes = true;
-                    }
-                    else if (c == sep)
-                    {
-                        result.Add(cur.ToString());
-                        cur.Clear();
-                    }
-                    else
-                    {
-                        cur.Append(c);
-                    }
-                }
-            }
-            result.Add(cur.ToString());
-            return result;
-        }
+        }        
     }
 }

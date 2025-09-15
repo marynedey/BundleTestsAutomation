@@ -255,6 +255,12 @@ namespace BundleTestsAutomation.UI
             gridRight.Rows.Clear();
             gridRight.Columns.Clear();
 
+            if (ofd.SafeFileName == "DTC.csv")
+            {
+                MessageBox.Show("Impossible de charger ce fichier, il n'est pas destiné à être lu ici. Il sert uniquement pour le contrôle des DTC.", "Information",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             var rows = CsvService.ReadCsv(ofd.FileName);
             CsvService.DisplayCsv(rows, gridLeft);
             Text = $"CSV Management - {Path.GetFileName(ofd.FileName)}";
