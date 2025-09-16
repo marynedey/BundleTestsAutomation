@@ -1,6 +1,7 @@
 ﻿using BundleTestsAutomation.Models.Bundle;
 using BundleTestsAutomation.Models.Tester;
 using BundleTestsAutomation.Services;
+using System.Text.RegularExpressions;
 
 namespace BundleTestsAutomation.UI
 {
@@ -13,6 +14,7 @@ namespace BundleTestsAutomation.UI
         // --- Menu buttons ---
         private Button btnMenuCsv;
         private Button btnMenuLogs;
+        private Button btnMenuAuto;
 
         // --- CSV controls ---
         private Button btnLoad;
@@ -26,8 +28,19 @@ namespace BundleTestsAutomation.UI
         // --- Logs controls ---
         private TextBox txtLogDisplay;
         private Button btnRefreshLogs;
-        private RichTextBox txtLogResults;
+        private TreeView treeLogResults;
         private ComboBox cmbVehicleType;
+        private Panel panelJustification;
+        private TextBox txtJustification;
+        private SplitContainer splitResults;
+        private Dictionary<int, string> lineJustifications = new Dictionary<int, string>();
+
+        // --- Auto controls ---
+        private Button btnStartTests;
+        private GroupBox grpResults;
+        private TreeView treeAutoResults;
+        private TextBox txtAutoJustification;
+        private Dictionary<int, string> autoJustifications = new();
 
         // --- Dialogs ---
         private OpenFileDialog ofd;
@@ -51,15 +64,19 @@ namespace BundleTestsAutomation.UI
             btnMenuCsv.Click += (s, e) => ShowMenuCsv();
             btnMenuLogs = new Button { Text = "LOGS", Width = 100, Height = 40, Location = new Point(120, 5) };
             btnMenuLogs.Click += (s, e) => ShowMenuLogs();
+            btnMenuAuto = new Button { Text = "AUTO", Width = 100, Height = 40, Location = new Point(230, 5) };
+            btnMenuAuto.Click += (s, e) => ShowMenuAuto();
 
             panelMenu.Controls.Add(btnMenuCsv);
             panelMenu.Controls.Add(btnMenuLogs);
+            panelMenu.Controls.Add(btnMenuAuto);
 
             // --- Initialiser contrôles ---
             InitializeCsvControls();
             InitializeDialogs();
             InitializeGrids();
             InitializeLogsControls();
+            InitializeAutoWindow();
 
             // --- Afficher CSV par défaut ---
             ShowMenuLogs();
@@ -106,6 +123,33 @@ namespace BundleTestsAutomation.UI
         {
             ofd = new OpenFileDialog { Title = "Sélectionnez un fichier CSV", Filter = "Fichiers CSV (*.csv)|*.csv", CheckFileExists = true, Multiselect = false };
             folderBrowserDialog = new FolderBrowserDialog { Description = "Sélectionnez le répertoire du bundle à traiter", UseDescriptionForTitle = true, ShowNewFolderButton = false };
+        }
+
+        private void InitializeAutoWindow()
+        {
+            btnStartTests = new Button { Text = "Lancer les tests automatiques", Height = 40, Dock = DockStyle.Top };
+            btnStartTests.Click += BtnStartTests_Click;
+
+            treeAutoResults = new TreeView
+            {
+                Dock = DockStyle.Fill,
+                HideSelection = false,
+                Font = new Font("Consolas", 10),
+                BackColor = Color.LightYellow
+            };
+
+            txtAutoJustification = new TextBox
+            {
+                Dock = DockStyle.Fill,
+                Multiline = true,
+                ReadOnly = true,
+                ScrollBars = ScrollBars.Vertical,
+                Font = new Font("Consolas", 10),
+                BackColor = Color.LightCyan
+            };
+
+            grpResults = new GroupBox { Text = "Résultats des tests automatiques", Dock = DockStyle.Fill };
+            grpResults.Controls.Add(treeAutoResults);
         }
         #endregion
 
@@ -178,46 +222,105 @@ namespace BundleTestsAutomation.UI
             {
                 AppSettings.VehicleTypeSelected = (VehicleType)cmbVehicleType.SelectedItem;
             };
-
             panelTop.Controls.Add(cmbVehicleType);
 
-            // --- SplitContainer vertical pour logs + résultats ---
-            var split = new SplitContainer
+            // --- SplitContainer vertical pour logs + (résultats+justification) ---
+            var splitLogs = new SplitContainer
             {
                 Dock = DockStyle.Fill,
                 Orientation = Orientation.Horizontal,
                 SplitterWidth = 6
             };
-            panelContent.Controls.Add(split);
+            panelContent.Controls.Add(splitLogs);
 
-            // --- TextBox pour afficher les logs ---
+            // --- GroupBox pour afficher les logs ---
+            var grpLogs = new GroupBox { Text = "Logs bruts", Dock = DockStyle.Fill };
             txtLogDisplay = new TextBox
             {
                 Dock = DockStyle.Fill,
                 Multiline = true,
                 ScrollBars = ScrollBars.Vertical,
                 ReadOnly = true,
-                Font = new Font("Consolas", 10),
-                Height = 30
+                Font = new Font("Consolas", 10)
             };
-            split.Panel1.Controls.Add(txtLogDisplay);
+            grpLogs.Controls.Add(txtLogDisplay);
+            splitLogs.Panel1.Controls.Add(grpLogs);
 
-            // --- TextBox pour afficher les résultats ---
-            txtLogResults = new RichTextBox
+            // --- SplitContainer horizontal pour résultats + justification ---
+            splitResults = new SplitContainer
             {
                 Dock = DockStyle.Fill,
-                ReadOnly = true,
-                Multiline = true,
-                ScrollBars = RichTextBoxScrollBars.Vertical,
+                Orientation = Orientation.Vertical,
+                SplitterWidth = 6
+            };
+            splitLogs.Panel2.Controls.Add(splitResults);
+
+            // --- GroupBox pour afficher les résultats ---
+            var grpResults = new GroupBox { Text = "Résultats des tests", Dock = DockStyle.Fill };
+            treeLogResults = new TreeView
+            {
+                Dock = DockStyle.Fill,
+                HideSelection = false,
                 Font = new Font("Consolas", 10),
                 BackColor = Color.LightYellow
             };
-            split.Panel2.Controls.Add(txtLogResults);
+            grpResults.Controls.Add(treeLogResults);
+            splitResults.Panel1.Controls.Add(grpResults);
+
+            // --- GroupBox + TextBox pour afficher la justification ---
+            var grpJustif = new GroupBox { Text = "Détails", Dock = DockStyle.Fill };
+            txtJustification = new TextBox
+            {
+                Dock = DockStyle.Fill,
+                Multiline = true,
+                ReadOnly = true,
+                ScrollBars = ScrollBars.Vertical,
+                Font = new Font("Consolas", 10),
+                BackColor = Color.LightCyan
+            };
+            grpJustif.Controls.Add(txtJustification);
+            splitResults.Panel2.Controls.Add(grpJustif);
+
+            // --- Définir la largeur initiale du panel justification ---
+            splitResults.SplitterDistance = splitResults.Width * 2 / 3;
+
+            // --- Ajuster la hauteur du splitter vertical logs/resultats
+            splitLogs.SplitterDistance = panelContent.Height / 2;
 
             btnRefreshLogs.BringToFront();
             cmbVehicleType.BringToFront();
-            split.BringToFront();
-            split.SplitterDistance = panelContent.Height / 2;
+            splitLogs.BringToFront();
+            splitLogs.SplitterDistance = panelContent.Height / 2;
+        }
+        private void ShowMenuAuto()
+        {
+            panelContent.Controls.Clear();
+
+            // --- Bouton lancer tests ---
+            panelContent.Controls.Add(btnStartTests);
+
+            // --- SplitContainer pour résultats + justification ---
+            var splitAuto = new SplitContainer
+            {
+                Dock = DockStyle.Fill,
+                Orientation = Orientation.Vertical,
+                SplitterWidth = 6
+            };
+            panelContent.Controls.Add(splitAuto);
+
+            // --- GroupBox résultats ---
+            var grpResultsAuto = new GroupBox { Text = "Résultats des tests", Dock = DockStyle.Fill };
+            grpResultsAuto.Controls.Add(treeAutoResults);
+            splitAuto.Panel1.Controls.Add(grpResultsAuto);
+
+            // --- GroupBox justification ---
+            var grpJustifAuto = new GroupBox { Text = "Détails", Dock = DockStyle.Fill };
+            grpJustifAuto.Controls.Add(txtAutoJustification);
+            splitAuto.Panel2.Controls.Add(grpJustifAuto);
+
+            btnStartTests.BringToFront();
+            splitAuto.BringToFront();
+            splitAuto.SplitterDistance = splitAuto.Width * 2 / 3;
         }
         #endregion
 
@@ -302,64 +405,108 @@ namespace BundleTestsAutomation.UI
         }
         private void ProcessLogs(string filePath)
         {
-            // Afficher les logs filtrés (filtrage simple)
             string allLogs = File.ReadAllText(filePath);
             txtLogDisplay.Text = allLogs;
 
-            ITester? tester = null;
-            string? directory = Path.GetDirectoryName(filePath);
-            string fileName = Path.GetFileName(filePath).ToLower();
-            string folderName = directory != null ? new DirectoryInfo(directory).Name.ToLower() : "";
-
-            if (folderName.Contains("tigr"))
-            {
-                tester = new TigrAgentLogTester();
-            }
-            else if (folderName.Contains("diagnostic"))
-            {
-                tester = new DiagnosticLoggerLogTester();
-            }
-            else if (folderName.Contains("isa"))
-            {
-                tester = new ISAConfigTester();
-            }
-            else if (fileName.Contains("output_messages_can"))
-            {
-                tester = new DTCLogTester();
-            }
+            var tester = TesterFactory.GetTester(filePath);
 
             if (tester != null)
             {
                 var results = tester.Test(filePath);
-                DisplayTestResults(results);
+                DisplayTestResults(results, treeLogResults, txtJustification, lineJustifications);
             }
             else
             {
-                txtLogResults.Text = "Aucun test disponible pour ce type de log.";
+                treeLogResults.Text = "Aucun test disponible pour ce type de log.";
             }
         }
+        #endregion
 
-        private void DisplayTestResults(List<TestResult> results)
+        #region Auto Tests Handlers
+        private void BtnStartTests_Click(object? sender, EventArgs e)
         {
-            txtLogResults.Clear();
-            foreach (var result in results)
+            string projectRoot = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\.."));
+            string dataPath = Path.Combine(projectRoot, "data");
+
+            if (!Directory.Exists(dataPath))
             {
-                // Choix de la couleur selon le statut
-                Color color = result.IsOk ? Color.Green : Color.Red;
+                MessageBox.Show($"Le dossier Data est introuvable : {dataPath}", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-                txtLogResults.SelectionStart = txtLogResults.TextLength;
-                txtLogResults.SelectionLength = 0;
-                txtLogResults.SelectionColor = color;
+            var allResults = new List<TestResult>();
 
-                txtLogResults.AppendText($"{result.TestName}: {result.Status}{Environment.NewLine}");
+            foreach (var file in Directory.GetFiles(dataPath, "*.*", SearchOption.AllDirectories))
+            {
+                var tester = TesterFactory.GetTester(file);
 
-                // Remet la couleur par défaut pour les messages
-                txtLogResults.SelectionColor = Color.Black;
-                foreach (var e in result.Errors)
+                if (tester != null)
                 {
-                    txtLogResults.AppendText($"\t{e}{Environment.NewLine}");
+                    var results = tester.Test(file);
+                    allResults.AddRange(results);
                 }
             }
+
+            if (allResults.Count == 0)
+            {
+                MessageBox.Show("Aucun fichier valide trouvé dans le dossier data.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                DisplayTestResults(allResults, treeAutoResults, txtAutoJustification, autoJustifications);
+                MessageBox.Show($"{allResults.Count} résultats collectés depuis {dataPath}",
+                        "Tests terminés", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        #endregion
+
+        #region Displaying results
+        private void DisplayTestResults(
+            List<TestResult> results,
+            TreeView resultsTree,
+            TextBox justificationBox,
+            Dictionary<int, string> justificationMap)
+        {
+            resultsTree.Nodes.Clear();
+            justificationBox.Clear();
+            justificationMap.Clear();
+
+            int nodeIndex = 0;
+            foreach (var result in results)
+            {
+                var parentNode = new TreeNode($"{result.TestName}: {result.Status}")
+                {
+                    ForeColor = result.IsOk ? Color.Green : Color.Red
+                };
+
+                foreach (var e in result.Errors)
+                {
+                    string displayText = e;
+                    string justification = null;
+
+                    var match = Regex.Match(e, @"justification:\s*(.+)$", RegexOptions.IgnoreCase);
+                    if (match.Success)
+                    {
+                        justification = match.Groups[1].Value;
+                        if (justification.Length > 50)
+                            displayText = e.Replace(justification, justification.Substring(0, 50) + "...");
+                    }
+
+                    var childNode = new TreeNode(displayText)
+                    {
+                        Tag = justification  // Stocke la justification ici
+                    };
+                    parentNode.Nodes.Add(childNode);
+                }
+
+                resultsTree.Nodes.Add(parentNode);
+            }
+
+            resultsTree.AfterSelect += (s, e) =>
+            {
+                justificationBox.Text = e.Node.Tag as string ?? "";  // si Tag = null, vide
+            };
+
         }
         #endregion
     }

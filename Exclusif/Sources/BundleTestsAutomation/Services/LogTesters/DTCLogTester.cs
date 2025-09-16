@@ -45,6 +45,7 @@ public class DTCLogTester : ITester
         var rows = CsvService.ReadDtcCsv(dtcRefPath);
 
         var validSpns = rows
+            .Where(r => r.ToBeIgnored != "1")
             .Select(r => r.SPNDLHex?.Trim())
             .Where(v => !string.IsNullOrEmpty(v))
             .ToHashSet();
@@ -58,9 +59,23 @@ public class DTCLogTester : ITester
             foreach (var dtc in dtcs)
             {
                 string spnHex = $"0x{dtc.SPN:X}";
-                if (validSpns.Contains(spnHex) || validSpns.Contains(dtc.SPN.ToString()))
+
+                // Cherche la ligne correspondante dans le CSV
+                var matchingRow = rows.FirstOrDefault(r =>
+                    (r.SPNDLHex?.Trim() == spnHex || r.SPNDLHex?.Trim() == dtc.SPN.ToString())
+                    && r.ToBeIgnored != "1"
+                );
+
+                if (matchingRow != null)
                 {
-                    issues.Add($"DTC trouvé : Time={dtc.Timestamp}, SPN={spnHex}, FMI={dtc.FMI}, Occurrence={dtc.Occurrence}, Hex={dtc.RawHex}, SA={dtc.SourceAddress}");
+                    // Ajoute la justification si elle existe
+                    string justification = !string.IsNullOrWhiteSpace(matchingRow.Justification)
+                        ? $", justification:  {matchingRow.Justification.Replace("\r\n", " ").Replace("\n", " ")}"
+                        : "";
+
+                    issues.Add(
+                        $"DTC trouvé : Time={dtc.Timestamp}, SPN={spnHex}{justification}"
+                    );
                 }
             }
 

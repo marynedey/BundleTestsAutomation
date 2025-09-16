@@ -1,10 +1,5 @@
-.vs/
-*.user
-*.suo
-*.sln.docstates
 bin/
 obj/
-Anagrafica_BUS_MY_24_DTC_table_1.4.xlsx
-Properties/
-UI/MainForm.resx
-automatisation.ico
+.vs/
+DiagnosticLoggerLogTester.cs
+DataCollectorLogTester.cs
